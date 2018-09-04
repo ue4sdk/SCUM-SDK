@@ -89,18 +89,18 @@ void USkillLine2_C::SkilLevelToMaxSkillValueText(ESkillLevel Selection, struct F
 // Function SkillLine2.SkillLine2_C.SetSkillValueText
 // (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 // Parameters:
-// struct FText                   ValueText                      (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm)
+// struct FText                   valueText                      (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm)
 
-void USkillLine2_C::SetSkillValueText(const struct FText& ValueText)
+void USkillLine2_C::SetSkillValueText(const struct FText& valueText)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillLine2.SkillLine2_C.SetSkillValueText");
 
 	struct
 	{
-		struct FText                   ValueText;
+		struct FText                   valueText;
 	} params;
 
-	params.ValueText = ValueText;
+	params.valueText = valueText;
 
 	UObject::ProcessEvent(fn, &params);
 }

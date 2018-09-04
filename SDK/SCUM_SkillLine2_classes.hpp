@@ -46,7 +46,7 @@ public:
 	void UpdateSkill2(ESkillLevel skillLevel, float skillPoints, const struct FString& skillCaption, const struct FText& maxValueText);
 	void SetMaxSkillValueText(const struct FText& maxValueText);
 	void SkilLevelToMaxSkillValueText(ESkillLevel Selection, struct FText* MaxValue);
-	void SetSkillValueText(const struct FText& ValueText);
+	void SetSkillValueText(const struct FText& valueText);
 	void UpdateSkill(ESkillLevel skillLevel, float skillPoints, const struct FString& skillCaption);
 	void SetAlarmColor(const struct FLinearColor& Color);
 	void GetValueTextBlock(class UTextBlock** textBox);

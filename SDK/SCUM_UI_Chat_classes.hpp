@@ -30,6 +30,8 @@ public:
 	}
 
 
+	void SetInputFocusIfNeeded();
+	struct FEventReply OnMouseButtonUp(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
 	void BndEvt__MuteButton_K2Node_ComponentBoundEvent_19_OnButtonClickedEvent__DelegateSignature();
 	void Construct();
 	void ExecuteUbergraph_UI_Chat(int EntryPoint);

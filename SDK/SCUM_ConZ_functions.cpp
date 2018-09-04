@@ -36294,22 +36294,6 @@ int APrisonerPlayerController::GetFameLevel()
 }
 
 
-// Function ConZ.PrisonerPlayerController.DumpAssetNames
-// (FUNC_Final, FUNC_Exec, FUNC_Native, FUNC_Private, FUNC_BlueprintCallable)
-
-void APrisonerPlayerController::DumpAssetNames()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function ConZ.PrisonerPlayerController.DumpAssetNames");
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
 // Function ConZ.PrisonerPlayerController.Crash
 // (FUNC_Final, FUNC_Exec, FUNC_Native, FUNC_Static, FUNC_Private)
 
@@ -36404,6 +36388,29 @@ void APrisonerPlayerController::Client_RecieveCharacterStats(uint32_t ID, TArray
 	params.ID = ID;
 	params.stats = stats;
 	params.rank = rank;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function ConZ.PrisonerPlayerController.Client_ProcessAdminCommand_ListAssets
+// (FUNC_Net, FUNC_NetReliable, FUNC_Native, FUNC_Event, FUNC_Public, FUNC_NetClient)
+// Parameters:
+// struct FString                 assetType                      (CPF_Parm, CPF_ZeroConstructor)
+// struct FString                 Filter                         (CPF_Parm, CPF_ZeroConstructor)
+
+void APrisonerPlayerController::Client_ProcessAdminCommand_ListAssets(const struct FString& assetType, const struct FString& Filter)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.PrisonerPlayerController.Client_ProcessAdminCommand_ListAssets");
+
+	struct
+	{
+		struct FString                 assetType;
+		struct FString                 Filter;
+	} params;
+
+	params.assetType = assetType;
+	params.Filter = Filter;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -37824,6 +37831,38 @@ void ASentry::PlayTargetEngagedSound()
 void ASentry::PlayReloadSound()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Sentry.PlayReloadSound");
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function ConZ.Sentry.PlayPlayerLostSound
+// (FUNC_Net, FUNC_Native, FUNC_Event, FUNC_NetMulticast, FUNC_Public)
+
+void ASentry::PlayPlayerLostSound()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Sentry.PlayPlayerLostSound");
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function ConZ.Sentry.PlayPlayerKilledSound
+// (FUNC_Net, FUNC_Native, FUNC_Event, FUNC_NetMulticast, FUNC_Public)
+
+void ASentry::PlayPlayerKilledSound()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Sentry.PlayPlayerKilledSound");
 
 	struct
 	{

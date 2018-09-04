@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_ConZGameState.BP_ConZGameState_C
-// 0x0008 (0x0590 - 0x0588)
+// 0x0008 (0x05B0 - 0x05A8)
 class ABP_ConZGameState_C : public AConZGameState
 {
 public:
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0588(0x0008) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
+	class USceneComponent*                             DefaultSceneRoot;                                         // 0x05A8(0x0008) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
