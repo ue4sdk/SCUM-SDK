@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.17.8320) SDK
+// SCUM (0.1.17) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -3638,7 +3638,7 @@ public:
 
 
 // Class ConZ.ConZGameMode
-// 0x0358 (0x0758 - 0x0400)
+// 0x03B0 (0x07B0 - 0x0400)
 class AConZGameMode : public AGameMode
 {
 public:
@@ -3654,7 +3654,7 @@ public:
 	class AGlobalBirdSpawner2*                         _globalBirdSpawner;                                       // 0x04E8(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	unsigned char                                      UnknownData02[0xC8];                                      // 0x04F0(0x00C8) MISSED OFFSET
 	class UDedicatedServerResponse*                    _serverResponse;                                          // 0x05B8(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData03[0x198];                                     // 0x05C0(0x0198) MISSED OFFSET
+	unsigned char                                      UnknownData03[0x1F0];                                     // 0x05C0(0x01F0) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -3687,7 +3687,7 @@ public:
 
 
 // Class ConZ.ConZGameState
-// 0x0230 (0x05A8 - 0x0378)
+// 0x0248 (0x05C0 - 0x0378)
 class AConZGameState : public AGameState
 {
 public:
@@ -3699,14 +3699,14 @@ public:
 	class UBaseItemTag*                                _persistentItemTag;                                       // 0x03E8(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	unsigned char                                      UnknownData01[0x18];                                      // 0x03F0(0x0018) MISSED OFFSET
 	TArray<class AConZCharacter*>                      _registeredCharacters;                                    // 0x0408(0x0010) (CPF_ZeroConstructor)
-	unsigned char                                      UnknownData02[0x60];                                      // 0x0418(0x0060) MISSED OFFSET
-	class USicknessClasses*                            _sicknessClasses;                                         // 0x0478(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData03[0x10];                                      // 0x0480(0x0010) MISSED OFFSET
-	TArray<class AConZTeam*>                           _repTeams;                                                // 0x0490(0x0010) (CPF_Net, CPF_ZeroConstructor)
-	TMap<TWeakObjectPtr<class AConZCharacter>, int>    _currentDroneTargetDispatcherMap;                         // 0x04A0(0x0050) (CPF_ZeroConstructor)
-	TMap<TWeakObjectPtr<class AConZCharacter>, int>    _droneTargetDispatcherHistoryMap;                         // 0x04F0(0x0050) (CPF_ZeroConstructor)
-	TMap<TWeakObjectPtr<class AConZCharacter>, class UDroneTargetData*> _droneTargetVisits;                                       // 0x0540(0x0050) (CPF_ZeroConstructor)
-	unsigned char                                      UnknownData04[0x18];                                      // 0x0590(0x0018) MISSED OFFSET
+	unsigned char                                      UnknownData02[0x70];                                      // 0x0418(0x0070) MISSED OFFSET
+	class USicknessClasses*                            _sicknessClasses;                                         // 0x0488(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData03[0x10];                                      // 0x0490(0x0010) MISSED OFFSET
+	TArray<class AConZTeam*>                           _repTeams;                                                // 0x04A0(0x0010) (CPF_Net, CPF_ZeroConstructor)
+	TMap<TWeakObjectPtr<class AConZCharacter>, int>    _currentDroneTargetDispatcherMap;                         // 0x04B0(0x0050) (CPF_ZeroConstructor)
+	TMap<TWeakObjectPtr<class AConZCharacter>, int>    _droneTargetDispatcherHistoryMap;                         // 0x0500(0x0050) (CPF_ZeroConstructor)
+	TMap<TWeakObjectPtr<class AConZCharacter>, class UDroneTargetData*> _droneTargetVisits;                                       // 0x0550(0x0050) (CPF_ZeroConstructor)
+	unsigned char                                      UnknownData04[0x20];                                      // 0x05A0(0x0020) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -9408,7 +9408,7 @@ public:
 
 
 // Class ConZ.Prisoner
-// 0x1520 (0x1D50 - 0x0830)
+// 0x1530 (0x1D60 - 0x0830)
 class APrisoner : public AConZCharacter
 {
 public:
@@ -9420,257 +9420,263 @@ public:
 	class UPhysicalAnimationComponent*                 PhysicalAnimationComponent;                               // 0x0858(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ExportObject, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst, CPF_InstancedReference, CPF_IsPlainOldData)
 	class UInteractionComponent*                       InteractionComponent;                                     // 0x0860(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ExportObject, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst, CPF_InstancedReference, CPF_IsPlainOldData)
 	class UPawnSensingComponent*                       SensingComponent;                                         // 0x0868(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ExportObject, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst, CPF_InstancedReference, CPF_IsPlainOldData)
-	int                                                NumberOfCrouchStages;                                     // 0x0870(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              CrouchStagesInterpSpeed;                                  // 0x0874(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UCurveFloat*                                 CrouchViewsAdditionalGlobalOffsetZVsCrouchStage;          // 0x0878(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	EPrisonerMovementPace                              DefaultPace;                                              // 0x0880(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0881(0x0007) MISSED OFFSET
-	class UPrisonerMovementSettings*                   MovementSettings;                                         // 0x0888(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              Fatness;                                                  // 0x0890(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              Leanness;                                                 // 0x0894(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool                                               IgnoreMovementSettings;                                   // 0x0898(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool                                               OverrideAimOffset;                                        // 0x0899(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData01[0x2];                                       // 0x089A(0x0002) MISSED OFFSET
-	struct FRotator                                    AimOffsetOverride;                                        // 0x089C(0x000C) (CPF_Edit, CPF_BlueprintVisible, CPF_IsPlainOldData)
-	float                                              DefaultViewBlendDuration;                                 // 0x08A8(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData02[0x4];                                       // 0x08AC(0x0004) MISSED OFFSET
-	class AActor*                                      EyesLookAtTargetOverride;                                 // 0x08B0(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              MinEyesRotationYaw;                                       // 0x08B8(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              MaxEyesRotationYaw;                                       // 0x08BC(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              MinEyesRotationPitch;                                     // 0x08C0(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              MaxEyesRotationPitch;                                     // 0x08C4(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UCurveFloat*                                 MinEyesRotationPitchCurve;                                // 0x08C8(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UCurveFloat*                                 MaxEyesRotationPitchCurve;                                // 0x08D0(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              EyesRotationSpeed;                                        // 0x08D8(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool                                               DebugEyesRotation;                                        // 0x08DC(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool                                               OverrideEyesRotation;                                     // 0x08DD(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData03[0x2];                                       // 0x08DE(0x0002) MISSED OFFSET
-	float                                              EyesYawDeltaOverride;                                     // 0x08E0(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              EyesPitchDeltaOverride;                                   // 0x08E4(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UMaterialInstance*                           StandardUndershirtMaterial;                               // 0x08E8(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UMaterialInstance*                           DeluxeUndershirtMaterial;                                 // 0x08F0(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              LandingImpactSpeedVelocityXYWeight;                       // 0x08F8(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              LandingImpactSpeedVelocityZWeight;                        // 0x08FC(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UCurveFloat*                                 LandingStaminaDrainCurve;                                 // 0x0900(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UCurveFloat*                                 LandingImpactSpeedModifierCurveForHitReact;               // 0x0908(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UCurveFloat*                                 LandingImpactSpeedModifierCurveForDamage;                 // 0x0910(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UCurveFloat*                                 LandingDamageCurve;                                       // 0x0918(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class ULandingEffects*                             LandingEffects;                                           // 0x0920(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              LandingImpactSpeedForRagdoll;                             // 0x0928(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              LandingMinRagdollDuration;                                // 0x092C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              LandingMaxRagdollDuration;                                // 0x0930(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              LandingRagdollDurationPerSpeedUnit;                       // 0x0934(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UParticleSystem*                             WaterParticlesWhenIdle;                                   // 0x0938(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UParticleSystem*                             WaterParticlesWhenIdleInOcean;                            // 0x0940(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UParticleSystem*                             WaterParticlesWhenMoving;                                 // 0x0948(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UParticleSystem*                             WaterParticlesWhenMovingInOcean;                          // 0x0950(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UParticleSystem*                             WaterParticlesWhenDiving;                                 // 0x0958(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	struct FName                                       WaterParticlesWhenDivingAttachPointName;                  // 0x0960(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UParticleSystem*                             WaterContactParticles;                                    // 0x0968(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	struct FName                                       WaterContactParticlesAttachPointName;                     // 0x0970(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              MinVelocityZToSpawnWaterContactParticles;                 // 0x0978(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData04[0x4];                                       // 0x097C(0x0004) MISSED OFFSET
-	class UCurveFloat*                                 DrowningAccelerationVsGearWeightLimitDeviation;           // 0x0980(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UAkAudioEvent*                               StartedDivingAudioEvent;                                  // 0x0988(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UAkAudioEvent*                               StoppedDivingAudioEvent;                                  // 0x0990(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              MaxHeadWaterWeight;                                       // 0x0998(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              MaxUpperBodyWaterWeight;                                  // 0x099C(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              MaxLowerBodyWaterWeight;                                  // 0x09A0(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              MaxFeetWaterWeight;                                       // 0x09A4(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              OutwardsWaterPropagationFactor;                           // 0x09A8(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              InwardsWaterPropagationRate;                              // 0x09AC(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              OutwardsWaterPropagationRate;                             // 0x09B0(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData05[0x4];                                       // 0x09B4(0x0004) MISSED OFFSET
-	class UCurveFloat*                                 GettingDryRateVsSpeed;                                    // 0x09B8(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UParticleSystem*                             SmallBleedingEffect;                                      // 0x09C0(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UParticleSystem*                             LargeBleedingEffect;                                      // 0x09C8(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UParticleSystem*                             UrineParticles;                                           // 0x09D0(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	struct FName                                       UrineParticlesAttachPointName;                            // 0x09D8(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	TArray<class UClass*>                              PrisonWalletItems;                                        // 0x09E0(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor)
-	float                                              DetectNearbyFoliageRadius;                                // 0x09F0(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              MinLocationDeltaToUpdateNearbyFoliage;                    // 0x09F4(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              MinSpeedToTriggerMovingThroughFoliageEffects;             // 0x09F8(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              MinAngularSpeedToTriggerMovingThroughFoliageEffects;      // 0x09FC(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UAkAudioEvent*                               OpenInventoryAudioEvent;                                  // 0x0A00(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UAkAudioEvent*                               CloseInventoryAudioEvent;                                 // 0x0A08(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool                                               IsFriendly;                                               // 0x0A10(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData06[0x7];                                       // 0x0A11(0x0007) MISSED OFFSET
-	struct FGameplayTag                                HitReactTypeWhenStanding;                                 // 0x0A18(0x0008) (CPF_Edit, CPF_BlueprintVisible)
-	struct FGameplayTag                                HitReactTypeWhenStandingInCombatMode;                     // 0x0A20(0x0008) (CPF_Edit, CPF_BlueprintVisible)
-	struct FGameplayTag                                HitReactTypeWhenStandingInCombatModeAndHoldingBlock;      // 0x0A28(0x0008) (CPF_Edit, CPF_BlueprintVisible)
-	struct FGameplayTag                                HitReactTypeWhenCrouching;                                // 0x0A30(0x0008) (CPF_Edit, CPF_BlueprintVisible)
-	struct FGameplayTag                                HitReactTypeWhenProne;                                    // 0x0A38(0x0008) (CPF_Edit, CPF_BlueprintVisible)
-	struct FGameplayTag                                MeleeAttackCapsulesAttachmentForItemInLHand;              // 0x0A40(0x0008) (CPF_Edit, CPF_BlueprintVisible)
-	struct FGameplayTag                                MeleeAttackCapsulesAttachmentForItemInRHand;              // 0x0A48(0x0008) (CPF_Edit, CPF_BlueprintVisible)
-	struct FPrisonerMeleeAttackTypes                   MeleeAttackTypes;                                         // 0x0A50(0x0080) (CPF_Edit, CPF_BlueprintVisible)
-	float                                              MeleeTargetMaxDistance;                                   // 0x0AD0(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              MeleeTargetMaxHeightDifference;                           // 0x0AD4(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UCurveFloat*                                 MeleeTargetMaxConeHalfAngleVsDistanceToTarget;            // 0x0AD8(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              TimeSpanAfterWhichMeleeAttacksBecomeInitial;              // 0x0AE0(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool                                               CanEverBeKnockedOutByMeleeAttack;                         // 0x0AE4(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData07[0x3];                                       // 0x0AE5(0x0003) MISSED OFFSET
-	TMap<EDamageMagnitudeType, float>                  MeleeHitRagdollImpulseByDamageMagnitudeType;              // 0x0AE8(0x0050) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor)
-	float                                              DefaultMeleeHitRagdollImpulse;                            // 0x0B38(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              ThrowModeActivationDelay;                                 // 0x0B3C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	struct FName                                       ThrowLaunchLocationSocketName;                            // 0x0B40(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              IslandBoundsCheckInterval;                                // 0x0B48(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool                                               ShouldOverrideCharacterTemplate;                          // 0x0B4C(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData08[0x3];                                       // 0x0B4D(0x0003) MISSED OFFSET
-	struct FCharacterTemplate                          CharacterTemplateOverride;                                // 0x0B50(0x0088) (CPF_Edit)
-	struct FAttachmentSocket                           LeftHandAttachmentSocket;                                 // 0x0BD8(0x0010) (CPF_Edit)
-	struct FAttachmentSocket                           RightHandAttachmentSocket;                                // 0x0BE8(0x0010) (CPF_Edit)
-	struct FAttachmentSocket                           LeftShoulderHolsterSocket;                                // 0x0BF8(0x0010) (CPF_Edit)
-	struct FAttachmentSocket                           RightShoulderHolsterSocket;                               // 0x0C08(0x0010) (CPF_Edit)
-	class UPhysicalSurfacesData*                       PhysicalSurfacesData;                                     // 0x0C18(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	struct FScriptMulticastDelegate                    InteractedWithObject;                                     // 0x0C20(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
-	class URespawnPrices*                              RespawnPrices;                                            // 0x0C30(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool                                               RespawnOnKill;                                            // 0x0C38(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData09[0x3];                                       // 0x0C39(0x0003) MISSED OFFSET
-	float                                              IKOffsetLeftFoot;                                         // 0x0C3C(0x0004) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              IKOffsetRightFoot;                                        // 0x0C40(0x0004) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	EPrisonerBorderCrossingPenalty                     BorderCrossingPenalty;                                    // 0x0C44(0x0001) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData10[0x3];                                       // 0x0C45(0x0003) MISSED OFFSET
-	struct FScriptMulticastDelegate                    BorderCrossingPenaltyChange;                              // 0x0C48(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
-	unsigned char                                      UnknownData11[0xF8];                                      // 0x0C58(0x00F8) MISSED OFFSET
-	TArray<class USkeletalMesh*>                       _headMeshes;                                              // 0x0D50(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor)
-	TArray<class UMaterialInstance*>                   _skinMaterials;                                           // 0x0D60(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor)
-	TArray<struct FLinearColor>                        _skinColors;                                              // 0x0D70(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor)
-	TArray<struct FLinearColor>                        _skinColorsAA;                                            // 0x0D80(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor)
-	TArray<class UTexture2D*>                          _headTattoos;                                             // 0x0D90(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor)
-	TArray<class UTexture2D*>                          _bodyTattoos;                                             // 0x0DA0(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor)
-	int                                                DeluxeTattooCount;                                        // 0x0DB0(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool                                               _isFaded;                                                 // 0x0DB4(0x0001) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData12[0x3];                                       // 0x0DB5(0x0003) MISSED OFFSET
-	TMap<EPrisonerBorderCrossingPenalty, float>        _leavingTheIslandPenaltyTimes;                            // 0x0DB8(0x0050) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor)
-	unsigned char                                      UnknownData13[0x8];                                       // 0x0E08(0x0008) MISSED OFFSET
-	class UMaterialInstance*                           _itemPlacingMaterialAllowed;                              // 0x0E10(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UMaterialInstance*                           _itemPlacingMaterialDisallowed;                           // 0x0E18(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UCurveFloat*                                 _fadeCurve;                                               // 0x0E20(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              _ikInterpSpeed;                                           // 0x0E28(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData14[0x4];                                       // 0x0E2C(0x0004) MISSED OFFSET
-	class UMaterialParameterCollection*                _commonParameterCollection;                               // 0x0E30(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData15[0x8];                                       // 0x0E38(0x0008) MISSED OFFSET
-	class UDbUserProfile*                              _userProfile;                                             // 0x0E40(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	struct FString                                     _userId;                                                  // 0x0E48(0x0010) (CPF_Net, CPF_ZeroConstructor)
-	struct FString                                     _userProfileName;                                         // 0x0E58(0x0010) (CPF_Net, CPF_ZeroConstructor)
-	unsigned char                                      UnknownData16[0xC8];                                      // 0x0E68(0x00C8) MISSED OFFSET
-	class UParticleSystemComponent*                    _waterParticlesComponentWhenIdle;                         // 0x0F30(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
-	class UParticleSystemComponent*                    _waterParticlesComponentWhenMoving;                       // 0x0F38(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
-	class UParticleSystemComponent*                    _waterParticlesComponentWhenDiving;                       // 0x0F40(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData17[0x14];                                      // 0x0F48(0x0014) MISSED OFFSET
-	float                                              _targetCrouchStage;                                       // 0x0F5C(0x0004) (CPF_Net, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	EPrisonerMovementPace                              _desiredPace;                                             // 0x0F60(0x0001) (CPF_Net, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool                                               _freeLookEnabled;                                         // 0x0F61(0x0001) (CPF_Net, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData18[0x26];                                      // 0x0F62(0x0026) MISSED OFFSET
-	bool                                               _postFreeLookControllerRotationBlendActive;               // 0x0F88(0x0001) (CPF_Net, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData19[0x3];                                       // 0x0F89(0x0003) MISSED OFFSET
-	struct FRotator                                    _aimOffset;                                               // 0x0F8C(0x000C) (CPF_Net, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData20[0x44];                                      // 0x0F98(0x0044) MISSED OFFSET
-	struct FVector                                     _lastSafeLocation;                                        // 0x0FDC(0x000C) (CPF_Net, CPF_IsPlainOldData)
-	class APrisonerCorpse*                             _lastCorpse;                                              // 0x0FE8(0x0008) (CPF_Net, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData21[0xC];                                       // 0x0FF0(0x000C) MISSED OFFSET
-	float                                              _targetLeanAmount;                                        // 0x0FFC(0x0004) (CPF_Net, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData22[0x710];                                     // 0x1000(0x0710) MISSED OFFSET
-	EPrisonerMeleeTargetSelectionMode                  _meleeTargetSelectionMode;                                // 0x1710(0x0001) (CPF_Net, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData23[0x7];                                       // 0x1711(0x0007) MISSED OFFSET
-	class AActor*                                      _meleeTarget;                                             // 0x1718(0x0008) (CPF_Net, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData24[0x8];                                       // 0x1720(0x0008) MISSED OFFSET
-	class UMeleeSkill*                                 _activeMeleeSkill;                                        // 0x1728(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData25[0x10];                                      // 0x1730(0x0010) MISSED OFFSET
-	class UUnarmedCombatInputRedirector*               _unarmedCombatInputRedirector;                            // 0x1740(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class USkillEventHandler*                          _skillEventHandler;                                       // 0x1748(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData26[0x20];                                      // 0x1750(0x0020) MISSED OFFSET
-	struct FName                                       _weaponSocketName;                                        // 0x1770(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	struct FName                                       _weaponHolsterSocketName;                                 // 0x1778(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class AWeapon*                                     _weapon;                                                  // 0x1780(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
-	class AItem*                                       _itemInHands;                                             // 0x1788(0x0008) (CPF_Net, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData27[0x1B];                                      // 0x1790(0x001B) MISSED OFFSET
-	EWeaponAimingType                                  _weaponAimingType;                                        // 0x17AB(0x0001) (CPF_Net, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData28[0x4];                                       // 0x17AC(0x0004) MISSED OFFSET
-	class UAnimMontage*                                _swapWeapons;                                             // 0x17B0(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UAnimMontage*                                _swapItemsNotWeaponToNotWeapon;                           // 0x17B8(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UAnimMontage*                                _swapItemsWeaponToWeapon;                                 // 0x17C0(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UAnimMontage*                                _swapItemsNotWeaponToWeapon;                              // 0x17C8(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UAnimMontage*                                _swapItemsWeaponToNotWeapon;                              // 0x17D0(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UAnimMontage*                                _equipRifleStanding;                                      // 0x17D8(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UAnimMontage*                                _unequipRifleStanding;                                    // 0x17E0(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UAnimMontage*                                _equipHandgunStanding;                                    // 0x17E8(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UAnimMontage*                                _unequipHadgunStanding;                                   // 0x17F0(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UAnimMontage*                                _urinateMontage;                                          // 0x17F8(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UAnimMontage*                                _urinateForcedMontage;                                    // 0x1800(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UAnimMontage*                                _defecateMontage;                                         // 0x1808(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UAnimMontage*                                _defecateForcedMontage;                                   // 0x1810(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UAnimMontage*                                _vomitMontage;                                            // 0x1818(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UAnimMontage*                                _vomitForcedMontage;                                      // 0x1820(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UAnimMontage*                                _searchObject;                                            // 0x1828(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UAnimMontage*                                _searchObjectWhileItemInHands;                            // 0x1830(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UAnimMontage*                                _searchObjectWhileWeaponInHands;                          // 0x1838(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UAnimMontage*                                _searchPrisoner;                                          // 0x1840(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UAnimMontage*                                _patchWoundsStanding;                                     // 0x1848(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UAnimMontage*                                _patchWoundsCrouching;                                    // 0x1850(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UAnimMontage*                                _patchWoundsProne;                                        // 0x1858(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UAnimMontage*                                _patchWoundsStandingEnd;                                  // 0x1860(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UAnimMontage*                                _patchWoundsCrouchingEnd;                                 // 0x1868(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UAnimMontage*                                _patchWoundsProneEnd;                                     // 0x1870(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UAnimMontage*                                _eatStanding;                                             // 0x1878(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UAnimMontage*                                _eatCrouching;                                            // 0x1880(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UAnimMontage*                                _drinkFromBottleStanding;                                 // 0x1888(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UAnimMontage*                                _drinkFromBottleCrouching;                                // 0x1890(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UAnimMontage*                                _drinkInteraction;                                        // 0x1898(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UAnimMontage*                                _throwMontage;                                            // 0x18A0(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UAnimMontage*                                _chopTreeStanding;                                        // 0x18A8(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UAnimMontage*                                _chopTreeStandingEnd;                                     // 0x18B0(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UAnimMontage*                                _chopLogStanding;                                         // 0x18B8(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UAnimMontage*                                _chopLogStandingEnd;                                      // 0x18C0(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UAnimMontage*                                _craftStanding;                                           // 0x18C8(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UAnimMontage*                                _craftCrouching;                                          // 0x18D0(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UAnimMontage*                                _craftProne;                                              // 0x18D8(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UAnimMontage*                                _uncraftStanding;                                         // 0x18E0(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UAnimMontage*                                _uncraftCrouching;                                        // 0x18E8(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UAnimMontage*                                _uncraftProne;                                            // 0x18F0(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData29[0xAC];                                      // 0x18F8(0x00AC) MISSED OFFSET
-	float                                              _respawnTime;                                             // 0x19A4(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData30[0x20];                                      // 0x19A8(0x0020) MISSED OFFSET
-	int                                                _headIndex;                                               // 0x19C8(0x0004) (CPF_Net, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	int                                                _skinColorIndex;                                          // 0x19CC(0x0004) (CPF_Net, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	int                                                _headTattooIndex;                                         // 0x19D0(0x0004) (CPF_Net, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	int                                                _bodyTattooIndex;                                         // 0x19D4(0x0004) (CPF_Net, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData31[0x20];                                      // 0x19D8(0x0020) MISSED OFFSET
-	bool                                               _isInCombatMode;                                          // 0x19F8(0x0001) (CPF_Net, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	EThrowingMode                                      _throwingMode;                                            // 0x19F9(0x0001) (CPF_Net, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData32[0x5E];                                      // 0x19FA(0x005E) MISSED OFFSET
-	class AItem*                                       _leftShoulderHolsteredItemReplicated;                     // 0x1A58(0x0008) (CPF_Net, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData33[0x8];                                       // 0x1A60(0x0008) MISSED OFFSET
-	class AItem*                                       _rightShoulderHolsteredItemReplicated;                    // 0x1A68(0x0008) (CPF_Net, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData34[0x48];                                      // 0x1A70(0x0048) MISSED OFFSET
-	TArray<class UCircularMenuSegmentInfo*>            _selfInteractionSegmentInfo;                              // 0x1AB8(0x0010) (CPF_Edit, CPF_ZeroConstructor)
-	unsigned char                                      UnknownData35[0x8];                                       // 0x1AC8(0x0008) MISSED OFFSET
-	struct FTimerHandle                                _interactDefaultContextMenuTimerHandle;                   // 0x1AD0(0x0008)
-	TArray<class APrisoner*>                           _examinedBy;                                              // 0x1AD8(0x0010) (CPF_Net, CPF_ZeroConstructor)
-	class UMaterialInstanceDynamic*                    _tacticsBlobMaterial;                                     // 0x1AE8(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	TArray<class UParticleSystemComponent*>            _bodyPartEffects;                                         // 0x1AF0(0x0010) (CPF_ExportObject, CPF_ZeroConstructor)
-	unsigned char                                      UnknownData36[0xC];                                       // 0x1B00(0x000C) MISSED OFFSET
-	TWeakObjectPtr<class AItemDropPlaceholder>         _itemDropPlaceholder;                                     // 0x1B0C(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	TWeakObjectPtr<class AItem>                        _currentlyDroppingItem;                                   // 0x1B14(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData37[0x4];                                       // 0x1B1C(0x0004) MISSED OFFSET
-	TArray<class UCharacterAction*>                    _actionsList;                                             // 0x1B20(0x0010) (CPF_ExportObject, CPF_ZeroConstructor)
-	unsigned char                                      UnknownData38[0x30];                                      // 0x1B30(0x0030) MISSED OFFSET
-	uint32_t                                           _packedWaterWeight;                                       // 0x1B60(0x0004) (CPF_Net, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData39[0x4];                                       // 0x1B64(0x0004) MISSED OFFSET
-	class AActor*                                      _mount;                                                   // 0x1B68(0x0008) (CPF_Net, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class AGameEventBase*                              _gameEvent;                                               // 0x1B70(0x0008) (CPF_Net, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UPrisonerLoadout*                            _gameEventLoadout;                                        // 0x1B78(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData40[0x10];                                      // 0x1B80(0x0010) MISSED OFFSET
-	struct FPrisonerNearbyFoliageInfo                  _nearbyFoliageInfo;                                       // 0x1B90(0x0010)
-	unsigned char                                      UnknownData41[0x160];                                     // 0x1BA0(0x0160) MISSED OFFSET
-	class UWidgetComponent*                            _nameWidgetComponent;                                     // 0x1D00(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
-	int                                                _chipLightColorIndex;                                     // 0x1D08(0x0004) (CPF_Net, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData42[0x4];                                       // 0x1D0C(0x0004) MISSED OFFSET
-	class UBaseItemTag*                                SaveSpawnLocationTag;                                     // 0x1D10(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData43[0x1C];                                      // 0x1D18(0x001C) MISSED OFFSET
-	bool                                               _isDeluxePlayer;                                          // 0x1D34(0x0001) (CPF_Net, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool                                               _isTalking;                                               // 0x1D35(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData44[0x1A];                                      // 0x1D36(0x001A) MISSED OFFSET
+	float                                              MaxActorEyesOffsetWhenLeaning;                            // 0x0870(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	int                                                NumberOfCrouchStages;                                     // 0x0874(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              CrouchStagesInterpSpeed;                                  // 0x0878(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x087C(0x0004) MISSED OFFSET
+	class UCurveFloat*                                 CrouchViewsAdditionalGlobalOffsetZVsCrouchStage;          // 0x0880(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              ProneEyeHeight;                                           // 0x0888(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              ProneEyeForwardOffset;                                    // 0x088C(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	EPrisonerMovementPace                              DefaultPace;                                              // 0x0890(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData01[0x7];                                       // 0x0891(0x0007) MISSED OFFSET
+	class UPrisonerMovementSettings*                   MovementSettings;                                         // 0x0898(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              Fatness;                                                  // 0x08A0(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              Leanness;                                                 // 0x08A4(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               IgnoreMovementSettings;                                   // 0x08A8(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               OverrideAimOffset;                                        // 0x08A9(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData02[0x2];                                       // 0x08AA(0x0002) MISSED OFFSET
+	struct FRotator                                    AimOffsetOverride;                                        // 0x08AC(0x000C) (CPF_Edit, CPF_BlueprintVisible, CPF_IsPlainOldData)
+	float                                              DefaultViewBlendDuration;                                 // 0x08B8(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData03[0x4];                                       // 0x08BC(0x0004) MISSED OFFSET
+	class AActor*                                      EyesLookAtTargetOverride;                                 // 0x08C0(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              MinEyesRotationYaw;                                       // 0x08C8(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              MaxEyesRotationYaw;                                       // 0x08CC(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              MinEyesRotationPitch;                                     // 0x08D0(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              MaxEyesRotationPitch;                                     // 0x08D4(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UCurveFloat*                                 MinEyesRotationPitchCurve;                                // 0x08D8(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UCurveFloat*                                 MaxEyesRotationPitchCurve;                                // 0x08E0(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              EyesRotationSpeed;                                        // 0x08E8(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               DebugEyesRotation;                                        // 0x08EC(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               OverrideEyesRotation;                                     // 0x08ED(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData04[0x2];                                       // 0x08EE(0x0002) MISSED OFFSET
+	float                                              EyesYawDeltaOverride;                                     // 0x08F0(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              EyesPitchDeltaOverride;                                   // 0x08F4(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UMaterialInstance*                           StandardUndershirtMaterial;                               // 0x08F8(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UMaterialInstance*                           DeluxeUndershirtMaterial;                                 // 0x0900(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              LandingImpactSpeedVelocityXYWeight;                       // 0x0908(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              LandingImpactSpeedVelocityZWeight;                        // 0x090C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UCurveFloat*                                 LandingStaminaDrainCurve;                                 // 0x0910(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UCurveFloat*                                 LandingImpactSpeedModifierCurveForHitReact;               // 0x0918(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UCurveFloat*                                 LandingImpactSpeedModifierCurveForDamage;                 // 0x0920(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UCurveFloat*                                 LandingDamageCurve;                                       // 0x0928(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class ULandingEffects*                             LandingEffects;                                           // 0x0930(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              LandingImpactSpeedForRagdoll;                             // 0x0938(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              LandingMinRagdollDuration;                                // 0x093C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              LandingMaxRagdollDuration;                                // 0x0940(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              LandingRagdollDurationPerSpeedUnit;                       // 0x0944(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UParticleSystem*                             WaterParticlesWhenIdle;                                   // 0x0948(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UParticleSystem*                             WaterParticlesWhenIdleInOcean;                            // 0x0950(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UParticleSystem*                             WaterParticlesWhenMoving;                                 // 0x0958(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UParticleSystem*                             WaterParticlesWhenMovingInOcean;                          // 0x0960(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UParticleSystem*                             WaterParticlesWhenDiving;                                 // 0x0968(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FName                                       WaterParticlesWhenDivingAttachPointName;                  // 0x0970(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UParticleSystem*                             WaterContactParticles;                                    // 0x0978(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FName                                       WaterContactParticlesAttachPointName;                     // 0x0980(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              MinVelocityZToSpawnWaterContactParticles;                 // 0x0988(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData05[0x4];                                       // 0x098C(0x0004) MISSED OFFSET
+	class UCurveFloat*                                 DrowningAccelerationVsGearWeightLimitDeviation;           // 0x0990(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UAkAudioEvent*                               StartedDivingAudioEvent;                                  // 0x0998(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UAkAudioEvent*                               StoppedDivingAudioEvent;                                  // 0x09A0(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              MaxHeadWaterWeight;                                       // 0x09A8(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              MaxUpperBodyWaterWeight;                                  // 0x09AC(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              MaxLowerBodyWaterWeight;                                  // 0x09B0(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              MaxFeetWaterWeight;                                       // 0x09B4(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              OutwardsWaterPropagationFactor;                           // 0x09B8(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              InwardsWaterPropagationRate;                              // 0x09BC(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              OutwardsWaterPropagationRate;                             // 0x09C0(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData06[0x4];                                       // 0x09C4(0x0004) MISSED OFFSET
+	class UCurveFloat*                                 GettingDryRateVsSpeed;                                    // 0x09C8(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UParticleSystem*                             SmallBleedingEffect;                                      // 0x09D0(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UParticleSystem*                             LargeBleedingEffect;                                      // 0x09D8(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UParticleSystem*                             UrineParticles;                                           // 0x09E0(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FName                                       UrineParticlesAttachPointName;                            // 0x09E8(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	TArray<class UClass*>                              PrisonWalletItems;                                        // 0x09F0(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor)
+	float                                              DetectNearbyFoliageRadius;                                // 0x0A00(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              MinLocationDeltaToUpdateNearbyFoliage;                    // 0x0A04(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              MinSpeedToTriggerMovingThroughFoliageEffects;             // 0x0A08(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              MinAngularSpeedToTriggerMovingThroughFoliageEffects;      // 0x0A0C(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UAkAudioEvent*                               OpenInventoryAudioEvent;                                  // 0x0A10(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UAkAudioEvent*                               CloseInventoryAudioEvent;                                 // 0x0A18(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               IsFriendly;                                               // 0x0A20(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData07[0x7];                                       // 0x0A21(0x0007) MISSED OFFSET
+	struct FGameplayTag                                HitReactTypeWhenStanding;                                 // 0x0A28(0x0008) (CPF_Edit, CPF_BlueprintVisible)
+	struct FGameplayTag                                HitReactTypeWhenStandingInCombatMode;                     // 0x0A30(0x0008) (CPF_Edit, CPF_BlueprintVisible)
+	struct FGameplayTag                                HitReactTypeWhenStandingInCombatModeAndHoldingBlock;      // 0x0A38(0x0008) (CPF_Edit, CPF_BlueprintVisible)
+	struct FGameplayTag                                HitReactTypeWhenCrouching;                                // 0x0A40(0x0008) (CPF_Edit, CPF_BlueprintVisible)
+	struct FGameplayTag                                HitReactTypeWhenProne;                                    // 0x0A48(0x0008) (CPF_Edit, CPF_BlueprintVisible)
+	struct FGameplayTag                                MeleeAttackCapsulesAttachmentForItemInLHand;              // 0x0A50(0x0008) (CPF_Edit, CPF_BlueprintVisible)
+	struct FGameplayTag                                MeleeAttackCapsulesAttachmentForItemInRHand;              // 0x0A58(0x0008) (CPF_Edit, CPF_BlueprintVisible)
+	struct FPrisonerMeleeAttackTypes                   MeleeAttackTypes;                                         // 0x0A60(0x0080) (CPF_Edit, CPF_BlueprintVisible)
+	float                                              MeleeTargetMaxDistance;                                   // 0x0AE0(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              MeleeTargetMaxHeightDifference;                           // 0x0AE4(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UCurveFloat*                                 MeleeTargetMaxConeHalfAngleVsDistanceToTarget;            // 0x0AE8(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              TimeSpanAfterWhichMeleeAttacksBecomeInitial;              // 0x0AF0(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               CanEverBeKnockedOutByMeleeAttack;                         // 0x0AF4(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData08[0x3];                                       // 0x0AF5(0x0003) MISSED OFFSET
+	TMap<EDamageMagnitudeType, float>                  MeleeHitRagdollImpulseByDamageMagnitudeType;              // 0x0AF8(0x0050) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor)
+	float                                              DefaultMeleeHitRagdollImpulse;                            // 0x0B48(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              ThrowModeActivationDelay;                                 // 0x0B4C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FName                                       ThrowLaunchLocationSocketName;                            // 0x0B50(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              IslandBoundsCheckInterval;                                // 0x0B58(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               ShouldOverrideCharacterTemplate;                          // 0x0B5C(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData09[0x3];                                       // 0x0B5D(0x0003) MISSED OFFSET
+	struct FCharacterTemplate                          CharacterTemplateOverride;                                // 0x0B60(0x0088) (CPF_Edit)
+	struct FAttachmentSocket                           LeftHandAttachmentSocket;                                 // 0x0BE8(0x0010) (CPF_Edit)
+	struct FAttachmentSocket                           RightHandAttachmentSocket;                                // 0x0BF8(0x0010) (CPF_Edit)
+	struct FAttachmentSocket                           LeftShoulderHolsterSocket;                                // 0x0C08(0x0010) (CPF_Edit)
+	struct FAttachmentSocket                           RightShoulderHolsterSocket;                               // 0x0C18(0x0010) (CPF_Edit)
+	class UPhysicalSurfacesData*                       PhysicalSurfacesData;                                     // 0x0C28(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FScriptMulticastDelegate                    InteractedWithObject;                                     // 0x0C30(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
+	class URespawnPrices*                              RespawnPrices;                                            // 0x0C40(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               RespawnOnKill;                                            // 0x0C48(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData10[0x3];                                       // 0x0C49(0x0003) MISSED OFFSET
+	float                                              IKOffsetLeftFoot;                                         // 0x0C4C(0x0004) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              IKOffsetRightFoot;                                        // 0x0C50(0x0004) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	EPrisonerBorderCrossingPenalty                     BorderCrossingPenalty;                                    // 0x0C54(0x0001) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData11[0x3];                                       // 0x0C55(0x0003) MISSED OFFSET
+	struct FScriptMulticastDelegate                    BorderCrossingPenaltyChange;                              // 0x0C58(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
+	unsigned char                                      UnknownData12[0xF8];                                      // 0x0C68(0x00F8) MISSED OFFSET
+	TArray<class USkeletalMesh*>                       _headMeshes;                                              // 0x0D60(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor)
+	TArray<class UMaterialInstance*>                   _skinMaterials;                                           // 0x0D70(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor)
+	TArray<struct FLinearColor>                        _skinColors;                                              // 0x0D80(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor)
+	TArray<struct FLinearColor>                        _skinColorsAA;                                            // 0x0D90(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor)
+	TArray<class UTexture2D*>                          _headTattoos;                                             // 0x0DA0(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor)
+	TArray<class UTexture2D*>                          _bodyTattoos;                                             // 0x0DB0(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor)
+	int                                                DeluxeTattooCount;                                        // 0x0DC0(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               _isFaded;                                                 // 0x0DC4(0x0001) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData13[0x3];                                       // 0x0DC5(0x0003) MISSED OFFSET
+	TMap<EPrisonerBorderCrossingPenalty, float>        _leavingTheIslandPenaltyTimes;                            // 0x0DC8(0x0050) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor)
+	unsigned char                                      UnknownData14[0x8];                                       // 0x0E18(0x0008) MISSED OFFSET
+	class UMaterialInstance*                           _itemPlacingMaterialAllowed;                              // 0x0E20(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UMaterialInstance*                           _itemPlacingMaterialDisallowed;                           // 0x0E28(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UCurveFloat*                                 _fadeCurve;                                               // 0x0E30(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              _ikInterpSpeed;                                           // 0x0E38(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData15[0x4];                                       // 0x0E3C(0x0004) MISSED OFFSET
+	class UMaterialParameterCollection*                _commonParameterCollection;                               // 0x0E40(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData16[0x8];                                       // 0x0E48(0x0008) MISSED OFFSET
+	class UDbUserProfile*                              _userProfile;                                             // 0x0E50(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FString                                     _userId;                                                  // 0x0E58(0x0010) (CPF_Net, CPF_ZeroConstructor)
+	struct FString                                     _userProfileName;                                         // 0x0E68(0x0010) (CPF_Net, CPF_ZeroConstructor)
+	unsigned char                                      UnknownData17[0xC8];                                      // 0x0E78(0x00C8) MISSED OFFSET
+	class UParticleSystemComponent*                    _waterParticlesComponentWhenIdle;                         // 0x0F40(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
+	class UParticleSystemComponent*                    _waterParticlesComponentWhenMoving;                       // 0x0F48(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
+	class UParticleSystemComponent*                    _waterParticlesComponentWhenDiving;                       // 0x0F50(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData18[0x14];                                      // 0x0F58(0x0014) MISSED OFFSET
+	float                                              _targetCrouchStage;                                       // 0x0F6C(0x0004) (CPF_Net, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	EPrisonerMovementPace                              _desiredPace;                                             // 0x0F70(0x0001) (CPF_Net, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               _freeLookEnabled;                                         // 0x0F71(0x0001) (CPF_Net, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData19[0x26];                                      // 0x0F72(0x0026) MISSED OFFSET
+	bool                                               _postFreeLookControllerRotationBlendActive;               // 0x0F98(0x0001) (CPF_Net, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData20[0x3];                                       // 0x0F99(0x0003) MISSED OFFSET
+	struct FRotator                                    _aimOffset;                                               // 0x0F9C(0x000C) (CPF_Net, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData21[0x44];                                      // 0x0FA8(0x0044) MISSED OFFSET
+	struct FVector                                     _lastSafeLocation;                                        // 0x0FEC(0x000C) (CPF_Net, CPF_IsPlainOldData)
+	class APrisonerCorpse*                             _lastCorpse;                                              // 0x0FF8(0x0008) (CPF_Net, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData22[0xC];                                       // 0x1000(0x000C) MISSED OFFSET
+	float                                              _targetLeanAmount;                                        // 0x100C(0x0004) (CPF_Net, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData23[0x710];                                     // 0x1010(0x0710) MISSED OFFSET
+	EPrisonerMeleeTargetSelectionMode                  _meleeTargetSelectionMode;                                // 0x1720(0x0001) (CPF_Net, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData24[0x7];                                       // 0x1721(0x0007) MISSED OFFSET
+	class AActor*                                      _meleeTarget;                                             // 0x1728(0x0008) (CPF_Net, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData25[0x8];                                       // 0x1730(0x0008) MISSED OFFSET
+	class UMeleeSkill*                                 _activeMeleeSkill;                                        // 0x1738(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData26[0x10];                                      // 0x1740(0x0010) MISSED OFFSET
+	class UUnarmedCombatInputRedirector*               _unarmedCombatInputRedirector;                            // 0x1750(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class USkillEventHandler*                          _skillEventHandler;                                       // 0x1758(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData27[0x20];                                      // 0x1760(0x0020) MISSED OFFSET
+	struct FName                                       _weaponSocketName;                                        // 0x1780(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FName                                       _weaponHolsterSocketName;                                 // 0x1788(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class AWeapon*                                     _weapon;                                                  // 0x1790(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
+	class AItem*                                       _itemInHands;                                             // 0x1798(0x0008) (CPF_Net, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData28[0x1B];                                      // 0x17A0(0x001B) MISSED OFFSET
+	EWeaponAimingType                                  _weaponAimingType;                                        // 0x17BB(0x0001) (CPF_Net, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData29[0x4];                                       // 0x17BC(0x0004) MISSED OFFSET
+	class UAnimMontage*                                _swapWeapons;                                             // 0x17C0(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UAnimMontage*                                _swapItemsNotWeaponToNotWeapon;                           // 0x17C8(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UAnimMontage*                                _swapItemsWeaponToWeapon;                                 // 0x17D0(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UAnimMontage*                                _swapItemsNotWeaponToWeapon;                              // 0x17D8(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UAnimMontage*                                _swapItemsWeaponToNotWeapon;                              // 0x17E0(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UAnimMontage*                                _equipRifleStanding;                                      // 0x17E8(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UAnimMontage*                                _unequipRifleStanding;                                    // 0x17F0(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UAnimMontage*                                _equipHandgunStanding;                                    // 0x17F8(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UAnimMontage*                                _unequipHadgunStanding;                                   // 0x1800(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UAnimMontage*                                _urinateMontage;                                          // 0x1808(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UAnimMontage*                                _urinateForcedMontage;                                    // 0x1810(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UAnimMontage*                                _defecateMontage;                                         // 0x1818(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UAnimMontage*                                _defecateForcedMontage;                                   // 0x1820(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UAnimMontage*                                _vomitMontage;                                            // 0x1828(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UAnimMontage*                                _vomitForcedMontage;                                      // 0x1830(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UAnimMontage*                                _searchObject;                                            // 0x1838(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UAnimMontage*                                _searchObjectWhileItemInHands;                            // 0x1840(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UAnimMontage*                                _searchObjectWhileWeaponInHands;                          // 0x1848(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UAnimMontage*                                _searchPrisoner;                                          // 0x1850(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UAnimMontage*                                _patchWoundsStanding;                                     // 0x1858(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UAnimMontage*                                _patchWoundsCrouching;                                    // 0x1860(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UAnimMontage*                                _patchWoundsProne;                                        // 0x1868(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UAnimMontage*                                _patchWoundsStandingEnd;                                  // 0x1870(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UAnimMontage*                                _patchWoundsCrouchingEnd;                                 // 0x1878(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UAnimMontage*                                _patchWoundsProneEnd;                                     // 0x1880(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UAnimMontage*                                _eatStanding;                                             // 0x1888(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UAnimMontage*                                _eatCrouching;                                            // 0x1890(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UAnimMontage*                                _drinkFromBottleStanding;                                 // 0x1898(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UAnimMontage*                                _drinkFromBottleCrouching;                                // 0x18A0(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UAnimMontage*                                _drinkInteraction;                                        // 0x18A8(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UAnimMontage*                                _throwMontage;                                            // 0x18B0(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UAnimMontage*                                _chopTreeStanding;                                        // 0x18B8(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UAnimMontage*                                _chopTreeStandingEnd;                                     // 0x18C0(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UAnimMontage*                                _chopLogStanding;                                         // 0x18C8(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UAnimMontage*                                _chopLogStandingEnd;                                      // 0x18D0(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UAnimMontage*                                _craftStanding;                                           // 0x18D8(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UAnimMontage*                                _craftCrouching;                                          // 0x18E0(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UAnimMontage*                                _craftProne;                                              // 0x18E8(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UAnimMontage*                                _uncraftStanding;                                         // 0x18F0(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UAnimMontage*                                _uncraftCrouching;                                        // 0x18F8(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UAnimMontage*                                _uncraftProne;                                            // 0x1900(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData30[0xAC];                                      // 0x1908(0x00AC) MISSED OFFSET
+	float                                              _respawnTime;                                             // 0x19B4(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData31[0x20];                                      // 0x19B8(0x0020) MISSED OFFSET
+	int                                                _headIndex;                                               // 0x19D8(0x0004) (CPF_Net, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	int                                                _skinColorIndex;                                          // 0x19DC(0x0004) (CPF_Net, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	int                                                _headTattooIndex;                                         // 0x19E0(0x0004) (CPF_Net, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	int                                                _bodyTattooIndex;                                         // 0x19E4(0x0004) (CPF_Net, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData32[0x20];                                      // 0x19E8(0x0020) MISSED OFFSET
+	bool                                               _isInCombatMode;                                          // 0x1A08(0x0001) (CPF_Net, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	EThrowingMode                                      _throwingMode;                                            // 0x1A09(0x0001) (CPF_Net, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData33[0x5E];                                      // 0x1A0A(0x005E) MISSED OFFSET
+	class AItem*                                       _leftShoulderHolsteredItemReplicated;                     // 0x1A68(0x0008) (CPF_Net, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData34[0x8];                                       // 0x1A70(0x0008) MISSED OFFSET
+	class AItem*                                       _rightShoulderHolsteredItemReplicated;                    // 0x1A78(0x0008) (CPF_Net, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData35[0x48];                                      // 0x1A80(0x0048) MISSED OFFSET
+	TArray<class UCircularMenuSegmentInfo*>            _selfInteractionSegmentInfo;                              // 0x1AC8(0x0010) (CPF_Edit, CPF_ZeroConstructor)
+	unsigned char                                      UnknownData36[0x8];                                       // 0x1AD8(0x0008) MISSED OFFSET
+	struct FTimerHandle                                _interactDefaultContextMenuTimerHandle;                   // 0x1AE0(0x0008)
+	TArray<class APrisoner*>                           _examinedBy;                                              // 0x1AE8(0x0010) (CPF_Net, CPF_ZeroConstructor)
+	class UMaterialInstanceDynamic*                    _tacticsBlobMaterial;                                     // 0x1AF8(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	TArray<class UParticleSystemComponent*>            _bodyPartEffects;                                         // 0x1B00(0x0010) (CPF_ExportObject, CPF_ZeroConstructor)
+	unsigned char                                      UnknownData37[0xC];                                       // 0x1B10(0x000C) MISSED OFFSET
+	TWeakObjectPtr<class AItemDropPlaceholder>         _itemDropPlaceholder;                                     // 0x1B1C(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	TWeakObjectPtr<class AItem>                        _currentlyDroppingItem;                                   // 0x1B24(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData38[0x4];                                       // 0x1B2C(0x0004) MISSED OFFSET
+	TArray<class UCharacterAction*>                    _actionsList;                                             // 0x1B30(0x0010) (CPF_ExportObject, CPF_ZeroConstructor)
+	unsigned char                                      UnknownData39[0x30];                                      // 0x1B40(0x0030) MISSED OFFSET
+	uint32_t                                           _packedWaterWeight;                                       // 0x1B70(0x0004) (CPF_Net, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData40[0x4];                                       // 0x1B74(0x0004) MISSED OFFSET
+	class AActor*                                      _mount;                                                   // 0x1B78(0x0008) (CPF_Net, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class AGameEventBase*                              _gameEvent;                                               // 0x1B80(0x0008) (CPF_Net, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UPrisonerLoadout*                            _gameEventLoadout;                                        // 0x1B88(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData41[0x10];                                      // 0x1B90(0x0010) MISSED OFFSET
+	struct FPrisonerNearbyFoliageInfo                  _nearbyFoliageInfo;                                       // 0x1BA0(0x0010)
+	unsigned char                                      UnknownData42[0x160];                                     // 0x1BB0(0x0160) MISSED OFFSET
+	class UWidgetComponent*                            _nameWidgetComponent;                                     // 0x1D10(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
+	int                                                _chipLightColorIndex;                                     // 0x1D18(0x0004) (CPF_Net, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData43[0x4];                                       // 0x1D1C(0x0004) MISSED OFFSET
+	class UBaseItemTag*                                SaveSpawnLocationTag;                                     // 0x1D20(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData44[0x1C];                                      // 0x1D28(0x001C) MISSED OFFSET
+	bool                                               _isDeluxePlayer;                                          // 0x1D44(0x0001) (CPF_Net, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               _isTalking;                                               // 0x1D45(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData45[0x2];                                       // 0x1D46(0x0002) MISSED OFFSET
+	float                                              _dedicatedServerHandleFootstepInterval;                   // 0x1D48(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData46[0x14];                                      // 0x1D4C(0x0014) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -9761,6 +9767,8 @@ public:
 	void Server_JumpOffLadder();
 	void Server_JoinAmmo(class AAmmunitionItem* finalItem, class AAmmunitionItem* initiatingItem);
 	void Server_InteractWithLadder(const struct FVector& traceOrigin, const struct FVector& traceDirection);
+	void Server_HandleGearMotion(EMotionIntensity motionIntensity, bool shouldMakeNoise);
+	void Server_HandleFootstep(EMotionIntensity motionIntensity, bool shouldMakeNoise);
 	void Server_CommitSuicide();
 	void Server_ClimbWindow();
 	void Server_Climb();
@@ -11657,7 +11665,7 @@ public:
 class UPrisonerAnimNotify_PlayGearSound : public UAnimNotify
 {
 public:
-	EMotionIntensity                                   MotionIntensity;                                          // 0x0038(0x0001) (CPF_Edit, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	EMotionIntensity                                   motionIntensity;                                          // 0x0038(0x0001) (CPF_Edit, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0039(0x0007) MISSED OFFSET
 
 	static UClass* StaticClass()
@@ -12601,11 +12609,11 @@ public:
 	}
 
 
-	bool UpdateMovingThroughFoliageSounds(int playingId, EMotionIntensity MotionIntensity);
+	bool UpdateMovingThroughFoliageSounds(int playingId, EMotionIntensity motionIntensity);
 	bool StopMovingThroughFoliageSounds(int playingId);
 	void StopAllMovingThroughFoliageSounds();
-	int PlayMovingThroughFoliageSounds(class UAkAudioEvent* StartAudioEvent, class UAkAudioEvent* StopAudioEvent, EMotionIntensity MotionIntensity);
-	void PlayGearSounds(EMotionIntensity MotionIntensity);
+	int PlayMovingThroughFoliageSounds(class UAkAudioEvent* StartAudioEvent, class UAkAudioEvent* StopAudioEvent, EMotionIntensity motionIntensity);
+	void PlayGearSounds(EMotionIntensity motionIntensity);
 	void PlayFootstepSounds(TEnumAsByte<EPhysicalSurface> inPhysicalSurface);
 	void OnOutOfBoundsSoundPercentChanged(class USoundWave* PlayingSoundWave, float PlaybackPercent);
 	void OnBorderCrossingStateChanged(class APrisoner* Prisoner, EPrisonerBorderCrossingPenalty penalty);

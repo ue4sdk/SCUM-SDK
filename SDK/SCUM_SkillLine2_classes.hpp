@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.17.8320) SDK
+// SCUM (0.1.17) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -46,7 +46,7 @@ public:
 	void UpdateSkill2(ESkillLevel skillLevel, float skillPoints, const struct FString& skillCaption, const struct FText& maxValueText);
 	void SetMaxSkillValueText(const struct FText& maxValueText);
 	void SkilLevelToMaxSkillValueText(ESkillLevel Selection, struct FText* MaxValue);
-	void SetSkillValueText(const struct FText& valueText);
+	void SetSkillValueText(const struct FText& ValueText);
 	void UpdateSkill(ESkillLevel skillLevel, float skillPoints, const struct FString& skillCaption);
 	void SetAlarmColor(const struct FLinearColor& Color);
 	void GetValueTextBlock(class UTextBlock** textBox);

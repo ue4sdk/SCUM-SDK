@@ -1,4 +1,4 @@
-// SCUM (0.1.17.8320) SDK
+// SCUM (0.1.17) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -89,18 +89,18 @@ void USkillLine2_C::SkilLevelToMaxSkillValueText(ESkillLevel Selection, struct F
 // Function SkillLine2.SkillLine2_C.SetSkillValueText
 // (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 // Parameters:
-// struct FText                   valueText                      (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm)
+// struct FText                   ValueText                      (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm)
 
-void USkillLine2_C::SetSkillValueText(const struct FText& valueText)
+void USkillLine2_C::SetSkillValueText(const struct FText& ValueText)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SkillLine2.SkillLine2_C.SetSkillValueText");
 
 	struct
 	{
-		struct FText                   valueText;
+		struct FText                   ValueText;
 	} params;
 
-	params.valueText = valueText;
+	params.ValueText = ValueText;
 
 	UObject::ProcessEvent(fn, &params);
 }

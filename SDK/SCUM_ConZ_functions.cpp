@@ -1,4 +1,4 @@
-// SCUM (0.1.17.8320) SDK
+// SCUM (0.1.17) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -24155,6 +24155,52 @@ void APrisoner::Server_InteractWithLadder(const struct FVector& traceOrigin, con
 }
 
 
+// Function ConZ.Prisoner.Server_HandleGearMotion
+// (FUNC_Net, FUNC_Native, FUNC_Event, FUNC_Public, FUNC_NetServer, FUNC_NetValidate)
+// Parameters:
+// EMotionIntensity               motionIntensity                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// bool                           shouldMakeNoise                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void APrisoner::Server_HandleGearMotion(EMotionIntensity motionIntensity, bool shouldMakeNoise)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Prisoner.Server_HandleGearMotion");
+
+	struct
+	{
+		EMotionIntensity               motionIntensity;
+		bool                           shouldMakeNoise;
+	} params;
+
+	params.motionIntensity = motionIntensity;
+	params.shouldMakeNoise = shouldMakeNoise;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function ConZ.Prisoner.Server_HandleFootstep
+// (FUNC_Net, FUNC_Native, FUNC_Event, FUNC_Public, FUNC_NetServer, FUNC_NetValidate)
+// Parameters:
+// EMotionIntensity               motionIntensity                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// bool                           shouldMakeNoise                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void APrisoner::Server_HandleFootstep(EMotionIntensity motionIntensity, bool shouldMakeNoise)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Prisoner.Server_HandleFootstep");
+
+	struct
+	{
+		EMotionIntensity               motionIntensity;
+		bool                           shouldMakeNoise;
+	} params;
+
+	params.motionIntensity = motionIntensity;
+	params.shouldMakeNoise = shouldMakeNoise;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function ConZ.Prisoner.Server_CommitSuicide
 // (FUNC_Net, FUNC_NetReliable, FUNC_Native, FUNC_Event, FUNC_Public, FUNC_NetServer, FUNC_NetValidate)
 
@@ -37270,22 +37316,22 @@ void UPrisonerSkillComponent::ArtificalPerspirationOnClients(class APrisoner* Pa
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 // Parameters:
 // int                            playingId                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// EMotionIntensity               MotionIntensity                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// EMotionIntensity               motionIntensity                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-bool UPrisonerSoundComponent::UpdateMovingThroughFoliageSounds(int playingId, EMotionIntensity MotionIntensity)
+bool UPrisonerSoundComponent::UpdateMovingThroughFoliageSounds(int playingId, EMotionIntensity motionIntensity)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ConZ.PrisonerSoundComponent.UpdateMovingThroughFoliageSounds");
 
 	struct
 	{
 		int                            playingId;
-		EMotionIntensity               MotionIntensity;
+		EMotionIntensity               motionIntensity;
 		bool                           ReturnValue;
 	} params;
 
 	params.playingId = playingId;
-	params.MotionIntensity = MotionIntensity;
+	params.motionIntensity = motionIntensity;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -37338,10 +37384,10 @@ void UPrisonerSoundComponent::StopAllMovingThroughFoliageSounds()
 // Parameters:
 // class UAkAudioEvent*           StartAudioEvent                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class UAkAudioEvent*           StopAudioEvent                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// EMotionIntensity               MotionIntensity                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// EMotionIntensity               motionIntensity                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // int                            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-int UPrisonerSoundComponent::PlayMovingThroughFoliageSounds(class UAkAudioEvent* StartAudioEvent, class UAkAudioEvent* StopAudioEvent, EMotionIntensity MotionIntensity)
+int UPrisonerSoundComponent::PlayMovingThroughFoliageSounds(class UAkAudioEvent* StartAudioEvent, class UAkAudioEvent* StopAudioEvent, EMotionIntensity motionIntensity)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ConZ.PrisonerSoundComponent.PlayMovingThroughFoliageSounds");
 
@@ -37349,13 +37395,13 @@ int UPrisonerSoundComponent::PlayMovingThroughFoliageSounds(class UAkAudioEvent*
 	{
 		class UAkAudioEvent*           StartAudioEvent;
 		class UAkAudioEvent*           StopAudioEvent;
-		EMotionIntensity               MotionIntensity;
+		EMotionIntensity               motionIntensity;
 		int                            ReturnValue;
 	} params;
 
 	params.StartAudioEvent = StartAudioEvent;
 	params.StopAudioEvent = StopAudioEvent;
-	params.MotionIntensity = MotionIntensity;
+	params.motionIntensity = motionIntensity;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -37366,18 +37412,18 @@ int UPrisonerSoundComponent::PlayMovingThroughFoliageSounds(class UAkAudioEvent*
 // Function ConZ.PrisonerSoundComponent.PlayGearSounds
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 // Parameters:
-// EMotionIntensity               MotionIntensity                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// EMotionIntensity               motionIntensity                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UPrisonerSoundComponent::PlayGearSounds(EMotionIntensity MotionIntensity)
+void UPrisonerSoundComponent::PlayGearSounds(EMotionIntensity motionIntensity)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ConZ.PrisonerSoundComponent.PlayGearSounds");
 
 	struct
 	{
-		EMotionIntensity               MotionIntensity;
+		EMotionIntensity               motionIntensity;
 	} params;
 
-	params.MotionIntensity = MotionIntensity;
+	params.motionIntensity = motionIntensity;
 
 	UObject::ProcessEvent(fn, &params);
 }
