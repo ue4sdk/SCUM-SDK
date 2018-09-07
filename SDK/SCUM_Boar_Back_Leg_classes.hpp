@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Boar_Back_Leg.Boar_Back_Leg_C
-// 0x0000 (0x07A0 - 0x07A0)
+// 0x0000 (0x07B0 - 0x07B0)
 class ABoar_Back_Leg_C : public AEquipmentItem
 {
 public:

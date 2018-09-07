@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Rubber_sheet.Rubber_sheet_C
-// 0x0000 (0x07A0 - 0x07A0)
+// 0x0000 (0x07B0 - 0x07B0)
 class ARubber_sheet_C : public AEquipmentItem
 {
 public:

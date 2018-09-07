@@ -64,20 +64,20 @@ struct FEventReply UUI_ItemClass_C::OnMouseButtonDoubleClick(const struct FGeome
 // Function UI_ItemClass.UI_ItemClass_C.Init
 // (FUNC_Event, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 // Parameters:
-// class UClass*                  itemClass                      (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// class UClass*                  ItemClass                      (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class UTexture2D*              Texture                        (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UUI_ItemClass_C::Init(class UClass* itemClass, class UTexture2D* Texture)
+void UUI_ItemClass_C::Init(class UClass* ItemClass, class UTexture2D* Texture)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_ItemClass.UI_ItemClass_C.Init");
 
 	struct
 	{
-		class UClass*                  itemClass;
+		class UClass*                  ItemClass;
 		class UTexture2D*              Texture;
 	} params;
 
-	params.itemClass = itemClass;
+	params.ItemClass = ItemClass;
 	params.Texture = Texture;
 
 	UObject::ProcessEvent(fn, &params);

@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PotassiumIodide_Pils_03.PotassiumIodide_Pils_03_C
-// 0x0000 (0x0790 - 0x0790)
+// 0x0000 (0x07A0 - 0x07A0)
 class APotassiumIodide_Pils_03_C : public AMedicationItem
 {
 public:

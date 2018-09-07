@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Bait_trap_for_small_animals.Bait_trap_for_small_animals_C
-// 0x0000 (0x07A0 - 0x07A0)
+// 0x0000 (0x07B0 - 0x07B0)
 class ABait_trap_for_small_animals_C : public AEquipmentItem
 {
 public:

@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Painkillers_02.Painkillers_02_C
-// 0x0000 (0x0790 - 0x0790)
+// 0x0000 (0x07A0 - 0x07A0)
 class APainkillers_02_C : public AMedicationItem
 {
 public:

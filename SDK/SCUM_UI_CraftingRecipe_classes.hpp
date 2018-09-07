@@ -35,7 +35,7 @@ public:
 
 
 	struct FEventReply OnMouseButtonDown(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
-	void SetTooltipFromClass(class UClass* itemClass);
+	void SetTooltipFromClass(class UClass* ItemClass);
 	void Construct();
 	void SetIsGrayedOut(bool isGrayedOut);
 	void SetAvailabilityState(ERecipeAvailabilityState State);

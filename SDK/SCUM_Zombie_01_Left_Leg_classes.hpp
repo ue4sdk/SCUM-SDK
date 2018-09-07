@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Zombie_01_Left_Leg.Zombie_01_Left_Leg_C
-// 0x0000 (0x07A0 - 0x07A0)
+// 0x0000 (0x07B0 - 0x07B0)
 class AZombie_01_Left_Leg_C : public AEquipmentItem
 {
 public:

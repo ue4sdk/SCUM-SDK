@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass 1911.1911_C
-// 0x0000 (0x07D0 - 0x07D0)
+// 0x0000 (0x07E0 - 0x07E0)
 class A1911_C : public AWeaponItem
 {
 public:

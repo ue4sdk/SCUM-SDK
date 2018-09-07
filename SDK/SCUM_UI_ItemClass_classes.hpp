@@ -33,7 +33,7 @@ public:
 
 	void GetTexture(class UTexture2D** Texture);
 	struct FEventReply OnMouseButtonDoubleClick(const struct FGeometry& InMyGeometry, const struct FPointerEvent& InMouseEvent);
-	void Init(class UClass* itemClass, class UTexture2D* Texture);
+	void Init(class UClass* ItemClass, class UTexture2D* Texture);
 	void OnSynchronizeProperties();
 	void Construct();
 	void ExecuteUbergraph_UI_ItemClass(int EntryPoint);

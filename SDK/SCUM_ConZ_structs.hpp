@@ -1295,6 +1295,19 @@ enum class EDigestionGroup : uint8_t
 };
 
 
+// Enum ConZ.EGameEventNotificationType
+enum class EGameEventNotificationType : uint8_t
+{
+	EGameEventNotificationType__EventStarted = 0,
+	EGameEventNotificationType__EventCanceled = 1,
+	EGameEventNotificationType__EventEnded = 2,
+	EGameEventNotificationType__NotEnoughParticipants = 3,
+	EGameEventNotificationType__ParticipantJoined = 4,
+	EGameEventNotificationType__ParticipantLeft = 5,
+	EGameEventNotificationType__EGameEventNotificationType_MAX = 6
+};
+
+
 // Enum ConZ.EGameEventParticipantState
 enum class EGameEventParticipantState : uint8_t
 {
@@ -2037,6 +2050,17 @@ enum class EWeaponType : uint8_t
 };
 
 
+// Enum ConZ.EDayPeriod
+enum class EDayPeriod : uint8_t
+{
+	EDayPeriod__Nighttime          = 0,
+	EDayPeriod__Dawn               = 1,
+	EDayPeriod__Daytime            = 2,
+	EDayPeriod__Dusk               = 3,
+	EDayPeriod__EDayPeriod_MAX     = 4
+};
+
+
 // Enum ConZ.EWolfAttackState
 enum class EWolfAttackState : uint8_t
 {
@@ -2499,7 +2523,7 @@ struct FChoppingTool2
 {
 	TArray<class UBaseItemTag*>                        ItemTags;                                                 // 0x0000(0x0010) (CPF_Edit, CPF_ZeroConstructor)
 	class UClass*                                      ItemTagClass;                                             // 0x0010(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UClass*                                      itemClass;                                                // 0x0018(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UClass*                                      ItemClass;                                                // 0x0018(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	bool                                               OverrideChoppingTime;                                     // 0x0020(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	unsigned char                                      UnknownData00[0x3];                                       // 0x0021(0x0003) MISSED OFFSET
 	float                                              ChoppingTimeMultiplier;                                   // 0x0024(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -2806,7 +2830,7 @@ struct FCraftingSkillLevelData
 // 0x0010
 struct FCraftingRecipeCraftableItem
 {
-	class UClass*                                      itemClass;                                                // 0x0000(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UClass*                                      ItemClass;                                                // 0x0000(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	bool                                               EnoughSkill;                                              // 0x0008(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0009(0x0007) MISSED OFFSET
 };
@@ -2815,7 +2839,7 @@ struct FCraftingRecipeCraftableItem
 // 0x0010
 struct FCraftingRecipeCraftingItem
 {
-	class UClass*                                      itemClass;                                                // 0x0000(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UClass*                                      ItemClass;                                                // 0x0000(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	int                                                quantity;                                                 // 0x0008(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	bool                                               isOptional;                                               // 0x000C(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	unsigned char                                      UnknownData00[0x3];                                       // 0x000D(0x0003) MISSED OFFSET
@@ -3259,7 +3283,7 @@ struct FServerCraftableItem
 {
 	uint32_t                                           ID;                                                       // 0x0000(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x0004(0x0004) MISSED OFFSET
-	class UClass*                                      itemClass;                                                // 0x0008(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UClass*                                      ItemClass;                                                // 0x0008(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	TArray<struct FServerUsedItem>                     MandatoryItems;                                           // 0x0010(0x0010) (CPF_ZeroConstructor)
 	TArray<struct FServerUsedItem>                     MandatoryParts;                                           // 0x0020(0x0010) (CPF_ZeroConstructor)
 	TArray<struct FServerUsedItem>                     OptionalItems;                                            // 0x0030(0x0010) (CPF_ZeroConstructor)
@@ -3608,19 +3632,21 @@ struct FSicknessRecord
 };
 
 // ScriptStruct ConZ.DigestionItemRecord
-// 0x0030
+// 0x0038
 struct FDigestionItemRecord
 {
 	int                                                ID;                                                       // 0x0000(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x0004(0x0004) MISSED OFFSET
 	struct FString                                     Caption;                                                  // 0x0008(0x0010) (CPF_ZeroConstructor)
-	uint16_t                                           RemainingWeight;                                          // 0x0018(0x0002) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData01[0x2];                                       // 0x001A(0x0002) MISSED OFFSET
-	float                                              Weight;                                                   // 0x001C(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              Volume;                                                   // 0x0020(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              RemainingVolume;                                          // 0x0024(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              Water;                                                    // 0x0028(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData02[0x4];                                       // 0x002C(0x0004) MISSED OFFSET
+	class UClass*                                      ItemClass;                                                // 0x0018(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	uint16_t                                           RemainingWeight;                                          // 0x0020(0x0002) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData01[0x2];                                       // 0x0022(0x0002) MISSED OFFSET
+	float                                              Weight;                                                   // 0x0024(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              Volume;                                                   // 0x0028(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              RemainingVolume;                                          // 0x002C(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              Water;                                                    // 0x0030(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               IsWaterFromWorld;                                         // 0x0034(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData02[0x3];                                       // 0x0035(0x0003) MISSED OFFSET
 };
 
 // ScriptStruct ConZ.HealingItemRecord
@@ -4079,7 +4105,7 @@ struct FRunningSkillParametersPerSkillLevel
 // 0x0018
 struct FSearchPerItemData
 {
-	class UClass*                                      itemClass;                                                // 0x0000(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UClass*                                      ItemClass;                                                // 0x0000(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	float                                              Probability;                                              // 0x0008(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	int                                                MinQuantity;                                              // 0x000C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	int                                                MaxQuantity;                                              // 0x0010(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)

@@ -100,30 +100,30 @@ struct FEventReply UUI_MultipleProgressBar_C::OnMouseMove(const struct FGeometry
 // Function UI_MultipleProgressBar.UI_MultipleProgressBar_C.SetPercentages
 // (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 // Parameters:
-// float                          percentage1                    (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// float                          Percentage1                    (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Percentage2                    (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// float                          percentage3                    (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// float                          percentage4                    (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// float                          percentage5                    (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// float                          Percentage3                    (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// float                          Percentage4                    (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// float                          Percentage5                    (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UUI_MultipleProgressBar_C::SetPercentages(float percentage1, float Percentage2, float percentage3, float percentage4, float percentage5)
+void UUI_MultipleProgressBar_C::SetPercentages(float Percentage1, float Percentage2, float Percentage3, float Percentage4, float Percentage5)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_MultipleProgressBar.UI_MultipleProgressBar_C.SetPercentages");
 
 	struct
 	{
-		float                          percentage1;
+		float                          Percentage1;
 		float                          Percentage2;
-		float                          percentage3;
-		float                          percentage4;
-		float                          percentage5;
+		float                          Percentage3;
+		float                          Percentage4;
+		float                          Percentage5;
 	} params;
 
-	params.percentage1 = percentage1;
+	params.Percentage1 = Percentage1;
 	params.Percentage2 = Percentage2;
-	params.percentage3 = percentage3;
-	params.percentage4 = percentage4;
-	params.percentage5 = percentage5;
+	params.Percentage3 = Percentage3;
+	params.Percentage4 = Percentage4;
+	params.Percentage5 = Percentage5;
 
 	UObject::ProcessEvent(fn, &params);
 }

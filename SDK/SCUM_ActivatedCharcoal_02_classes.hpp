@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass ActivatedCharcoal_02.ActivatedCharcoal_02_C
-// 0x0000 (0x0790 - 0x0790)
+// 0x0000 (0x07A0 - 0x07A0)
 class AActivatedCharcoal_02_C : public AMedicationItem
 {
 public:

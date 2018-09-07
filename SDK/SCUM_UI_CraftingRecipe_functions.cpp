@@ -42,18 +42,18 @@ struct FEventReply UUI_CraftingRecipe_C::OnMouseButtonDown(const struct FGeometr
 // Function UI_CraftingRecipe.UI_CraftingRecipe_C.SetTooltipFromClass
 // (FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
 // Parameters:
-// class UClass*                  itemClass                      (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// class UClass*                  ItemClass                      (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UUI_CraftingRecipe_C::SetTooltipFromClass(class UClass* itemClass)
+void UUI_CraftingRecipe_C::SetTooltipFromClass(class UClass* ItemClass)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CraftingRecipe.UI_CraftingRecipe_C.SetTooltipFromClass");
 
 	struct
 	{
-		class UClass*                  itemClass;
+		class UClass*                  ItemClass;
 	} params;
 
-	params.itemClass = itemClass;
+	params.ItemClass = ItemClass;
 
 	UObject::ProcessEvent(fn, &params);
 }

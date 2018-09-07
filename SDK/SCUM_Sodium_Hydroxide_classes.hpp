@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Sodium_Hydroxide.Sodium_Hydroxide_C
-// 0x0000 (0x07A0 - 0x07A0)
+// 0x0000 (0x07B0 - 0x07B0)
 class ASodium_Hydroxide_C : public AEquipmentItem
 {
 public:

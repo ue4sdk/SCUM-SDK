@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Wolf_Left_Front_Leg.Wolf_Left_Front_Leg_C
-// 0x0000 (0x07A0 - 0x07A0)
+// 0x0000 (0x07B0 - 0x07B0)
 class AWolf_Left_Front_Leg_C : public AEquipmentItem
 {
 public:

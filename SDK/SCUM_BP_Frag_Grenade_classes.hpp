@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Frag_Grenade.BP_Frag_Grenade_C
-// 0x0000 (0x07C0 - 0x07C0)
+// 0x0000 (0x07D0 - 0x07D0)
 class ABP_Frag_Grenade_C : public AFragGrenadeItem
 {
 public:

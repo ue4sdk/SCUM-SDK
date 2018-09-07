@@ -10278,18 +10278,18 @@ void UCraftingPanelWidget::Craft()
 // Function ConZ.CraftingRecipeWidget.SetTooltipFromClass
 // (FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
 // Parameters:
-// class UClass*                  itemClass                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// class UClass*                  ItemClass                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UCraftingRecipeWidget::SetTooltipFromClass(class UClass* itemClass)
+void UCraftingRecipeWidget::SetTooltipFromClass(class UClass* ItemClass)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ConZ.CraftingRecipeWidget.SetTooltipFromClass");
 
 	struct
 	{
-		class UClass*                  itemClass;
+		class UClass*                  ItemClass;
 	} params;
 
-	params.itemClass = itemClass;
+	params.ItemClass = ItemClass;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -10942,21 +10942,24 @@ void AGameEventBase::Multicast_ShowScoreboardForEveryone()
 }
 
 
-// Function ConZ.GameEventBase.Multicast_ShowEventNotificationToParticipants
-// (FUNC_Net, FUNC_NetReliable, FUNC_Native, FUNC_Event, FUNC_NetMulticast, FUNC_Protected, FUNC_BlueprintCallable, FUNC_NetValidate)
+// Function ConZ.GameEventBase.Multicast_ShowEventNotification
+// (FUNC_Net, FUNC_NetReliable, FUNC_Native, FUNC_Event, FUNC_NetMulticast, FUNC_Protected, FUNC_NetValidate)
 // Parameters:
-// struct FString                 Message                        (CPF_Parm, CPF_ZeroConstructor)
+// EGameEventNotificationType     Type                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FString                 auxString                      (CPF_Parm, CPF_ZeroConstructor)
 
-void AGameEventBase::Multicast_ShowEventNotificationToParticipants(const struct FString& Message)
+void AGameEventBase::Multicast_ShowEventNotification(EGameEventNotificationType Type, const struct FString& auxString)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ConZ.GameEventBase.Multicast_ShowEventNotificationToParticipants");
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.GameEventBase.Multicast_ShowEventNotification");
 
 	struct
 	{
-		struct FString                 Message;
+		EGameEventNotificationType     Type;
+		struct FString                 auxString;
 	} params;
 
-	params.Message = Message;
+	params.Type = Type;
+	params.auxString = auxString;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -16514,29 +16517,6 @@ void AGameEventManager::OnRep_AnnouncedGameEvents()
 }
 
 
-// Function ConZ.GameEventManager.Multicast_ShowEventNotificationToAll
-// (FUNC_Net, FUNC_NetReliable, FUNC_Native, FUNC_Event, FUNC_NetMulticast, FUNC_Public, FUNC_NetValidate)
-// Parameters:
-// struct FString                 Message                        (CPF_Parm, CPF_ZeroConstructor)
-// float                          Duration                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-
-void AGameEventManager::Multicast_ShowEventNotificationToAll(const struct FString& Message, float Duration)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function ConZ.GameEventManager.Multicast_ShowEventNotificationToAll");
-
-	struct
-	{
-		struct FString                 Message;
-		float                          Duration;
-	} params;
-
-	params.Message = Message;
-	params.Duration = Duration;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
 // Function ConZ.GameEventManager.IsEventLocationFree
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
@@ -21342,20 +21322,20 @@ void UItemClassWidget::InteractWith(class APrisoner* Prisoner)
 // Function ConZ.ItemClassWidget.Init
 // (FUNC_Event, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 // Parameters:
-// class UClass*                  itemClass                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// class UClass*                  ItemClass                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class UTexture2D*              Texture                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UItemClassWidget::Init(class UClass* itemClass, class UTexture2D* Texture)
+void UItemClassWidget::Init(class UClass* ItemClass, class UTexture2D* Texture)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ConZ.ItemClassWidget.Init");
 
 	struct
 	{
-		class UClass*                  itemClass;
+		class UClass*                  ItemClass;
 		class UTexture2D*              Texture;
 	} params;
 
-	params.itemClass = itemClass;
+	params.ItemClass = ItemClass;
 	params.Texture = Texture;
 
 	UObject::ProcessEvent(fn, &params);
@@ -37961,6 +37941,22 @@ void ASentry::PlayLastWarningSound()
 }
 
 
+// Function ConZ.Sentry.PlayHeardPrisonerSound
+// (FUNC_Net, FUNC_Native, FUNC_Event, FUNC_NetMulticast, FUNC_Public)
+
+void ASentry::PlayHeardPrisonerSound()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Sentry.PlayHeardPrisonerSound");
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function ConZ.Sentry.OnRep_GunsLookAtLocation
 // (FUNC_Final, FUNC_Native, FUNC_Private)
 
@@ -38021,6 +38017,48 @@ bool ASentry::IsAlive()
 	struct
 	{
 		bool                           ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function ConZ.Sentry.GetMuzzleLocation
+// (FUNC_Final, FUNC_Native, FUNC_Private, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm, CPF_IsPlainOldData)
+
+struct FVector ASentry::GetMuzzleLocation()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Sentry.GetMuzzleLocation");
+
+	struct
+	{
+		struct FVector                 ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function ConZ.Sentry.GetMuzzleDirection
+// (FUNC_Final, FUNC_Native, FUNC_Private, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm, CPF_IsPlainOldData)
+
+struct FVector ASentry::GetMuzzleDirection()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Sentry.GetMuzzleDirection");
+
+	struct
+	{
+		struct FVector                 ReturnValue;
 	} params;
 
 
@@ -38895,6 +38933,38 @@ bool UServerBrowser::ConnectToServer(const struct FString& Ip, int ResponsePort,
 	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
+}
+
+
+// Function ConZ.ServerBrowser.CloseSocketAndPingingThreads
+// (FUNC_Final, FUNC_Native, FUNC_Private, FUNC_BlueprintCallable)
+
+void UServerBrowser::CloseSocketAndPingingThreads()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.ServerBrowser.CloseSocketAndPingingThreads");
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function ConZ.ServerBrowser.CloseConnection
+// (FUNC_Final, FUNC_Native, FUNC_Private, FUNC_BlueprintCallable)
+
+void UServerBrowser::CloseConnection()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.ServerBrowser.CloseConnection");
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -40644,6 +40714,27 @@ float AWeatherController::GetRainIntensity()
 	struct
 	{
 		float                          ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function ConZ.WeatherController.GetDayPeriod
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// EDayPeriod                     ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+EDayPeriod AWeatherController::GetDayPeriod()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.WeatherController.GetDayPeriod");
+
+	struct
+	{
+		EDayPeriod                     ReturnValue;
 	} params;
 
 

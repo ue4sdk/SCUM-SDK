@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Adrenaline_Shot.Adrenaline_Shot_C
-// 0x0000 (0x0790 - 0x0790)
+// 0x0000 (0x07A0 - 0x07A0)
 class AAdrenaline_Shot_C : public AMedicationItem
 {
 public:
