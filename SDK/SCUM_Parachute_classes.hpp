@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Parachute.Parachute_C
-// 0x0000 (0x07B0 - 0x07B0)
+// 0x0000 (0x0790 - 0x0790)
 class AParachute_C : public AEquipmentItem
 {
 public:

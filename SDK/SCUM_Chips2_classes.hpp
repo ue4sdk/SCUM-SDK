@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Chips2.Chips2_C
-// 0x0000 (0x0870 - 0x0870)
+// 0x0000 (0x0860 - 0x0860)
 class AChips2_C : public AFoodItem
 {
 public:

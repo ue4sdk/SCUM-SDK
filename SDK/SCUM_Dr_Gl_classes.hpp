@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Dr_Gl.Dr_Gl_C
-// 0x0000 (0x0800 - 0x0800)
+// 0x0000 (0x07F0 - 0x07F0)
 class ADr_Gl_C : public AClothesItem
 {
 public:

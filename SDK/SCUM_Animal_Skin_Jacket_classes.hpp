@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Animal_Skin_Jacket.Animal_Skin_Jacket_C
-// 0x0000 (0x07B0 - 0x07B0)
+// 0x0000 (0x0790 - 0x0790)
 class AAnimal_Skin_Jacket_C : public AEquipmentItem
 {
 public:

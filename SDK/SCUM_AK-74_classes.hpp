@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass AK-74.AK-74_C
-// 0x0000 (0x07E0 - 0x07E0)
+// 0x0000 (0x07C0 - 0x07C0)
 class AAK_74_C : public AWeaponItem
 {
 public:

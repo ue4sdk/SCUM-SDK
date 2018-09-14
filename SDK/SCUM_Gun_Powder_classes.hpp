@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Gun_Powder.Gun_Powder_C
-// 0x0000 (0x07B0 - 0x07B0)
+// 0x0000 (0x0790 - 0x0790)
 class AGun_Powder_C : public AEquipmentItem
 {
 public:

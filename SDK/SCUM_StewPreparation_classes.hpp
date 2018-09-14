@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass StewPreparation.StewPreparation_C
-// 0x0000 (0x0870 - 0x0870)
+// 0x0000 (0x0860 - 0x0860)
 class AStewPreparation_C : public AFoodPreparationItem
 {
 public:

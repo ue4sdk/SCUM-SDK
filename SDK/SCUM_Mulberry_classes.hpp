@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Mulberry.Mulberry_C
-// 0x0000 (0x0870 - 0x0870)
+// 0x0000 (0x0860 - 0x0860)
 class AMulberry_C : public AFoodItem
 {
 public:

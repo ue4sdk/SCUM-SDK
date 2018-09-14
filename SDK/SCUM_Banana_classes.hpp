@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Banana.Banana_C
-// 0x0000 (0x0870 - 0x0870)
+// 0x0000 (0x0860 - 0x0860)
 class ABanana_C : public AFoodItem
 {
 public:

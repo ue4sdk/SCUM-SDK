@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Wooden_Spoon.Wooden_Spoon_C
-// 0x0000 (0x07B0 - 0x07B0)
+// 0x0000 (0x0790 - 0x0790)
 class AWooden_Spoon_C : public AEquipmentItem
 {
 public:

@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Smoke_Grenade.BP_Smoke_Grenade_C
-// 0x0000 (0x07C0 - 0x07C0)
+// 0x0000 (0x07B0 - 0x07B0)
 class ABP_Smoke_Grenade_C : public ASmokeGrenadeItem
 {
 public:

@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Metal_Scrap_04.Metal_Scrap_04_C
-// 0x0000 (0x07B0 - 0x07B0)
+// 0x0000 (0x0790 - 0x0790)
 class AMetal_Scrap_04_C : public AEquipmentItem
 {
 public:

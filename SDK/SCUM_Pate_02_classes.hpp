@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Pate_02.Pate_02_C
-// 0x0000 (0x0880 - 0x0880)
+// 0x0000 (0x0870 - 0x0870)
 class APate_02_C : public ACookedFoodItem
 {
 public:

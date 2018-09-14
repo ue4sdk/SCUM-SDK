@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass MRE_TunaSalad.MRE_TunaSalad_C
-// 0x0000 (0x0870 - 0x0870)
+// 0x0000 (0x0860 - 0x0860)
 class AMRE_TunaSalad_C : public AFoodItem
 {
 public:

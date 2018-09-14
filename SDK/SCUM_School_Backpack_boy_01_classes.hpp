@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass School_Backpack_boy_01.School_Backpack_Boy_01_C
-// 0x0000 (0x0800 - 0x0800)
+// 0x0000 (0x07F0 - 0x07F0)
 class ASchool_Backpack_Boy_01_C : public AClothesItem
 {
 public:

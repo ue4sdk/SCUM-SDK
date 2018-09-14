@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass 1H_Stone_Axe_Head.1H_Stone_Axe_Head_C
-// 0x0000 (0x07B0 - 0x07B0)
+// 0x0000 (0x0790 - 0x0790)
 class A1H_Stone_Axe_Head_C : public AEquipmentItem
 {
 public:

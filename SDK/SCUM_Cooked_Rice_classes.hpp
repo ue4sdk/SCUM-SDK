@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Cooked_Rice.Cooked_Rice_C
-// 0x0000 (0x0880 - 0x0880)
+// 0x0000 (0x0870 - 0x0870)
 class ACooked_Rice_C : public ACookedFoodItem
 {
 public:

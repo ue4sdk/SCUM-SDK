@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Trip_wire_dead_fall_for_large_animals.Trip_wire_dead_fall_for_large_animals_C
-// 0x0000 (0x07B0 - 0x07B0)
+// 0x0000 (0x0790 - 0x0790)
 class ATrip_wire_dead_fall_for_large_animals_C : public AEquipmentItem
 {
 public:

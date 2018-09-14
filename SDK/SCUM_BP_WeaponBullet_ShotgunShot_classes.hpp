@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_WeaponBullet_ShotgunShot.BP_WeaponBullet_ShotgunShot_C
-// 0x0000 (0x04C0 - 0x04C0)
+// 0x0000 (0x04C8 - 0x04C8)
 class ABP_WeaponBullet_ShotgunShot_C : public AProjectile
 {
 public:

@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_WeaponBullet_545x39FMJ1.BP_WeaponBullet_545x39FMJ1_C
-// 0x0000 (0x04C0 - 0x04C0)
+// 0x0000 (0x04C8 - 0x04C8)
 class ABP_WeaponBullet_545x39FMJ1_C : public AProjectile
 {
 public:

@@ -1170,6 +1170,17 @@ enum class EAnimalMode : uint8_t
 };
 
 
+// Enum ConZ.EConfigFile
+enum class EConfigFile : uint8_t
+{
+	EConfigFile__None              = 0,
+	EConfigFile__Engine            = 1,
+	EConfigFile__GameUserSettings  = 2,
+	EConfigFile__ServerSettings    = 3,
+	EConfigFile__EConfigFile_MAX   = 4
+};
+
+
 // Enum ConZ.ECraftingItemCategory
 enum class ECraftingItemCategory : uint8_t
 {
@@ -3536,12 +3547,14 @@ struct FCharacterActionAck
 };
 
 // ScriptStruct ConZ.ProjectilePointDamageEvent
-// 0x0020 (0x00C8 - 0x00A8)
+// 0x0038 (0x00E0 - 0x00A8)
 struct FProjectilePointDamageEvent : public FPointDamageEvent
 {
 	bool                                               IsHeadUpperShot;                                          // 0x00A8(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	unsigned char                                      UnknownData00[0x3];                                       // 0x00A9(0x0003) MISSED OFFSET
 	float                                              EnergyLossPerClothesLayer[0x7];                           // 0x00AC(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FVector_NetQuantize100                      KillerLocation;                                           // 0x00C8(0x000C)
+	struct FVector_NetQuantize100                      VictimLocation;                                           // 0x00D4(0x000C)
 };
 
 // ScriptStruct ConZ.SkillEventWeapon
@@ -4226,14 +4239,15 @@ struct FZombieTurnMontageDescription
 };
 
 // ScriptStruct ConZ.ZombieAttackDescription
-// 0x0018
+// 0x0020
 struct FZombieAttackDescription
 {
 	class UAnimMontage*                                Montage;                                                  // 0x0000(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              MinDistance;                                              // 0x0008(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              MaxDistance;                                              // 0x000C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              RegainControlMultiplier;                                  // 0x0010(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0014(0x0004) MISSED OFFSET
+	struct FFloatInterval                              PitchRange;                                               // 0x0008(0x0008) (CPF_Edit)
+	float                                              MinDistance;                                              // 0x0010(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              MaxDistance;                                              // 0x0014(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              RegainControlMultiplier;                                  // 0x0018(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x001C(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct ConZ.ZombieRagdollAutoRecovery

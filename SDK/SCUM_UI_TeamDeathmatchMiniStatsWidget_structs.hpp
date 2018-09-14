@@ -7,10 +7,10 @@
 #endif
 
 #include "SCUM_Basic.hpp"
-#include "SCUM_CoreUObject_classes.hpp"
 #include "SCUM_UI_GameEventParticipantStatsWidget_classes.hpp"
 #include "SCUM_ConZ_classes.hpp"
 #include "SCUM_Engine_classes.hpp"
+#include "SCUM_CoreUObject_classes.hpp"
 
 namespace SDK
 {

@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Amanita_Pantheria.Amanita_Pantheria_C
-// 0x0000 (0x0870 - 0x0870)
+// 0x0000 (0x0860 - 0x0860)
 class AAmanita_Pantheria_C : public AFoodItem
 {
 public:

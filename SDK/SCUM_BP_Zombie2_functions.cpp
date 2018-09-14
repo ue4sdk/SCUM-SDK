@@ -28,46 +28,6 @@ void ABP_Zombie2_C::UserConstructionScript()
 }
 
 
-// Function BP_Zombie2.BP_Zombie2_C.ReceiveTick
-// (FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
-// Parameters:
-// float                          DeltaSeconds                   (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-
-void ABP_Zombie2_C::ReceiveTick(float DeltaSeconds)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Zombie2.BP_Zombie2_C.ReceiveTick");
-
-	struct
-	{
-		float                          DeltaSeconds;
-	} params;
-
-	params.DeltaSeconds = DeltaSeconds;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function BP_Zombie2.BP_Zombie2_C.ExecuteUbergraph_BP_Zombie2
-// ()
-// Parameters:
-// int                            EntryPoint                     (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-
-void ABP_Zombie2_C::ExecuteUbergraph_BP_Zombie2(int EntryPoint)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Zombie2.BP_Zombie2_C.ExecuteUbergraph_BP_Zombie2");
-
-	struct
-	{
-		int                            EntryPoint;
-	} params;
-
-	params.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
 }
 
 #ifdef _MSC_VER

@@ -7834,6 +7834,66 @@ float UCircularParameterWidget::GetCurrentValue()
 }
 
 
+// Function ConZ.ClockFaceWidget.SetTime
+// (FUNC_Final, FUNC_Native, FUNC_Public)
+// Parameters:
+// float                          Time                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UClockFaceWidget::SetTime(float Time)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.ClockFaceWidget.SetTime");
+
+	struct
+	{
+		float                          Time;
+	} params;
+
+	params.Time = Time;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function ConZ.ClockFaceWidget.SetMinutes
+// (FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
+// Parameters:
+// int                            Minutes                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UClockFaceWidget::SetMinutes(int Minutes)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.ClockFaceWidget.SetMinutes");
+
+	struct
+	{
+		int                            Minutes;
+	} params;
+
+	params.Minutes = Minutes;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function ConZ.ClockFaceWidget.SetHours
+// (FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
+// Parameters:
+// int                            Hours                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UClockFaceWidget::SetHours(int Hours)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.ClockFaceWidget.SetHours");
+
+	struct
+	{
+		int                            Hours;
+	} params;
+
+	params.Hours = Hours;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function ConZ.ClothesItem.UpdateMaterialParamsOnClients
 // (FUNC_Net, FUNC_NetReliable, FUNC_Native, FUNC_Event, FUNC_NetMulticast, FUNC_Public)
 
@@ -8692,6 +8752,28 @@ void UConsoleHelpers::RevertConfig()
 }
 
 
+// Function ConZ.ConsoleHelpers.IsPushToTalkEnabled
+// (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_BlueprintCallable)
+// Parameters:
+// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+bool UConsoleHelpers::IsPushToTalkEnabled()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.ConsoleHelpers.IsPushToTalkEnabled");
+
+	struct
+	{
+		bool                           ReturnValue;
+	} params;
+
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
 // Function ConZ.ConsoleHelpers.GetInvertMouseY
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_BlueprintCallable)
 // Parameters:
@@ -8728,6 +8810,37 @@ bool UConsoleHelpers::GetHasPendingChanges()
 		bool                           ReturnValue;
 	} params;
 
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function ConZ.ConsoleHelpers.GetConfigVar
+// (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_BlueprintCallable)
+// Parameters:
+// EConfigFile                    file                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FString                 Key                            (CPF_Parm, CPF_ZeroConstructor)
+// struct FString                 Section                        (CPF_Parm, CPF_ZeroConstructor)
+// struct FString                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
+
+struct FString UConsoleHelpers::GetConfigVar(EConfigFile file, const struct FString& Key, const struct FString& Section)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.ConsoleHelpers.GetConfigVar");
+
+	struct
+	{
+		EConfigFile                    file;
+		struct FString                 Key;
+		struct FString                 Section;
+		struct FString                 ReturnValue;
+	} params;
+
+	params.file = file;
+	params.Key = Key;
+	params.Section = Section;
 
 	static auto defaultObj = StaticClass()->CreateDefaultObject();
 	defaultObj->ProcessEvent(fn, &params);
@@ -22223,6 +22336,30 @@ void UOptionsWidget::ResetControlsToDefault()
 }
 
 
+// Function ConZ.OptionsWidget.GetResolutionStringFormatted
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+// Parameters:
+// struct FString                 string                         (CPF_Parm, CPF_ZeroConstructor)
+// struct FString                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
+
+struct FString UOptionsWidget::GetResolutionStringFormatted(const struct FString& string)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.OptionsWidget.GetResolutionStringFormatted");
+
+	struct
+	{
+		struct FString                 string;
+		struct FString                 ReturnValue;
+	} params;
+
+	params.string = string;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
 // Function ConZ.OptionsWidget.GetMouseSensitivity
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
@@ -23714,6 +23851,26 @@ void APrisoner::SetConstitution(float Value)
 }
 
 
+// Function ConZ.Prisoner.SetAutoWalk
+// (FUNC_Final, FUNC_Native, FUNC_Private)
+// Parameters:
+// bool                           Value                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void APrisoner::SetAutoWalk(bool Value)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Prisoner.SetAutoWalk");
+
+	struct
+	{
+		bool                           Value;
+	} params;
+
+	params.Value = Value;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function ConZ.Prisoner.Server_UnpackAmmoBox
 // (FUNC_Net, FUNC_NetReliable, FUNC_Native, FUNC_Event, FUNC_Public, FUNC_NetServer, FUNC_NetValidate)
 // Parameters:
@@ -23867,26 +24024,6 @@ void APrisoner::Server_SplitAmmo(class AAmmunitionItem* ammoitem)
 	} params;
 
 	params.ammoitem = ammoitem;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function ConZ.Prisoner.Server_SpawnPrisonWalletItem
-// (FUNC_Net, FUNC_NetReliable, FUNC_Native, FUNC_Event, FUNC_Public, FUNC_NetServer, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_NetValidate)
-// Parameters:
-// struct FVector                 Location                       (CPF_Parm, CPF_IsPlainOldData)
-
-void APrisoner::Server_SpawnPrisonWalletItem(const struct FVector& Location)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Prisoner.Server_SpawnPrisonWalletItem");
-
-	struct
-	{
-		struct FVector                 Location;
-	} params;
-
-	params.Location = Location;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -25529,6 +25666,27 @@ bool APrisoner::IsDeluxePlayer()
 bool APrisoner::IsCompletelyInitialized()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Prisoner.IsCompletelyInitialized");
+
+	struct
+	{
+		bool                           ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function ConZ.Prisoner.IsAutoWalking
+// (FUNC_Final, FUNC_Native, FUNC_Private)
+// Parameters:
+// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+bool APrisoner::IsAutoWalking()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Prisoner.IsAutoWalking");
 
 	struct
 	{
@@ -31019,6 +31177,26 @@ void UPrisonerLifeComponent::SetBreathRateFactorOnServer(float factor)
 }
 
 
+// Function ConZ.PrisonerLifeComponent.Server_SpawnPrisonWalletItem
+// (FUNC_Net, FUNC_NetReliable, FUNC_Native, FUNC_Event, FUNC_Public, FUNC_NetServer, FUNC_HasDefaults, FUNC_NetValidate)
+// Parameters:
+// struct FVector                 Location                       (CPF_Parm, CPF_IsPlainOldData)
+
+void UPrisonerLifeComponent::Server_SpawnPrisonWalletItem(const struct FVector& Location)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.PrisonerLifeComponent.Server_SpawnPrisonWalletItem");
+
+	struct
+	{
+		struct FVector                 Location;
+	} params;
+
+	params.Location = Location;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function ConZ.PrisonerLifeComponent.PushActionOnServer
 // (FUNC_Final, FUNC_Net, FUNC_NetReliable, FUNC_Native, FUNC_Event, FUNC_Private, FUNC_NetServer, FUNC_NetValidate)
 // Parameters:
@@ -34692,6 +34870,26 @@ void UPrisonerLifeComponent::Die()
 	{
 	} params;
 
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function ConZ.PrisonerLifeComponent.Client_WarnForBodyState
+// (FUNC_Net, FUNC_NetReliable, FUNC_Native, FUNC_Event, FUNC_Public, FUNC_NetClient)
+// Parameters:
+// EBodyState                     State                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UPrisonerLifeComponent::Client_WarnForBodyState(EBodyState State)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.PrisonerLifeComponent.Client_WarnForBodyState");
+
+	struct
+	{
+		EBodyState                     State;
+	} params;
+
+	params.State = State;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -40996,6 +41194,22 @@ void AWolf::OnRep_Scale()
 void UWolfAnimInstance::AnimNotify_Howl()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ConZ.WolfAnimInstance.AnimNotify_Howl");
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function ConZ.Wristwatch.SyncTime
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+
+void AWristwatch::SyncTime()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Wristwatch.SyncTime");
 
 	struct
 	{

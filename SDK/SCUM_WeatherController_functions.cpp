@@ -183,22 +183,6 @@ void AWeatherController_C::Recapture()
 }
 
 
-// Function WeatherController.WeatherController_C.ChangeWindDir
-// (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
-
-void AWeatherController_C::ChangeWindDir()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function WeatherController.WeatherController_C.ChangeWindDir");
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
 // Function WeatherController.WeatherController_C.Event_SetWindDirection
 // (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 // Parameters:
@@ -234,6 +218,22 @@ void AWeatherController_C::Event_SetWindSpeed(float Value)
 	} params;
 
 	params.Value = Value;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function WeatherController.WeatherController_C.ChangeWindDir
+// (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void AWeatherController_C::ChangeWindDir()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function WeatherController.WeatherController_C.ChangeWindDir");
+
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }

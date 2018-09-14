@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Portable_Gas_Stove.Portable_Gas_Stove_C
-// 0x0000 (0x0800 - 0x0800)
+// 0x0000 (0x07F0 - 0x07F0)
 class APortable_Gas_Stove_C : public AFireplaceItem
 {
 public:

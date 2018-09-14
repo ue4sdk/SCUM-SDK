@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Cantonese_Sweet_And_sour_02.Cantonese_Sweet_And_sour_02_C
-// 0x0000 (0x0880 - 0x0880)
+// 0x0000 (0x0870 - 0x0870)
 class ACantonese_Sweet_And_sour_02_C : public ACookedFoodItem
 {
 public:

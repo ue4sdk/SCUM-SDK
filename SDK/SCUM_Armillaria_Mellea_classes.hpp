@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Armillaria_Mellea.Armillaria_Mellea_C
-// 0x0000 (0x0870 - 0x0870)
+// 0x0000 (0x0860 - 0x0860)
 class AArmillaria_Mellea_C : public AFoodItem
 {
 public:

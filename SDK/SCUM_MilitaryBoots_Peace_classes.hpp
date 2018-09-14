@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass MilitaryBoots_Peace.MilitaryBoots_Peace_C
-// 0x0000 (0x0800 - 0x0800)
+// 0x0000 (0x07F0 - 0x07F0)
 class AMilitaryBoots_Peace_C : public AClothesItem
 {
 public:

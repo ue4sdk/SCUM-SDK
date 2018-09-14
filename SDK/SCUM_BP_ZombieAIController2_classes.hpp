@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_ZombieAIController2.BP_ZombieAIController2_C
-// 0x0000 (0x0710 - 0x0710)
+// 0x0000 (0x0708 - 0x0708)
 class ABP_ZombieAIController2_C : public AZombieAIController2
 {
 public:

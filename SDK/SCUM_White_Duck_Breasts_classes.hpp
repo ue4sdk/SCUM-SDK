@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass White_Duck_Breasts.White_Duck_Breasts_C
-// 0x0000 (0x0870 - 0x0870)
+// 0x0000 (0x0860 - 0x0860)
 class AWhite_Duck_Breasts_C : public AFoodItem
 {
 public:

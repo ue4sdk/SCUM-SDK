@@ -183,9 +183,9 @@ public:
 	void NetworkSyncDayTime();
 	void StartWeatherTransition(float NewStormIntensity, float TransitionTime);
 	void Recapture();
-	void ChangeWindDir();
 	void Event_SetWindDirection(const struct FVector2D& Value);
 	void Event_SetWindSpeed(float Value);
+	void ChangeWindDir();
 	void ExecuteUbergraph_WeatherController(int EntryPoint);
 };
 

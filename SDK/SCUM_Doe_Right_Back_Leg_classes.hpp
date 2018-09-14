@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Doe_Right_Back_Leg.Doe_Right_Back_Leg_C
-// 0x0000 (0x07B0 - 0x07B0)
+// 0x0000 (0x0790 - 0x0790)
 class ADoe_Right_Back_Leg_C : public AEquipmentItem
 {
 public:

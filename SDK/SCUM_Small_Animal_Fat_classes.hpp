@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Small_Animal_Fat.Small_Animal_Fat_C
-// 0x0000 (0x0870 - 0x0870)
+// 0x0000 (0x0860 - 0x0860)
 class ASmall_Animal_Fat_C : public AFoodItem
 {
 public:

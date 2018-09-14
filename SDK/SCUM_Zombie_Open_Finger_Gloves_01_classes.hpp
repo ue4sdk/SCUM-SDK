@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Zombie_Open_Finger_Gloves_01.Zombie_Open_Finger_Gloves_01_C
-// 0x0000 (0x0800 - 0x0800)
+// 0x0000 (0x07F0 - 0x07F0)
 class AZombie_Open_Finger_Gloves_01_C : public AClothesItem
 {
 public:

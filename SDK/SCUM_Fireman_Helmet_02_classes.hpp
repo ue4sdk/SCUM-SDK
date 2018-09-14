@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Fireman_Helmet_02.Fireman_Helmet_02_C
-// 0x0000 (0x0800 - 0x0800)
+// 0x0000 (0x07F0 - 0x07F0)
 class AFireman_Helmet_02_C : public AClothesItem
 {
 public:

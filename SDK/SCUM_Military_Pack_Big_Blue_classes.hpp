@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Military_Pack_Big_Blue.Military_Pack_Big_Blue_C
-// 0x0000 (0x0800 - 0x0800)
+// 0x0000 (0x07F0 - 0x07F0)
 class AMilitary_Pack_Big_Blue_C : public AClothesItem
 {
 public:

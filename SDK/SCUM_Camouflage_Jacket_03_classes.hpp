@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Camouflage_Jacket_03.Camouflage_Jacket_03_C
-// 0x0000 (0x0800 - 0x0800)
+// 0x0000 (0x07F0 - 0x07F0)
 class ACamouflage_Jacket_03_C : public AClothesItem
 {
 public:
