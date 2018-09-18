@@ -7,8 +7,8 @@
 #endif
 
 #include "SCUM_Basic.hpp"
-#include "SCUM_Engine_classes.hpp"
 #include "SCUM_BP_Bird2_classes.hpp"
+#include "SCUM_Engine_classes.hpp"
 
 namespace SDK
 {

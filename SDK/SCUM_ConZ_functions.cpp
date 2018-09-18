@@ -3880,7 +3880,7 @@ void UBaseItemContainerWidget::InitGrid(const struct FMargin& gridPadding)
 
 
 // Function ConZ.BaseItemContainerWidget.GetSlotsForPanel
-// (FUNC_Native, FUNC_Protected, FUNC_HasOutParms, FUNC_BlueprintCallable)
+// (FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
 // class UGridSlot*               GridSlot                       (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 // int                            Width                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -3924,7 +3924,7 @@ bool UBaseItemContainerWidget::GetSlotsForPanel(class UGridSlot* GridSlot, int W
 
 
 // Function ConZ.BaseItemContainerWidget.GetSlots
-// (FUNC_Native, FUNC_Protected, FUNC_HasOutParms, FUNC_BlueprintCallable)
+// (FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
 // class UGridSlot*               GridSlot                       (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 // int                            Width                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -7835,7 +7835,7 @@ float UCircularParameterWidget::GetCurrentValue()
 
 
 // Function ConZ.ClockFaceWidget.SetTime
-// (FUNC_Final, FUNC_Native, FUNC_Public)
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 // Parameters:
 // float                          Time                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
@@ -18029,7 +18029,7 @@ void UHandInventorySecondIteration::OnDropEvent(class UInventorySlotUserWidget* 
 
 
 // Function ConZ.HandInventorySecondIteration.GetSlots
-// (FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable)
+// (FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
 // class UGridSlot*               GridSlot                       (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 // int                            Width                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -18358,7 +18358,7 @@ void UHandInventoryWidget::OnDropEvent(class UInventorySlotUserWidget* inventory
 
 
 // Function ConZ.HandInventoryWidget.GetSlots
-// (FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable)
+// (FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
 // class UGridSlot*               GridSlot                       (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 // int                            Width                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -22649,6 +22649,22 @@ void APrisoner::UpdateZoomEffect(float Fraction)
 }
 
 
+// Function ConZ.Prisoner.UpdateWristwatchVisibility
+// (FUNC_Final, FUNC_Native, FUNC_Public)
+
+void APrisoner::UpdateWristwatchVisibility()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Prisoner.UpdateWristwatchVisibility");
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function ConZ.Prisoner.UpdateMaterialsFadeAmount
 // (FUNC_Final, FUNC_Native, FUNC_Private)
 // Parameters:
@@ -26057,6 +26073,27 @@ void APrisoner::GoToRagdoll()
 }
 
 
+// Function ConZ.Prisoner.GetWristwatchComponent
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// class UChildActorComponent*    ReturnValue                    (CPF_ExportObject, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_InstancedReference, CPF_IsPlainOldData)
+
+class UChildActorComponent* APrisoner::GetWristwatchComponent()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Prisoner.GetWristwatchComponent");
+
+	struct
+	{
+		class UChildActorComponent*    ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
 // Function ConZ.Prisoner.GetWetness
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
@@ -27788,6 +27825,22 @@ void APrisoner::DetonateChip()
 void APrisoner::DecreaseCrouchStage()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Prisoner.DecreaseCrouchStage");
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function ConZ.Prisoner.ConstructWristwatchChildActor
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+
+void APrisoner::ConstructWristwatchChildActor()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Prisoner.ConstructWristwatchChildActor");
 
 	struct
 	{
@@ -37756,7 +37809,7 @@ void UQuickAccessItemSwitcher::OnDragCancelledEvent(class UBaseItemWidget* Widge
 
 
 // Function ConZ.QuickAccessItemSwitcher.GetSlots
-// (FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable)
+// (FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
 // class UGridSlot*               GridSlot                       (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 // int                            Width                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -39320,7 +39373,7 @@ void UShoulderHolsterWidget::OnDropEvent(class UInventorySlotUserWidget* invento
 
 
 // Function ConZ.ShoulderHolsterWidget.GetSlots
-// (FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable)
+// (FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
 // class UGridSlot*               GridSlot                       (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 // int                            Width                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -40768,6 +40821,26 @@ void AWeatherCapture2D::CaptureNextFrame()
 }
 
 
+// Function ConZ.WeatherController.SetTimeOfDay
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+// Parameters:
+// float                          Value                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void AWeatherController::SetTimeOfDay(float Value)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.WeatherController.SetTimeOfDay");
+
+	struct
+	{
+		float                          Value;
+	} params;
+
+	params.Value = Value;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function ConZ.WeatherController.GetWindVelocity
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
@@ -41204,6 +41277,26 @@ void UWolfAnimInstance::AnimNotify_Howl()
 }
 
 
+// Function ConZ.Wristwatch.ToggleDisplayVisibility
+// (FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
+// Parameters:
+// bool                           Visiblity                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void AWristwatch::ToggleDisplayVisibility(bool Visiblity)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Wristwatch.ToggleDisplayVisibility");
+
+	struct
+	{
+		bool                           Visiblity;
+	} params;
+
+	params.Visiblity = Visiblity;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function ConZ.Wristwatch.SyncTime
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
@@ -41215,6 +41308,26 @@ void AWristwatch::SyncTime()
 	{
 	} params;
 
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function ConZ.Wristwatch.SetTime
+// (FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
+// Parameters:
+// float                          Value                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void AWristwatch::SetTime(float Value)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Wristwatch.SetTime");
+
+	struct
+	{
+		float                          Value;
+	} params;
+
+	params.Value = Value;
 
 	UObject::ProcessEvent(fn, &params);
 }

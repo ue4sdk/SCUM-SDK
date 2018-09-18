@@ -95,13 +95,14 @@ enum class EInteractionType : uint8_t
 	EInteractionType__Urinate      = 65,
 	EInteractionType__Defecate     = 66,
 	EInteractionType__Vomit        = 67,
-	EInteractionType__MakeUnconscious = 68,
-	EInteractionType__PacifyAnimal = 69,
-	EInteractionType__TameAnimal   = 70,
-	EInteractionType__LearnAnimal  = 71,
-	EInteractionType__CommandAnimal = 72,
-	EInteractionType__FeedAnimal   = 73,
-	EInteractionType__EInteractionType_MAX = 74
+	EInteractionType__CheckTime    = 68,
+	EInteractionType__MakeUnconscious = 69,
+	EInteractionType__PacifyAnimal = 70,
+	EInteractionType__TameAnimal   = 71,
+	EInteractionType__LearnAnimal  = 72,
+	EInteractionType__CommandAnimal = 73,
+	EInteractionType__FeedAnimal   = 74,
+	EInteractionType__EInteractionType_MAX = 75
 };
 
 
@@ -1724,6 +1725,16 @@ enum class EPrisonerResponseIdle : uint8_t
 };
 
 
+// Enum ConZ.EPrisonerMontageBlendType
+enum class EPrisonerMontageBlendType : uint8_t
+{
+	EPrisonerMontageBlendType__All = 0,
+	EPrisonerMontageBlendType__LeftHand = 1,
+	EPrisonerMontageBlendType__RightHand = 2,
+	EPrisonerMontageBlendType__EPrisonerMontageBlendType_MAX = 3
+};
+
+
 // Enum ConZ.EPrisonerMontage
 enum class EPrisonerMontage : uint8_t
 {
@@ -1760,8 +1771,11 @@ enum class EPrisonerMontage : uint8_t
 	EPrisonerMontage__SwapItemsWeaponToNotWeapon = 30,
 	EPrisonerMontage__Craft        = 31,
 	EPrisonerMontage__Uncraft      = 32,
-	EPrisonerMontage__Count        = 33,
-	EPrisonerMontage__EPrisonerMontage_MAX = 34
+	EPrisonerMontage__CheckTime    = 33,
+	EPrisonerMontage__CheckTimeWhileItemInHands = 34,
+	EPrisonerMontage__CheckTimeWhileWeaponInHands = 35,
+	EPrisonerMontage__Count        = 36,
+	EPrisonerMontage__EPrisonerMontage_MAX = 37
 };
 
 

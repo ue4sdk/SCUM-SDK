@@ -8,8 +8,8 @@
 
 #include "SCUM_Basic.hpp"
 #include "SCUM_Engine_classes.hpp"
-#include "SCUM_SplineSection_classes.hpp"
 #include "SCUM_CoreUObject_classes.hpp"
+#include "SCUM_SplineSection_classes.hpp"
 #include "SCUM_SplineMesh_classes.hpp"
 
 namespace SDK
