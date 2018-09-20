@@ -2399,7 +2399,7 @@ public:
 
 
 // Class ConZ.Weapon
-// 0x08F0 (0x10B0 - 0x07C0)
+// 0x0900 (0x10C0 - 0x07C0)
 class AWeapon : public AWeaponItem
 {
 public:
@@ -2474,38 +2474,40 @@ public:
 	float                                              MuzzleEffectsScaleDistanceRange;                          // 0x0F54(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	float                                              MuzzleEffectsScaleByDistanceFactor;                       // 0x0F58(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	float                                              ChamberBulletDelay;                                       // 0x0F5C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UWeaponState*                                _currentState;                                            // 0x0F60(0x0008) (CPF_BlueprintVisible, CPF_ExportObject, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
-	class UWeaponState*                                _activeState;                                             // 0x0F68(0x0008) (CPF_BlueprintVisible, CPF_ExportObject, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
-	class UWeaponStateEquipping*                       _equippingState;                                          // 0x0F70(0x0008) (CPF_BlueprintVisible, CPF_ExportObject, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
-	class UWeaponState*                                _unequippingStateDefault;                                 // 0x0F78(0x0008) (CPF_BlueprintVisible, CPF_ExportObject, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
-	class UWeaponState*                                _unequippingState;                                        // 0x0F80(0x0008) (CPF_BlueprintVisible, CPF_ExportObject, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
-	class UWeaponState*                                _inactiveState;                                           // 0x0F88(0x0008) (CPF_BlueprintVisible, CPF_ExportObject, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
-	class UWeaponState*                                _chamberBulletState;                                      // 0x0F90(0x0008) (CPF_BlueprintVisible, CPF_ExportObject, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
-	class UWeaponStateReload*                          _reloadState2;                                            // 0x0F98(0x0008) (CPF_BlueprintVisible, CPF_ExportObject, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
-	class UParticleSystem*                             _muzzlePS;                                                // 0x0FA0(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UParticleSystemComponent*                    _muzzlePSC;                                               // 0x0FA8(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_Transient, CPF_InstancedReference, CPF_IsPlainOldData)
-	class UParticleSystem*                             _smokeAfterShotFiredPS;                                   // 0x0FB0(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UParticleSystemComponent*                    _smokeAfterShotFiredPSC;                                  // 0x0FB8(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_Transient, CPF_InstancedReference, CPF_IsPlainOldData)
-	class UParticleSystem*                             _ejectCasingPS;                                           // 0x0FC0(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UAkAudioEvent*                               _fireSingleShotAudioEvent;                                // 0x0FC8(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UAkAudioEvent*                               _startAutoFireAudioEvent;                                 // 0x0FD0(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UAkAudioEvent*                               _stopAutoFireAudioEvent;                                  // 0x0FD8(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UAkAudioEvent*                               _noAmmoAudioEvent;                                        // 0x0FE0(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UAkAudioEvent*                               _zeroRangeClickAudioEvent;                                // 0x0FE8(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UAkAudioEvent*                               _changeFiringModeAudioEvent;                              // 0x0FF0(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class APrisoner*                                   _weaponOwner;                                             // 0x0FF8(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
-	int                                                _loadedAmmoCount;                                         // 0x1000(0x0004) (CPF_Net, CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData07[0x5C];                                      // 0x1004(0x005C) MISSED OFFSET
-	EWeaponFiringMode                                  _firingMode;                                              // 0x1060(0x0001) (CPF_Net, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData08[0x17];                                      // 0x1061(0x0017) MISSED OFFSET
-	TArray<class AWeaponAttachment*>                   _weaponAttachmentsReplicated;                             // 0x1078(0x0010) (CPF_Net, CPF_ZeroConstructor)
-	unsigned char                                      UnknownData09[0x18];                                      // 0x1088(0x0018) MISSED OFFSET
-	int                                                _internalMagazineAmmoCount;                               // 0x10A0(0x0004) (CPF_Net, CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData10[0x5];                                       // 0x10A4(0x0005) MISSED OFFSET
-	bool                                               _shouldPlayChamberOpenedIdle;                             // 0x10A9(0x0001) (CPF_Net, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData11[0x2];                                       // 0x10AA(0x0002) MISSED OFFSET
-	bool                                               _isInGameEvent;                                           // 0x10AC(0x0001) (CPF_Net, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData12[0x3];                                       // 0x10AD(0x0003) MISSED OFFSET
+	bool                                               ChamberBulletAutomatically;                               // 0x0F60(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData07[0x7];                                       // 0x0F61(0x0007) MISSED OFFSET
+	class UWeaponState*                                _currentState;                                            // 0x0F68(0x0008) (CPF_BlueprintVisible, CPF_ExportObject, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
+	class UWeaponState*                                _activeState;                                             // 0x0F70(0x0008) (CPF_BlueprintVisible, CPF_ExportObject, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
+	class UWeaponStateEquipping*                       _equippingState;                                          // 0x0F78(0x0008) (CPF_BlueprintVisible, CPF_ExportObject, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
+	class UWeaponState*                                _unequippingStateDefault;                                 // 0x0F80(0x0008) (CPF_BlueprintVisible, CPF_ExportObject, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
+	class UWeaponState*                                _unequippingState;                                        // 0x0F88(0x0008) (CPF_BlueprintVisible, CPF_ExportObject, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
+	class UWeaponState*                                _inactiveState;                                           // 0x0F90(0x0008) (CPF_BlueprintVisible, CPF_ExportObject, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
+	class UWeaponState*                                _chamberBulletState;                                      // 0x0F98(0x0008) (CPF_BlueprintVisible, CPF_ExportObject, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
+	class UWeaponStateReload*                          _reloadState2;                                            // 0x0FA0(0x0008) (CPF_BlueprintVisible, CPF_ExportObject, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
+	class UParticleSystem*                             _muzzlePS;                                                // 0x0FA8(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UParticleSystemComponent*                    _muzzlePSC;                                               // 0x0FB0(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_Transient, CPF_InstancedReference, CPF_IsPlainOldData)
+	class UParticleSystem*                             _smokeAfterShotFiredPS;                                   // 0x0FB8(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UParticleSystemComponent*                    _smokeAfterShotFiredPSC;                                  // 0x0FC0(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_Transient, CPF_InstancedReference, CPF_IsPlainOldData)
+	class UParticleSystem*                             _ejectCasingPS;                                           // 0x0FC8(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UAkAudioEvent*                               _fireSingleShotAudioEvent;                                // 0x0FD0(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UAkAudioEvent*                               _startAutoFireAudioEvent;                                 // 0x0FD8(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UAkAudioEvent*                               _stopAutoFireAudioEvent;                                  // 0x0FE0(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UAkAudioEvent*                               _noAmmoAudioEvent;                                        // 0x0FE8(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UAkAudioEvent*                               _zeroRangeClickAudioEvent;                                // 0x0FF0(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UAkAudioEvent*                               _changeFiringModeAudioEvent;                              // 0x0FF8(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class APrisoner*                                   _weaponOwner;                                             // 0x1000(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
+	int                                                _loadedAmmoCount;                                         // 0x1008(0x0004) (CPF_Net, CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData08[0x5C];                                      // 0x100C(0x005C) MISSED OFFSET
+	EWeaponFiringMode                                  _firingMode;                                              // 0x1068(0x0001) (CPF_Net, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData09[0x17];                                      // 0x1069(0x0017) MISSED OFFSET
+	TArray<class AWeaponAttachment*>                   _weaponAttachmentsReplicated;                             // 0x1080(0x0010) (CPF_Net, CPF_ZeroConstructor)
+	unsigned char                                      UnknownData10[0x18];                                      // 0x1090(0x0018) MISSED OFFSET
+	int                                                _internalMagazineAmmoCount;                               // 0x10A8(0x0004) (CPF_Net, CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData11[0x5];                                       // 0x10AC(0x0005) MISSED OFFSET
+	bool                                               _shouldPlayChamberOpenedIdle;                             // 0x10B1(0x0001) (CPF_Net, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData12[0x2];                                       // 0x10B2(0x0002) MISSED OFFSET
+	bool                                               _isInGameEvent;                                           // 0x10B4(0x0001) (CPF_Net, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData13[0xB];                                       // 0x10B5(0x000B) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -3648,6 +3650,7 @@ public:
 	void RemoveLoadingWidget();
 	void OnPreLoadMap(const struct FString& mapName);
 	void OnPostLoadMap(class UWorld* loadedWorld);
+	void OnPlaySessionEnd(bool quit);
 	bool IsTransitioningMap();
 	void HandleNetworkFailure(class UWorld* World, class UNetDriver* NetDriver, TEnumAsByte<ENetworkFailure> FailureType, const struct FString& errorString);
 	class UDedicatedServerRequest* GetServerRequest();

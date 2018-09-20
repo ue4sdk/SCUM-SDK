@@ -15,11 +15,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Weapon_Improvised_Rifle.BP_Weapon_Improvised_Rifle_C
-// 0x0008 (0x10B8 - 0x10B0)
+// 0x0010 (0x10D0 - 0x10C0)
 class ABP_Weapon_Improvised_Rifle_C : public AWeapon
 {
 public:
-	class UMeleeAttackCollisionCapsule*                MeleeAttackCollisionCapsule;                              // 0x10B0(0x0008) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x10C0(0x0008) (CPF_Transient, CPF_DuplicateTransient)
+	class UMeleeAttackCollisionCapsule*                MeleeAttackCollisionCapsule;                              // 0x10C8(0x0008) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -29,6 +30,8 @@ public:
 
 
 	void UserConstructionScript();
+	void ReceiveTick(float DeltaSeconds);
+	void ExecuteUbergraph_BP_Weapon_Improvised_Rifle(int EntryPoint);
 };
 
 

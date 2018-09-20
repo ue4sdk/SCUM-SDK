@@ -7,6 +7,7 @@
 #endif
 
 #include "SCUM_Basic.hpp"
+#include "SCUM_Engine_classes.hpp"
 #include "SCUM_ConZ_classes.hpp"
 
 namespace SDK

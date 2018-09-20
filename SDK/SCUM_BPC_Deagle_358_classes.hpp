@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BPC_Deagle_358.BPC_Deagle_357_C
-// 0x0000 (0x10B8 - 0x10B8)
+// 0x0000 (0x10C8 - 0x10C8)
 class ABPC_Deagle_357_C : public ABP_DEagle_50_C
 {
 public:

@@ -9200,6 +9200,26 @@ void UConZGameInstance::OnPostLoadMap(class UWorld* loadedWorld)
 }
 
 
+// Function ConZ.ConZGameInstance.OnPlaySessionEnd
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+// Parameters:
+// bool                           quit                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UConZGameInstance::OnPlaySessionEnd(bool quit)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.ConZGameInstance.OnPlaySessionEnd");
+
+	struct
+	{
+		bool                           quit;
+	} params;
+
+	params.quit = quit;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function ConZ.ConZGameInstance.IsTransitioningMap
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
