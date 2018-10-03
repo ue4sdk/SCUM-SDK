@@ -963,9 +963,6 @@
     <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_AKS_74U_RemoveMagInsertMagChamber_functions.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Bar_01_functions.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
     <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_BaseComplexAnimal2_functions.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
@@ -1018,9 +1015,6 @@
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_BerettaM9_functions.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Big_Heavy_Sliding_Doors_01_functions.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Bird2_functions.cpp">
@@ -1182,9 +1176,6 @@
     <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Fan_01_Blueprint_functions.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Fence_05_functions.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
     <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Flashbang_functions.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
@@ -1218,13 +1209,7 @@
     <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Goat2_functions.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Grate_Door_functions.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
     <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Guard_House_01_functions.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Guard_Tower_Door_functions.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Horse2_functions.cpp">
@@ -1306,12 +1291,6 @@
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_MechanoidsManager_functions.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_MedicBay_01_functions.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Medium_Heavy_Sliding_Doors_01_functions.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Metal_Door_04_functions.cpp">
@@ -1413,13 +1392,7 @@
     <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_RainController_functions.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_River_C_4_2_WM_functions.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
     <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Rotating_Radar_functions.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_SafeZone_fence_01_functions.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_ScopeRail_AK47_functions.cpp">
@@ -1437,9 +1410,6 @@
     <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_SimpleAnimalAIController_functions.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Small_Heavy_Sliding_Doors_01_functions.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
     <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Smoke_Grenade_functions.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
@@ -1450,15 +1420,6 @@
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_SoundSpline_functions.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Storage_Building_01_functions.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Supply_Building_functions.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_SurveillanceReflector1_functions.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_SVD_InsertBulletChamber_functions.cpp">
@@ -1542,9 +1503,6 @@
     <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Warning_Rotating_Light_01_functions.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Warning_Rotating_Light_02_functions.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
     <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_WaypointGroup_functions.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
@@ -1561,9 +1519,6 @@
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Weapon_Hunter85_functions.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Weapon_Improvised_Rifle_functions.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Weapon_M1_Garand_functions.cpp">
@@ -1621,9 +1576,6 @@
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Wolf3_functions.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Workshop_Building_functions.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Wristwatch_functions.cpp">
@@ -3024,9 +2976,6 @@
     <ClCompile Include="SCUM-SDK\SDK\SCUM_Kiwi_functions.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="SCUM-SDK\SDK\SCUM_Landscape_C_4_5_functions.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
     <ClCompile Include="SCUM-SDK\SDK\SCUM_Landscape_functions.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
@@ -4243,9 +4192,6 @@
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="SCUM-SDK\SDK\SCUM_SM_Container_Blueprint_functions.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="SCUM-SDK\SDK\SCUM_SM_GuardTower_Blueprint_functions.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="SCUM-SDK\SDK\SCUM_Small_Animal_Fat_functions.cpp">
@@ -5665,6 +5611,615 @@
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="SCUM-SDK\SDK\SCUM_Zucchini_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_ABP_Sentry_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_AnimBP_ImprovisedPistol50cal_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Advanced_Standing_Torch_01_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Airport_Bar_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Airport_Radar_01_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Airport_Sliding_Doors_01_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Airport_Sliding_Doors_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Airport_Terrace_01_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_amkBenchSingle_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_amkBenchSingleD2_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Armory_Room_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_BarnDoor_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Bunker_Entrance_03_Extension_01_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Chapel_01_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_ChapelDoor_01_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_ChickenCoop_01_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_ChickenCoopDoor_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_City_sign_A_board_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_City_sign_C_board_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Continental_Door_01_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Continental_Door_02_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Continental_Door_05_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Continental_Door_06_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Continental_House_01_A_Blueprint_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Continental_House_02_Blueprint_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Continental_House_03_Blueprint_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Continental_House_04_Stable_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Continental_House_05_A_Blueprint_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Continental_House_05_B_Blueprint_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Continental_House_06b_Blueprint_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Continental_House_07_Stable_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Continental_House_10_2_Blueprint_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_ContinentalBarn_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_CornStorage_02_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Custom_Room_01_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_depositiry_01_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Door_01_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Door_A_Int_01_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Door_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Door_Int_01_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Door_Int_02_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_dormBench_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_dormBenchD1_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_dormBenchD2_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Double_Door_03_Solid_A_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Double_Door_03_Solid_A1_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Double_Door_03_Solid1_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Farm_Model_01_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Full_Set_01_Door_01_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Garage_Door_02_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Gas_Station_01_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Hangar_01_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Hangar_Door_01_A_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Hangar_Door_01_B_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Hangar_Door_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Hangar_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Hatch_Door_Tower_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Hospital_Workshop_01_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_HuntingStand_01_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_ImprovisedPistol_OpenEmptyInsertBullet_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_ImprovisedPistol_OpenInsertBullet_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_industrial_Light_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_industrial_Light_White_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_KletVinograd_01_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_KletVinograd_Doors_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Ladder_01_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Metal_Door_01_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Metal_Door_02_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Metal_Door_03_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Metal_Door_05_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Metal_Door_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Military_Hangar_01_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Military_Hangar_02_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_NavigationInvoker_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_NeonLamp_Light_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_NewsStand_02_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_NewsStandDoor_02_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Old_Stable_House_01_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Old_Stable_House_Door_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Outdoor_Toilet_Door_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Pallet_3pcs_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Pallet_6pcs_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Passenger_Building_01_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_PlainText_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Pond_WM_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_PrisonSecurityLock_01_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Rabbitry_01_door_down_no_destruction_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Rabbitry_01_door_up_no_destruction1_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Rabbitry_01_no_destruction_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_radio_01_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Room_01_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Room_A_04_a_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Room_A_04_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Room_A_a_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Room_A_b01_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Room_A_Office_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Room_B_01_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Sentry_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_SentryAIController_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_SentryCorpse_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_SentryWalkCameraShake_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Service_Scaffolding_01_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Service_Scaffolding_02_A_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Shed_01_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Single_Door_A_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Sliding_Glass_Doors_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_SM_Control_Tower_01_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_SolidDoor_03_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Standing_Torch_01_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Street_lamp_02_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Supermarket_02_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Ticket_Room_01_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Toilete_Stall_01_Door_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_ToolShed_Doors_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_trainstationBenchD1_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_trainstationBenchD2_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Tunnel_AngledDown_Entrance_02_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Tunnel_Big_4m_Doors_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Tunnel_Big_4m_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Tunnel_Big_8m_Doors_Windows_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Tunnel_Big_8m_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Tunnel_Big_Doors_02_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Tunnel_Big_Doors_02_Locked_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Tunnel_Big_L_02_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Tunnel_Big_L_03_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Tunnel_Big_T_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Tunnel_Doors_Small_01_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Tunnel_Doors_Small_02_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Tunnel_Light_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Tunnel_Restroom_Doors_Small_Men_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Tunnel_Restroom_Doors_Small_Women_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Tunnel_Small_4m_Doors_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Tunnel_Small_4m_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Tunnel_Small_7m_Clean_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Tunnel_Small_8m_Doors_Windows_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Tunnel_Small_Angle_Down_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Tunnel_Small_End_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Tunnel_Small_L_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Weapon_Improvised_Handgun_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Weapon_Improvised_Shotgun_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_WellSpring_01_New_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_WellSpring_03_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_WildAnimalFeeder_01_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Wooden_Small_Door_NEW_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_WoodenLogCabinDoor_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_Caned_Food_Drink_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_Cars_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_Cave_B_1_4_WM_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_Cave_C_2_1_WM_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_Drink_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_Dry_Food_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_EX_Candy_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_EX_Canned_Drinks_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_EX_Drinks_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_EX_House_Clothes_All_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_EX_House_Clothes_Small_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_EX_House_Items_01_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_EX_House_Medicine_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_EX_Industrial_items_Big_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_EX_Kitchen_Food_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_EX_Kitchen_Items_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_EX_Medical_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_EX_Military_Weapons_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_EX_Police_Weapons_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_EX_Stable_Items_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_Fruit_vegetables_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_House_Drink_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_House_Food_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_House_Items_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_House_Medicine_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_Improvised_Mask_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_Industrial_Tools_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_Kitchen_Items_Canned_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_Kitchen_Items_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_Landscape_C_2_2_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_Medical_Equipement_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_Medical_Lab_clothes_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_Medication_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_Military_Clothes_Medium_Big_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_Military_Clothes_Small_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_Military_Footwear_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_Military_Vests_Armor_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_Night_Vision_Googles_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_SM_Barracks_Blueprint_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_SM_Garage_02_Blueprint_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_SM_Jail_Garage_Blueprint_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_SM_Jail_Garage_Building_Door_Blueprint_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_SM_MetalDoor_01_Blueprint_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_SM_MetalDoor_02_A_Blueprint_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_SM_MetalDoor_02_B_Blueprint_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_SM_Outdoor_Toilet_Blueprint_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_SM_Reflector_On_Blueprint_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_SM_Stone_Shed_05_Blueprint_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_SM_Stone_Stable_01_Blueprint_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_SM_Toilet_Stall_01_Blueprint_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_SM_Tool_Shed_Blueprint_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_SM_WaterPump_01_lp_Blueprint_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_SM_Wire_Fence_03_Door_Blueprint_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_Stable_Tools_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_Trash_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_Tunel_WM_C2_02_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_TV_Base_C1_WM_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_WoodenLogCabin_BP_functions.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>
@@ -8459,22 +9014,10 @@
     <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_RainController_structs.hpp">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_River_C_4_2_WM_classes.hpp">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_River_C_4_2_WM_structs.hpp">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
     <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Rotating_Radar_classes.hpp">
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Rotating_Radar_structs.hpp">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_SafeZone_fence_01_classes.hpp">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_SafeZone_fence_01_structs.hpp">
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_ScopeRail_AK47_classes.hpp">
@@ -8507,12 +9050,6 @@
     <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_SimpleAnimalAIController_structs.hpp">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Small_Heavy_Sliding_Doors_01_classes.hpp">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Small_Heavy_Sliding_Doors_01_structs.hpp">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
     <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Smoke_Grenade_classes.hpp">
       <Filter>Headerdateien</Filter>
     </ClInclude>
@@ -8535,24 +9072,6 @@
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_SoundSpline_structs.hpp">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Storage_Building_01_classes.hpp">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Storage_Building_01_structs.hpp">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Supply_Building_classes.hpp">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Supply_Building_structs.hpp">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_SurveillanceReflector1_classes.hpp">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_SurveillanceReflector1_structs.hpp">
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_SVD_InsertBulletChamber_classes.hpp">
@@ -8717,12 +9236,6 @@
     <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Warning_Rotating_Light_01_structs.hpp">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Warning_Rotating_Light_02_classes.hpp">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Warning_Rotating_Light_02_structs.hpp">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
     <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_WaypointGroup_classes.hpp">
       <Filter>Headerdateien</Filter>
     </ClInclude>
@@ -8757,12 +9270,6 @@
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Weapon_Hunter85_structs.hpp">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Weapon_Improvised_Rifle_classes.hpp">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Weapon_Improvised_Rifle_structs.hpp">
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Weapon_M1_Garand_classes.hpp">
@@ -8877,12 +9384,6 @@
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Wolf3_structs.hpp">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Workshop_Building_classes.hpp">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Workshop_Building_structs.hpp">
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Wristwatch_classes.hpp">
@@ -11681,12 +12182,6 @@
     <ClInclude Include="SCUM-SDK\SDK\SCUM_Kiwi_structs.hpp">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="SCUM-SDK\SDK\SCUM_Landscape_C_4_5_classes.hpp">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="SCUM-SDK\SDK\SCUM_Landscape_C_4_5_structs.hpp">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
     <ClInclude Include="SCUM-SDK\SDK\SCUM_Landscape_classes.hpp">
       <Filter>Headerdateien</Filter>
     </ClInclude>
@@ -14121,12 +14616,6 @@
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="SCUM-SDK\SDK\SCUM_SM_Container_Blueprint_structs.hpp">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="SCUM-SDK\SDK\SCUM_SM_GuardTower_Blueprint_classes.hpp">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="SCUM-SDK\SDK\SCUM_SM_GuardTower_Blueprint_structs.hpp">
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="SCUM-SDK\SDK\SCUM_Small_Animal_Fat_classes.hpp">
@@ -16965,6 +17454,1224 @@
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="SCUM-SDK\SDK\SCUM_Zucchini_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_ABP_Sentry_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_ABP_Sentry_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_AnimBP_ImprovisedPistol50cal_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_AnimBP_ImprovisedPistol50cal_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Advanced_Standing_Torch_01_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Advanced_Standing_Torch_01_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Airport_Bar_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Airport_Bar_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Airport_Radar_01_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Airport_Radar_01_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Airport_Sliding_Doors_01_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Airport_Sliding_Doors_01_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Airport_Sliding_Doors_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Airport_Sliding_Doors_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Airport_Terrace_01_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Airport_Terrace_01_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_amkBenchSingle_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_amkBenchSingle_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_amkBenchSingleD2_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_amkBenchSingleD2_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Armory_Room_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Armory_Room_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_BarnDoor_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_BarnDoor_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Bunker_Entrance_03_Extension_01_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Bunker_Entrance_03_Extension_01_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Chapel_01_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Chapel_01_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_ChapelDoor_01_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_ChapelDoor_01_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_ChickenCoop_01_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_ChickenCoop_01_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_ChickenCoopDoor_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_ChickenCoopDoor_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_City_sign_A_board_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_City_sign_A_board_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_City_sign_C_board_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_City_sign_C_board_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Continental_Door_01_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Continental_Door_01_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Continental_Door_02_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Continental_Door_02_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Continental_Door_05_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Continental_Door_05_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Continental_Door_06_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Continental_Door_06_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Continental_House_01_A_Blueprint_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Continental_House_01_A_Blueprint_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Continental_House_02_Blueprint_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Continental_House_02_Blueprint_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Continental_House_03_Blueprint_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Continental_House_03_Blueprint_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Continental_House_04_Stable_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Continental_House_04_Stable_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Continental_House_05_A_Blueprint_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Continental_House_05_A_Blueprint_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Continental_House_05_B_Blueprint_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Continental_House_05_B_Blueprint_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Continental_House_06b_Blueprint_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Continental_House_06b_Blueprint_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Continental_House_07_Stable_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Continental_House_07_Stable_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Continental_House_10_2_Blueprint_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Continental_House_10_2_Blueprint_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_ContinentalBarn_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_ContinentalBarn_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_CornStorage_02_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_CornStorage_02_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Custom_Room_01_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Custom_Room_01_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_depositiry_01_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_depositiry_01_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Door_01_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Door_01_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Door_A_Int_01_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Door_A_Int_01_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Door_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Door_Int_01_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Door_Int_01_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Door_Int_02_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Door_Int_02_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Door_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_dormBench_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_dormBench_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_dormBenchD1_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_dormBenchD1_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_dormBenchD2_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_dormBenchD2_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Double_Door_03_Solid_A_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Double_Door_03_Solid_A_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Double_Door_03_Solid_A1_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Double_Door_03_Solid_A1_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Double_Door_03_Solid1_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Double_Door_03_Solid1_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Farm_Model_01_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Farm_Model_01_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Full_Set_01_Door_01_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Full_Set_01_Door_01_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Garage_Door_02_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Garage_Door_02_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Gas_Station_01_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Gas_Station_01_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Hangar_01_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Hangar_01_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Hangar_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Hangar_Door_01_A_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Hangar_Door_01_A_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Hangar_Door_01_B_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Hangar_Door_01_B_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Hangar_Door_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Hangar_Door_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Hangar_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Hatch_Door_Tower_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Hatch_Door_Tower_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Hospital_Workshop_01_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Hospital_Workshop_01_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_HuntingStand_01_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_HuntingStand_01_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_ImprovisedPistol_OpenEmptyInsertBullet_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_ImprovisedPistol_OpenEmptyInsertBullet_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_ImprovisedPistol_OpenInsertBullet_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_ImprovisedPistol_OpenInsertBullet_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_industrial_Light_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_industrial_Light_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_industrial_Light_White_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_industrial_Light_White_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_KletVinograd_01_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_KletVinograd_01_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_KletVinograd_Doors_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_KletVinograd_Doors_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Ladder_01_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Ladder_01_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Metal_Door_01_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Metal_Door_01_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Metal_Door_02_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Metal_Door_02_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Metal_Door_03_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Metal_Door_03_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Metal_Door_05_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Metal_Door_05_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Metal_Door_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Metal_Door_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Military_Hangar_01_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Military_Hangar_01_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Military_Hangar_02_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Military_Hangar_02_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_NavigationInvoker_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_NavigationInvoker_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_NeonLamp_Light_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_NeonLamp_Light_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_NewsStand_02_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_NewsStand_02_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_NewsStandDoor_02_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_NewsStandDoor_02_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Old_Stable_House_01_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Old_Stable_House_01_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Old_Stable_House_Door_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Old_Stable_House_Door_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Outdoor_Toilet_Door_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Outdoor_Toilet_Door_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Pallet_3pcs_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Pallet_3pcs_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Pallet_6pcs_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Pallet_6pcs_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Passenger_Building_01_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Passenger_Building_01_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_PlainText_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_PlainText_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Pond_WM_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Pond_WM_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_PrisonSecurityLock_01_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_PrisonSecurityLock_01_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Rabbitry_01_door_down_no_destruction_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Rabbitry_01_door_down_no_destruction_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Rabbitry_01_door_up_no_destruction1_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Rabbitry_01_door_up_no_destruction1_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Rabbitry_01_no_destruction_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Rabbitry_01_no_destruction_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_radio_01_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_radio_01_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Room_01_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Room_01_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Room_A_04_a_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Room_A_04_a_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Room_A_04_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Room_A_04_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Room_A_a_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Room_A_a_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Room_A_b01_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Room_A_b01_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Room_A_Office_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Room_A_Office_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Room_B_01_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Room_B_01_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Sentry_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Sentry_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_SentryAIController_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_SentryAIController_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_SentryCorpse_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_SentryCorpse_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_SentryWalkCameraShake_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_SentryWalkCameraShake_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Service_Scaffolding_01_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Service_Scaffolding_01_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Service_Scaffolding_02_A_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Service_Scaffolding_02_A_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Shed_01_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Shed_01_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Single_Door_A_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Single_Door_A_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Sliding_Glass_Doors_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Sliding_Glass_Doors_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_SM_Control_Tower_01_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_SM_Control_Tower_01_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_SolidDoor_03_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_SolidDoor_03_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Standing_Torch_01_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Standing_Torch_01_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Street_lamp_02_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Street_lamp_02_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Supermarket_02_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Supermarket_02_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Ticket_Room_01_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Ticket_Room_01_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Toilete_Stall_01_Door_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Toilete_Stall_01_Door_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_ToolShed_Doors_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_ToolShed_Doors_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_trainstationBenchD1_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_trainstationBenchD1_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_trainstationBenchD2_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_trainstationBenchD2_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Tunnel_AngledDown_Entrance_02_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Tunnel_AngledDown_Entrance_02_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Tunnel_Big_4m_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Tunnel_Big_4m_Doors_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Tunnel_Big_4m_Doors_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Tunnel_Big_4m_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Tunnel_Big_8m_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Tunnel_Big_8m_Doors_Windows_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Tunnel_Big_8m_Doors_Windows_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Tunnel_Big_8m_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Tunnel_Big_Doors_02_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Tunnel_Big_Doors_02_Locked_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Tunnel_Big_Doors_02_Locked_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Tunnel_Big_Doors_02_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Tunnel_Big_L_02_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Tunnel_Big_L_02_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Tunnel_Big_L_03_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Tunnel_Big_L_03_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Tunnel_Big_T_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Tunnel_Big_T_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Tunnel_Doors_Small_01_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Tunnel_Doors_Small_01_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Tunnel_Doors_Small_02_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Tunnel_Doors_Small_02_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Tunnel_Light_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Tunnel_Light_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Tunnel_Restroom_Doors_Small_Men_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Tunnel_Restroom_Doors_Small_Men_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Tunnel_Restroom_Doors_Small_Women_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Tunnel_Restroom_Doors_Small_Women_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Tunnel_Small_4m_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Tunnel_Small_4m_Doors_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Tunnel_Small_4m_Doors_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Tunnel_Small_4m_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Tunnel_Small_7m_Clean_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Tunnel_Small_7m_Clean_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Tunnel_Small_8m_Doors_Windows_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Tunnel_Small_8m_Doors_Windows_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Tunnel_Small_Angle_Down_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Tunnel_Small_Angle_Down_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Tunnel_Small_End_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Tunnel_Small_End_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Tunnel_Small_L_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Tunnel_Small_L_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Weapon_Improvised_Handgun_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Weapon_Improvised_Handgun_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Weapon_Improvised_Shotgun_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Weapon_Improvised_Shotgun_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_WellSpring_01_New_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_WellSpring_01_New_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_WellSpring_03_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_WellSpring_03_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_WildAnimalFeeder_01_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_WildAnimalFeeder_01_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Wooden_Small_Door_NEW_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Wooden_Small_Door_NEW_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_WoodenLogCabinDoor_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_WoodenLogCabinDoor_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_Caned_Food_Drink_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_Caned_Food_Drink_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_Cars_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_Cars_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_Cave_B_1_4_WM_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_Cave_B_1_4_WM_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_Cave_C_2_1_WM_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_Cave_C_2_1_WM_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_Drink_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_Drink_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_Dry_Food_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_Dry_Food_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_EX_Candy_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_EX_Candy_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_EX_Canned_Drinks_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_EX_Canned_Drinks_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_EX_Drinks_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_EX_Drinks_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_EX_House_Clothes_All_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_EX_House_Clothes_All_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_EX_House_Clothes_Small_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_EX_House_Clothes_Small_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_EX_House_Items_01_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_EX_House_Items_01_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_EX_House_Medicine_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_EX_House_Medicine_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_EX_Industrial_items_Big_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_EX_Industrial_items_Big_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_EX_Kitchen_Food_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_EX_Kitchen_Food_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_EX_Kitchen_Items_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_EX_Kitchen_Items_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_EX_Medical_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_EX_Medical_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_EX_Military_Weapons_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_EX_Military_Weapons_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_EX_Police_Weapons_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_EX_Police_Weapons_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_EX_Stable_Items_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_EX_Stable_Items_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_Fruit_vegetables_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_Fruit_vegetables_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_House_Drink_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_House_Drink_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_House_Food_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_House_Food_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_House_Items_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_House_Items_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_House_Medicine_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_House_Medicine_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_Improvised_Mask_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_Improvised_Mask_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_Industrial_Tools_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_Industrial_Tools_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_Kitchen_Items_Canned_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_Kitchen_Items_Canned_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_Kitchen_Items_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_Kitchen_Items_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_Landscape_C_2_2_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_Landscape_C_2_2_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_Medical_Equipement_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_Medical_Equipement_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_Medical_Lab_clothes_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_Medical_Lab_clothes_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_Medication_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_Medication_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_Military_Clothes_Medium_Big_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_Military_Clothes_Medium_Big_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_Military_Clothes_Small_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_Military_Clothes_Small_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_Military_Footwear_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_Military_Footwear_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_Military_Vests_Armor_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_Military_Vests_Armor_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_Night_Vision_Googles_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_Night_Vision_Googles_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_SM_Barracks_Blueprint_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_SM_Barracks_Blueprint_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_SM_Garage_02_Blueprint_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_SM_Garage_02_Blueprint_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_SM_Jail_Garage_Blueprint_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_SM_Jail_Garage_Blueprint_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_SM_Jail_Garage_Building_Door_Blueprint_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_SM_Jail_Garage_Building_Door_Blueprint_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_SM_MetalDoor_01_Blueprint_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_SM_MetalDoor_01_Blueprint_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_SM_MetalDoor_02_A_Blueprint_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_SM_MetalDoor_02_A_Blueprint_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_SM_MetalDoor_02_B_Blueprint_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_SM_MetalDoor_02_B_Blueprint_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_SM_Outdoor_Toilet_Blueprint_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_SM_Outdoor_Toilet_Blueprint_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_SM_Reflector_On_Blueprint_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_SM_Reflector_On_Blueprint_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_SM_Stone_Shed_05_Blueprint_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_SM_Stone_Shed_05_Blueprint_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_SM_Stone_Stable_01_Blueprint_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_SM_Stone_Stable_01_Blueprint_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_SM_Toilet_Stall_01_Blueprint_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_SM_Toilet_Stall_01_Blueprint_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_SM_Tool_Shed_Blueprint_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_SM_Tool_Shed_Blueprint_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_SM_WaterPump_01_lp_Blueprint_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_SM_WaterPump_01_lp_Blueprint_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_SM_Wire_Fence_03_Door_Blueprint_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_SM_Wire_Fence_03_Door_Blueprint_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_Stable_Tools_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_Stable_Tools_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_Trash_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_Trash_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_Tunel_WM_C2_02_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_Tunel_WM_C2_02_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_TV_Base_C1_WM_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_TV_Base_C1_WM_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_WoodenLogCabin_BP_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_WoodenLogCabin_BP_structs.hpp">
       <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>

@@ -100,6 +100,26 @@ void ABP_Wristwatch_C::ToggleDisplayVisibility(bool Visiblity)
 }
 
 
+// Function BP_Wristwatch.BP_Wristwatch_C.SetDisplayBrightness
+// (FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
+// Parameters:
+// float                          Value                          (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void ABP_Wristwatch_C::SetDisplayBrightness(float Value)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Wristwatch.BP_Wristwatch_C.SetDisplayBrightness");
+
+	struct
+	{
+		float                          Value;
+	} params;
+
+	params.Value = Value;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function BP_Wristwatch.BP_Wristwatch_C.ExecuteUbergraph_BP_Wristwatch
 // ()
 // Parameters:

@@ -22817,42 +22817,6 @@ void APrisoner::ToggleCraftingPanel()
 }
 
 
-// Function ConZ.Prisoner.TeleportToRandomPlayerStart
-// (FUNC_Final, FUNC_Exec, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
-
-void APrisoner::TeleportToRandomPlayerStart()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Prisoner.TeleportToRandomPlayerStart");
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function ConZ.Prisoner.TeleportToPlayer
-// (FUNC_Final, FUNC_Exec, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
-// Parameters:
-// struct FString                 Name                           (CPF_Parm, CPF_ZeroConstructor)
-
-void APrisoner::TeleportToPlayer(const struct FString& Name)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Prisoner.TeleportToPlayer");
-
-	struct
-	{
-		struct FString                 Name;
-	} params;
-
-	params.Name = Name;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
 // Function ConZ.Prisoner.Teleport
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable)
 // Parameters:
@@ -23051,6 +23015,26 @@ bool APrisoner::ShouldLookatMeleeTarget()
 	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
+}
+
+
+// Function ConZ.Prisoner.SetWristwatchBrightness
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+// Parameters:
+// float                          Value                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void APrisoner::SetWristwatchBrightness(float Value)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Prisoner.SetWristwatchBrightness");
+
+	struct
+	{
+		float                          Value;
+	} params;
+
+	params.Value = Value;
+
+	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -23340,26 +23324,6 @@ void APrisoner::SetSkillLevel(const struct FString& Name, int Value)
 }
 
 
-// Function ConZ.Prisoner.SetPlayerWaypoint
-// (FUNC_Final, FUNC_Exec, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
-// Parameters:
-// struct FString                 Name                           (CPF_Parm, CPF_ZeroConstructor)
-
-void APrisoner::SetPlayerWaypoint(const struct FString& Name)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Prisoner.SetPlayerWaypoint");
-
-	struct
-	{
-		struct FString                 Name;
-	} params;
-
-	params.Name = Name;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
 // Function ConZ.Prisoner.SetPlayerSoundLevel
 // (FUNC_Final, FUNC_Native, FUNC_Private, FUNC_BlueprintCallable)
 // Parameters:
@@ -23424,7 +23388,7 @@ void APrisoner::SetNightVisionEnabled(bool Value)
 
 
 // Function ConZ.Prisoner.SetNameTextVisibilityForAll
-// (FUNC_Final, FUNC_Exec, FUNC_Native, FUNC_Public)
+// (FUNC_Final, FUNC_Native, FUNC_Public)
 // Parameters:
 // bool                           visible                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
@@ -23942,26 +23906,6 @@ void APrisoner::Server_UnloadAmmoFromMagazine(class AWeaponAttachmentMagazine* m
 	} params;
 
 	params.magazine = magazine;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function ConZ.Prisoner.Server_Teleport
-// (FUNC_Final, FUNC_Net, FUNC_NetReliable, FUNC_Native, FUNC_Event, FUNC_Private, FUNC_NetServer, FUNC_NetValidate)
-// Parameters:
-// struct FPrisonerTeleportRequest request                        (CPF_ConstParm, CPF_Parm, CPF_ReferenceParm)
-
-void APrisoner::Server_Teleport(const struct FPrisonerTeleportRequest& request)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Prisoner.Server_Teleport");
-
-	struct
-	{
-		struct FPrisonerTeleportRequest request;
-	} params;
-
-	params.request = request;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -24611,7 +24555,7 @@ void APrisoner::RemoveFromTeamOnServer(class APrisoner* member)
 
 
 // Function ConZ.Prisoner.RecoverLastSafeLocation
-// (FUNC_Final, FUNC_Exec, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
 void APrisoner::RecoverLastSafeLocation()
 {
@@ -41341,6 +41285,26 @@ void AWristwatch::SyncTime()
 void AWristwatch::SetTime(float Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Wristwatch.SetTime");
+
+	struct
+	{
+		float                          Value;
+	} params;
+
+	params.Value = Value;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function ConZ.Wristwatch.SetDisplayBrightness
+// (FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
+// Parameters:
+// float                          Value                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void AWristwatch::SetDisplayBrightness(float Value)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Wristwatch.SetDisplayBrightness");
 
 	struct
 	{

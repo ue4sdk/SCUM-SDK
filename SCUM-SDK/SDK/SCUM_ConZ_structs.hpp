@@ -96,13 +96,19 @@ enum class EInteractionType : uint8_t
 	EInteractionType__Defecate     = 66,
 	EInteractionType__Vomit        = 67,
 	EInteractionType__CheckTime    = 68,
-	EInteractionType__MakeUnconscious = 69,
-	EInteractionType__PacifyAnimal = 70,
-	EInteractionType__TameAnimal   = 71,
-	EInteractionType__LearnAnimal  = 72,
-	EInteractionType__CommandAnimal = 73,
-	EInteractionType__FeedAnimal   = 74,
-	EInteractionType__EInteractionType_MAX = 75
+	EInteractionType__GestureShowFinger = 69,
+	EInteractionType__GestureStandSurrender = 70,
+	EInteractionType__GestureWaveHi = 71,
+	EInteractionType__GestureYouAreDead = 72,
+	EInteractionType__GestureFY    = 73,
+	EInteractionType__GesturePoint = 74,
+	EInteractionType__MakeUnconscious = 75,
+	EInteractionType__PacifyAnimal = 76,
+	EInteractionType__TameAnimal   = 77,
+	EInteractionType__LearnAnimal  = 78,
+	EInteractionType__CommandAnimal = 79,
+	EInteractionType__FeedAnimal   = 80,
+	EInteractionType__EInteractionType_MAX = 81
 };
 
 
@@ -1033,7 +1039,8 @@ enum class ECharacterActionNotifyType : uint8_t
 	ECharacterActionNotifyType__InsertCartridge = 3,
 	ECharacterActionNotifyType__SwapWeapons = 4,
 	ECharacterActionNotifyType__Chop = 5,
-	ECharacterActionNotifyType__ECharacterActionNotifyType_MAX = 6
+	ECharacterActionNotifyType__CommitSuicide = 6,
+	ECharacterActionNotifyType__ECharacterActionNotifyType_MAX = 7
 };
 
 
@@ -1774,8 +1781,15 @@ enum class EPrisonerMontage : uint8_t
 	EPrisonerMontage__CheckTime    = 33,
 	EPrisonerMontage__CheckTimeWhileItemInHands = 34,
 	EPrisonerMontage__CheckTimeWhileWeaponInHands = 35,
-	EPrisonerMontage__Count        = 36,
-	EPrisonerMontage__EPrisonerMontage_MAX = 37
+	EPrisonerMontage__GestureShowFinger = 36,
+	EPrisonerMontage__GestureStandSurrender = 37,
+	EPrisonerMontage__GestureWaveHi = 38,
+	EPrisonerMontage__GestureYouAreDead = 39,
+	EPrisonerMontage__GestureFY    = 40,
+	EPrisonerMontage__GesturePoint = 41,
+	EPrisonerMontage__CommitSuicide = 42,
+	EPrisonerMontage__Count        = 43,
+	EPrisonerMontage__EPrisonerMontage_MAX = 44
 };
 
 
@@ -4521,6 +4535,13 @@ struct FLadderDetectionParams
 	struct FVector                                     CharacterLocation;                                        // 0x0018(0x000C) (CPF_IsPlainOldData)
 	float                                              MaxHorzDistanceToLadder;                                  // 0x0024(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	float                                              MaxRayToLadderAngle;                                      // 0x0028(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// ScriptStruct ConZ.PrisonerViolation
+// 0x0010
+struct FPrisonerViolation
+{
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0000(0x0010) MISSED OFFSET
 };
 
 // ScriptStruct ConZ.PrisonerViewInfo

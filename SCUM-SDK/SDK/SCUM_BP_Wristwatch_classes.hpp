@@ -35,6 +35,7 @@ public:
 	void SetTime(float Value);
 	void ReceiveBeginPlay();
 	void ToggleDisplayVisibility(bool Visiblity);
+	void SetDisplayBrightness(float Value);
 	void ExecuteUbergraph_BP_Wristwatch(int EntryPoint);
 };
 

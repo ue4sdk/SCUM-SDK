@@ -12,6 +12,26 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function UI_ClockFaceWidget.UI_ClockFaceWidget_C.SetBrightness
+// (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+// Parameters:
+// float                          Value                          (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UUI_ClockFaceWidget_C::SetBrightness(float Value)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UI_ClockFaceWidget.UI_ClockFaceWidget_C.SetBrightness");
+
+	struct
+	{
+		float                          Value;
+	} params;
+
+	params.Value = Value;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function UI_ClockFaceWidget.UI_ClockFaceWidget_C.AppendZero
 // (FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 // Parameters:

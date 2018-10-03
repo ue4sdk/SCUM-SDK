@@ -284,40 +284,40 @@ void UCircularProgressBarSprites_C::SetNormalColor(const struct FLinearColor& no
 // Function CircularProgressBarSprites.CircularProgressBarSprites_C.GetAlarmColor
 // (FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintEvent, FUNC_BlueprintPure)
 // Parameters:
-// struct FLinearColor            alarmColor                     (CPF_Parm, CPF_OutParm, CPF_IsPlainOldData)
+// struct FLinearColor            AlarmColor                     (CPF_Parm, CPF_OutParm, CPF_IsPlainOldData)
 
-void UCircularProgressBarSprites_C::GetAlarmColor(struct FLinearColor* alarmColor)
+void UCircularProgressBarSprites_C::GetAlarmColor(struct FLinearColor* AlarmColor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CircularProgressBarSprites.CircularProgressBarSprites_C.GetAlarmColor");
 
 	struct
 	{
-		struct FLinearColor            alarmColor;
+		struct FLinearColor            AlarmColor;
 	} params;
 
 
 	UObject::ProcessEvent(fn, &params);
 
-	if (alarmColor != nullptr)
-		*alarmColor = params.alarmColor;
+	if (AlarmColor != nullptr)
+		*AlarmColor = params.AlarmColor;
 }
 
 
 // Function CircularProgressBarSprites.CircularProgressBarSprites_C.SetAlarmColor
 // (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 // Parameters:
-// struct FLinearColor            alarmColor                     (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_IsPlainOldData)
+// struct FLinearColor            AlarmColor                     (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_IsPlainOldData)
 
-void UCircularProgressBarSprites_C::SetAlarmColor(const struct FLinearColor& alarmColor)
+void UCircularProgressBarSprites_C::SetAlarmColor(const struct FLinearColor& AlarmColor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CircularProgressBarSprites.CircularProgressBarSprites_C.SetAlarmColor");
 
 	struct
 	{
-		struct FLinearColor            alarmColor;
+		struct FLinearColor            AlarmColor;
 	} params;
 
-	params.alarmColor = alarmColor;
+	params.AlarmColor = AlarmColor;
 
 	UObject::ProcessEvent(fn, &params);
 }
