@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.17) SDK
+// SCUM (0.1.20) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_DropZoneSlot.BP_DropZoneSlot_C
-// 0x0000 (0x0358 - 0x0358)
+// 0x0000 (0x0368 - 0x0368)
 class ABP_DropZoneSlot_C : public ADropZoneSlot
 {
 public:

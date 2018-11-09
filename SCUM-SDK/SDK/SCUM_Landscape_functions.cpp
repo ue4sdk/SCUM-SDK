@@ -1,4 +1,4 @@
-// SCUM (0.1.17) SDK
+// SCUM (0.1.20) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -76,6 +76,26 @@ void ALandscapeProxy::SetLandscapeMaterialScalarParameterValue(const struct FNam
 
 	params.ParameterName = ParameterName;
 	params.Value = Value;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Landscape.LandscapeProxy.EditorSetLandscapeMaterial
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+// Parameters:
+// class UMaterialInterface*      NewLandscapeMaterial           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void ALandscapeProxy::EditorSetLandscapeMaterial(class UMaterialInterface* NewLandscapeMaterial)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Landscape.LandscapeProxy.EditorSetLandscapeMaterial");
+
+	struct
+	{
+		class UMaterialInterface*      NewLandscapeMaterial;
+	} params;
+
+	params.NewLandscapeMaterial = NewLandscapeMaterial;
 
 	UObject::ProcessEvent(fn, &params);
 }

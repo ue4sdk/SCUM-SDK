@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.17) SDK
+// SCUM (0.1.20) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -34,6 +34,16 @@ enum class ERangeBoundTypes : uint8_t
 	ERangeBoundTypes__Inclusive    = 1,
 	ERangeBoundTypes__Open         = 2,
 	ERangeBoundTypes__ERangeBoundTypes_MAX = 3
+};
+
+
+// Enum CoreUObject.ELocalizedTextSourceCategory
+enum class ELocalizedTextSourceCategory : uint8_t
+{
+	ELocalizedTextSourceCategory__Game = 0,
+	ELocalizedTextSourceCategory__Engine = 1,
+	ELocalizedTextSourceCategory__Editor = 2,
+	ELocalizedTextSourceCategory__ELocalizedTextSourceCategory_MAX = 3
 };
 
 
@@ -649,6 +659,49 @@ struct FDateTime
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0000(0x0008) MISSED OFFSET
 };
 
+// ScriptStruct CoreUObject.FrameNumber
+// 0x0004
+struct FFrameNumber
+{
+	int                                                Value;                                                    // 0x0000(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// ScriptStruct CoreUObject.FrameRate
+// 0x0008
+struct FFrameRate
+{
+	int                                                Numerator;                                                // 0x0000(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	int                                                Denominator;                                              // 0x0004(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// ScriptStruct CoreUObject.FrameTime
+// 0x0008
+struct FFrameTime
+{
+	struct FFrameNumber                                FrameNumber;                                              // 0x0000(0x0004) (CPF_BlueprintVisible)
+	float                                              SubFrame;                                                 // 0x0004(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// ScriptStruct CoreUObject.QualifiedFrameTime
+// 0x0010
+struct FQualifiedFrameTime
+{
+	struct FFrameTime                                  Time;                                                     // 0x0000(0x0008) (CPF_BlueprintVisible)
+	struct FFrameRate                                  Rate;                                                     // 0x0008(0x0008) (CPF_BlueprintVisible)
+};
+
+// ScriptStruct CoreUObject.Timecode
+// 0x0014
+struct FTimecode
+{
+	int                                                Hours;                                                    // 0x0000(0x0004) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	int                                                Minutes;                                                  // 0x0004(0x0004) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	int                                                Seconds;                                                  // 0x0008(0x0004) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	int                                                Frames;                                                   // 0x000C(0x0004) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bDropFrameFormat;                                         // 0x0010(0x0001) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0011(0x0003) MISSED OFFSET
+};
+
 // ScriptStruct CoreUObject.Timespan
 // 0x0008
 struct FTimespan
@@ -743,18 +796,40 @@ struct FInt32Interval
 	int                                                Max;                                                      // 0x0004(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
+// ScriptStruct CoreUObject.PolyglotTextData
+// 0x00B0
+struct FPolyglotTextData
+{
+	ELocalizedTextSourceCategory                       Category;                                                 // 0x0000(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0001(0x0007) MISSED OFFSET
+	struct FString                                     NativeCulture;                                            // 0x0008(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor)
+	struct FString                                     Namespace;                                                // 0x0018(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor)
+	struct FString                                     Key;                                                      // 0x0028(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor)
+	struct FString                                     NativeString;                                             // 0x0038(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor)
+	TMap<struct FString, struct FString>               LocalizedStrings;                                         // 0x0048(0x0050) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor)
+	struct FText                                       CachedText;                                               // 0x0098(0x0018) (CPF_Transient)
+};
+
 // ScriptStruct CoreUObject.AutomationEvent
-// 0x0048
+// 0x0038
 struct FAutomationEvent
 {
 	EAutomationEventType                               Type;                                                     // 0x0000(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0001(0x0007) MISSED OFFSET
 	struct FString                                     Message;                                                  // 0x0008(0x0010) (CPF_ZeroConstructor)
 	struct FString                                     Context;                                                  // 0x0018(0x0010) (CPF_ZeroConstructor)
-	struct FString                                     Filename;                                                 // 0x0028(0x0010) (CPF_ZeroConstructor)
-	int                                                LineNumber;                                               // 0x0038(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x003C(0x0004) MISSED OFFSET
-	struct FDateTime                                   Timestamp;                                                // 0x0040(0x0008)
+	struct FGuid                                       Artifact;                                                 // 0x0028(0x0010) (CPF_IsPlainOldData)
+};
+
+// ScriptStruct CoreUObject.AutomationExecutionEntry
+// 0x0058
+struct FAutomationExecutionEntry
+{
+	struct FAutomationEvent                            Event;                                                    // 0x0000(0x0038)
+	struct FString                                     Filename;                                                 // 0x0038(0x0010) (CPF_ZeroConstructor)
+	int                                                LineNumber;                                               // 0x0048(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x004C(0x0004) MISSED OFFSET
+	struct FDateTime                                   Timestamp;                                                // 0x0050(0x0008)
 };
 
 }

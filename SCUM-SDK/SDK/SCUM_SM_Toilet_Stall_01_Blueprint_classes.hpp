@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.17) SDK
+// SCUM (0.1.20) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,14 +15,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass SM_Toilet_Stall_01_Blueprint.SM_Toilet_Stall_01_Blueprint_C
-// 0x0020 (0x0338 - 0x0318)
+// 0x0020 (0x0348 - 0x0328)
 class ASM_Toilet_Stall_01_Blueprint_C : public AActor
 {
 public:
-	class UStaticMeshComponent*                        SM_Toilet_Stall_01;                                       // 0x0318(0x0008) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
-	class UChildActorComponent*                        ChildActor;                                               // 0x0320(0x0008) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
-	class UChildActorComponent*                        BP_Toilete_Stall_01_Door;                                 // 0x0328(0x0008) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
-	class USceneComponent*                             SharedRoot;                                               // 0x0330(0x0008) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
+	class UStaticMeshComponent*                        SM_Toilet_Stall_01;                                       // 0x0328(0x0008) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
+	class UChildActorComponent*                        ChildActor;                                               // 0x0330(0x0008) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
+	class UChildActorComponent*                        BP_Toilete_Stall_01_Door;                                 // 0x0338(0x0008) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
+	class USceneComponent*                             SharedRoot;                                               // 0x0340(0x0008) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

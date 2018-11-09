@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.17) SDK
+// SCUM (0.1.20) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -86,45 +86,45 @@ public:
 
 
 // Class DonAINavigation.DonNavigationManager
-// 0x6A18 (0x6D30 - 0x0318)
+// 0x6A18 (0x6D40 - 0x0328)
 class ADonNavigationManager : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x1F4];                                     // 0x0318(0x01F4) MISSED OFFSET
-	bool                                               bIsUnbound;                                               // 0x050C(0x0001) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x050D(0x0003) MISSED OFFSET
-	class USceneComponent*                             SceneComponent;                                           // 0x0510(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ExportObject, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_EditConst, CPF_InstancedReference, CPF_IsPlainOldData)
-	class UBillboardComponent*                         Billboard;                                                // 0x0518(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ExportObject, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_EditConst, CPF_InstancedReference, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData02[0x10];                                      // 0x0520(0x0010) MISSED OFFSET
-	float                                              VoxelSize;                                                // 0x0530(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	int                                                XGridSize;                                                // 0x0534(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	int                                                YGridSize;                                                // 0x0538(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	int                                                ZGridSize;                                                // 0x053C(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	TArray<TEnumAsByte<ECollisionChannel>>             ObstacleQueryChannels;                                    // 0x0540(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor)
-	TArray<class AActor*>                              ActorsToIgnoreForCollision;                               // 0x0550(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor)
-	TArray<float>                                      AutoCorrectionGuessList;                                  // 0x0560(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor)
-	float                                              UnrealPhyxPenetrationDepth;                               // 0x0570(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool                                               PerformCollisionChecksOnStartup;                          // 0x0574(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool                                               bMultiThreadingEnabled;                                   // 0x0575(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData03[0x2];                                       // 0x0576(0x0002) MISSED OFFSET
-	int                                                MaxPathSolverIterationsPerTick;                           // 0x0578(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	int                                                MaxCollisionSolverIterationsPerTick;                      // 0x057C(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	int                                                MaxPathSolverIterationsOnThread;                          // 0x0580(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	int                                                MaxCollisionSolverIterationsOnThread;                     // 0x0584(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	int                                                MaxPathSolverIterationsPerTick_Unbound;                   // 0x0588(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	int                                                MaxCollisionSolverIterationsPerTick_Unbound;              // 0x058C(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	int                                                MaxPathSolverIterationsOnThread_Unbound;                  // 0x0590(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	int                                                MaxCollisionSolverIterationsOnThread_Unbound;             // 0x0594(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UBoxComponent*                               WorldBoundaryVisualizer;                                  // 0x0598(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
-	bool                                               bDisplayWorldBoundary;                                    // 0x05A0(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool                                               bDisplayWorldBoundaryInGame;                              // 0x05A1(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData04[0x2];                                       // 0x05A2(0x0002) MISSED OFFSET
-	float                                              DebugVoxelsLineThickness;                                 // 0x05A4(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool                                               bRunDebugValidationsForDynamicCollisions;                 // 0x05A8(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData05[0x6607];                                    // 0x05A9(0x6607) MISSED OFFSET
-	unsigned char                                      UnknownData06[0x50];                                      // 0x05A9(0x0050) UNKNOWN PROPERTY: SetProperty DonAINavigation.DonNavigationManager.ActiveNavigationTaskOwners
-	unsigned char                                      UnknownData07[0x50];                                      // 0x6C00(0x0050) UNKNOWN PROPERTY: SetProperty DonAINavigation.DonNavigationManager.ActiveCollisionTaskOwners
-	unsigned char                                      UnknownData08[0xE0];                                      // 0x6C50(0x00E0) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x1F4];                                     // 0x0328(0x01F4) MISSED OFFSET
+	bool                                               bIsUnbound;                                               // 0x051C(0x0001) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x051D(0x0003) MISSED OFFSET
+	class USceneComponent*                             SceneComponent;                                           // 0x0520(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ExportObject, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_EditConst, CPF_InstancedReference, CPF_IsPlainOldData)
+	class UBillboardComponent*                         Billboard;                                                // 0x0528(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ExportObject, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_EditConst, CPF_InstancedReference, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData02[0x10];                                      // 0x0530(0x0010) MISSED OFFSET
+	float                                              VoxelSize;                                                // 0x0540(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	int                                                XGridSize;                                                // 0x0544(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	int                                                YGridSize;                                                // 0x0548(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	int                                                ZGridSize;                                                // 0x054C(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	TArray<TEnumAsByte<ECollisionChannel>>             ObstacleQueryChannels;                                    // 0x0550(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor)
+	TArray<class AActor*>                              ActorsToIgnoreForCollision;                               // 0x0560(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor)
+	TArray<float>                                      AutoCorrectionGuessList;                                  // 0x0570(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor)
+	float                                              UnrealPhyxPenetrationDepth;                               // 0x0580(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               PerformCollisionChecksOnStartup;                          // 0x0584(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bMultiThreadingEnabled;                                   // 0x0585(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData03[0x2];                                       // 0x0586(0x0002) MISSED OFFSET
+	int                                                MaxPathSolverIterationsPerTick;                           // 0x0588(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	int                                                MaxCollisionSolverIterationsPerTick;                      // 0x058C(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	int                                                MaxPathSolverIterationsOnThread;                          // 0x0590(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	int                                                MaxCollisionSolverIterationsOnThread;                     // 0x0594(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	int                                                MaxPathSolverIterationsPerTick_Unbound;                   // 0x0598(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	int                                                MaxCollisionSolverIterationsPerTick_Unbound;              // 0x059C(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	int                                                MaxPathSolverIterationsOnThread_Unbound;                  // 0x05A0(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	int                                                MaxCollisionSolverIterationsOnThread_Unbound;             // 0x05A4(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UBoxComponent*                               WorldBoundaryVisualizer;                                  // 0x05A8(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
+	bool                                               bDisplayWorldBoundary;                                    // 0x05B0(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bDisplayWorldBoundaryInGame;                              // 0x05B1(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData04[0x2];                                       // 0x05B2(0x0002) MISSED OFFSET
+	float                                              DebugVoxelsLineThickness;                                 // 0x05B4(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bRunDebugValidationsForDynamicCollisions;                 // 0x05B8(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData05[0x6607];                                    // 0x05B9(0x6607) MISSED OFFSET
+	unsigned char                                      UnknownData06[0x50];                                      // 0x05B9(0x0050) UNKNOWN PROPERTY: SetProperty DonAINavigation.DonNavigationManager.ActiveNavigationTaskOwners
+	unsigned char                                      UnknownData07[0x50];                                      // 0x6C10(0x0050) UNKNOWN PROPERTY: SetProperty DonAINavigation.DonNavigationManager.ActiveCollisionTaskOwners
+	unsigned char                                      UnknownData08[0xE0];                                      // 0x6C60(0x00E0) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -134,9 +134,9 @@ public:
 
 
 	void VisualizeNAVResult(TArray<struct FVector> PathSolution, const struct FVector& Source, const struct FVector& Destination, bool Reset, const struct FDoNNavigationDebugParams& DebugParams, const struct FColor& LineColor);
-	void VisualizeDynamicCollisionListeners(const struct FScriptDelegate& Listener, const struct FDoNNavigationQueryData& queryData);
-	void StopListeningToDynamicCollisionsForPathIndex(const struct FScriptDelegate& ListenerToClear, const struct FDoNNavigationQueryData& queryData, int VolumeIndex);
-	void StopListeningToDynamicCollisionsForPath(const struct FScriptDelegate& ListenerToClear, const struct FDoNNavigationQueryData& queryData);
+	void VisualizeDynamicCollisionListeners(const struct FScriptDelegate& Listener, const struct FDoNNavigationQueryData& QueryData);
+	void StopListeningToDynamicCollisionsForPathIndex(const struct FScriptDelegate& ListenerToClear, const struct FDoNNavigationQueryData& QueryData, int VolumeIndex);
+	void StopListeningToDynamicCollisionsForPath(const struct FScriptDelegate& ListenerToClear, const struct FDoNNavigationQueryData& QueryData);
 	bool SchedulePathfindingTask(class AActor* Actor, const struct FVector& Destination, const struct FDoNNavigationQueryParams& QueryParams, const struct FDoNNavigationDebugParams& DebugParams, const struct FScriptDelegate& ResultHandlerDelegate, const struct FScriptDelegate& DynamicCollisionListener);
 	bool ScheduleDynamicCollisionUpdate(class UPrimitiveComponent* Mesh, const struct FScriptDelegate& ResultHandler, const struct FName& CustomCacheIdentifier, bool bReplaceExistingTask, bool bDisableCacheUsage, bool bReloadCollisionCache, bool bUseCheapBoundsCollision, float BoundsScaleFactor, bool bForceSynchronousExecution, bool bDrawDebug);
 	bool IsMeshBoundsWithinNavigableWorld(class UPrimitiveComponent* Mesh, float BoundsScaleFactor);
@@ -162,7 +162,7 @@ public:
 
 
 // Class DonAINavigation.DonNavigationManagerUnbound
-// 0x0000 (0x6D30 - 0x6D30)
+// 0x0000 (0x6D40 - 0x6D40)
 class ADonNavigationManagerUnbound : public ADonNavigationManager
 {
 public:

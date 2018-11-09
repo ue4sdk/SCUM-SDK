@@ -1,0 +1,44 @@
+#pragma once
+
+// SCUM (0.1.20) SDK
+
+#ifdef _MSC_VER
+	#pragma pack(push, 0x8)
+#endif
+
+#include "SCUM_AppleVision_structs.hpp"
+
+namespace SDK
+{
+//---------------------------------------------------------------------------
+//Classes
+//---------------------------------------------------------------------------
+
+// Class AppleVision.AppleVisionDetectFacesAsyncTaskBlueprintProxy
+// 0x0050 (0x0078 - 0x0028)
+class UAppleVisionDetectFacesAsyncTaskBlueprintProxy : public UObject
+{
+public:
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0028(0x0008) MISSED OFFSET
+	struct FScriptMulticastDelegate                    OnSuccess;                                                // 0x0030(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
+	struct FScriptMulticastDelegate                    OnFailure;                                                // 0x0040(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
+	unsigned char                                      UnknownData01[0x10];                                      // 0x0050(0x0010) MISSED OFFSET
+	struct FFaceDetectionResult                        FaceDetectionResult;                                      // 0x0060(0x0010) (CPF_BlueprintVisible, CPF_BlueprintReadOnly)
+	unsigned char                                      UnknownData02[0x8];                                       // 0x0070(0x0008) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>("Class AppleVision.AppleVisionDetectFacesAsyncTaskBlueprintProxy");
+		return ptr;
+	}
+
+
+	static class UAppleVisionDetectFacesAsyncTaskBlueprintProxy* CreateProxyObjectForDetectFaces(class UTexture* SourceImage);
+};
+
+
+}
+
+#ifdef _MSC_VER
+	#pragma pack(pop)
+#endif

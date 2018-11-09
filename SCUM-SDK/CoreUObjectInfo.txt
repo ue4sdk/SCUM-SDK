@@ -5,7 +5,7 @@ class UTextBuffer                        : public UObject                   // 0
 class UField                             : public UObject                   // 0x08 (0x28 - 0x30) 
 class UStruct                            : public UField                    // 0x58 (0x30 - 0x88) 
 class UScriptStruct                      : public UStruct                   // 0x10 (0x88 - 0x98) 
-class UPackage                           : public UObject                   // 0x70 (0x28 - 0x98) 
+class UPackage                           : public UObject                   // 0x68 (0x28 - 0x90) 
 class UClass                             : public UStruct                   // 0x170 (0x88 - 0x1F8) 
 class UFunction                          : public UStruct                   // 0x30 (0x88 - 0xB8) 
 class UDelegateFunction                  : public UFunction                 // 0x00 (0xB8 - 0xB8) 

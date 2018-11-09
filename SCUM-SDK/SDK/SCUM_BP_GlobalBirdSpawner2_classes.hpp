@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.17) SDK
+// SCUM (0.1.20) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_GlobalBirdSpawner2.BP_GlobalBirdSpawner2_C
-// 0x0000 (0x03F8 - 0x03F8)
+// 0x0000 (0x0408 - 0x0408)
 class ABP_GlobalBirdSpawner2_C : public AGlobalBirdSpawner2
 {
 public:

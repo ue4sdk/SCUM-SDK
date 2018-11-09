@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.17) SDK
+// SCUM (0.1.20) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_ContinuouAttackAIController.BP_ContinuouAttackAIController_C
-// 0x0000 (0x05C8 - 0x05C8)
+// 0x0000 (0x05F0 - 0x05F0)
 class ABP_ContinuouAttackAIController_C : public AAnimalContinuousChargeAttackAIController
 {
 public:

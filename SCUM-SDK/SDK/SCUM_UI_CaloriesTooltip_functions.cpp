@@ -1,4 +1,4 @@
-// SCUM (0.1.17) SDK
+// SCUM (0.1.20) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -52,20 +52,20 @@ void UUI_CaloriesTooltip_C::SetTitle(const struct FText& Title)
 // (FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 // Parameters:
 // float                          MaxValue                       (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// float                          displayMaxValue                (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// float                          DisplayMaxValue                (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UUI_CaloriesTooltip_C::SetMaxValue(float MaxValue, float displayMaxValue)
+void UUI_CaloriesTooltip_C::SetMaxValue(float MaxValue, float DisplayMaxValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_CaloriesTooltip.UI_CaloriesTooltip_C.SetMaxValue");
 
 	struct
 	{
 		float                          MaxValue;
-		float                          displayMaxValue;
+		float                          DisplayMaxValue;
 	} params;
 
 	params.MaxValue = MaxValue;
-	params.displayMaxValue = displayMaxValue;
+	params.DisplayMaxValue = DisplayMaxValue;
 
 	UObject::ProcessEvent(fn, &params);
 }

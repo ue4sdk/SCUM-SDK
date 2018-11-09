@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.17) SDK
+// SCUM (0.1.20) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Old_Stable_House_Door.BP_Old_Stable_House_Door_C
-// 0x0000 (0x03C8 - 0x03C8)
+// 0x0000 (0x03E8 - 0x03E8)
 class ABP_Old_Stable_House_Door_C : public ARegularDoorStatic
 {
 public:

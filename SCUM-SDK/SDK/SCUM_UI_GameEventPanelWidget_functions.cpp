@@ -1,4 +1,4 @@
-// SCUM (0.1.17) SDK
+// SCUM (0.1.20) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -46,48 +46,6 @@ void UUI_GameEventPanelWidget_C::RestoreSelected()
 
 
 	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function UI_GameEventPanelWidget.UI_GameEventPanelWidget_C.Get_NextEventBorder_BrushColor
-// (FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintEvent, FUNC_BlueprintPure)
-// Parameters:
-// struct FLinearColor            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm, CPF_IsPlainOldData)
-
-struct FLinearColor UUI_GameEventPanelWidget_C::Get_NextEventBorder_BrushColor()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventPanelWidget.UI_GameEventPanelWidget_C.Get_NextEventBorder_BrushColor");
-
-	struct
-	{
-		struct FLinearColor            ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function UI_GameEventPanelWidget.UI_GameEventPanelWidget_C.Get_CurrentEventBorder_BrushColor
-// (FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintEvent, FUNC_BlueprintPure)
-// Parameters:
-// struct FLinearColor            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm, CPF_IsPlainOldData)
-
-struct FLinearColor UUI_GameEventPanelWidget_C::Get_CurrentEventBorder_BrushColor()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventPanelWidget.UI_GameEventPanelWidget_C.Get_CurrentEventBorder_BrushColor");
-
-	struct
-	{
-		struct FLinearColor            ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
 }
 
 
@@ -277,84 +235,6 @@ void UUI_GameEventPanelWidget_C::Construct()
 }
 
 
-// Function UI_GameEventPanelWidget.UI_GameEventPanelWidget_C.OnCurrentEventComboBoxOpening
-// (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
-
-void UUI_GameEventPanelWidget_C::OnCurrentEventComboBoxOpening()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventPanelWidget.UI_GameEventPanelWidget_C.OnCurrentEventComboBoxOpening");
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function UI_GameEventPanelWidget.UI_GameEventPanelWidget_C.OnNextEventComboBoxOpening
-// (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
-
-void UUI_GameEventPanelWidget_C::OnNextEventComboBoxOpening()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventPanelWidget.UI_GameEventPanelWidget_C.OnNextEventComboBoxOpening");
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function UI_GameEventPanelWidget.UI_GameEventPanelWidget_C.OnCurrentEventComboBoxSelectionChanged
-// (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
-// Parameters:
-// struct FString                 SelectedItem                   (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_ZeroConstructor)
-// TEnumAsByte<ESelectInfo>       SelectionType                  (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-
-void UUI_GameEventPanelWidget_C::OnCurrentEventComboBoxSelectionChanged(const struct FString& SelectedItem, TEnumAsByte<ESelectInfo> SelectionType)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventPanelWidget.UI_GameEventPanelWidget_C.OnCurrentEventComboBoxSelectionChanged");
-
-	struct
-	{
-		struct FString                 SelectedItem;
-		TEnumAsByte<ESelectInfo>       SelectionType;
-	} params;
-
-	params.SelectedItem = SelectedItem;
-	params.SelectionType = SelectionType;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function UI_GameEventPanelWidget.UI_GameEventPanelWidget_C.OnNextEventsComboBoxSelectionChanged
-// (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
-// Parameters:
-// struct FString                 SelectedItem                   (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_ZeroConstructor)
-// TEnumAsByte<ESelectInfo>       SelectionType                  (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-
-void UUI_GameEventPanelWidget_C::OnNextEventsComboBoxSelectionChanged(const struct FString& SelectedItem, TEnumAsByte<ESelectInfo> SelectionType)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventPanelWidget.UI_GameEventPanelWidget_C.OnNextEventsComboBoxSelectionChanged");
-
-	struct
-	{
-		struct FString                 SelectedItem;
-		TEnumAsByte<ESelectInfo>       SelectionType;
-	} params;
-
-	params.SelectedItem = SelectedItem;
-	params.SelectionType = SelectionType;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
 // Function UI_GameEventPanelWidget.UI_GameEventPanelWidget_C.OnOpened
 // (FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
 
@@ -382,6 +262,29 @@ void UUI_GameEventPanelWidget_C::OnClosed()
 	{
 	} params;
 
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function UI_GameEventPanelWidget.UI_GameEventPanelWidget_C.OnEventComboBoxSelectionChanged
+// (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+// Parameters:
+// struct FString                 SelectedItem                   (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_ZeroConstructor)
+// TEnumAsByte<ESelectInfo>       SelectionType                  (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UUI_GameEventPanelWidget_C::OnEventComboBoxSelectionChanged(const struct FString& SelectedItem, TEnumAsByte<ESelectInfo> SelectionType)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UI_GameEventPanelWidget.UI_GameEventPanelWidget_C.OnEventComboBoxSelectionChanged");
+
+	struct
+	{
+		struct FString                 SelectedItem;
+		TEnumAsByte<ESelectInfo>       SelectionType;
+	} params;
+
+	params.SelectedItem = SelectedItem;
+	params.SelectionType = SelectionType;
 
 	UObject::ProcessEvent(fn, &params);
 }

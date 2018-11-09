@@ -1,4 +1,4 @@
-// SCUM (0.1.17) SDK
+// SCUM (0.1.20) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -94,191 +94,6 @@ void AAkAmbientSound::StartAmbientSound()
 
 
 	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function AkAudio.AkCheckBox.SetIsChecked
-// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
-// Parameters:
-// bool                           InIsChecked                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-
-void UAkCheckBox::SetIsChecked(bool InIsChecked)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkCheckBox.SetIsChecked");
-
-	struct
-	{
-		bool                           InIsChecked;
-	} params;
-
-	params.InIsChecked = InIsChecked;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function AkAudio.AkCheckBox.SetCheckedState
-// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
-// Parameters:
-// ECheckBoxState                 InCheckedState                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-
-void UAkCheckBox::SetCheckedState(ECheckBoxState InCheckedState)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkCheckBox.SetCheckedState");
-
-	struct
-	{
-		ECheckBoxState                 InCheckedState;
-	} params;
-
-	params.InCheckedState = InCheckedState;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function AkAudio.AkCheckBox.SetAkItemId
-// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
-// Parameters:
-// struct FGuid                   ItemId                         (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm, CPF_IsPlainOldData)
-
-void UAkCheckBox::SetAkItemId(const struct FGuid& ItemId)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkCheckBox.SetAkItemId");
-
-	struct
-	{
-		struct FGuid                   ItemId;
-	} params;
-
-	params.ItemId = ItemId;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function AkAudio.AkCheckBox.SetAkBoolProperty
-// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
-// Parameters:
-// struct FString                 ItemProperty                   (CPF_Parm, CPF_ZeroConstructor)
-
-void UAkCheckBox::SetAkBoolProperty(const struct FString& ItemProperty)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkCheckBox.SetAkBoolProperty");
-
-	struct
-	{
-		struct FString                 ItemProperty;
-	} params;
-
-	params.ItemProperty = ItemProperty;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function AkAudio.AkCheckBox.IsPressed
-// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
-// Parameters:
-// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-
-bool UAkCheckBox::IsPressed()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkCheckBox.IsPressed");
-
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function AkAudio.AkCheckBox.IsChecked
-// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
-// Parameters:
-// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-
-bool UAkCheckBox::IsChecked()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkCheckBox.IsChecked");
-
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function AkAudio.AkCheckBox.GetCheckedState
-// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
-// Parameters:
-// ECheckBoxState                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-
-ECheckBoxState UAkCheckBox::GetCheckedState()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkCheckBox.GetCheckedState");
-
-	struct
-	{
-		ECheckBoxState                 ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function AkAudio.AkCheckBox.GetAkProperty
-// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
-// Parameters:
-// struct FString                 ReturnValue                    (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
-
-struct FString UAkCheckBox::GetAkProperty()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkCheckBox.GetAkProperty");
-
-	struct
-	{
-		struct FString                 ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function AkAudio.AkCheckBox.GetAkItemId
-// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
-// Parameters:
-// struct FGuid                   ReturnValue                    (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReturnParm, CPF_IsPlainOldData)
-
-struct FGuid UAkCheckBox::GetAkItemId()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkCheckBox.GetAkItemId");
-
-	struct
-	{
-		struct FGuid                   ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
 }
 
 
@@ -502,20 +317,50 @@ void UAkComponent::PostTrigger(const struct FString& Trigger)
 }
 
 
-// Function AkAudio.AkComponent.PostAssociatedAkEvent
-// (FUNC_Final, FUNC_BlueprintCosmetic, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+// Function AkAudio.AkComponent.PostAssociatedAkEventAndWaitForEnd
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 // Parameters:
+// struct FLatentActionInfo       LatentInfo                     (CPF_Parm)
 // int                            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-int UAkComponent::PostAssociatedAkEvent()
+int UAkComponent::PostAssociatedAkEventAndWaitForEnd(const struct FLatentActionInfo& LatentInfo)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkComponent.PostAssociatedAkEventAndWaitForEnd");
+
+	struct
+	{
+		struct FLatentActionInfo       LatentInfo;
+		int                            ReturnValue;
+	} params;
+
+	params.LatentInfo = LatentInfo;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function AkAudio.AkComponent.PostAssociatedAkEvent
+// (FUNC_Final, FUNC_BlueprintCosmetic, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable)
+// Parameters:
+// int                            CallbackMask                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FScriptDelegate         PostEventCallback              (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
+// int                            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+int UAkComponent::PostAssociatedAkEvent(int CallbackMask, const struct FScriptDelegate& PostEventCallback)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkComponent.PostAssociatedAkEvent");
 
 	struct
 	{
+		int                            CallbackMask;
+		struct FScriptDelegate         PostEventCallback;
 		int                            ReturnValue;
 	} params;
 
+	params.CallbackMask = CallbackMask;
+	params.PostEventCallback = PostEventCallback;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -547,25 +392,61 @@ int UAkComponent::PostAkEventByName(const struct FString& in_EventName)
 }
 
 
-// Function AkAudio.AkComponent.PostAkEvent
-// (FUNC_Final, FUNC_BlueprintCosmetic, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+// Function AkAudio.AkComponent.PostAkEventAndWaitForEnd
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 // Parameters:
 // class UAkAudioEvent*           AkEvent                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FString                 in_EventName                   (CPF_Parm, CPF_ZeroConstructor)
+// struct FLatentActionInfo       LatentInfo                     (CPF_Parm)
 // int                            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-int UAkComponent::PostAkEvent(class UAkAudioEvent* AkEvent, const struct FString& in_EventName)
+int UAkComponent::PostAkEventAndWaitForEnd(class UAkAudioEvent* AkEvent, const struct FString& in_EventName, const struct FLatentActionInfo& LatentInfo)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkComponent.PostAkEventAndWaitForEnd");
+
+	struct
+	{
+		class UAkAudioEvent*           AkEvent;
+		struct FString                 in_EventName;
+		struct FLatentActionInfo       LatentInfo;
+		int                            ReturnValue;
+	} params;
+
+	params.AkEvent = AkEvent;
+	params.in_EventName = in_EventName;
+	params.LatentInfo = LatentInfo;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function AkAudio.AkComponent.PostAkEvent
+// (FUNC_Final, FUNC_BlueprintCosmetic, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable)
+// Parameters:
+// class UAkAudioEvent*           AkEvent                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// int                            CallbackMask                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FScriptDelegate         PostEventCallback              (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
+// struct FString                 in_EventName                   (CPF_Parm, CPF_ZeroConstructor)
+// int                            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+int UAkComponent::PostAkEvent(class UAkAudioEvent* AkEvent, int CallbackMask, const struct FScriptDelegate& PostEventCallback, const struct FString& in_EventName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkComponent.PostAkEvent");
 
 	struct
 	{
 		class UAkAudioEvent*           AkEvent;
+		int                            CallbackMask;
+		struct FScriptDelegate         PostEventCallback;
 		struct FString                 in_EventName;
 		int                            ReturnValue;
 	} params;
 
 	params.AkEvent = AkEvent;
+	params.CallbackMask = CallbackMask;
+	params.PostEventCallback = PostEventCallback;
 	params.in_EventName = in_EventName;
 
 	UObject::ProcessEvent(fn, &params);
@@ -586,6 +467,212 @@ float UAkComponent::GetAttenuationRadius()
 	struct
 	{
 		float                          ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function AkAudio.AkAudioInputComponent.PostAssociatedAudioInputEvent
+// (FUNC_Final, FUNC_BlueprintCosmetic, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+// Parameters:
+// int                            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+int UAkAudioInputComponent::PostAssociatedAudioInputEvent()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkAudioInputComponent.PostAssociatedAudioInputEvent");
+
+	struct
+	{
+		int                            ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function AkAudio.AkCheckBox.SetIsChecked
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+// Parameters:
+// bool                           InIsChecked                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UAkCheckBox::SetIsChecked(bool InIsChecked)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkCheckBox.SetIsChecked");
+
+	struct
+	{
+		bool                           InIsChecked;
+	} params;
+
+	params.InIsChecked = InIsChecked;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AkAudio.AkCheckBox.SetCheckedState
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+// Parameters:
+// ECheckBoxState                 InCheckedState                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UAkCheckBox::SetCheckedState(ECheckBoxState InCheckedState)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkCheckBox.SetCheckedState");
+
+	struct
+	{
+		ECheckBoxState                 InCheckedState;
+	} params;
+
+	params.InCheckedState = InCheckedState;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AkAudio.AkCheckBox.SetAkItemId
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
+// Parameters:
+// struct FGuid                   ItemId                         (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm, CPF_IsPlainOldData)
+
+void UAkCheckBox::SetAkItemId(const struct FGuid& ItemId)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkCheckBox.SetAkItemId");
+
+	struct
+	{
+		struct FGuid                   ItemId;
+	} params;
+
+	params.ItemId = ItemId;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AkAudio.AkCheckBox.SetAkBoolProperty
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+// Parameters:
+// struct FString                 ItemProperty                   (CPF_Parm, CPF_ZeroConstructor)
+
+void UAkCheckBox::SetAkBoolProperty(const struct FString& ItemProperty)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkCheckBox.SetAkBoolProperty");
+
+	struct
+	{
+		struct FString                 ItemProperty;
+	} params;
+
+	params.ItemProperty = ItemProperty;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AkAudio.AkCheckBox.IsPressed
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+bool UAkCheckBox::IsPressed()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkCheckBox.IsPressed");
+
+	struct
+	{
+		bool                           ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function AkAudio.AkCheckBox.IsChecked
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+bool UAkCheckBox::IsChecked()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkCheckBox.IsChecked");
+
+	struct
+	{
+		bool                           ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function AkAudio.AkCheckBox.GetCheckedState
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// ECheckBoxState                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+ECheckBoxState UAkCheckBox::GetCheckedState()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkCheckBox.GetCheckedState");
+
+	struct
+	{
+		ECheckBoxState                 ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function AkAudio.AkCheckBox.GetAkProperty
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// struct FString                 ReturnValue                    (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
+
+struct FString UAkCheckBox::GetAkProperty()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkCheckBox.GetAkProperty");
+
+	struct
+	{
+		struct FString                 ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function AkAudio.AkCheckBox.GetAkItemId
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// struct FGuid                   ReturnValue                    (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReturnParm, CPF_IsPlainOldData)
+
+struct FGuid UAkCheckBox::GetAkItemId()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkCheckBox.GetAkItemId");
+
+	struct
+	{
+		struct FGuid                   ReturnValue;
 	} params;
 
 
@@ -679,13 +766,39 @@ void UAkGameplayStatics::UnloadBankByName(const struct FString& BankName)
 }
 
 
+// Function AkAudio.AkGameplayStatics.UnloadBankAsync
+// (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable)
+// Parameters:
+// class UAkAudioBank*            Bank                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FScriptDelegate         BankUnloadedCallback           (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
+
+void UAkGameplayStatics::UnloadBankAsync(class UAkAudioBank* Bank, const struct FScriptDelegate& BankUnloadedCallback)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkGameplayStatics.UnloadBankAsync");
+
+	struct
+	{
+		class UAkAudioBank*            Bank;
+		struct FScriptDelegate         BankUnloadedCallback;
+	} params;
+
+	params.Bank = Bank;
+	params.BankUnloadedCallback = BankUnloadedCallback;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+}
+
+
 // Function AkAudio.AkGameplayStatics.UnloadBank
-// (FUNC_Final, FUNC_BlueprintCosmetic, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_BlueprintCallable)
+// (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_BlueprintCallable)
 // Parameters:
 // class UAkAudioBank*            Bank                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FString                 BankName                       (CPF_Parm, CPF_ZeroConstructor)
+// struct FLatentActionInfo       LatentInfo                     (CPF_Parm)
+// class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UAkGameplayStatics::UnloadBank(class UAkAudioBank* Bank, const struct FString& BankName)
+void UAkGameplayStatics::UnloadBank(class UAkAudioBank* Bank, const struct FString& BankName, const struct FLatentActionInfo& LatentInfo, class UObject* WorldContextObject)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkGameplayStatics.UnloadBank");
 
@@ -693,10 +806,14 @@ void UAkGameplayStatics::UnloadBank(class UAkAudioBank* Bank, const struct FStri
 	{
 		class UAkAudioBank*            Bank;
 		struct FString                 BankName;
+		struct FLatentActionInfo       LatentInfo;
+		class UObject*                 WorldContextObject;
 	} params;
 
 	params.Bank = Bank;
 	params.BankName = BankName;
+	params.LatentInfo = LatentInfo;
+	params.WorldContextObject = WorldContextObject;
 
 	static auto defaultObj = StaticClass()->CreateDefaultObject();
 	defaultObj->ProcessEvent(fn, &params);
@@ -1349,6 +1466,43 @@ int UAkGameplayStatics::PostEvent(class UAkAudioEvent* AkEvent, class AActor* Ac
 }
 
 
+// Function AkAudio.AkGameplayStatics.PostAndWaitForEndOfEvent
+// (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_BlueprintCallable)
+// Parameters:
+// class UAkAudioEvent*           AkEvent                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// class AActor*                  Actor                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// bool                           bStopWhenAttachedToDestroyed   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FString                 EventName                      (CPF_Parm, CPF_ZeroConstructor)
+// struct FLatentActionInfo       LatentInfo                     (CPF_Parm)
+// int                            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+int UAkGameplayStatics::PostAndWaitForEndOfEvent(class UAkAudioEvent* AkEvent, class AActor* Actor, bool bStopWhenAttachedToDestroyed, const struct FString& EventName, const struct FLatentActionInfo& LatentInfo)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkGameplayStatics.PostAndWaitForEndOfEvent");
+
+	struct
+	{
+		class UAkAudioEvent*           AkEvent;
+		class AActor*                  Actor;
+		bool                           bStopWhenAttachedToDestroyed;
+		struct FString                 EventName;
+		struct FLatentActionInfo       LatentInfo;
+		int                            ReturnValue;
+	} params;
+
+	params.AkEvent = AkEvent;
+	params.Actor = Actor;
+	params.bStopWhenAttachedToDestroyed = bStopWhenAttachedToDestroyed;
+	params.EventName = EventName;
+	params.LatentInfo = LatentInfo;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
 // Function AkAudio.AkGameplayStatics.LoadInitBank
 // (FUNC_Final, FUNC_BlueprintCosmetic, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_BlueprintCallable)
 
@@ -1411,13 +1565,39 @@ void UAkGameplayStatics::LoadBankByName(const struct FString& BankName)
 }
 
 
+// Function AkAudio.AkGameplayStatics.LoadBankAsync
+// (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable)
+// Parameters:
+// class UAkAudioBank*            Bank                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FScriptDelegate         BankLoadedCallback             (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
+
+void UAkGameplayStatics::LoadBankAsync(class UAkAudioBank* Bank, const struct FScriptDelegate& BankLoadedCallback)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkGameplayStatics.LoadBankAsync");
+
+	struct
+	{
+		class UAkAudioBank*            Bank;
+		struct FScriptDelegate         BankLoadedCallback;
+	} params;
+
+	params.Bank = Bank;
+	params.BankLoadedCallback = BankLoadedCallback;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+}
+
+
 // Function AkAudio.AkGameplayStatics.LoadBank
-// (FUNC_Final, FUNC_BlueprintCosmetic, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_BlueprintCallable)
+// (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_BlueprintCallable)
 // Parameters:
 // class UAkAudioBank*            Bank                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FString                 BankName                       (CPF_Parm, CPF_ZeroConstructor)
+// struct FLatentActionInfo       LatentInfo                     (CPF_Parm)
+// class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UAkGameplayStatics::LoadBank(class UAkAudioBank* Bank, const struct FString& BankName)
+void UAkGameplayStatics::LoadBank(class UAkAudioBank* Bank, const struct FString& BankName, const struct FLatentActionInfo& LatentInfo, class UObject* WorldContextObject)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkGameplayStatics.LoadBank");
 
@@ -1425,10 +1605,14 @@ void UAkGameplayStatics::LoadBank(class UAkAudioBank* Bank, const struct FString
 	{
 		class UAkAudioBank*            Bank;
 		struct FString                 BankName;
+		struct FLatentActionInfo       LatentInfo;
+		class UObject*                 WorldContextObject;
 	} params;
 
 	params.Bank = Bank;
 	params.BankName = BankName;
+	params.LatentInfo = LatentInfo;
+	params.WorldContextObject = WorldContextObject;
 
 	static auto defaultObj = StaticClass()->CreateDefaultObject();
 	defaultObj->ProcessEvent(fn, &params);
@@ -1573,6 +1757,256 @@ void UAkGameplayStatics::AddOutputCaptureMarker(const struct FString& MarkerText
 
 	static auto defaultObj = StaticClass()->CreateDefaultObject();
 	defaultObj->ProcessEvent(fn, &params);
+}
+
+
+// Function AkAudio.AkMIDIEventCallbackInfo.GetType
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+// Parameters:
+// EAkMidiEventType               ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+EAkMidiEventType UAkMIDIEventCallbackInfo::GetType()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkMIDIEventCallbackInfo.GetType");
+
+	struct
+	{
+		EAkMidiEventType               ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function AkAudio.AkMIDIEventCallbackInfo.GetProgramChange
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable)
+// Parameters:
+// struct FAkMidiProgramChange    AsProgramChange                (CPF_Parm, CPF_OutParm)
+// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+bool UAkMIDIEventCallbackInfo::GetProgramChange(struct FAkMidiProgramChange* AsProgramChange)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkMIDIEventCallbackInfo.GetProgramChange");
+
+	struct
+	{
+		struct FAkMidiProgramChange    AsProgramChange;
+		bool                           ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	if (AsProgramChange != nullptr)
+		*AsProgramChange = params.AsProgramChange;
+
+	return params.ReturnValue;
+}
+
+
+// Function AkAudio.AkMIDIEventCallbackInfo.GetPitchBend
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable)
+// Parameters:
+// struct FAkMidiPitchBend        AsPitchBend                    (CPF_Parm, CPF_OutParm)
+// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+bool UAkMIDIEventCallbackInfo::GetPitchBend(struct FAkMidiPitchBend* AsPitchBend)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkMIDIEventCallbackInfo.GetPitchBend");
+
+	struct
+	{
+		struct FAkMidiPitchBend        AsPitchBend;
+		bool                           ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	if (AsPitchBend != nullptr)
+		*AsPitchBend = params.AsPitchBend;
+
+	return params.ReturnValue;
+}
+
+
+// Function AkAudio.AkMIDIEventCallbackInfo.GetNoteOn
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable)
+// Parameters:
+// struct FAkMidiNoteOnOff        AsNoteOn                       (CPF_Parm, CPF_OutParm)
+// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+bool UAkMIDIEventCallbackInfo::GetNoteOn(struct FAkMidiNoteOnOff* AsNoteOn)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkMIDIEventCallbackInfo.GetNoteOn");
+
+	struct
+	{
+		struct FAkMidiNoteOnOff        AsNoteOn;
+		bool                           ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	if (AsNoteOn != nullptr)
+		*AsNoteOn = params.AsNoteOn;
+
+	return params.ReturnValue;
+}
+
+
+// Function AkAudio.AkMIDIEventCallbackInfo.GetNoteOff
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable)
+// Parameters:
+// struct FAkMidiNoteOnOff        AsNoteOff                      (CPF_Parm, CPF_OutParm)
+// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+bool UAkMIDIEventCallbackInfo::GetNoteOff(struct FAkMidiNoteOnOff* AsNoteOff)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkMIDIEventCallbackInfo.GetNoteOff");
+
+	struct
+	{
+		struct FAkMidiNoteOnOff        AsNoteOff;
+		bool                           ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	if (AsNoteOff != nullptr)
+		*AsNoteOff = params.AsNoteOff;
+
+	return params.ReturnValue;
+}
+
+
+// Function AkAudio.AkMIDIEventCallbackInfo.GetNoteAftertouch
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable)
+// Parameters:
+// struct FAkMidiNoteAftertouch   AsNoteAftertouch               (CPF_Parm, CPF_OutParm)
+// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+bool UAkMIDIEventCallbackInfo::GetNoteAftertouch(struct FAkMidiNoteAftertouch* AsNoteAftertouch)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkMIDIEventCallbackInfo.GetNoteAftertouch");
+
+	struct
+	{
+		struct FAkMidiNoteAftertouch   AsNoteAftertouch;
+		bool                           ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	if (AsNoteAftertouch != nullptr)
+		*AsNoteAftertouch = params.AsNoteAftertouch;
+
+	return params.ReturnValue;
+}
+
+
+// Function AkAudio.AkMIDIEventCallbackInfo.GetGeneric
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable)
+// Parameters:
+// struct FAkMidiGeneric          AsGeneric                      (CPF_Parm, CPF_OutParm)
+// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+bool UAkMIDIEventCallbackInfo::GetGeneric(struct FAkMidiGeneric* AsGeneric)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkMIDIEventCallbackInfo.GetGeneric");
+
+	struct
+	{
+		struct FAkMidiGeneric          AsGeneric;
+		bool                           ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	if (AsGeneric != nullptr)
+		*AsGeneric = params.AsGeneric;
+
+	return params.ReturnValue;
+}
+
+
+// Function AkAudio.AkMIDIEventCallbackInfo.GetChannelAftertouch
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable)
+// Parameters:
+// struct FAkMidiChannelAftertouch AsChannelAftertouch            (CPF_Parm, CPF_OutParm)
+// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+bool UAkMIDIEventCallbackInfo::GetChannelAftertouch(struct FAkMidiChannelAftertouch* AsChannelAftertouch)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkMIDIEventCallbackInfo.GetChannelAftertouch");
+
+	struct
+	{
+		struct FAkMidiChannelAftertouch AsChannelAftertouch;
+		bool                           ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	if (AsChannelAftertouch != nullptr)
+		*AsChannelAftertouch = params.AsChannelAftertouch;
+
+	return params.ReturnValue;
+}
+
+
+// Function AkAudio.AkMIDIEventCallbackInfo.GetChannel
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+// Parameters:
+// unsigned char                  ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+unsigned char UAkMIDIEventCallbackInfo::GetChannel()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkMIDIEventCallbackInfo.GetChannel");
+
+	struct
+	{
+		unsigned char                  ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function AkAudio.AkMIDIEventCallbackInfo.GetCc
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable)
+// Parameters:
+// struct FAkMidiCc               AsCc                           (CPF_Parm, CPF_OutParm)
+// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+bool UAkMIDIEventCallbackInfo::GetCc(struct FAkMidiCc* AsCc)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AkAudio.AkMIDIEventCallbackInfo.GetCc");
+
+	struct
+	{
+		struct FAkMidiCc               AsCc;
+		bool                           ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	if (AsCc != nullptr)
+		*AsCc = params.AsCc;
+
+	return params.ReturnValue;
 }
 
 

@@ -1,4 +1,4 @@
-// SCUM (0.1.17) SDK
+// SCUM (0.1.20) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -211,18 +211,18 @@ void UOptionsWidget_C::SetDynamicShadowsQuality(int Value)
 // Function OptionsWidget.OptionsWidget_C.UpdateSupportedResolutions
 // (FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 // Parameters:
-// bool                           Fullscreen                     (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// bool                           fullscreen                     (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UOptionsWidget_C::UpdateSupportedResolutions(bool Fullscreen)
+void UOptionsWidget_C::UpdateSupportedResolutions(bool fullscreen)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OptionsWidget.OptionsWidget_C.UpdateSupportedResolutions");
 
 	struct
 	{
-		bool                           Fullscreen;
+		bool                           fullscreen;
 	} params;
 
-	params.Fullscreen = Fullscreen;
+	params.fullscreen = fullscreen;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -1640,6 +1640,32 @@ void UOptionsWidget_C::RefreshAllOptionSliders()
 void UOptionsWidget_C::BndEvt__EnablePushToTalkSlider_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature(int Index, int OldIndex, const struct FText& Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OptionsWidget.OptionsWidget_C.BndEvt__EnablePushToTalkSlider_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature");
+
+	struct
+	{
+		int                            Index;
+		int                            OldIndex;
+		struct FText                   Value;
+	} params;
+
+	params.Index = Index;
+	params.OldIndex = OldIndex;
+	params.Value = Value;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function OptionsWidget.OptionsWidget_C.BndEvt__ConcealedMode_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature
+// (FUNC_BlueprintEvent)
+// Parameters:
+// int                            Index                          (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// int                            OldIndex                       (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FText                   Value                          (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm)
+
+void UOptionsWidget_C::BndEvt__ConcealedMode_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature(int Index, int OldIndex, const struct FText& Value)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function OptionsWidget.OptionsWidget_C.BndEvt__ConcealedMode_K2Node_ComponentBoundEvent_2_OnValueChanged__DelegateSignature");
 
 	struct
 	{

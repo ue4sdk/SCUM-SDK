@@ -1,15 +1,15 @@
 #pragma once
 
-// SCUM (0.1.17) SDK
+// SCUM (0.1.20) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
 #endif
 
 #include "SCUM_Basic.hpp"
-#include "SCUM_AnimGraphRuntime_classes.hpp"
-#include "SCUM_Engine_classes.hpp"
 #include "SCUM_CoreUObject_classes.hpp"
+#include "SCUM_Engine_classes.hpp"
+#include "SCUM_AnimGraphRuntime_classes.hpp"
 
 namespace SDK
 {
@@ -137,17 +137,17 @@ struct FVehicleTransmissionData
 };
 
 // ScriptStruct PhysXVehicles.AnimNode_WheelHandler
-// 0x0018 (0x0088 - 0x0070)
+// 0x0018 (0x0130 - 0x0118)
 struct FAnimNode_WheelHandler : public FAnimNode_SkeletalControlBase
 {
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0070(0x0018) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x18];                                      // 0x0118(0x0018) MISSED OFFSET
 };
 
 // ScriptStruct PhysXVehicles.VehicleAnimInstanceProxy
-// 0x0010 (0x0550 - 0x0540)
+// 0x0010 (0x05F0 - 0x05E0)
 struct FVehicleAnimInstanceProxy : public FAnimInstanceProxy
 {
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0540(0x0010) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x10];                                      // 0x05E0(0x0010) MISSED OFFSET
 };
 
 }

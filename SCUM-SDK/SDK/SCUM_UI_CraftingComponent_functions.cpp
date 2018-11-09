@@ -1,4 +1,4 @@
-// SCUM (0.1.17) SDK
+// SCUM (0.1.20) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -36,6 +36,26 @@ struct FEventReply UUI_CraftingComponent_C::OnMouseButtonDown(const struct FGeom
 	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
+}
+
+
+// Function UI_CraftingComponent.UI_CraftingComponent_C.SetIsTool
+// (FUNC_Event, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+// Parameters:
+// bool                           IsTool                         (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UUI_CraftingComponent_C::SetIsTool(bool IsTool)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UI_CraftingComponent.UI_CraftingComponent_C.SetIsTool");
+
+	struct
+	{
+		bool                           IsTool;
+	} params;
+
+	params.IsTool = IsTool;
+
+	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -135,26 +155,6 @@ void UUI_CraftingComponent_C::SetIsAvailable(bool IsAvailable)
 }
 
 
-// Function UI_CraftingComponent.UI_CraftingComponent_C.SetIsTool
-// (FUNC_Event, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
-// Parameters:
-// bool                           IsTool                         (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-
-void UUI_CraftingComponent_C::SetIsTool(bool IsTool)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UI_CraftingComponent.UI_CraftingComponent_C.SetIsTool");
-
-	struct
-	{
-		bool                           IsTool;
-	} params;
-
-	params.IsTool = IsTool;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
 // Function UI_CraftingComponent.UI_CraftingComponent_C.OnMouseEnter
 // (FUNC_BlueprintCosmetic, FUNC_Event, FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintEvent)
 // Parameters:
@@ -173,6 +173,29 @@ void UUI_CraftingComponent_C::OnMouseEnter(const struct FGeometry& MyGeometry, c
 
 	params.MyGeometry = MyGeometry;
 	params.MouseEvent = MouseEvent;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function UI_CraftingComponent.UI_CraftingComponent_C.SetSatisfiedAndRequiredCount
+// (FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
+// Parameters:
+// int                            Satisfied                      (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// int                            Required                       (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UUI_CraftingComponent_C::SetSatisfiedAndRequiredCount(int Satisfied, int Required)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UI_CraftingComponent.UI_CraftingComponent_C.SetSatisfiedAndRequiredCount");
+
+	struct
+	{
+		int                            Satisfied;
+		int                            Required;
+	} params;
+
+	params.Satisfied = Satisfied;
+	params.Required = Required;
 
 	UObject::ProcessEvent(fn, &params);
 }

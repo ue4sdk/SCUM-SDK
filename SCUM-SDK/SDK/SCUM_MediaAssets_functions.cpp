@@ -1,4 +1,4 @@
-// SCUM (0.1.17) SDK
+// SCUM (0.1.20) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -338,6 +338,26 @@ bool UMediaPlayer::SetTrackFormat(EMediaPlayerTrack TrackType, int TrackIndex, i
 }
 
 
+// Function MediaAssets.MediaPlayer.SetTimeDelay
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
+// Parameters:
+// struct FTimespan               TimeDelay                      (CPF_Parm)
+
+void UMediaPlayer::SetTimeDelay(const struct FTimespan& TimeDelay)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.SetTimeDelay");
+
+	struct
+	{
+		struct FTimespan               TimeDelay;
+	} params;
+
+	params.TimeDelay = TimeDelay;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function MediaAssets.MediaPlayer.SetRate
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 // Parameters:
@@ -355,6 +375,30 @@ bool UMediaPlayer::SetRate(float Rate)
 	} params;
 
 	params.Rate = Rate;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function MediaAssets.MediaPlayer.SetNativeVolume
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+// Parameters:
+// float                          Volume                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+bool UMediaPlayer::SetNativeVolume(float Volume)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.SetNativeVolume");
+
+	struct
+	{
+		float                          Volume;
+		bool                           ReturnValue;
+	} params;
+
+	params.Volume = Volume;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -401,6 +445,26 @@ void UMediaPlayer::SetDesiredPlayerName(const struct FName& PlayerName)
 	} params;
 
 	params.PlayerName = PlayerName;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function MediaAssets.MediaPlayer.SetBlockOnTime
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
+// Parameters:
+// struct FTimespan               Time                           (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
+
+void UMediaPlayer::SetBlockOnTime(const struct FTimespan& Time)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.SetBlockOnTime");
+
+	struct
+	{
+		struct FTimespan               Time;
+	} params;
+
+	params.Time = Time;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -1146,6 +1210,27 @@ struct FText UMediaPlayer::GetTrackDisplayName(EMediaPlayerTrack TrackType, int 
 
 	params.TrackType = TrackType;
 	params.TrackIndex = TrackIndex;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function MediaAssets.MediaPlayer.GetTimeDelay
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// struct FTimespan               ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
+
+struct FTimespan UMediaPlayer::GetTimeDelay()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function MediaAssets.MediaPlayer.GetTimeDelay");
+
+	struct
+	{
+		struct FTimespan               ReturnValue;
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 

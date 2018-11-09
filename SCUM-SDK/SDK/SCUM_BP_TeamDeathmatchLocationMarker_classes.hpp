@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.17) SDK
+// SCUM (0.1.20) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_TeamDeathmatchLocationMarker.BP_TeamDeathmatchLocationMarker_C
-// 0x0000 (0x0530 - 0x0530)
+// 0x0000 (0x0548 - 0x0548)
 class ABP_TeamDeathmatchLocationMarker_C : public ATeamDeathmatchLocationMarker
 {
 public:

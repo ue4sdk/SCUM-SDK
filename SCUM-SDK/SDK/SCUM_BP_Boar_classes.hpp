@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.17) SDK
+// SCUM (0.1.20) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,12 +15,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Boar.BP_Boar_C
-// 0x0010 (0x0C20 - 0x0C10)
+// 0x0010 (0x0C30 - 0x0C20)
 class ABP_Boar_C : public ABP_BaseComplexAnimal2_C
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0C10(0x0008) (CPF_Transient, CPF_DuplicateTransient)
-	class UMeleeAttackCollisionCapsule*                MeleeAttackCapsuleHead;                                   // 0x0C18(0x0008) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0C20(0x0008) (CPF_Transient, CPF_DuplicateTransient)
+	class UMeleeAttackCollisionCapsule*                MeleeAttackCapsuleHead;                                   // 0x0C28(0x0008) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

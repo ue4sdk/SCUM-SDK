@@ -1,4 +1,4 @@
-// SCUM (0.1.17) SDK
+// SCUM (0.1.20) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -786,9 +786,9 @@ float UTKMathFunctionLibrary::ConvertPhysicsLinearVelocity(const struct FVector&
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FAnchors                CurrentAnchor                  (CPF_Parm)
-// struct FMargin                 Offsets                        (CPF_Parm)
+// struct FMargin                 Offsets                        (CPF_Parm, CPF_IsPlainOldData)
 // struct FAnchors                TargetAnchor                   (CPF_Parm)
-// struct FMargin                 ConvertedOffsets               (CPF_Parm, CPF_OutParm)
+// struct FMargin                 ConvertedOffsets               (CPF_Parm, CPF_OutParm, CPF_IsPlainOldData)
 
 void UTKMathFunctionLibrary::ConvertAnchorToAnchor(class UObject* WorldContextObject, const struct FAnchors& CurrentAnchor, const struct FMargin& Offsets, const struct FAnchors& TargetAnchor, struct FMargin* ConvertedOffsets)
 {
@@ -2859,10 +2859,10 @@ void UVictoryBPFunctionLibrary::Victory_SaveStringToOSClipboard(const struct FSt
 // TArray<struct FLinearColor>    ImagePixels                    (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
 // bool                           SaveAsBMP                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           SRGB                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// struct FString                 errorString                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor)
+// struct FString                 ErrorString                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-bool UVictoryBPFunctionLibrary::Victory_SavePixels(const struct FString& FullFilePath, int Width, int Height, TArray<struct FLinearColor> ImagePixels, bool SaveAsBMP, bool SRGB, struct FString* errorString)
+bool UVictoryBPFunctionLibrary::Victory_SavePixels(const struct FString& FullFilePath, int Width, int Height, TArray<struct FLinearColor> ImagePixels, bool SaveAsBMP, bool SRGB, struct FString* ErrorString)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.Victory_SavePixels");
 
@@ -2874,7 +2874,7 @@ bool UVictoryBPFunctionLibrary::Victory_SavePixels(const struct FString& FullFil
 		TArray<struct FLinearColor>    ImagePixels;
 		bool                           SaveAsBMP;
 		bool                           SRGB;
-		struct FString                 errorString;
+		struct FString                 ErrorString;
 		bool                           ReturnValue;
 	} params;
 
@@ -2888,8 +2888,8 @@ bool UVictoryBPFunctionLibrary::Victory_SavePixels(const struct FString& FullFil
 	static auto defaultObj = StaticClass()->CreateDefaultObject();
 	defaultObj->ProcessEvent(fn, &params);
 
-	if (errorString != nullptr)
-		*errorString = params.errorString;
+	if (ErrorString != nullptr)
+		*ErrorString = params.ErrorString;
 
 	return params.ReturnValue;
 }
@@ -4001,22 +4001,22 @@ void UVictoryBPFunctionLibrary::SetBloomIntensity(class APostProcessVolume* Post
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_BlueprintCallable)
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// struct FString                 mapName                        (CPF_Parm, CPF_ZeroConstructor)
+// struct FString                 MapName                        (CPF_Parm, CPF_ZeroConstructor)
 // bool                           bNotifyPlayers                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UVictoryBPFunctionLibrary::ServerTravel(class UObject* WorldContextObject, const struct FString& mapName, bool bNotifyPlayers)
+void UVictoryBPFunctionLibrary::ServerTravel(class UObject* WorldContextObject, const struct FString& MapName, bool bNotifyPlayers)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.ServerTravel");
 
 	struct
 	{
 		class UObject*                 WorldContextObject;
-		struct FString                 mapName;
+		struct FString                 MapName;
 		bool                           bNotifyPlayers;
 	} params;
 
 	params.WorldContextObject = WorldContextObject;
-	params.mapName = mapName;
+	params.MapName = MapName;
 	params.bNotifyPlayers = bNotifyPlayers;
 
 	static auto defaultObj = StaticClass()->CreateDefaultObject();
@@ -4259,19 +4259,19 @@ void UVictoryBPFunctionLibrary::RemoveAllWidgetsOfClass(class UObject* WorldCont
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
 // struct FString                 PreviousTime                   (CPF_Parm, CPF_ZeroConstructor)
-// float                          Milliseconds                   (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// float                          MilliSeconds                   (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Seconds                        (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Minutes                        (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Hours                          (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UVictoryBPFunctionLibrary::RealWorldTime__GetTimePassedSincePreviousTime(const struct FString& PreviousTime, float* Milliseconds, float* Seconds, float* Minutes, float* Hours)
+void UVictoryBPFunctionLibrary::RealWorldTime__GetTimePassedSincePreviousTime(const struct FString& PreviousTime, float* MilliSeconds, float* Seconds, float* Minutes, float* Hours)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.RealWorldTime__GetTimePassedSincePreviousTime");
 
 	struct
 	{
 		struct FString                 PreviousTime;
-		float                          Milliseconds;
+		float                          MilliSeconds;
 		float                          Seconds;
 		float                          Minutes;
 		float                          Hours;
@@ -4282,8 +4282,8 @@ void UVictoryBPFunctionLibrary::RealWorldTime__GetTimePassedSincePreviousTime(co
 	static auto defaultObj = StaticClass()->CreateDefaultObject();
 	defaultObj->ProcessEvent(fn, &params);
 
-	if (Milliseconds != nullptr)
-		*Milliseconds = params.Milliseconds;
+	if (MilliSeconds != nullptr)
+		*MilliSeconds = params.MilliSeconds;
 	if (Seconds != nullptr)
 		*Seconds = params.Seconds;
 	if (Minutes != nullptr)
@@ -4298,12 +4298,12 @@ void UVictoryBPFunctionLibrary::RealWorldTime__GetTimePassedSincePreviousTime(co
 // Parameters:
 // struct FString                 PreviousTime1                  (CPF_Parm, CPF_ZeroConstructor)
 // struct FString                 PreviousTime2                  (CPF_Parm, CPF_ZeroConstructor)
-// float                          Milliseconds                   (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// float                          MilliSeconds                   (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Seconds                        (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Minutes                        (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Hours                          (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UVictoryBPFunctionLibrary::RealWorldTime__GetDifferenceBetweenTimes(const struct FString& PreviousTime1, const struct FString& PreviousTime2, float* Milliseconds, float* Seconds, float* Minutes, float* Hours)
+void UVictoryBPFunctionLibrary::RealWorldTime__GetDifferenceBetweenTimes(const struct FString& PreviousTime1, const struct FString& PreviousTime2, float* MilliSeconds, float* Seconds, float* Minutes, float* Hours)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.RealWorldTime__GetDifferenceBetweenTimes");
 
@@ -4311,7 +4311,7 @@ void UVictoryBPFunctionLibrary::RealWorldTime__GetDifferenceBetweenTimes(const s
 	{
 		struct FString                 PreviousTime1;
 		struct FString                 PreviousTime2;
-		float                          Milliseconds;
+		float                          MilliSeconds;
 		float                          Seconds;
 		float                          Minutes;
 		float                          Hours;
@@ -4323,8 +4323,8 @@ void UVictoryBPFunctionLibrary::RealWorldTime__GetDifferenceBetweenTimes(const s
 	static auto defaultObj = StaticClass()->CreateDefaultObject();
 	defaultObj->ProcessEvent(fn, &params);
 
-	if (Milliseconds != nullptr)
-		*Milliseconds = params.Milliseconds;
+	if (MilliSeconds != nullptr)
+		*MilliSeconds = params.MilliSeconds;
 	if (Seconds != nullptr)
 		*Seconds = params.Seconds;
 	if (Minutes != nullptr)
@@ -4337,7 +4337,7 @@ void UVictoryBPFunctionLibrary::RealWorldTime__GetDifferenceBetweenTimes(const s
 // Function VictoryBPLibrary.VictoryBPFunctionLibrary.RealWorldTime__GetCurrentOSTime
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// int                            Milliseconds                   (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// int                            MilliSeconds                   (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // int                            Seconds                        (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // int                            Minutes                        (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // int                            Hours12                        (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -4347,13 +4347,13 @@ void UVictoryBPFunctionLibrary::RealWorldTime__GetDifferenceBetweenTimes(const s
 // int                            Year                           (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FString                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-struct FString UVictoryBPFunctionLibrary::RealWorldTime__GetCurrentOSTime(int* Milliseconds, int* Seconds, int* Minutes, int* Hours12, int* Hours24, int* Day, int* Month, int* Year)
+struct FString UVictoryBPFunctionLibrary::RealWorldTime__GetCurrentOSTime(int* MilliSeconds, int* Seconds, int* Minutes, int* Hours12, int* Hours24, int* Day, int* Month, int* Year)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.RealWorldTime__GetCurrentOSTime");
 
 	struct
 	{
-		int                            Milliseconds;
+		int                            MilliSeconds;
 		int                            Seconds;
 		int                            Minutes;
 		int                            Hours12;
@@ -4368,8 +4368,8 @@ struct FString UVictoryBPFunctionLibrary::RealWorldTime__GetCurrentOSTime(int* M
 	static auto defaultObj = StaticClass()->CreateDefaultObject();
 	defaultObj->ProcessEvent(fn, &params);
 
-	if (Milliseconds != nullptr)
-		*Milliseconds = params.Milliseconds;
+	if (MilliSeconds != nullptr)
+		*MilliSeconds = params.MilliSeconds;
 	if (Seconds != nullptr)
 		*Seconds = params.Seconds;
 	if (Minutes != nullptr)
@@ -5070,7 +5070,7 @@ bool UVictoryBPFunctionLibrary::OptionsMenu__GetDisplayAdapterScreenResolutions(
 // bool                           Windows_                       (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           Mac                            (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           Linux                          (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// bool                           iOS                            (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// bool                           IOS                            (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           Android                        (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           Android_ARM                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           Android_Vulkan                 (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -5079,7 +5079,7 @@ bool UVictoryBPFunctionLibrary::OptionsMenu__GetDisplayAdapterScreenResolutions(
 // bool                           HTML5                          (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           Apple                          (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UVictoryBPFunctionLibrary::OperatingSystem__GetCurrentPlatform(bool* Windows_, bool* Mac, bool* Linux, bool* iOS, bool* Android, bool* Android_ARM, bool* Android_Vulkan, bool* PS4, bool* XBoxOne, bool* HTML5, bool* Apple)
+void UVictoryBPFunctionLibrary::OperatingSystem__GetCurrentPlatform(bool* Windows_, bool* Mac, bool* Linux, bool* IOS, bool* Android, bool* Android_ARM, bool* Android_Vulkan, bool* PS4, bool* XBoxOne, bool* HTML5, bool* Apple)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.OperatingSystem__GetCurrentPlatform");
 
@@ -5088,7 +5088,7 @@ void UVictoryBPFunctionLibrary::OperatingSystem__GetCurrentPlatform(bool* Window
 		bool                           Windows_;
 		bool                           Mac;
 		bool                           Linux;
-		bool                           iOS;
+		bool                           IOS;
 		bool                           Android;
 		bool                           Android_ARM;
 		bool                           Android_Vulkan;
@@ -5108,8 +5108,8 @@ void UVictoryBPFunctionLibrary::OperatingSystem__GetCurrentPlatform(bool* Window
 		*Mac = params.Mac;
 	if (Linux != nullptr)
 		*Linux = params.Linux;
-	if (iOS != nullptr)
-		*iOS = params.iOS;
+	if (IOS != nullptr)
+		*IOS = params.IOS;
 	if (Android != nullptr)
 		*Android = params.Android;
 	if (Android_ARM != nullptr)
@@ -5767,15 +5767,15 @@ bool UVictoryBPFunctionLibrary::IsWidgetOfClassInViewport(class UObject* WorldCo
 }
 
 
-// Function VictoryBPLibrary.VictoryBPFunctionLibrary.IsStandalone
+// Function VictoryBPLibrary.VictoryBPFunctionLibrary.IsStandAlone
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-bool UVictoryBPFunctionLibrary::IsStandalone(class UObject* WorldContextObject)
+bool UVictoryBPFunctionLibrary::IsStandAlone(class UObject* WorldContextObject)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.IsStandalone");
+	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.IsStandAlone");
 
 	struct
 	{
@@ -5932,26 +5932,26 @@ void UVictoryBPFunctionLibrary::HideStreamingLevel(class ULevelStreamingKismet* 
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
 // struct FString                 SearchIn                       (CPF_Parm, CPF_ZeroConstructor)
-// struct FString                 Substring                      (CPF_Parm, CPF_ZeroConstructor)
+// struct FString                 SubString                      (CPF_Parm, CPF_ZeroConstructor)
 // TEnumAsByte<ESearchCase>       SearchCase                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TEnumAsByte<ESearchDir>        SearchDir                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-bool UVictoryBPFunctionLibrary::HasSubstring(const struct FString& SearchIn, const struct FString& Substring, TEnumAsByte<ESearchCase> SearchCase, TEnumAsByte<ESearchDir> SearchDir)
+bool UVictoryBPFunctionLibrary::HasSubstring(const struct FString& SearchIn, const struct FString& SubString, TEnumAsByte<ESearchCase> SearchCase, TEnumAsByte<ESearchDir> SearchDir)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.HasSubstring");
 
 	struct
 	{
 		struct FString                 SearchIn;
-		struct FString                 Substring;
+		struct FString                 SubString;
 		TEnumAsByte<ESearchCase>       SearchCase;
 		TEnumAsByte<ESearchDir>        SearchDir;
 		bool                           ReturnValue;
 	} params;
 
 	params.SearchIn = SearchIn;
-	params.Substring = Substring;
+	params.SubString = SubString;
 	params.SearchCase = SearchCase;
 	params.SearchDir = SearchDir;
 
@@ -7513,24 +7513,24 @@ bool UVictoryBPFunctionLibrary::CreateMD5Hash(const struct FString& FileToHash, 
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
 // struct FString                 Source                         (CPF_Parm, CPF_ZeroConstructor)
-// struct FString                 Substring                      (CPF_Parm, CPF_ZeroConstructor)
+// struct FString                 SubString                      (CPF_Parm, CPF_ZeroConstructor)
 // TEnumAsByte<ESearchCase>       SearchCase                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // int                            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-int UVictoryBPFunctionLibrary::CountOccurrancesOfSubString(const struct FString& Source, const struct FString& Substring, TEnumAsByte<ESearchCase> SearchCase)
+int UVictoryBPFunctionLibrary::CountOccurrancesOfSubString(const struct FString& Source, const struct FString& SubString, TEnumAsByte<ESearchCase> SearchCase)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VictoryBPLibrary.VictoryBPFunctionLibrary.CountOccurrancesOfSubString");
 
 	struct
 	{
 		struct FString                 Source;
-		struct FString                 Substring;
+		struct FString                 SubString;
 		TEnumAsByte<ESearchCase>       SearchCase;
 		int                            ReturnValue;
 	} params;
 
 	params.Source = Source;
-	params.Substring = Substring;
+	params.SubString = SubString;
 	params.SearchCase = SearchCase;
 
 	static auto defaultObj = StaticClass()->CreateDefaultObject();

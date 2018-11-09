@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.17) SDK
+// SCUM (0.1.20) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -79,7 +79,7 @@ public:
 	void UpdateImageFromBodySlot(EBodySlot bodySlot);
 	void SetMinimizationState(bool minimizePartial, bool minimizeFull);
 	void BlinkItemContainer();
-	void SaveLayout(const TScriptInterface<class UAttributeMapInterface>& attributes);
+	void SaveLayout(const TScriptInterface<class UAttributeMapInterface>& Attributes);
 	void DeferredLoadLayout(bool minimizedPartial, bool minimizedFully);
 	void ExecuteUbergraph_UI_GenericItemInventory(int EntryPoint);
 };

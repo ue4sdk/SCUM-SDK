@@ -1,4 +1,4 @@
-// SCUM (0.1.17) SDK
+// SCUM (0.1.20) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -1094,18 +1094,18 @@ void UResizableWindow_C::OnMaximized()
 // Function ResizableWindow.ResizableWindow_C.SaveLayout
 // (FUNC_Event, FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 // Parameters:
-// TScriptInterface<class UAttributeMapInterface> attributes                     (CPF_ConstParm, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// TScriptInterface<class UAttributeMapInterface> Attributes                     (CPF_ConstParm, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 
-void UResizableWindow_C::SaveLayout(const TScriptInterface<class UAttributeMapInterface>& attributes)
+void UResizableWindow_C::SaveLayout(const TScriptInterface<class UAttributeMapInterface>& Attributes)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ResizableWindow.ResizableWindow_C.SaveLayout");
 
 	struct
 	{
-		TScriptInterface<class UAttributeMapInterface> attributes;
+		TScriptInterface<class UAttributeMapInterface> Attributes;
 	} params;
 
-	params.attributes = attributes;
+	params.Attributes = Attributes;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -1114,18 +1114,18 @@ void UResizableWindow_C::SaveLayout(const TScriptInterface<class UAttributeMapIn
 // Function ResizableWindow.ResizableWindow_C.LoadLayout
 // (FUNC_Event, FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 // Parameters:
-// TScriptInterface<class UAttributeMapInterface> attributes                     (CPF_ConstParm, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// TScriptInterface<class UAttributeMapInterface> Attributes                     (CPF_ConstParm, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 
-void UResizableWindow_C::LoadLayout(const TScriptInterface<class UAttributeMapInterface>& attributes)
+void UResizableWindow_C::LoadLayout(const TScriptInterface<class UAttributeMapInterface>& Attributes)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ResizableWindow.ResizableWindow_C.LoadLayout");
 
 	struct
 	{
-		TScriptInterface<class UAttributeMapInterface> attributes;
+		TScriptInterface<class UAttributeMapInterface> Attributes;
 	} params;
 
-	params.attributes = attributes;
+	params.Attributes = Attributes;
 
 	UObject::ProcessEvent(fn, &params);
 }

@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.17) SDK
+// SCUM (0.1.20) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Goat_Torso.Goat_Torso_C
-// 0x0000 (0x0790 - 0x0790)
+// 0x0000 (0x06F8 - 0x06F8)
 class AGoat_Torso_C : public AEquipmentItem
 {
 public:

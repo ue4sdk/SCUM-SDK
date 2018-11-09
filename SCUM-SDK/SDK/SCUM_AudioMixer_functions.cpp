@@ -1,4 +1,4 @@
-// SCUM (0.1.17) SDK
+// SCUM (0.1.20) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,169 @@ namespace SDK
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function AudioMixer.SynthComponent.Stop
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+
+void USynthComponent::Stop()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AudioMixer.SynthComponent.Stop");
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AudioMixer.SynthComponent.Start
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+
+void USynthComponent::Start()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AudioMixer.SynthComponent.Start");
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AudioMixer.SynthComponent.SetVolumeMultiplier
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+// Parameters:
+// float                          VolumeMultiplier               (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void USynthComponent::SetVolumeMultiplier(float VolumeMultiplier)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AudioMixer.SynthComponent.SetVolumeMultiplier");
+
+	struct
+	{
+		float                          VolumeMultiplier;
+	} params;
+
+	params.VolumeMultiplier = VolumeMultiplier;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AudioMixer.SynthComponent.SetSubmixSend
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+// Parameters:
+// class USoundSubmix*            Submix                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// float                          SendLevel                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void USynthComponent::SetSubmixSend(class USoundSubmix* Submix, float SendLevel)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AudioMixer.SynthComponent.SetSubmixSend");
+
+	struct
+	{
+		class USoundSubmix*            Submix;
+		float                          SendLevel;
+	} params;
+
+	params.Submix = Submix;
+	params.SendLevel = SendLevel;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AudioMixer.SynthComponent.IsPlaying
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+bool USynthComponent::IsPlaying()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AudioMixer.SynthComponent.IsPlaying");
+
+	struct
+	{
+		bool                           ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function AudioMixer.AudioMixerBlueprintLibrary.StopRecordingOutput
+// (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_BlueprintCallable)
+// Parameters:
+// class UObject*                 WorldContextObject             (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// EAudioRecordingExportType      ExportType                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FString                 Name                           (CPF_Parm, CPF_ZeroConstructor)
+// struct FString                 Path                           (CPF_Parm, CPF_ZeroConstructor)
+// class USoundSubmix*            SubmixToRecord                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// class USoundWave*              ExistingSoundWaveToOverwrite   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// class USoundWave*              ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+class USoundWave* UAudioMixerBlueprintLibrary::StopRecordingOutput(class UObject* WorldContextObject, EAudioRecordingExportType ExportType, const struct FString& Name, const struct FString& Path, class USoundSubmix* SubmixToRecord, class USoundWave* ExistingSoundWaveToOverwrite)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AudioMixer.AudioMixerBlueprintLibrary.StopRecordingOutput");
+
+	struct
+	{
+		class UObject*                 WorldContextObject;
+		EAudioRecordingExportType      ExportType;
+		struct FString                 Name;
+		struct FString                 Path;
+		class USoundSubmix*            SubmixToRecord;
+		class USoundWave*              ExistingSoundWaveToOverwrite;
+		class USoundWave*              ReturnValue;
+	} params;
+
+	params.WorldContextObject = WorldContextObject;
+	params.ExportType = ExportType;
+	params.Name = Name;
+	params.Path = Path;
+	params.SubmixToRecord = SubmixToRecord;
+	params.ExistingSoundWaveToOverwrite = ExistingSoundWaveToOverwrite;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function AudioMixer.AudioMixerBlueprintLibrary.StartRecordingOutput
+// (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_BlueprintCallable)
+// Parameters:
+// class UObject*                 WorldContextObject             (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// float                          ExpectedDuration               (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// class USoundSubmix*            SubmixToRecord                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UAudioMixerBlueprintLibrary::StartRecordingOutput(class UObject* WorldContextObject, float ExpectedDuration, class USoundSubmix* SubmixToRecord)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AudioMixer.AudioMixerBlueprintLibrary.StartRecordingOutput");
+
+	struct
+	{
+		class UObject*                 WorldContextObject;
+		float                          ExpectedDuration;
+		class USoundSubmix*            SubmixToRecord;
+	} params;
+
+	params.WorldContextObject = WorldContextObject;
+	params.ExpectedDuration = ExpectedDuration;
+	params.SubmixToRecord = SubmixToRecord;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+}
+
 
 // Function AudioMixer.AudioMixerBlueprintLibrary.SetBypassSourceEffectChainEntry
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_BlueprintCallable)
@@ -273,102 +436,6 @@ void USubmixEffectReverbPreset::SetSettings(const struct FSubmixEffectReverbSett
 	params.InSettings = InSettings;
 
 	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function AudioMixer.SynthComponent.Stop
-// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
-
-void USynthComponent::Stop()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function AudioMixer.SynthComponent.Stop");
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function AudioMixer.SynthComponent.Start
-// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
-
-void USynthComponent::Start()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function AudioMixer.SynthComponent.Start");
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function AudioMixer.SynthComponent.SetVolumeMultiplier
-// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
-// Parameters:
-// float                          VolumeMultiplier               (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-
-void USynthComponent::SetVolumeMultiplier(float VolumeMultiplier)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function AudioMixer.SynthComponent.SetVolumeMultiplier");
-
-	struct
-	{
-		float                          VolumeMultiplier;
-	} params;
-
-	params.VolumeMultiplier = VolumeMultiplier;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function AudioMixer.SynthComponent.SetSubmixSend
-// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
-// Parameters:
-// class USoundSubmix*            Submix                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// float                          SendLevel                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-
-void USynthComponent::SetSubmixSend(class USoundSubmix* Submix, float SendLevel)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function AudioMixer.SynthComponent.SetSubmixSend");
-
-	struct
-	{
-		class USoundSubmix*            Submix;
-		float                          SendLevel;
-	} params;
-
-	params.Submix = Submix;
-	params.SendLevel = SendLevel;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function AudioMixer.SynthComponent.IsPlaying
-// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
-// Parameters:
-// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-
-bool USynthComponent::IsPlaying()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function AudioMixer.SynthComponent.IsPlaying");
-
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
 }
 
 

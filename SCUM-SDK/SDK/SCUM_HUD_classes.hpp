@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.17) SDK
+// SCUM (0.1.20) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -121,7 +121,6 @@ public:
 	struct FEventReply OnKeyUp(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent);
 	void UpdateCircularProgressBarsPercentages();
 	void GetPrisonerLifeComponent(class UPrisonerLifeComponent** LifeComponent);
-	void ToggleMonitorsVisibility();
 	void OnPerformanceMonitorMaximized();
 	void OnRDAMonitorMaximized();
 	void OnBCUBodyMonitorMaximized();
@@ -131,6 +130,7 @@ public:
 	void AddWarning(EWarningType warningType);
 	void AddObjective(class ABP_MissionObjective_C* Objective, bool PlaySound, bool ShowNotification);
 	void AddMessageWithColor(TEnumAsByte<EMessageType> Type, const struct FText& Text, float Duration, const struct FLinearColor& Color);
+	void ToggleMonitorsVisibility();
 	void ClearTeammateNames();
 	void ObjectiveChanged(class ABP_MissionObjective_C* sender);
 	void UpdateAttributesHistory();
@@ -139,7 +139,6 @@ public:
 	void OnPrisonerSet();
 	void Construct();
 	void Shake();
-	void AddMessage(TEnumAsByte<EMessageType> Type, const struct FText& Text, float Duration);
 	void SetMainCanvasVisibility(bool visible);
 	void SwitchTabMode(int Index);
 	void ShowNotification(const struct FString& Message, float Duration);
@@ -149,6 +148,7 @@ public:
 	void OpenChat();
 	void CloseChat();
 	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
+	void AddMessage(TEnumAsByte<EMessageType> Type, const struct FText& Text, float Duration);
 	void ExecuteUbergraph_HUD(int EntryPoint);
 };
 

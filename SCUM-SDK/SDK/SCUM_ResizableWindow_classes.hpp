@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.17) SDK
+// SCUM (0.1.20) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // WidgetBlueprintGeneratedClass ResizableWindow.ResizableWindow_C
-// 0x0360 (0x05A0 - 0x0240)
+// 0x0378 (0x05B8 - 0x0240)
 class UResizableWindow_C : public UCustomGUIWindow_C
 {
 public:
@@ -36,62 +36,62 @@ public:
 	class UHoveredEventWidget_C*                       ResizeWidget;                                             // 0x02B0(0x0008) (CPF_BlueprintVisible, CPF_ExportObject, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData, CPF_RepSkip, CPF_RepNotify, CPF_Interp, CPF_NonTransactional, CPF_EditorOnly, CPF_NoDestructor, CPF_AutoWeak, CPF_ContainsInstancedReference, CPF_AssetRegistrySearchable, CPF_SimpleDisplay, CPF_AdvancedDisplay, CPF_Protected, CPF_BlueprintCallable, CPF_BlueprintAuthorityOnly, CPF_TextExportTransient, CPF_NonPIEDuplicateTransient, CPF_ExposeOnSpawn, CPF_PersistentInstance, CPF_UObjectWrapper, CPF_HasGetValueTypeHash, CPF_NativeAccessSpecifierPublic, CPF_NativeAccessSpecifierProtected, CPF_NativeAccessSpecifierPrivate)
 	bool                                               DragEnabled;                                              // 0x02B8(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x02B9(0x0007) MISSED OFFSET
-	struct FSlateFontInfo                              HeaderFont;                                               // 0x02C0(0x0058) (CPF_Edit, CPF_BlueprintVisible)
-	bool                                               IsMouseButtonDown;                                        // 0x0318(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x0319(0x0003) MISSED OFFSET
-	struct FVector2D                                   LastMousePosition;                                        // 0x031C(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	bool                                               MouseDownAndMoving;                                       // 0x0324(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	bool                                               IsDrag;                                                   // 0x0325(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	bool                                               IsResize;                                                 // 0x0326(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData02[0x1];                                       // 0x0327(0x0001) MISSED OFFSET
-	class UCanvasPanelSlot*                            ParentSlot;                                               // 0x0328(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_InstancedReference, CPF_IsPlainOldData)
-	bool                                               ResizeEnabled;                                            // 0x0330(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData03[0x3];                                       // 0x0331(0x0003) MISSED OFFSET
-	struct FLinearColor                                ResizeColorHover;                                         // 0x0334(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_IsPlainOldData)
-	struct FLinearColor                                ResizeColorNormal;                                        // 0x0344(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_IsPlainOldData)
-	struct FLinearColor                                HeaderColorNormal;                                        // 0x0354(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_IsPlainOldData)
-	struct FLinearColor                                HeaderColorHovered;                                       // 0x0364(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_IsPlainOldData)
-	bool                                               IsResizeColoredHover;                                     // 0x0374(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	bool                                               IsHeaderColoredHover;                                     // 0x0375(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	bool                                               IsResizeColoredNormal;                                    // 0x0376(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	bool                                               IsHeaderColoredNormal;                                    // 0x0377(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	struct FVector2D                                   PreResizeAlignment;                                       // 0x0378(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	struct FVector2D                                   PreResizeOffset;                                          // 0x0380(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	bool                                               IsAlignmentAccountedFor;                                  // 0x0388(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData04[0x3];                                       // 0x0389(0x0003) MISSED OFFSET
-	struct FVector2D                                   PreDragSize;                                              // 0x038C(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	bool                                               IsResizeHovered;                                          // 0x0394(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	bool                                               IsHeaderHovered;                                          // 0x0395(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData05[0x2];                                       // 0x0396(0x0002) MISSED OFFSET
-	struct FVector2D                                   ResizeAreaSize;                                           // 0x0398(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_IsPlainOldData)
-	struct FSlateBrush                                 ResizeAreaBrush;                                          // 0x03A0(0x0078) (CPF_Edit, CPF_BlueprintVisible)
-	struct FSlateBrush                                 DragAppearanceBrush;                                      // 0x0418(0x0078) (CPF_Edit, CPF_BlueprintVisible)
-	struct FLinearColor                                DragAppearanceColor;                                      // 0x0490(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_IsPlainOldData)
-	struct FText                                       HeaderText;                                               // 0x04A0(0x0018) (CPF_Edit, CPF_BlueprintVisible)
-	float                                              SafetyZoneY;                                              // 0x04B8(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              SafetyZoneX;                                              // 0x04BC(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              MinWidth;                                                 // 0x04C0(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              MinHeight;                                                // 0x04C4(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              MaxWidth;                                                 // 0x04C8(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              MaxHeight;                                                // 0x04CC(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	struct FLinearColor                                HeaderContentNormal;                                      // 0x04D0(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_IsPlainOldData)
-	struct FSlateColor                                 HeaderTextColorNormal;                                    // 0x04E0(0x0028) (CPF_Edit, CPF_BlueprintVisible)
-	struct FSlateColor                                 HeaderTextColorHovered;                                   // 0x0508(0x0028) (CPF_Edit, CPF_BlueprintVisible)
-	bool                                               IsMinimized;                                              // 0x0530(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData06[0x7];                                       // 0x0531(0x0007) MISSED OFFSET
-	class UClass*                                      _contentWidgetClass;                                      // 0x0538(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	struct FVector2D                                   _curentContentAreaSlotSize;                               // 0x0540(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	struct FScriptMulticastDelegate                    ContentSizeChangedEventDispatcher;                        // 0x0548(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_BlueprintAssignable)
-	bool                                               isFooterV2Active;                                         // 0x0558(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData07[0x7];                                       // 0x0559(0x0007) MISSED OFFSET
-	class UWindowsContent_C*                           _windowsContentWidget;                                    // 0x0560(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_InstancedReference, CPF_IsPlainOldData)
-	bool                                               ResizeEnabledLocked;                                      // 0x0568(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData08[0x7];                                       // 0x0569(0x0007) MISSED OFFSET
-	struct FScriptMulticastDelegate                    ContentMaximizedEventDispatcher;                          // 0x0570(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_BlueprintAssignable)
-	bool                                               _shouldRefreshSize;                                       // 0x0580(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData09[0x7];                                       // 0x0581(0x0007) MISSED OFFSET
-	struct FScriptMulticastDelegate                    OnHeaderDoubleClickDispatcher;                            // 0x0588(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_BlueprintAssignable)
-	class UHUD_C*                                      parentHUD;                                                // 0x0598(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_InstancedReference, CPF_IsPlainOldData)
+	struct FSlateFontInfo                              HeaderFont;                                               // 0x02C0(0x0050) (CPF_Edit, CPF_BlueprintVisible)
+	bool                                               IsMouseButtonDown;                                        // 0x0310(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x0311(0x0003) MISSED OFFSET
+	struct FVector2D                                   LastMousePosition;                                        // 0x0314(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	bool                                               MouseDownAndMoving;                                       // 0x031C(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	bool                                               IsDrag;                                                   // 0x031D(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	bool                                               IsResize;                                                 // 0x031E(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData02[0x1];                                       // 0x031F(0x0001) MISSED OFFSET
+	class UCanvasPanelSlot*                            ParentSlot;                                               // 0x0320(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_InstancedReference, CPF_IsPlainOldData)
+	bool                                               ResizeEnabled;                                            // 0x0328(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData03[0x3];                                       // 0x0329(0x0003) MISSED OFFSET
+	struct FLinearColor                                ResizeColorHover;                                         // 0x032C(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_IsPlainOldData)
+	struct FLinearColor                                ResizeColorNormal;                                        // 0x033C(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_IsPlainOldData)
+	struct FLinearColor                                HeaderColorNormal;                                        // 0x034C(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_IsPlainOldData)
+	struct FLinearColor                                HeaderColorHovered;                                       // 0x035C(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_IsPlainOldData)
+	bool                                               IsResizeColoredHover;                                     // 0x036C(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	bool                                               IsHeaderColoredHover;                                     // 0x036D(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	bool                                               IsResizeColoredNormal;                                    // 0x036E(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	bool                                               IsHeaderColoredNormal;                                    // 0x036F(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	struct FVector2D                                   PreResizeAlignment;                                       // 0x0370(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	struct FVector2D                                   PreResizeOffset;                                          // 0x0378(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	bool                                               IsAlignmentAccountedFor;                                  // 0x0380(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData04[0x3];                                       // 0x0381(0x0003) MISSED OFFSET
+	struct FVector2D                                   PreDragSize;                                              // 0x0384(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	bool                                               IsResizeHovered;                                          // 0x038C(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	bool                                               IsHeaderHovered;                                          // 0x038D(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData05[0x2];                                       // 0x038E(0x0002) MISSED OFFSET
+	struct FVector2D                                   ResizeAreaSize;                                           // 0x0390(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_IsPlainOldData)
+	struct FSlateBrush                                 ResizeAreaBrush;                                          // 0x0398(0x0088) (CPF_Edit, CPF_BlueprintVisible)
+	struct FSlateBrush                                 DragAppearanceBrush;                                      // 0x0420(0x0088) (CPF_Edit, CPF_BlueprintVisible)
+	struct FLinearColor                                DragAppearanceColor;                                      // 0x04A8(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_IsPlainOldData)
+	struct FText                                       HeaderText;                                               // 0x04B8(0x0018) (CPF_Edit, CPF_BlueprintVisible)
+	float                                              SafetyZoneY;                                              // 0x04D0(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              SafetyZoneX;                                              // 0x04D4(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              MinWidth;                                                 // 0x04D8(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              MinHeight;                                                // 0x04DC(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              MaxWidth;                                                 // 0x04E0(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              MaxHeight;                                                // 0x04E4(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FLinearColor                                HeaderContentNormal;                                      // 0x04E8(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_IsPlainOldData)
+	struct FSlateColor                                 HeaderTextColorNormal;                                    // 0x04F8(0x0028) (CPF_Edit, CPF_BlueprintVisible)
+	struct FSlateColor                                 HeaderTextColorHovered;                                   // 0x0520(0x0028) (CPF_Edit, CPF_BlueprintVisible)
+	bool                                               IsMinimized;                                              // 0x0548(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData06[0x7];                                       // 0x0549(0x0007) MISSED OFFSET
+	class UClass*                                      _contentWidgetClass;                                      // 0x0550(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FVector2D                                   _curentContentAreaSlotSize;                               // 0x0558(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	struct FScriptMulticastDelegate                    ContentSizeChangedEventDispatcher;                        // 0x0560(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_BlueprintAssignable)
+	bool                                               isFooterV2Active;                                         // 0x0570(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData07[0x7];                                       // 0x0571(0x0007) MISSED OFFSET
+	class UWindowsContent_C*                           _windowsContentWidget;                                    // 0x0578(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_InstancedReference, CPF_IsPlainOldData)
+	bool                                               ResizeEnabledLocked;                                      // 0x0580(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData08[0x7];                                       // 0x0581(0x0007) MISSED OFFSET
+	struct FScriptMulticastDelegate                    ContentMaximizedEventDispatcher;                          // 0x0588(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_BlueprintAssignable)
+	bool                                               _shouldRefreshSize;                                       // 0x0598(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData09[0x7];                                       // 0x0599(0x0007) MISSED OFFSET
+	struct FScriptMulticastDelegate                    OnHeaderDoubleClickDispatcher;                            // 0x05A0(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_BlueprintAssignable)
+	class UHUD_C*                                      parentHUD;                                                // 0x05B0(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_InstancedReference, CPF_IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -152,8 +152,8 @@ public:
 	void AlarmOffWindowContent();
 	void OnHeaderDoubleClickEvent(const struct FGeometry& Geometry, const struct FPointerEvent& MouseEvent);
 	void OnMaximized();
-	void SaveLayout(const TScriptInterface<class UAttributeMapInterface>& attributes);
-	void LoadLayout(const TScriptInterface<class UAttributeMapInterface>& attributes);
+	void SaveLayout(const TScriptInterface<class UAttributeMapInterface>& Attributes);
+	void LoadLayout(const TScriptInterface<class UAttributeMapInterface>& Attributes);
 	void ResetLayout();
 	void BndEvt__HoveredEventWidget_K2Node_ComponentBoundEvent_72_MouseLeft__DelegateSignature();
 	void BndEvt__HoveredEventWidget_K2Node_ComponentBoundEvent_67_MouseEntered__DelegateSignature();

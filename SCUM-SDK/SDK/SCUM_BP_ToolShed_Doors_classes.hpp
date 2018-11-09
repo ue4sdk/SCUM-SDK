@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.17) SDK
+// SCUM (0.1.20) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_ToolShed_Doors.BP_ToolShed_Doors_C
-// 0x0000 (0x0400 - 0x0400)
+// 0x0000 (0x0420 - 0x0420)
 class ABP_ToolShed_Doors_C : public ADoubleRegularDoorStatic
 {
 public:

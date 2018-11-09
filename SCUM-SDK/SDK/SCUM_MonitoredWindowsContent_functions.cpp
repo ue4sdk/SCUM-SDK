@@ -1,4 +1,4 @@
-// SCUM (0.1.17) SDK
+// SCUM (0.1.20) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -198,6 +198,22 @@ void UMonitoredWindowsContent_C::GetDefaultPrisoner(class APrisoner** Prisoner)
 
 	if (Prisoner != nullptr)
 		*Prisoner = params.Prisoner;
+}
+
+
+// Function MonitoredWindowsContent.MonitoredWindowsContent_C.Construct
+// (FUNC_BlueprintCosmetic, FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
+
+void UMonitoredWindowsContent_C::Construct()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function MonitoredWindowsContent.MonitoredWindowsContent_C.Construct");
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
 }
 
 

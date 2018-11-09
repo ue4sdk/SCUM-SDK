@@ -1,4 +1,4 @@
-// SCUM (0.1.17) SDK
+// SCUM (0.1.20) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -348,6 +348,92 @@ struct FAssetData UAssetRegistryHelpers::CreateAssetData(class UObject* InAsset,
 }
 
 
+// Function AssetRegistry.AssetRegistry.SearchAllAssets
+// (FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+// Parameters:
+// bool                           bSynchronousSearch             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UAssetRegistry::SearchAllAssets(bool bSynchronousSearch)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistry.SearchAllAssets");
+
+	struct
+	{
+		bool                           bSynchronousSearch;
+	} params;
+
+	params.bSynchronousSearch = bSynchronousSearch;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AssetRegistry.AssetRegistry.ScanPathsSynchronous
+// (FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable)
+// Parameters:
+// TArray<struct FString>         InPaths                        (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
+// bool                           bForceRescan                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UAssetRegistry::ScanPathsSynchronous(TArray<struct FString> InPaths, bool bForceRescan)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistry.ScanPathsSynchronous");
+
+	struct
+	{
+		TArray<struct FString>         InPaths;
+		bool                           bForceRescan;
+	} params;
+
+	params.InPaths = InPaths;
+	params.bForceRescan = bForceRescan;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AssetRegistry.AssetRegistry.ScanModifiedAssetFiles
+// (FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable)
+// Parameters:
+// TArray<struct FString>         InFilePaths                    (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
+
+void UAssetRegistry::ScanModifiedAssetFiles(TArray<struct FString> InFilePaths)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistry.ScanModifiedAssetFiles");
+
+	struct
+	{
+		TArray<struct FString>         InFilePaths;
+	} params;
+
+	params.InFilePaths = InFilePaths;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AssetRegistry.AssetRegistry.ScanFilesSynchronous
+// (FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable)
+// Parameters:
+// TArray<struct FString>         InFilePaths                    (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
+// bool                           bForceRescan                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UAssetRegistry::ScanFilesSynchronous(TArray<struct FString> InFilePaths, bool bForceRescan)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistry.ScanFilesSynchronous");
+
+	struct
+	{
+		TArray<struct FString>         InFilePaths;
+		bool                           bForceRescan;
+	} params;
+
+	params.InFilePaths = InFilePaths;
+	params.bForceRescan = bForceRescan;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function AssetRegistry.AssetRegistry.RunAssetsThroughFilter
 // (FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
@@ -370,6 +456,26 @@ void UAssetRegistry::RunAssetsThroughFilter(const struct FARFilter& Filter, TArr
 
 	if (AssetDataList != nullptr)
 		*AssetDataList = params.AssetDataList;
+}
+
+
+// Function AssetRegistry.AssetRegistry.PrioritizeSearchPath
+// (FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+// Parameters:
+// struct FString                 PathToPrioritize               (CPF_Parm, CPF_ZeroConstructor)
+
+void UAssetRegistry::PrioritizeSearchPath(const struct FString& PathToPrioritize)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AssetRegistry.AssetRegistry.PrioritizeSearchPath");
+
+	struct
+	{
+		struct FString                 PathToPrioritize;
+	} params;
+
+	params.PathToPrioritize = PathToPrioritize;
+
+	UObject::ProcessEvent(fn, &params);
 }
 
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.17) SDK
+// SCUM (0.1.20) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -8,8 +8,9 @@
 
 #include "SCUM_Basic.hpp"
 #include "SCUM_Engine_classes.hpp"
-#include "SCUM_GameplayTasks_classes.hpp"
 #include "SCUM_CoreUObject_classes.hpp"
+#include "SCUM_GameplayTasks_classes.hpp"
+#include "SCUM_NavigationSystem_classes.hpp"
 #include "SCUM_GameplayTags_classes.hpp"
 
 namespace SDK
@@ -562,6 +563,39 @@ enum class EPawnActionMoveMode : uint8_t
 //Script Structs
 //---------------------------------------------------------------------------
 
+// ScriptStruct AIModule.AIDataProviderValue
+// 0x0020
+struct FAIDataProviderValue
+{
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0000(0x0008) MISSED OFFSET
+	class UProperty*                                   CachedProperty;                                           // 0x0008(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
+	class UAIDataProvider*                             DataBinding;                                              // 0x0010(0x0008) (CPF_Edit, CPF_ExportObject, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
+	struct FName                                       DataField;                                                // 0x0018(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// ScriptStruct AIModule.AIDataProviderTypedValue
+// 0x0008 (0x0028 - 0x0020)
+struct FAIDataProviderTypedValue : public FAIDataProviderValue
+{
+	class UClass*                                      PropertyType;                                             // 0x0020(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// ScriptStruct AIModule.AIDataProviderBoolValue
+// 0x0008 (0x0030 - 0x0028)
+struct FAIDataProviderBoolValue : public FAIDataProviderTypedValue
+{
+	bool                                               DefaultValue;                                             // 0x0028(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0029(0x0007) MISSED OFFSET
+};
+
+// ScriptStruct AIModule.AIDataProviderFloatValue
+// 0x0008 (0x0030 - 0x0028)
+struct FAIDataProviderFloatValue : public FAIDataProviderTypedValue
+{
+	float                                              DefaultValue;                                             // 0x0028(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x002C(0x0004) MISSED OFFSET
+};
+
 // ScriptStruct AIModule.AIRequestID
 // 0x0004
 struct FAIRequestID
@@ -717,31 +751,6 @@ struct FBlackboardKeySelector
 	unsigned char                                      UnknownData01[0x3];                                       // 0x0025(0x0003) MISSED OFFSET
 };
 
-// ScriptStruct AIModule.AIDataProviderValue
-// 0x0020
-struct FAIDataProviderValue
-{
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0000(0x0008) MISSED OFFSET
-	class UProperty*                                   CachedProperty;                                           // 0x0008(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
-	class UAIDataProvider*                             DataBinding;                                              // 0x0010(0x0008) (CPF_Edit, CPF_ExportObject, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
-	struct FName                                       DataField;                                                // 0x0018(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-};
-
-// ScriptStruct AIModule.AIDataProviderTypedValue
-// 0x0008 (0x0028 - 0x0020)
-struct FAIDataProviderTypedValue : public FAIDataProviderValue
-{
-	class UClass*                                      PropertyType;                                             // 0x0020(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-};
-
-// ScriptStruct AIModule.AIDataProviderFloatValue
-// 0x0008 (0x0030 - 0x0028)
-struct FAIDataProviderFloatValue : public FAIDataProviderTypedValue
-{
-	float                                              DefaultValue;                                             // 0x0028(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x002C(0x0004) MISSED OFFSET
-};
-
 // ScriptStruct AIModule.AIDynamicParam
 // 0x0038
 struct FAIDynamicParam
@@ -800,14 +809,6 @@ struct FCrowdAvoidanceSamplingPattern
 	TArray<float>                                      Radii;                                                    // 0x0010(0x0010) (CPF_Edit, CPF_ZeroConstructor)
 };
 
-// ScriptStruct AIModule.AIDataProviderBoolValue
-// 0x0008 (0x0030 - 0x0028)
-struct FAIDataProviderBoolValue : public FAIDataProviderTypedValue
-{
-	bool                                               DefaultValue;                                             // 0x0028(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0029(0x0007) MISSED OFFSET
-};
-
 // ScriptStruct AIModule.EnvTraceData
 // 0x0030
 struct FEnvTraceData
@@ -854,11 +855,11 @@ struct FEnvDirection
 };
 
 // ScriptStruct AIModule.EnvQueryInstanceCache
-// 0x01C0
+// 0x0178
 struct FEnvQueryInstanceCache
 {
 	class UEnvQuery*                                   Template;                                                 // 0x0000(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData00[0x1B8];                                     // 0x0008(0x01B8) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x170];                                     // 0x0008(0x0170) MISSED OFFSET
 };
 
 // ScriptStruct AIModule.EnvOverlapData

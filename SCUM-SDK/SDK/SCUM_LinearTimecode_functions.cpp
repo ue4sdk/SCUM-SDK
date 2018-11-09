@@ -1,4 +1,4 @@
-// SCUM (0.1.17) SDK
+// SCUM (0.1.20) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,9 +15,9 @@ namespace SDK
 // Function LinearTimecode.LinearTimecodeComponent.SetDropTimecodeFrameNumber
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable)
 // Parameters:
-// struct FDropTimecode           Timecode                       (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FDropTimecode           Timecode                       (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
 // int                            FrameNumber                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// struct FDropTimecode           OutTimecode                    (CPF_Parm, CPF_OutParm, CPF_IsPlainOldData)
+// struct FDropTimecode           OutTimecode                    (CPF_Parm, CPF_OutParm)
 
 void ULinearTimecodeComponent::SetDropTimecodeFrameNumber(const struct FDropTimecode& Timecode, int FrameNumber, struct FDropTimecode* OutTimecode)
 {
@@ -44,7 +44,7 @@ void ULinearTimecodeComponent::SetDropTimecodeFrameNumber(const struct FDropTime
 // Function LinearTimecode.LinearTimecodeComponent.GetDropTimeCodeFrameNumber
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable)
 // Parameters:
-// struct FDropTimecode           Timecode                       (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FDropTimecode           Timecode                       (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
 // int                            FrameNumber                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 void ULinearTimecodeComponent::GetDropTimeCodeFrameNumber(const struct FDropTimecode& Timecode, int* FrameNumber)
@@ -89,9 +89,9 @@ int ULinearTimecodeComponent::GetDropFrameNumber()
 
 
 // Function LinearTimecode.DropTimecodeToStringConversion.Conv_DropTimecodeToString
-// (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintPure)
+// (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Private, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// struct FDropTimecode           InTimecode                     (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FDropTimecode           InTimecode                     (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
 // struct FString                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
 struct FString UDropTimecodeToStringConversion::Conv_DropTimecodeToString(const struct FDropTimecode& InTimecode)

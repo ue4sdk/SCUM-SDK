@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.17) SDK
+// SCUM (0.1.20) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_TrackingMarker_Rabbit.BP_TrackingMarker_Rabbit_C
-// 0x0008 (0x0398 - 0x0390)
+// 0x0008 (0x03A8 - 0x03A0)
 class ABP_TrackingMarker_Rabbit_C : public ABP_TrackingMarker2_C
 {
 public:
-	class UDecalComponent*                             Decal;                                                    // 0x0390(0x0008) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
+	class UDecalComponent*                             Decal;                                                    // 0x03A0(0x0008) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

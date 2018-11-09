@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.17) SDK
+// SCUM (0.1.20) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -89,7 +89,7 @@ public:
 
 
 // Class MediaAssets.MediaPlayer
-// 0x0168 (0x0190 - 0x0028)
+// 0x0110 (0x0138 - 0x0028)
 class UMediaPlayer : public UObject
 {
 public:
@@ -112,12 +112,14 @@ public:
 	unsigned char                                      UnknownData01[0x3];                                       // 0x00C5(0x0003) MISSED OFFSET
 	class UMediaPlaylist*                              Playlist;                                                 // 0x00C8(0x0008) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
 	int                                                PlaylistIndex;                                            // 0x00D0(0x0004) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              HorizontalFieldOfView;                                    // 0x00D4(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              VerticalFieldOfView;                                      // 0x00D8(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	struct FRotator                                    ViewRotation;                                             // 0x00DC(0x000C) (CPF_Edit, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData02[0x88];                                      // 0x00E8(0x0088) MISSED OFFSET
-	struct FGuid                                       PlayerGuid;                                               // 0x0170(0x0010) (CPF_IsPlainOldData)
-	unsigned char                                      UnknownData03[0x10];                                      // 0x0180(0x0010) MISSED OFFSET
+	unsigned char                                      UnknownData02[0x4];                                       // 0x00D4(0x0004) MISSED OFFSET
+	struct FTimespan                                   TimeDelay;                                                // 0x00D8(0x0008) (CPF_BlueprintVisible, CPF_BlueprintReadOnly)
+	float                                              HorizontalFieldOfView;                                    // 0x00E0(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              VerticalFieldOfView;                                      // 0x00E4(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FRotator                                    ViewRotation;                                             // 0x00E8(0x000C) (CPF_Edit, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData03[0x2C];                                      // 0x00F4(0x002C) MISSED OFFSET
+	struct FGuid                                       PlayerGuid;                                               // 0x0120(0x0010) (CPF_IsPlainOldData)
+	unsigned char                                      UnknownData04[0x8];                                       // 0x0130(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -133,9 +135,12 @@ public:
 	bool SetViewField(float Horizontal, float Vertical, bool Absolute);
 	bool SetVideoTrackFrameRate(int TrackIndex, int FormatIndex, float FrameRate);
 	bool SetTrackFormat(EMediaPlayerTrack TrackType, int TrackIndex, int FormatIndex);
+	void SetTimeDelay(const struct FTimespan& TimeDelay);
 	bool SetRate(float Rate);
+	bool SetNativeVolume(float Volume);
 	bool SetLooping(bool Looping);
 	void SetDesiredPlayerName(const struct FName& PlayerName);
+	void SetBlockOnTime(const struct FTimespan& Time);
 	bool SelectTrack(EMediaPlayerTrack TrackType, int TrackIndex);
 	bool Seek(const struct FTimespan& Time);
 	bool Rewind();
@@ -168,6 +173,7 @@ public:
 	struct FString GetTrackLanguage(EMediaPlayerTrack TrackType, int TrackIndex);
 	int GetTrackFormat(EMediaPlayerTrack TrackType, int TrackIndex);
 	struct FText GetTrackDisplayName(EMediaPlayerTrack TrackType, int TrackIndex);
+	struct FTimespan GetTimeDelay();
 	struct FTimespan GetTime();
 	void GetSupportedRates(bool Unthinned, TArray<struct FFloatRange>* OutRates);
 	int GetSelectedTrack(EMediaPlayerTrack TrackType);
@@ -221,15 +227,19 @@ public:
 
 
 // Class MediaAssets.MediaSoundComponent
-// 0x0080 (0x0730 - 0x06B0)
+// 0x00A0 (0x0660 - 0x05C0)
 class UMediaSoundComponent : public USynthComponent
 {
 public:
-	EMediaSoundChannels                                Channels;                                                 // 0x06B0(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x06B0(0x0003) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
-	unsigned char                                      UnknownData01[0x4];                                       // 0x06B4(0x0004) MISSED OFFSET
-	class UMediaPlayer*                                MediaPlayer;                                              // 0x06B8(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData02[0x70];                                      // 0x06C0(0x0070) MISSED OFFSET
+	EMediaSoundChannels                                Channels;                                                 // 0x05C0(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x05C0(0x0003) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	bool                                               DynamicRateAdjustment;                                    // 0x05C4(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x05C5(0x0003) MISSED OFFSET
+	float                                              RateAdjustmentFactor;                                     // 0x05C8(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FFloatRange                                 RateAdjustmentRange;                                      // 0x05CC(0x0010) (CPF_Edit)
+	unsigned char                                      UnknownData02[0x4];                                       // 0x05DC(0x0004) MISSED OFFSET
+	class UMediaPlayer*                                MediaPlayer;                                              // 0x05E0(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData03[0x78];                                      // 0x05E8(0x0078) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -299,6 +309,23 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>("Class MediaAssets.StreamMediaSource");
+		return ptr;
+	}
+
+};
+
+
+// Class MediaAssets.TimeSynchronizableMediaSource
+// 0x0008 (0x0040 - 0x0038)
+class UTimeSynchronizableMediaSource : public UBaseMediaSource
+{
+public:
+	bool                                               bUseTimeSynchronization;                                  // 0x0038(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0039(0x0007) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>("Class MediaAssets.TimeSynchronizableMediaSource");
 		return ptr;
 	}
 

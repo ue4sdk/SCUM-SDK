@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.17) SDK
+// SCUM (0.1.20) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BPC_BerettaM9.BPC_BerettaM9_C
-// 0x0000 (0x10C0 - 0x10C0)
+// 0x0000 (0x1030 - 0x1030)
 class ABPC_BerettaM9_C : public ABP_BerettaM9_C
 {
 public:

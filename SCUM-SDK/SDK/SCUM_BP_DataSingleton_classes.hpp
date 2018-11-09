@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.17) SDK
+// SCUM (0.1.20) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_DataSingleton.BP_DataSingleton_C
-// 0x0000 (0x0358 - 0x0358)
+// 0x0000 (0x0370 - 0x0370)
 class UBP_DataSingleton_C : public UDataSingleton
 {
 public:

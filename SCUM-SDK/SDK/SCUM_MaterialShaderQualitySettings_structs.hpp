@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.17) SDK
+// SCUM (0.1.20) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -31,7 +31,7 @@ enum class EMobileCSMQuality : uint8_t
 //---------------------------------------------------------------------------
 
 // ScriptStruct MaterialShaderQualitySettings.MaterialQualityOverrides
-// 0x0006
+// 0x0007
 struct FMaterialQualityOverrides
 {
 	bool                                               bEnableOverride;                                          // 0x0000(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
@@ -39,7 +39,8 @@ struct FMaterialQualityOverrides
 	bool                                               bForceNonMetal;                                           // 0x0002(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
 	bool                                               bForceDisableLMDirectionality;                            // 0x0003(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
 	bool                                               bForceLQReflections;                                      // 0x0004(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	EMobileCSMQuality                                  MobileCSMQuality;                                         // 0x0005(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	bool                                               bDisableMaterialNormalCalculation;                        // 0x0005(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	EMobileCSMQuality                                  MobileCSMQuality;                                         // 0x0006(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
 };
 
 }

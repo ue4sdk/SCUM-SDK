@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.17) SDK
+// SCUM (0.1.20) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -8,8 +8,8 @@
 
 #include "SCUM_Basic.hpp"
 #include "SCUM_UMG_classes.hpp"
-#include "SCUM_ConZ_classes.hpp"
 #include "SCUM_Engine_classes.hpp"
+#include "SCUM_ConZ_classes.hpp"
 #include "SCUM_SlateCore_classes.hpp"
 
 namespace SDK

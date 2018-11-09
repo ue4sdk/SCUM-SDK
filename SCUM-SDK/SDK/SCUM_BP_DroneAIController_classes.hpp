@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.17) SDK
+// SCUM (0.1.20) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_DroneAIController.BP_DroneAIController_C
-// 0x0000 (0x0768 - 0x0768)
+// 0x0000 (0x0790 - 0x0790)
 class ABP_DroneAIController_C : public ADroneAIController
 {
 public:

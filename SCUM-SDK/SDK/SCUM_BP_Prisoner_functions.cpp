@@ -1,4 +1,4 @@
-// SCUM (0.1.17) SDK
+// SCUM (0.1.20) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -127,42 +127,6 @@ void ABP_Prisoner_C::DrawFootstep(bool flip)
 }
 
 
-// Function BP_Prisoner.BP_Prisoner_C.ReceiveBeginPlay
-// (FUNC_Event, FUNC_Protected, FUNC_BlueprintEvent)
-
-void ABP_Prisoner_C::ReceiveBeginPlay()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Prisoner.BP_Prisoner_C.ReceiveBeginPlay");
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function BP_Prisoner.BP_Prisoner_C.ReceiveTick
-// (FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
-// Parameters:
-// float                          DeltaSeconds                   (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-
-void ABP_Prisoner_C::ReceiveTick(float DeltaSeconds)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Prisoner.BP_Prisoner_C.ReceiveTick");
-
-	struct
-	{
-		float                          DeltaSeconds;
-	} params;
-
-	params.DeltaSeconds = DeltaSeconds;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
 // Function BP_Prisoner.BP_Prisoner_C.InitTextMeshFromName
 // (FUNC_Event, FUNC_Protected, FUNC_BlueprintEvent)
 // Parameters:
@@ -284,6 +248,42 @@ void ABP_Prisoner_C::BndEvt__VoiceChat_K2Node_ComponentBoundEvent_0_VoiceChatSta
 void ABP_Prisoner_C::BndEvt__VoiceChat_K2Node_ComponentBoundEvent_1_VoiceChatStateChangedSignature__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Prisoner.BP_Prisoner_C.BndEvt__VoiceChat_K2Node_ComponentBoundEvent_1_VoiceChatStateChangedSignature__DelegateSignature");
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Prisoner.BP_Prisoner_C.ReceiveTick
+// (FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
+// Parameters:
+// float                          DeltaSeconds                   (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void ABP_Prisoner_C::ReceiveTick(float DeltaSeconds)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Prisoner.BP_Prisoner_C.ReceiveTick");
+
+	struct
+	{
+		float                          DeltaSeconds;
+	} params;
+
+	params.DeltaSeconds = DeltaSeconds;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Prisoner.BP_Prisoner_C.ReceiveBeginPlay
+// (FUNC_Event, FUNC_Protected, FUNC_BlueprintEvent)
+
+void ABP_Prisoner_C::ReceiveBeginPlay()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Prisoner.BP_Prisoner_C.ReceiveBeginPlay");
 
 	struct
 	{

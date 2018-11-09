@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.17) SDK
+// SCUM (0.1.20) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Class OnlineSubsystemUtils.IpConnection
-// 0x0020 (0x337D0 - 0x337B0)
+// 0x0020 (0x1910 - 0x18F0)
 class UIpConnection : public UNetConnection
 {
 public:
-	unsigned char                                      UnknownData00[0x20];                                      // 0x337B0(0x0020) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x20];                                      // 0x18F0(0x0020) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -31,19 +31,19 @@ public:
 
 
 // Class OnlineSubsystemUtils.IpNetDriver
-// 0x0030 (0x0538 - 0x0508)
+// 0x0030 (0x0568 - 0x0538)
 class UIpNetDriver : public UNetDriver
 {
 public:
-	unsigned char                                      LogPortUnreach : 1;                                       // 0x0508(0x0001) (CPF_Config)
-	unsigned char                                      AllowPlayerPortUnreach : 1;                               // 0x0508(0x0001) (CPF_Config)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0509(0x0003) MISSED OFFSET
-	uint32_t                                           MaxPortCountToTry;                                        // 0x050C(0x0004) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData01[0x18];                                      // 0x0510(0x0018) MISSED OFFSET
-	uint32_t                                           ServerDesiredSocketReceiveBufferBytes;                    // 0x0528(0x0004) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	uint32_t                                           ServerDesiredSocketSendBufferBytes;                       // 0x052C(0x0004) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	uint32_t                                           ClientDesiredSocketReceiveBufferBytes;                    // 0x0530(0x0004) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	uint32_t                                           ClientDesiredSocketSendBufferBytes;                       // 0x0534(0x0004) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	unsigned char                                      LogPortUnreach : 1;                                       // 0x0538(0x0001) (CPF_Config)
+	unsigned char                                      AllowPlayerPortUnreach : 1;                               // 0x0538(0x0001) (CPF_Config)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0539(0x0003) MISSED OFFSET
+	uint32_t                                           MaxPortCountToTry;                                        // 0x053C(0x0004) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData01[0x18];                                      // 0x0540(0x0018) MISSED OFFSET
+	uint32_t                                           ServerDesiredSocketReceiveBufferBytes;                    // 0x0558(0x0004) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	uint32_t                                           ServerDesiredSocketSendBufferBytes;                       // 0x055C(0x0004) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	uint32_t                                           ClientDesiredSocketReceiveBufferBytes;                    // 0x0560(0x0004) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	uint32_t                                           ClientDesiredSocketSendBufferBytes;                       // 0x0564(0x0004) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -114,13 +114,13 @@ public:
 
 
 // Class OnlineSubsystemUtils.ConnectionCallbackProxy
-// 0x0078 (0x00A0 - 0x0028)
+// 0x0048 (0x0070 - 0x0028)
 class UConnectionCallbackProxy : public UOnlineBlueprintCallProxyBase
 {
 public:
 	struct FScriptMulticastDelegate                    OnSuccess;                                                // 0x0028(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
 	struct FScriptMulticastDelegate                    OnFailure;                                                // 0x0038(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
-	unsigned char                                      UnknownData00[0x58];                                      // 0x0048(0x0058) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x28];                                      // 0x0048(0x0028) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -134,13 +134,13 @@ public:
 
 
 // Class OnlineSubsystemUtils.CreateSessionCallbackProxy
-// 0x00C8 (0x00F0 - 0x0028)
+// 0x0068 (0x0090 - 0x0028)
 class UCreateSessionCallbackProxy : public UOnlineBlueprintCallProxyBase
 {
 public:
 	struct FScriptMulticastDelegate                    OnSuccess;                                                // 0x0028(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
 	struct FScriptMulticastDelegate                    OnFailure;                                                // 0x0038(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
-	unsigned char                                      UnknownData00[0xA8];                                      // 0x0048(0x00A8) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x48];                                      // 0x0048(0x0048) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -154,13 +154,13 @@ public:
 
 
 // Class OnlineSubsystemUtils.DestroySessionCallbackProxy
-// 0x0078 (0x00A0 - 0x0028)
+// 0x0048 (0x0070 - 0x0028)
 class UDestroySessionCallbackProxy : public UOnlineBlueprintCallProxyBase
 {
 public:
 	struct FScriptMulticastDelegate                    OnSuccess;                                                // 0x0028(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
 	struct FScriptMulticastDelegate                    OnFailure;                                                // 0x0038(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
-	unsigned char                                      UnknownData00[0x58];                                      // 0x0048(0x0058) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x28];                                      // 0x0048(0x0028) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -214,13 +214,13 @@ public:
 
 
 // Class OnlineSubsystemUtils.FindSessionsCallbackProxy
-// 0x0098 (0x00C0 - 0x0028)
+// 0x0060 (0x0088 - 0x0028)
 class UFindSessionsCallbackProxy : public UOnlineBlueprintCallProxyBase
 {
 public:
 	struct FScriptMulticastDelegate                    OnSuccess;                                                // 0x0028(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
 	struct FScriptMulticastDelegate                    OnFailure;                                                // 0x0038(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
-	unsigned char                                      UnknownData00[0x78];                                      // 0x0048(0x0078) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x40];                                      // 0x0048(0x0040) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -258,13 +258,13 @@ public:
 
 
 // Class OnlineSubsystemUtils.InAppPurchaseCallbackProxy
-// 0x0098 (0x00C0 - 0x0028)
+// 0x0058 (0x0080 - 0x0028)
 class UInAppPurchaseCallbackProxy : public UObject
 {
 public:
 	struct FScriptMulticastDelegate                    OnSuccess;                                                // 0x0028(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
 	struct FScriptMulticastDelegate                    OnFailure;                                                // 0x0038(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
-	unsigned char                                      UnknownData00[0x78];                                      // 0x0048(0x0078) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x38];                                      // 0x0048(0x0038) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -278,13 +278,13 @@ public:
 
 
 // Class OnlineSubsystemUtils.InAppPurchaseQueryCallbackProxy
-// 0x00A8 (0x00D0 - 0x0028)
+// 0x0068 (0x0090 - 0x0028)
 class UInAppPurchaseQueryCallbackProxy : public UObject
 {
 public:
 	struct FScriptMulticastDelegate                    OnSuccess;                                                // 0x0028(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
 	struct FScriptMulticastDelegate                    OnFailure;                                                // 0x0038(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
-	unsigned char                                      UnknownData00[0x88];                                      // 0x0048(0x0088) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x48];                                      // 0x0048(0x0048) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -298,13 +298,13 @@ public:
 
 
 // Class OnlineSubsystemUtils.InAppPurchaseRestoreCallbackProxy
-// 0x00A8 (0x00D0 - 0x0028)
+// 0x0068 (0x0090 - 0x0028)
 class UInAppPurchaseRestoreCallbackProxy : public UObject
 {
 public:
 	struct FScriptMulticastDelegate                    OnSuccess;                                                // 0x0028(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
 	struct FScriptMulticastDelegate                    OnFailure;                                                // 0x0038(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
-	unsigned char                                      UnknownData00[0x88];                                      // 0x0048(0x0088) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x48];                                      // 0x0048(0x0048) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -318,13 +318,13 @@ public:
 
 
 // Class OnlineSubsystemUtils.JoinSessionCallbackProxy
-// 0x0138 (0x0160 - 0x0028)
+// 0x0100 (0x0128 - 0x0028)
 class UJoinSessionCallbackProxy : public UOnlineBlueprintCallProxyBase
 {
 public:
 	struct FScriptMulticastDelegate                    OnSuccess;                                                // 0x0028(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
 	struct FScriptMulticastDelegate                    OnFailure;                                                // 0x0038(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
-	unsigned char                                      UnknownData00[0x118];                                     // 0x0048(0x0118) MISSED OFFSET
+	unsigned char                                      UnknownData00[0xE0];                                      // 0x0048(0x00E0) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -355,13 +355,13 @@ public:
 
 
 // Class OnlineSubsystemUtils.LeaderboardFlushCallbackProxy
-// 0x0078 (0x00A0 - 0x0028)
+// 0x0040 (0x0068 - 0x0028)
 class ULeaderboardFlushCallbackProxy : public UObject
 {
 public:
 	struct FScriptMulticastDelegate                    OnSuccess;                                                // 0x0028(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
 	struct FScriptMulticastDelegate                    OnFailure;                                                // 0x0038(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
-	unsigned char                                      UnknownData00[0x58];                                      // 0x0048(0x0058) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x20];                                      // 0x0048(0x0020) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -375,13 +375,13 @@ public:
 
 
 // Class OnlineSubsystemUtils.LeaderboardQueryCallbackProxy
-// 0x00A8 (0x00D0 - 0x0028)
+// 0x0070 (0x0098 - 0x0028)
 class ULeaderboardQueryCallbackProxy : public UObject
 {
 public:
 	struct FScriptMulticastDelegate                    OnSuccess;                                                // 0x0028(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
 	struct FScriptMulticastDelegate                    OnFailure;                                                // 0x0038(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
-	unsigned char                                      UnknownData00[0x88];                                      // 0x0048(0x0088) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x50];                                      // 0x0048(0x0050) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -395,13 +395,13 @@ public:
 
 
 // Class OnlineSubsystemUtils.LogoutCallbackProxy
-// 0x0038 (0x0060 - 0x0028)
+// 0x0038 (0x0068 - 0x0030)
 class ULogoutCallbackProxy : public UBlueprintAsyncActionBase
 {
 public:
-	struct FScriptMulticastDelegate                    OnSuccess;                                                // 0x0028(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
-	struct FScriptMulticastDelegate                    OnFailure;                                                // 0x0038(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0048(0x0018) MISSED OFFSET
+	struct FScriptMulticastDelegate                    OnSuccess;                                                // 0x0030(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
+	struct FScriptMulticastDelegate                    OnFailure;                                                // 0x0040(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
+	unsigned char                                      UnknownData00[0x18];                                      // 0x0050(0x0018) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -415,15 +415,15 @@ public:
 
 
 // Class OnlineSubsystemUtils.OnlineBeacon
-// 0x0028 (0x0340 - 0x0318)
+// 0x0028 (0x0350 - 0x0328)
 class AOnlineBeacon : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0318(0x0008) MISSED OFFSET
-	float                                              BeaconConnectionInitialTimeout;                           // 0x0320(0x0004) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	float                                              BeaconConnectionTimeout;                                  // 0x0324(0x0004) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	class UNetDriver*                                  NetDriver;                                                // 0x0328(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData01[0x10];                                      // 0x0330(0x0010) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0328(0x0008) MISSED OFFSET
+	float                                              BeaconConnectionInitialTimeout;                           // 0x0330(0x0004) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	float                                              BeaconConnectionTimeout;                                  // 0x0334(0x0004) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	class UNetDriver*                                  NetDriver;                                                // 0x0338(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData01[0x10];                                      // 0x0340(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -435,14 +435,14 @@ public:
 
 
 // Class OnlineSubsystemUtils.OnlineBeaconClient
-// 0x0090 (0x03D0 - 0x0340)
+// 0x0050 (0x03A0 - 0x0350)
 class AOnlineBeaconClient : public AOnlineBeacon
 {
 public:
-	class AOnlineBeaconHostObject*                     BeaconOwner;                                              // 0x0340(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UNetConnection*                              BeaconConnection;                                         // 0x0348(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	EBeaconConnectionState                             ConnectionState;                                          // 0x0350(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7F];                                      // 0x0351(0x007F) MISSED OFFSET
+	class AOnlineBeaconHostObject*                     BeaconOwner;                                              // 0x0350(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UNetConnection*                              BeaconConnection;                                         // 0x0358(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	EBeaconConnectionState                             ConnectionState;                                          // 0x0360(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3F];                                      // 0x0361(0x003F) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -456,14 +456,14 @@ public:
 
 
 // Class OnlineSubsystemUtils.OnlineBeaconHost
-// 0x00B8 (0x03F8 - 0x0340)
+// 0x00B8 (0x0408 - 0x0350)
 class AOnlineBeaconHost : public AOnlineBeacon
 {
 public:
-	int                                                ListenPort;                                               // 0x0340(0x0004) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0344(0x0004) MISSED OFFSET
-	TArray<class AOnlineBeaconClient*>                 ClientActors;                                             // 0x0348(0x0010) (CPF_ZeroConstructor)
-	unsigned char                                      UnknownData01[0xA0];                                      // 0x0358(0x00A0) MISSED OFFSET
+	int                                                ListenPort;                                               // 0x0350(0x0004) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0354(0x0004) MISSED OFFSET
+	TArray<class AOnlineBeaconClient*>                 ClientActors;                                             // 0x0358(0x0010) (CPF_ZeroConstructor)
+	unsigned char                                      UnknownData01[0xA0];                                      // 0x0368(0x00A0) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -475,13 +475,13 @@ public:
 
 
 // Class OnlineSubsystemUtils.OnlineBeaconHostObject
-// 0x0028 (0x0340 - 0x0318)
+// 0x0028 (0x0350 - 0x0328)
 class AOnlineBeaconHostObject : public AActor
 {
 public:
-	struct FString                                     BeaconTypeName;                                           // 0x0318(0x0010) (CPF_ZeroConstructor, CPF_Transient)
-	class UClass*                                      ClientBeaconActorClass;                                   // 0x0328(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	TArray<class AOnlineBeaconClient*>                 ClientActors;                                             // 0x0330(0x0010) (CPF_ZeroConstructor)
+	struct FString                                     BeaconTypeName;                                           // 0x0328(0x0010) (CPF_ZeroConstructor, CPF_Transient)
+	class UClass*                                      ClientBeaconActorClass;                                   // 0x0338(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	TArray<class AOnlineBeaconClient*>                 ClientActors;                                             // 0x0340(0x0010) (CPF_ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -528,14 +528,14 @@ public:
 
 
 // Class OnlineSubsystemUtils.OnlineSessionClient
-// 0x0298 (0x02C0 - 0x0028)
+// 0x0168 (0x0190 - 0x0028)
 class UOnlineSessionClient : public UOnlineSession
 {
 public:
-	unsigned char                                      UnknownData00[0x288];                                     // 0x0028(0x0288) MISSED OFFSET
-	bool                                               bIsFromInvite;                                            // 0x02B0(0x0001) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
-	bool                                               bHandlingDisconnect;                                      // 0x02B1(0x0001) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData01[0xE];                                       // 0x02B2(0x000E) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x160];                                     // 0x0028(0x0160) MISSED OFFSET
+	bool                                               bIsFromInvite;                                            // 0x0188(0x0001) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
+	bool                                               bHandlingDisconnect;                                      // 0x0189(0x0001) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData01[0x6];                                       // 0x018A(0x0006) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -547,17 +547,17 @@ public:
 
 
 // Class OnlineSubsystemUtils.PartyBeaconClient
-// 0x0130 (0x0500 - 0x03D0)
+// 0x00B0 (0x0450 - 0x03A0)
 class APartyBeaconClient : public AOnlineBeaconClient
 {
 public:
-	unsigned char                                      UnknownData00[0xC0];                                      // 0x03D0(0x00C0) MISSED OFFSET
-	struct FString                                     DestSessionId;                                            // 0x0490(0x0010) (CPF_ZeroConstructor)
-	struct FPartyReservation                           PendingReservation;                                       // 0x04A0(0x0030)
-	EClientRequestType                                 RequestType;                                              // 0x04D0(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool                                               bPendingReservationSent;                                  // 0x04D1(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool                                               bCancelReservation;                                       // 0x04D2(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData01[0x2D];                                      // 0x04D3(0x002D) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x30];                                      // 0x03A0(0x0030) MISSED OFFSET
+	struct FString                                     DestSessionId;                                            // 0x03D0(0x0010) (CPF_ZeroConstructor)
+	struct FPartyReservation                           PendingReservation;                                       // 0x03E0(0x0040)
+	EClientRequestType                                 RequestType;                                              // 0x0420(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bPendingReservationSent;                                  // 0x0421(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bCancelReservation;                                       // 0x0422(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData01[0x2D];                                      // 0x0423(0x002D) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -577,17 +577,17 @@ public:
 
 
 // Class OnlineSubsystemUtils.PartyBeaconHost
-// 0x0160 (0x04A0 - 0x0340)
+// 0x0068 (0x03B8 - 0x0350)
 class APartyBeaconHost : public AOnlineBeaconHostObject
 {
 public:
-	class UPartyBeaconState*                           State;                                                    // 0x0340(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData00[0x148];                                     // 0x0348(0x0148) MISSED OFFSET
-	bool                                               bLogoutOnSessionTimeout;                                  // 0x0490(0x0001) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x0491(0x0003) MISSED OFFSET
-	float                                              SessionTimeoutSecs;                                       // 0x0494(0x0004) (CPF_ZeroConstructor, CPF_Transient, CPF_Config, CPF_IsPlainOldData)
-	float                                              TravelSessionTimeoutSecs;                                 // 0x0498(0x0004) (CPF_ZeroConstructor, CPF_Transient, CPF_Config, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData02[0x4];                                       // 0x049C(0x0004) MISSED OFFSET
+	class UPartyBeaconState*                           State;                                                    // 0x0350(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x50];                                      // 0x0358(0x0050) MISSED OFFSET
+	bool                                               bLogoutOnSessionTimeout;                                  // 0x03A8(0x0001) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x03A9(0x0003) MISSED OFFSET
+	float                                              SessionTimeoutSecs;                                       // 0x03AC(0x0004) (CPF_ZeroConstructor, CPF_Transient, CPF_Config, CPF_IsPlainOldData)
+	float                                              TravelSessionTimeoutSecs;                                 // 0x03B0(0x0004) (CPF_ZeroConstructor, CPF_Transient, CPF_Config, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData02[0x4];                                       // 0x03B4(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -599,7 +599,7 @@ public:
 
 
 // Class OnlineSubsystemUtils.PartyBeaconState
-// 0x0048 (0x0070 - 0x0028)
+// 0x0050 (0x0078 - 0x0028)
 class UPartyBeaconState : public UObject
 {
 public:
@@ -611,8 +611,10 @@ public:
 	struct FName                                       TeamAssignmentMethod;                                     // 0x0040(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
 	int                                                ReservedHostTeamNum;                                      // 0x0048(0x0004) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
 	int                                                ForceTeamNum;                                             // 0x004C(0x0004) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
-	TArray<struct FPartyReservation>                   Reservations;                                             // 0x0050(0x0010) (CPF_ZeroConstructor, CPF_Transient)
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0060(0x0010) MISSED OFFSET
+	bool                                               bRestrictCrossConsole;                                    // 0x0050(0x0001) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0051(0x0007) MISSED OFFSET
+	TArray<struct FPartyReservation>                   Reservations;                                             // 0x0058(0x0010) (CPF_ZeroConstructor, CPF_Transient)
+	unsigned char                                      UnknownData01[0x10];                                      // 0x0068(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -644,13 +646,13 @@ public:
 
 
 // Class OnlineSubsystemUtils.ShowLoginUICallbackProxy
-// 0x0030 (0x0058 - 0x0028)
+// 0x0030 (0x0060 - 0x0030)
 class UShowLoginUICallbackProxy : public UBlueprintAsyncActionBase
 {
 public:
-	struct FScriptMulticastDelegate                    OnSuccess;                                                // 0x0028(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
-	struct FScriptMulticastDelegate                    OnFailure;                                                // 0x0038(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0048(0x0010) MISSED OFFSET
+	struct FScriptMulticastDelegate                    OnSuccess;                                                // 0x0030(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
+	struct FScriptMulticastDelegate                    OnFailure;                                                // 0x0040(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0050(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -664,7 +666,7 @@ public:
 
 
 // Class OnlineSubsystemUtils.TestBeaconClient
-// 0x0000 (0x03D0 - 0x03D0)
+// 0x0000 (0x03A0 - 0x03A0)
 class ATestBeaconClient : public AOnlineBeaconClient
 {
 public:
@@ -682,7 +684,7 @@ public:
 
 
 // Class OnlineSubsystemUtils.TestBeaconHost
-// 0x0000 (0x0340 - 0x0340)
+// 0x0000 (0x0350 - 0x0350)
 class ATestBeaconHost : public AOnlineBeaconHostObject
 {
 public:
@@ -717,11 +719,11 @@ public:
 
 
 // Class OnlineSubsystemUtils.VoipListenerSynthComponent
-// 0x0010 (0x06C0 - 0x06B0)
+// 0x0010 (0x05D0 - 0x05C0)
 class UVoipListenerSynthComponent : public USynthComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x06B0(0x0010) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x10];                                      // 0x05C0(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

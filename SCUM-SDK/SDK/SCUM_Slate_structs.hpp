@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.17) SDK
+// SCUM (0.1.20) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -152,6 +152,13 @@ enum class EMultipleKeyBindingIndex : uint8_t
 //---------------------------------------------------------------------------
 //Script Structs
 //---------------------------------------------------------------------------
+
+// ScriptStruct Slate.VirtualKeyboardOptions
+// 0x0001
+struct FVirtualKeyboardOptions
+{
+	bool                                               bEnableAutocorrect;                                       // 0x0000(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
 
 // ScriptStruct Slate.InputChord
 // 0x0020

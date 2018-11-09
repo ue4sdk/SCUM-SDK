@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.17) SDK
+// SCUM (0.1.20) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // WidgetBlueprintGeneratedClass UI_CC_ProgressBar.UI_CC_ProgressBar_C
-// 0x0154 (0x0374 - 0x0220)
+// 0x0155 (0x0375 - 0x0220)
 class UUI_CC_ProgressBar_C : public UDesignableUserWidget
 {
 public:
@@ -64,6 +64,7 @@ public:
 	struct FScriptMulticastDelegate                    MouseUp;                                                  // 0x0350(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_BlueprintAssignable)
 	struct FScriptMulticastDelegate                    MouseDown;                                                // 0x0360(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_BlueprintAssignable)
 	float                                              SnapThreshold;                                            // 0x0370(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               ShouldTriggerOnIndexChangedAtConstruct;                   // 0x0374(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

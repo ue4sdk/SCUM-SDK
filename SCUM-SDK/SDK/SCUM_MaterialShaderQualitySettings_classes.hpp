@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.17) SDK
+// SCUM (0.1.20) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -35,8 +35,8 @@ public:
 class UShaderPlatformQualitySettings : public UObject
 {
 public:
-	struct FMaterialQualityOverrides                   QualityOverrides[0x3];                                    // 0x0028(0x0006) (CPF_Edit, CPF_Config)
-	unsigned char                                      UnknownData00[0x6];                                       // 0x003A(0x0006) MISSED OFFSET
+	struct FMaterialQualityOverrides                   QualityOverrides[0x3];                                    // 0x0028(0x0007) (CPF_Edit, CPF_Config)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x003D(0x0003) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

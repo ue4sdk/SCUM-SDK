@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.17) SDK
+// SCUM (0.1.20) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Zombie_Corpse.BP_Zombie_Corpse_C
-// 0x0000 (0x04F0 - 0x04F0)
+// 0x0000 (0x0500 - 0x0500)
 class ABP_Zombie_Corpse_C : public AZombieCorpse
 {
 public:

@@ -1,4 +1,4 @@
-// SCUM (0.1.17) SDK
+// SCUM (0.1.20) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,26 @@ namespace SDK
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function LevelSequence.LevelSequenceBurnInOptions.SetBurnIn
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
+// Parameters:
+// struct FSoftClassPath          InBurnInClass                  (CPF_Parm)
+
+void ULevelSequenceBurnInOptions::SetBurnIn(const struct FSoftClassPath& InBurnInClass)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequenceBurnInOptions.SetBurnIn");
+
+	struct
+	{
+		struct FSoftClassPath          InBurnInClass;
+	} params;
+
+	params.InBurnInClass = InBurnInClass;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
 
 // Function LevelSequence.LevelSequenceActor.SetSequence
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)

@@ -1,14 +1,14 @@
 #pragma once
 
-// SCUM (0.1.17) SDK
+// SCUM (0.1.20) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
 #endif
 
 #include "SCUM_Basic.hpp"
-#include "SCUM_Engine_classes.hpp"
 #include "SCUM_CoreUObject_classes.hpp"
+#include "SCUM_Engine_classes.hpp"
 
 namespace SDK
 {
@@ -56,7 +56,7 @@ struct FCameraFilmbackSettings
 };
 
 // ScriptStruct CinematicCamera.CameraLensSettings
-// 0x0014
+// 0x0018
 struct FCameraLensSettings
 {
 	float                                              MinFocalLength;                                           // 0x0000(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -64,6 +64,7 @@ struct FCameraLensSettings
 	float                                              MinFStop;                                                 // 0x0008(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	float                                              MaxFStop;                                                 // 0x000C(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	float                                              MinimumFocusDistance;                                     // 0x0010(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	int                                                DiaphragmBladeCount;                                      // 0x0014(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
 // ScriptStruct CinematicCamera.CameraTrackingFocusSettings
@@ -108,8 +109,7 @@ struct FNamedFilmbackPreset
 struct FNamedLensPreset
 {
 	struct FString                                     Name;                                                     // 0x0000(0x0010) (CPF_ZeroConstructor)
-	struct FCameraLensSettings                         LensSettings;                                             // 0x0010(0x0014) (CPF_IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0024(0x0004) MISSED OFFSET
+	struct FCameraLensSettings                         LensSettings;                                             // 0x0010(0x0018) (CPF_IsPlainOldData)
 };
 
 }

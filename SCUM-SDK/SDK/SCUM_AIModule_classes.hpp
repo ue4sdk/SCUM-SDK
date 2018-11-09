@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.17) SDK
+// SCUM (0.1.20) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,28 +14,123 @@ namespace SDK
 //Classes
 //---------------------------------------------------------------------------
 
+// Class AIModule.BTNode
+// 0x0030 (0x0058 - 0x0028)
+class UBTNode : public UObject
+{
+public:
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0028(0x0008) MISSED OFFSET
+	struct FString                                     NodeName;                                                 // 0x0030(0x0010) (CPF_Edit, CPF_ZeroConstructor)
+	class UBehaviorTree*                               TreeAsset;                                                // 0x0040(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UBTCompositeNode*                            ParentNode;                                               // 0x0048(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData01[0x8];                                       // 0x0050(0x0008) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.BTNode");
+		return ptr;
+	}
+
+};
+
+
+// Class AIModule.BTTaskNode
+// 0x0018 (0x0070 - 0x0058)
+class UBTTaskNode : public UBTNode
+{
+public:
+	TArray<class UBTService*>                          Services;                                                 // 0x0058(0x0010) (CPF_ZeroConstructor)
+	unsigned char                                      bIgnoreRestartSelf : 1;                                   // 0x0068(0x0001) (CPF_Edit)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0069(0x0007) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.BTTaskNode");
+		return ptr;
+	}
+
+};
+
+
+// Class AIModule.EnvQueryNode
+// 0x0008 (0x0030 - 0x0028)
+class UEnvQueryNode : public UObject
+{
+public:
+	int                                                VerNum;                                                   // 0x0028(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x002C(0x0004) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.EnvQueryNode");
+		return ptr;
+	}
+
+};
+
+
+// Class AIModule.EnvQueryTest
+// 0x0190 (0x01C0 - 0x0030)
+class UEnvQueryTest : public UEnvQueryNode
+{
+public:
+	int                                                TestOrder;                                                // 0x0030(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	TEnumAsByte<EEnvTestPurpose>                       TestPurpose;                                              // 0x0034(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0035(0x0003) MISSED OFFSET
+	struct FString                                     TestComment;                                              // 0x0038(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance)
+	TEnumAsByte<EEnvTestFilterOperator>                MultipleContextFilterOp;                                  // 0x0048(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	TEnumAsByte<EEnvTestScoreOperator>                 MultipleContextScoreOp;                                   // 0x0049(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	TEnumAsByte<EEnvTestFilterType>                    FilterType;                                               // 0x004A(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData01[0x5];                                       // 0x004B(0x0005) MISSED OFFSET
+	struct FAIDataProviderBoolValue                    BoolValue;                                                // 0x0050(0x0030) (CPF_Edit, CPF_DisableEditOnInstance)
+	struct FAIDataProviderFloatValue                   FloatValueMin;                                            // 0x0080(0x0030) (CPF_Edit, CPF_DisableEditOnInstance)
+	struct FAIDataProviderFloatValue                   FloatValueMax;                                            // 0x00B0(0x0030) (CPF_Edit, CPF_DisableEditOnInstance)
+	unsigned char                                      UnknownData02[0x1];                                       // 0x00E0(0x0001) MISSED OFFSET
+	TEnumAsByte<EEnvTestScoreEquation>                 ScoringEquation;                                          // 0x00E1(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	TEnumAsByte<EEnvQueryTestClamping>                 ClampMinType;                                             // 0x00E2(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	TEnumAsByte<EEnvQueryTestClamping>                 ClampMaxType;                                             // 0x00E3(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	EEQSNormalizationType                              NormalizationType;                                        // 0x00E4(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData03[0x3];                                       // 0x00E5(0x0003) MISSED OFFSET
+	struct FAIDataProviderFloatValue                   ScoreClampMin;                                            // 0x00E8(0x0030) (CPF_Edit, CPF_DisableEditOnInstance)
+	struct FAIDataProviderFloatValue                   ScoreClampMax;                                            // 0x0118(0x0030) (CPF_Edit, CPF_DisableEditOnInstance)
+	struct FAIDataProviderFloatValue                   ScoringFactor;                                            // 0x0148(0x0030) (CPF_Edit, CPF_DisableEditOnInstance)
+	struct FAIDataProviderFloatValue                   ReferenceValue;                                           // 0x0178(0x0030) (CPF_Edit, CPF_DisableEditOnInstance)
+	bool                                               bDefineReferenceValue;                                    // 0x01A8(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData04[0xF];                                       // 0x01A9(0x000F) MISSED OFFSET
+	unsigned char                                      bWorkOnFloatValues : 1;                                   // 0x01B8(0x0001)
+	unsigned char                                      UnknownData05[0x7];                                       // 0x01B9(0x0007) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.EnvQueryTest");
+		return ptr;
+	}
+
+};
+
+
 // Class AIModule.AIController
-// 0x0090 (0x0410 - 0x0380)
+// 0x0090 (0x0438 - 0x03A8)
 class AAIController : public AController
 {
 public:
-	unsigned char                                      UnknownData00[0x38];                                      // 0x0380(0x0038) MISSED OFFSET
-	unsigned char                                      bStopAILogicOnUnposses : 1;                               // 0x03B8(0x0001) (CPF_Edit, CPF_BlueprintVisible)
-	unsigned char                                      bLOSflag : 1;                                             // 0x03B8(0x0001)
-	unsigned char                                      bSkipExtraLOSChecks : 1;                                  // 0x03B8(0x0001)
-	unsigned char                                      bAllowStrafe : 1;                                         // 0x03B8(0x0001)
-	unsigned char                                      bWantsPlayerState : 1;                                    // 0x03B8(0x0001)
-	unsigned char                                      bSetControlRotationFromPawnOrientation : 1;               // 0x03B8(0x0001) (CPF_Edit, CPF_BlueprintVisible)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x03B9(0x0007) MISSED OFFSET
-	class UPathFollowingComponent*                     PathFollowingComponent;                                   // 0x03C0(0x0008) (CPF_Edit, CPF_ExportObject, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_EditConst, CPF_InstancedReference, CPF_IsPlainOldData)
-	class UBrainComponent*                             BrainComponent;                                           // 0x03C8(0x0008) (CPF_BlueprintVisible, CPF_ExportObject, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
-	class UAIPerceptionComponent*                      PerceptionComponent;                                      // 0x03D0(0x0008) (CPF_Edit, CPF_ExportObject, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_EditConst, CPF_InstancedReference, CPF_IsPlainOldData)
-	class UPawnActionsComponent*                       ActionsComp;                                              // 0x03D8(0x0008) (CPF_BlueprintVisible, CPF_ExportObject, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
-	class UBlackboardComponent*                        Blackboard;                                               // 0x03E0(0x0008) (CPF_BlueprintVisible, CPF_ExportObject, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
-	class UGameplayTasksComponent*                     CachedGameplayTasksComponent;                             // 0x03E8(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
-	class UClass*                                      DefaultNavigationFilterClass;                             // 0x03F0(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	struct FScriptMulticastDelegate                    ReceiveMoveCompleted;                                     // 0x03F8(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
-	unsigned char                                      UnknownData02[0x8];                                       // 0x0408(0x0008) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x38];                                      // 0x03A8(0x0038) MISSED OFFSET
+	unsigned char                                      bStopAILogicOnUnposses : 1;                               // 0x03E0(0x0001) (CPF_Edit, CPF_BlueprintVisible)
+	unsigned char                                      bLOSflag : 1;                                             // 0x03E0(0x0001)
+	unsigned char                                      bSkipExtraLOSChecks : 1;                                  // 0x03E0(0x0001) (CPF_Edit, CPF_BlueprintVisible)
+	unsigned char                                      bAllowStrafe : 1;                                         // 0x03E0(0x0001) (CPF_Edit, CPF_BlueprintVisible)
+	unsigned char                                      bWantsPlayerState : 1;                                    // 0x03E0(0x0001) (CPF_Edit, CPF_BlueprintVisible)
+	unsigned char                                      bSetControlRotationFromPawnOrientation : 1;               // 0x03E0(0x0001) (CPF_Edit, CPF_BlueprintVisible)
+	unsigned char                                      UnknownData01[0x7];                                       // 0x03E1(0x0007) MISSED OFFSET
+	class UPathFollowingComponent*                     PathFollowingComponent;                                   // 0x03E8(0x0008) (CPF_Edit, CPF_ExportObject, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_EditConst, CPF_InstancedReference, CPF_IsPlainOldData)
+	class UBrainComponent*                             BrainComponent;                                           // 0x03F0(0x0008) (CPF_BlueprintVisible, CPF_ExportObject, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
+	class UAIPerceptionComponent*                      PerceptionComponent;                                      // 0x03F8(0x0008) (CPF_Edit, CPF_ExportObject, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_EditConst, CPF_InstancedReference, CPF_IsPlainOldData)
+	class UPawnActionsComponent*                       ActionsComp;                                              // 0x0400(0x0008) (CPF_BlueprintVisible, CPF_ExportObject, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
+	class UBlackboardComponent*                        Blackboard;                                               // 0x0408(0x0008) (CPF_BlueprintVisible, CPF_ExportObject, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
+	class UGameplayTasksComponent*                     CachedGameplayTasksComponent;                             // 0x0410(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
+	class UClass*                                      DefaultNavigationFilterClass;                             // 0x0418(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FScriptMulticastDelegate                    ReceiveMoveCompleted;                                     // 0x0420(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
+	unsigned char                                      UnknownData02[0x8];                                       // 0x0430(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -70,15 +165,15 @@ public:
 
 
 // Class AIModule.PathFollowingComponent
-// 0x02C0 (0x03B0 - 0x00F0)
+// 0x01D8 (0x02C8 - 0x00F0)
 class UPathFollowingComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x130];                                     // 0x00F0(0x0130) MISSED OFFSET
-	class UNavMovementComponent*                       MovementComp;                                             // 0x0220(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_Transient, CPF_InstancedReference, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData01[0x8];                                       // 0x0228(0x0008) MISSED OFFSET
-	class ANavigationData*                             MyNavData;                                                // 0x0230(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData02[0x178];                                     // 0x0238(0x0178) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x50];                                      // 0x00F0(0x0050) MISSED OFFSET
+	class UNavMovementComponent*                       MovementComp;                                             // 0x0140(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_Transient, CPF_InstancedReference, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData01[0x8];                                       // 0x0148(0x0008) MISSED OFFSET
+	class ANavigationData*                             MyNavData;                                                // 0x0150(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData02[0x170];                                     // 0x0158(0x0170) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -95,17 +190,18 @@ public:
 
 
 // Class AIModule.CrowdFollowingComponent
-// 0x0050 (0x0400 - 0x03B0)
+// 0x0050 (0x0318 - 0x02C8)
 class UCrowdFollowingComponent : public UPathFollowingComponent
 {
 public:
-	struct FVector                                     CrowdAgentMoveDirection;                                  // 0x03B0(0x000C) (CPF_IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x03BC(0x0004) MISSED OFFSET
-	class UCharacterMovementComponent*                 CharacterMovement;                                        // 0x03C0(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_Transient, CPF_InstancedReference, CPF_IsPlainOldData)
-	struct FNavAvoidanceMask                           AvoidanceGroup;                                           // 0x03C8(0x0004) (CPF_Deprecated, CPF_IsPlainOldData)
-	struct FNavAvoidanceMask                           GroupsToAvoid;                                            // 0x03CC(0x0004) (CPF_Deprecated, CPF_IsPlainOldData)
-	struct FNavAvoidanceMask                           GroupsToIgnore;                                           // 0x03D0(0x0004) (CPF_Deprecated, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData01[0x2C];                                      // 0x03D4(0x002C) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x02C8(0x0008) MISSED OFFSET
+	struct FVector                                     CrowdAgentMoveDirection;                                  // 0x02D0(0x000C) (CPF_IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x02DC(0x0004) MISSED OFFSET
+	class UCharacterMovementComponent*                 CharacterMovement;                                        // 0x02E0(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_Transient, CPF_InstancedReference, CPF_IsPlainOldData)
+	struct FNavAvoidanceMask                           AvoidanceGroup;                                           // 0x02E8(0x0004) (CPF_Deprecated, CPF_IsPlainOldData)
+	struct FNavAvoidanceMask                           GroupsToAvoid;                                            // 0x02EC(0x0004) (CPF_Deprecated, CPF_IsPlainOldData)
+	struct FNavAvoidanceMask                           GroupsToIgnore;                                           // 0x02F0(0x0004) (CPF_Deprecated, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData02[0x24];                                      // 0x02F4(0x0024) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -153,6 +249,8 @@ public:
 
 	static void UnlockAIResourcesWithAnimation(class UAnimInstance* AnimInstance, bool bUnlockMovement, bool UnlockAILogic);
 	static class APawn* SpawnAIFromClass(class UObject* WorldContextObject, class UClass* PawnClass, class UBehaviorTree* BehaviorTree, const struct FVector& Location, const struct FRotator& Rotation, bool bNoCollisionFail);
+	static void SimpleMoveToLocation(class AController* Controller, const struct FVector& Goal);
+	static void SimpleMoveToActor(class AController* Controller, class AActor* Goal);
 	static void SendAIMessage(class APawn* Target, const struct FName& Message, class UObject* MessageSource, bool bSuccess);
 	static void LockAIResourcesWithAnimation(class UAnimInstance* AnimInstance, bool bLockMovement, bool LockAILogic);
 	static bool IsValidAIRotation(const struct FRotator& Rotation);
@@ -375,7 +473,7 @@ public:
 
 
 // Class AIModule.AISense
-// 0x00F8 (0x0120 - 0x0028)
+// 0x0060 (0x0088 - 0x0028)
 class UAISense : public UObject
 {
 public:
@@ -386,7 +484,7 @@ public:
 	unsigned char                                      bAutoRegisterAllPawnsAsSources : 1;                       // 0x0030(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Config, CPF_DisableEditOnInstance)
 	unsigned char                                      UnknownData01[0x7];                                       // 0x0031(0x0007) MISSED OFFSET
 	class UAIPerceptionSystem*                         PerceptionSystemInstance;                                 // 0x0038(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData02[0xE0];                                      // 0x0040(0x00E0) MISSED OFFSET
+	unsigned char                                      UnknownData02[0x48];                                      // 0x0040(0x0048) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -398,14 +496,13 @@ public:
 
 
 // Class AIModule.AISense_Blueprint
-// 0x0030 (0x0150 - 0x0120)
+// 0x0028 (0x00B0 - 0x0088)
 class UAISense_Blueprint : public UAISense
 {
 public:
-	class UClass*                                      ListenerDataType;                                         // 0x0120(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	TArray<class UAIPerceptionComponent*>              ListenerContainer;                                        // 0x0128(0x0010) (CPF_BlueprintVisible, CPF_ExportObject, CPF_BlueprintReadOnly, CPF_ZeroConstructor)
-	TArray<class UAISenseEvent*>                       UnprocessedEvents;                                        // 0x0138(0x0010) (CPF_ZeroConstructor)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0148(0x0008) MISSED OFFSET
+	class UClass*                                      ListenerDataType;                                         // 0x0088(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	TArray<class UAIPerceptionComponent*>              ListenerContainer;                                        // 0x0090(0x0010) (CPF_BlueprintVisible, CPF_ExportObject, CPF_BlueprintReadOnly, CPF_ZeroConstructor)
+	TArray<class UAISenseEvent*>                       UnprocessedEvents;                                        // 0x00A0(0x0010) (CPF_ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -425,11 +522,11 @@ public:
 
 
 // Class AIModule.AISense_Damage
-// 0x0010 (0x0130 - 0x0120)
+// 0x0010 (0x0098 - 0x0088)
 class UAISense_Damage : public UAISense
 {
 public:
-	TArray<struct FAIDamageEvent>                      RegisteredEvents;                                         // 0x0120(0x0010) (CPF_ZeroConstructor)
+	TArray<struct FAIDamageEvent>                      RegisteredEvents;                                         // 0x0088(0x0010) (CPF_ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -443,13 +540,13 @@ public:
 
 
 // Class AIModule.AISense_Hearing
-// 0x0070 (0x0190 - 0x0120)
+// 0x0068 (0x00F0 - 0x0088)
 class UAISense_Hearing : public UAISense
 {
 public:
-	TArray<struct FAINoiseEvent>                       NoiseEvents;                                              // 0x0120(0x0010) (CPF_ZeroConstructor)
-	float                                              SpeedOfSoundSq;                                           // 0x0130(0x0004) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData00[0x5C];                                      // 0x0134(0x005C) MISSED OFFSET
+	TArray<struct FAINoiseEvent>                       NoiseEvents;                                              // 0x0088(0x0010) (CPF_ZeroConstructor)
+	float                                              SpeedOfSoundSq;                                           // 0x0098(0x0004) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x54];                                      // 0x009C(0x0054) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -463,11 +560,11 @@ public:
 
 
 // Class AIModule.AISense_Prediction
-// 0x0010 (0x0130 - 0x0120)
+// 0x0010 (0x0098 - 0x0088)
 class UAISense_Prediction : public UAISense
 {
 public:
-	TArray<struct FAIPredictionEvent>                  RegisteredEvents;                                         // 0x0120(0x0010) (CPF_ZeroConstructor)
+	TArray<struct FAIPredictionEvent>                  RegisteredEvents;                                         // 0x0088(0x0010) (CPF_ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -482,19 +579,19 @@ public:
 
 
 // Class AIModule.AISense_Sight
-// 0x00E0 (0x0200 - 0x0120)
+// 0x00D8 (0x0160 - 0x0088)
 class UAISense_Sight : public UAISense
 {
 public:
-	unsigned char                                      UnknownData00[0xB0];                                      // 0x0120(0x00B0) MISSED OFFSET
-	int                                                MaxTracesPerTick;                                         // 0x01D0(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	int                                                MinQueriesPerTimeSliceCheck;                              // 0x01D4(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	double                                             MaxTimeSlicePerTick;                                      // 0x01D8(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	float                                              HighImportanceQueryDistanceThreshold;                     // 0x01E0(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x01E4(0x0004) MISSED OFFSET
-	float                                              MaxQueryImportance;                                       // 0x01E8(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	float                                              SightLimitQueryImportance;                                // 0x01EC(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData02[0x10];                                      // 0x01F0(0x0010) MISSED OFFSET
+	unsigned char                                      UnknownData00[0xB0];                                      // 0x0088(0x00B0) MISSED OFFSET
+	int                                                MaxTracesPerTick;                                         // 0x0138(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	int                                                MinQueriesPerTimeSliceCheck;                              // 0x013C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	double                                             MaxTimeSlicePerTick;                                      // 0x0140(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	float                                              HighImportanceQueryDistanceThreshold;                     // 0x0148(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x014C(0x0004) MISSED OFFSET
+	float                                              MaxQueryImportance;                                       // 0x0150(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	float                                              SightLimitQueryImportance;                                // 0x0154(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData02[0x8];                                       // 0x0158(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -506,11 +603,11 @@ public:
 
 
 // Class AIModule.AISense_Team
-// 0x0010 (0x0130 - 0x0120)
+// 0x0010 (0x0098 - 0x0088)
 class UAISense_Team : public UAISense
 {
 public:
-	TArray<struct FAITeamStimulusEvent>                RegisteredEvents;                                         // 0x0120(0x0010) (CPF_ZeroConstructor)
+	TArray<struct FAITeamStimulusEvent>                RegisteredEvents;                                         // 0x0088(0x0010) (CPF_ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -522,11 +619,11 @@ public:
 
 
 // Class AIModule.AISense_Touch
-// 0x0010 (0x0130 - 0x0120)
+// 0x0010 (0x0098 - 0x0088)
 class UAISense_Touch : public UAISense
 {
 public:
-	TArray<struct FAITouchEvent>                       RegisteredEvents;                                         // 0x0120(0x0010) (CPF_ZeroConstructor)
+	TArray<struct FAITouchEvent>                       RegisteredEvents;                                         // 0x0088(0x0010) (CPF_ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -844,11 +941,11 @@ public:
 
 
 // Class AIModule.AITask_RunEQS
-// 0x00E0 (0x0150 - 0x0070)
+// 0x0078 (0x00E8 - 0x0070)
 class UAITask_RunEQS : public UAITask
 {
 public:
-	unsigned char                                      UnknownData00[0xE0];                                      // 0x0070(0x00E0) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x78];                                      // 0x0070(0x0078) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -906,13 +1003,13 @@ public:
 
 
 // Class AIModule.BehaviorTreeComponent
-// 0x0140 (0x0290 - 0x0150)
+// 0x0150 (0x02A0 - 0x0150)
 class UBehaviorTreeComponent : public UBrainComponent
 {
 public:
 	unsigned char                                      UnknownData00[0x20];                                      // 0x0150(0x0020) MISSED OFFSET
 	TArray<class UBTNode*>                             NodeInstances;                                            // 0x0170(0x0010) (CPF_ZeroConstructor, CPF_Transient)
-	unsigned char                                      UnknownData01[0x110];                                     // 0x0180(0x0110) MISSED OFFSET
+	unsigned char                                      UnknownData01[0x120];                                     // 0x0180(0x0120) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -1215,26 +1312,6 @@ public:
 };
 
 
-// Class AIModule.BTNode
-// 0x0030 (0x0058 - 0x0028)
-class UBTNode : public UObject
-{
-public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0028(0x0008) MISSED OFFSET
-	struct FString                                     NodeName;                                                 // 0x0030(0x0010) (CPF_Edit, CPF_ZeroConstructor)
-	class UBehaviorTree*                               TreeAsset;                                                // 0x0040(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UBTCompositeNode*                            ParentNode;                                               // 0x0048(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData01[0x8];                                       // 0x0050(0x0008) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>("Class AIModule.BTNode");
-		return ptr;
-	}
-
-};
-
-
 // Class AIModule.BTAuxiliaryNode
 // 0x0008 (0x0060 - 0x0058)
 class UBTAuxiliaryNode : public UBTNode
@@ -1252,15 +1329,15 @@ public:
 
 
 // Class AIModule.BTCompositeNode
-// 0x0078 (0x00D0 - 0x0058)
+// 0x0038 (0x0090 - 0x0058)
 class UBTCompositeNode : public UBTNode
 {
 public:
 	TArray<struct FBTCompositeChild>                   Children;                                                 // 0x0058(0x0010) (CPF_ZeroConstructor)
 	TArray<class UBTService*>                          Services;                                                 // 0x0068(0x0010) (CPF_ZeroConstructor)
-	unsigned char                                      UnknownData00[0x48];                                      // 0x0078(0x0048) MISSED OFFSET
-	unsigned char                                      bApplyDecoratorScope : 1;                                 // 0x00C0(0x0001) (CPF_Edit)
-	unsigned char                                      UnknownData01[0xF];                                       // 0x00C1(0x000F) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0078(0x0010) MISSED OFFSET
+	unsigned char                                      bApplyDecoratorScope : 1;                                 // 0x0088(0x0001) (CPF_Edit)
+	unsigned char                                      UnknownData01[0x7];                                       // 0x0089(0x0007) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -1272,7 +1349,7 @@ public:
 
 
 // Class AIModule.BTComposite_Selector
-// 0x0000 (0x00D0 - 0x00D0)
+// 0x0000 (0x0090 - 0x0090)
 class UBTComposite_Selector : public UBTCompositeNode
 {
 public:
@@ -1287,7 +1364,7 @@ public:
 
 
 // Class AIModule.BTComposite_Sequence
-// 0x0000 (0x00D0 - 0x00D0)
+// 0x0000 (0x0090 - 0x0090)
 class UBTComposite_Sequence : public UBTCompositeNode
 {
 public:
@@ -1302,10 +1379,12 @@ public:
 
 
 // Class AIModule.BTComposite_SimpleParallel
-// 0x0000 (0x00D0 - 0x00D0)
+// 0x0008 (0x0098 - 0x0090)
 class UBTComposite_SimpleParallel : public UBTCompositeNode
 {
 public:
+	TEnumAsByte<EBTParallelMode>                       FinishMode;                                               // 0x0090(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnTemplate, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0091(0x0007) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -1822,34 +1901,16 @@ public:
 
 
 // Class AIModule.BTService_RunEQS
-// 0x0088 (0x0120 - 0x0098)
+// 0x0058 (0x00F0 - 0x0098)
 class UBTService_RunEQS : public UBTService_BlackboardBase
 {
 public:
 	struct FEQSParametrizedQueryExecutionRequest       EQSRequest;                                               // 0x0098(0x0048) (CPF_Edit)
-	unsigned char                                      UnknownData00[0x40];                                      // 0x00E0(0x0040) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x10];                                      // 0x00E0(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>("Class AIModule.BTService_RunEQS");
-		return ptr;
-	}
-
-};
-
-
-// Class AIModule.BTTaskNode
-// 0x0018 (0x0070 - 0x0058)
-class UBTTaskNode : public UBTNode
-{
-public:
-	TArray<class UBTService*>                          Services;                                                 // 0x0058(0x0010) (CPF_ZeroConstructor)
-	unsigned char                                      bIgnoreRestartSelf : 1;                                   // 0x0068(0x0001) (CPF_Edit)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0069(0x0007) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>("Class AIModule.BTTaskNode");
 		return ptr;
 	}
 
@@ -2003,7 +2064,7 @@ public:
 
 
 // Class AIModule.BTTask_PlayAnimation
-// 0x0080 (0x00F0 - 0x0070)
+// 0x0040 (0x00B0 - 0x0070)
 class UBTTask_PlayAnimation : public UBTTaskNode
 {
 public:
@@ -2013,7 +2074,7 @@ public:
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0079(0x0007) MISSED OFFSET
 	class UBehaviorTreeComponent*                      MyOwnerComp;                                              // 0x0080(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 	class USkeletalMeshComponent*                      CachedSkelMesh;                                           // 0x0088(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData01[0x60];                                      // 0x0090(0x0060) MISSED OFFSET
+	unsigned char                                      UnknownData01[0x20];                                      // 0x0090(0x0020) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -2108,7 +2169,7 @@ public:
 
 
 // Class AIModule.BTTask_RunEQSQuery
-// 0x00E8 (0x0180 - 0x0098)
+// 0x00B8 (0x0150 - 0x0098)
 class UBTTask_RunEQSQuery : public UBTTask_BlackboardBase
 {
 public:
@@ -2121,7 +2182,7 @@ public:
 	bool                                               bUseBBKey;                                                // 0x00F0(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	unsigned char                                      UnknownData01[0x7];                                       // 0x00F1(0x0007) MISSED OFFSET
 	struct FEQSParametrizedQueryExecutionRequest       EQSRequest;                                               // 0x00F8(0x0048) (CPF_Edit)
-	unsigned char                                      UnknownData02[0x40];                                      // 0x0140(0x0040) MISSED OFFSET
+	unsigned char                                      UnknownData02[0x10];                                      // 0x0140(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -2229,7 +2290,7 @@ public:
 
 
 // Class AIModule.DetourCrowdAIController
-// 0x0000 (0x0410 - 0x0410)
+// 0x0000 (0x0438 - 0x0438)
 class ADetourCrowdAIController : public AAIController
 {
 public:
@@ -2335,23 +2396,6 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>("Class AIModule.EnvQueryDebugHelpers");
-		return ptr;
-	}
-
-};
-
-
-// Class AIModule.EnvQueryNode
-// 0x0008 (0x0030 - 0x0028)
-class UEnvQueryNode : public UObject
-{
-public:
-	int                                                VerNum;                                                   // 0x0028(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x002C(0x0004) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>("Class AIModule.EnvQueryNode");
 		return ptr;
 	}
 
@@ -2750,46 +2794,6 @@ public:
 };
 
 
-// Class AIModule.EnvQueryTest
-// 0x0190 (0x01C0 - 0x0030)
-class UEnvQueryTest : public UEnvQueryNode
-{
-public:
-	int                                                TestOrder;                                                // 0x0030(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	TEnumAsByte<EEnvTestPurpose>                       TestPurpose;                                              // 0x0034(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0035(0x0003) MISSED OFFSET
-	struct FString                                     TestComment;                                              // 0x0038(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance)
-	TEnumAsByte<EEnvTestFilterOperator>                MultipleContextFilterOp;                                  // 0x0048(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	TEnumAsByte<EEnvTestScoreOperator>                 MultipleContextScoreOp;                                   // 0x0049(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	TEnumAsByte<EEnvTestFilterType>                    FilterType;                                               // 0x004A(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData01[0x5];                                       // 0x004B(0x0005) MISSED OFFSET
-	struct FAIDataProviderBoolValue                    BoolValue;                                                // 0x0050(0x0030) (CPF_Edit, CPF_DisableEditOnInstance)
-	struct FAIDataProviderFloatValue                   FloatValueMin;                                            // 0x0080(0x0030) (CPF_Edit, CPF_DisableEditOnInstance)
-	struct FAIDataProviderFloatValue                   FloatValueMax;                                            // 0x00B0(0x0030) (CPF_Edit, CPF_DisableEditOnInstance)
-	unsigned char                                      UnknownData02[0x1];                                       // 0x00E0(0x0001) MISSED OFFSET
-	TEnumAsByte<EEnvTestScoreEquation>                 ScoringEquation;                                          // 0x00E1(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	TEnumAsByte<EEnvQueryTestClamping>                 ClampMinType;                                             // 0x00E2(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	TEnumAsByte<EEnvQueryTestClamping>                 ClampMaxType;                                             // 0x00E3(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	EEQSNormalizationType                              NormalizationType;                                        // 0x00E4(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData03[0x3];                                       // 0x00E5(0x0003) MISSED OFFSET
-	struct FAIDataProviderFloatValue                   ScoreClampMin;                                            // 0x00E8(0x0030) (CPF_Edit, CPF_DisableEditOnInstance)
-	struct FAIDataProviderFloatValue                   ScoreClampMax;                                            // 0x0118(0x0030) (CPF_Edit, CPF_DisableEditOnInstance)
-	struct FAIDataProviderFloatValue                   ScoringFactor;                                            // 0x0148(0x0030) (CPF_Edit, CPF_DisableEditOnInstance)
-	struct FAIDataProviderFloatValue                   ReferenceValue;                                           // 0x0178(0x0030) (CPF_Edit, CPF_DisableEditOnInstance)
-	bool                                               bDefineReferenceValue;                                    // 0x01A8(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData04[0xF];                                       // 0x01A9(0x000F) MISSED OFFSET
-	unsigned char                                      bWorkOnFloatValues : 1;                                   // 0x01B8(0x0001)
-	unsigned char                                      UnknownData05[0x7];                                       // 0x01B9(0x0007) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>("Class AIModule.EnvQueryTest");
-		return ptr;
-	}
-
-};
-
-
 // Class AIModule.EnvQueryTest_Distance
 // 0x0010 (0x01D0 - 0x01C0)
 class UEnvQueryTest_Distance : public UEnvQueryTest
@@ -2983,11 +2987,11 @@ public:
 
 
 // Class AIModule.EQSRenderingComponent
-// 0x0040 (0x06A0 - 0x0660)
+// 0x0040 (0x05A0 - 0x0560)
 class UEQSRenderingComponent : public UPrimitiveComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x40];                                      // 0x0660(0x0040) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x40];                                      // 0x0560(0x0040) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -2999,28 +3003,28 @@ public:
 
 
 // Class AIModule.EQSTestingPawn
-// 0x0090 (0x07C0 - 0x0730)
+// 0x00A0 (0x07E0 - 0x0740)
 class AEQSTestingPawn : public ACharacter
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0730(0x0008) MISSED OFFSET
-	class UEnvQuery*                                   QueryTemplate;                                            // 0x0738(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	TArray<struct FEnvNamedValue>                      QueryParams;                                              // 0x0740(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_EditConst)
-	TArray<struct FAIDynamicParam>                     QueryConfig;                                              // 0x0750(0x0010) (CPF_Edit, CPF_ZeroConstructor)
-	float                                              TimeLimitPerStep;                                         // 0x0760(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	int                                                StepToDebugDraw;                                          // 0x0764(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	EEnvQueryHightlightMode                            HighlightMode;                                            // 0x0768(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x0769(0x0003) MISSED OFFSET
-	unsigned char                                      bDrawLabels : 1;                                          // 0x076C(0x0001) (CPF_Edit)
-	unsigned char                                      bDrawFailedItems : 1;                                     // 0x076C(0x0001) (CPF_Edit)
-	unsigned char                                      bReRunQueryOnlyOnFinishedMove : 1;                        // 0x076C(0x0001) (CPF_Edit)
-	unsigned char                                      bShouldBeVisibleInGame : 1;                               // 0x076C(0x0001) (CPF_Edit)
-	unsigned char                                      bTickDuringGame : 1;                                      // 0x076C(0x0001) (CPF_Edit)
-	unsigned char                                      UnknownData02[0x3];                                       // 0x076D(0x0003) MISSED OFFSET
-	TEnumAsByte<EEnvQueryRunMode>                      QueryingMode;                                             // 0x0770(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData03[0x7];                                       // 0x0771(0x0007) MISSED OFFSET
-	struct FNavAgentProperties                         NavAgentProperties;                                       // 0x0778(0x0020) (CPF_Edit)
-	unsigned char                                      UnknownData04[0x28];                                      // 0x0798(0x0028) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0740(0x0008) MISSED OFFSET
+	class UEnvQuery*                                   QueryTemplate;                                            // 0x0748(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	TArray<struct FEnvNamedValue>                      QueryParams;                                              // 0x0750(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_EditConst)
+	TArray<struct FAIDynamicParam>                     QueryConfig;                                              // 0x0760(0x0010) (CPF_Edit, CPF_ZeroConstructor)
+	float                                              TimeLimitPerStep;                                         // 0x0770(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	int                                                StepToDebugDraw;                                          // 0x0774(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	EEnvQueryHightlightMode                            HighlightMode;                                            // 0x0778(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x0779(0x0003) MISSED OFFSET
+	unsigned char                                      bDrawLabels : 1;                                          // 0x077C(0x0001) (CPF_Edit)
+	unsigned char                                      bDrawFailedItems : 1;                                     // 0x077C(0x0001) (CPF_Edit)
+	unsigned char                                      bReRunQueryOnlyOnFinishedMove : 1;                        // 0x077C(0x0001) (CPF_Edit)
+	unsigned char                                      bShouldBeVisibleInGame : 1;                               // 0x077C(0x0001) (CPF_Edit)
+	unsigned char                                      bTickDuringGame : 1;                                      // 0x077C(0x0001) (CPF_Edit)
+	unsigned char                                      UnknownData02[0x3];                                       // 0x077D(0x0003) MISSED OFFSET
+	TEnumAsByte<EEnvQueryRunMode>                      QueryingMode;                                             // 0x0780(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData03[0x7];                                       // 0x0781(0x0007) MISSED OFFSET
+	struct FNavAgentProperties                         NavAgentProperties;                                       // 0x0788(0x0030) (CPF_Edit)
+	unsigned char                                      UnknownData04[0x28];                                      // 0x07B8(0x0028) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -3047,7 +3051,7 @@ public:
 
 
 // Class AIModule.GridPathAIController
-// 0x0000 (0x0410 - 0x0410)
+// 0x0000 (0x0438 - 0x0438)
 class AGridPathAIController : public AAIController
 {
 public:
@@ -3062,11 +3066,12 @@ public:
 
 
 // Class AIModule.GridPathFollowingComponent
-// 0x0030 (0x03E0 - 0x03B0)
+// 0x0030 (0x02F8 - 0x02C8)
 class UGridPathFollowingComponent : public UPathFollowingComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x30];                                      // 0x03B0(0x0030) MISSED OFFSET
+	class UNavLocalGridManager*                        GridManager;                                              // 0x02C8(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x28];                                      // 0x02D0(0x0028) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -3089,6 +3094,34 @@ public:
 		return ptr;
 	}
 
+};
+
+
+// Class AIModule.NavLinkProxy
+// 0x0050 (0x0378 - 0x0328)
+class ANavLinkProxy : public AActor
+{
+public:
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0328(0x0010) MISSED OFFSET
+	TArray<struct FNavigationLink>                     PointLinks;                                               // 0x0338(0x0010) (CPF_Edit, CPF_ZeroConstructor)
+	TArray<struct FNavigationSegmentLink>              SegmentLinks;                                             // 0x0348(0x0010) (CPF_ZeroConstructor)
+	class UNavLinkCustomComponent*                     SmartLinkComp;                                            // 0x0358(0x0008) (CPF_Edit, CPF_ExportObject, CPF_ZeroConstructor, CPF_EditConst, CPF_InstancedReference, CPF_IsPlainOldData)
+	bool                                               bSmartLinkIsRelevant;                                     // 0x0360(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData01[0x7];                                       // 0x0361(0x0007) MISSED OFFSET
+	struct FScriptMulticastDelegate                    OnSmartLinkReached;                                       // 0x0368(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.NavLinkProxy");
+		return ptr;
+	}
+
+
+	void SetSmartLinkEnabled(bool bEnabled);
+	void ResumePathFollowing(class AActor* Agent);
+	void ReceiveSmartLinkReached(class AActor* Agent, const struct FVector& Destination);
+	bool IsSmartLinkEnabled();
+	bool HasMovingAgents();
 };
 
 
@@ -3116,8 +3149,23 @@ public:
 };
 
 
+// Class AIModule.PathFollowingManager
+// 0x0000 (0x0028 - 0x0028)
+class UPathFollowingManager : public UObject
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>("Class AIModule.PathFollowingManager");
+		return ptr;
+	}
+
+};
+
+
 // Class AIModule.PawnAction
-// 0x00A8 (0x00D0 - 0x0028)
+// 0x0070 (0x0098 - 0x0028)
 class UPawnAction : public UObject
 {
 public:
@@ -3126,12 +3174,12 @@ public:
 	class UPawnActionsComponent*                       OwnerComponent;                                           // 0x0038(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_Transient, CPF_InstancedReference, CPF_IsPlainOldData)
 	class UObject*                                     Instigator;                                               // 0x0040(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
 	class UBrainComponent*                             BrainComp;                                                // 0x0048(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_Transient, CPF_InstancedReference, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData00[0x68];                                      // 0x0050(0x0068) MISSED OFFSET
-	unsigned char                                      bAllowNewSameClassInstance : 1;                           // 0x00B8(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_DisableEditOnInstance)
-	unsigned char                                      bReplaceActiveSameClassInstance : 1;                      // 0x00B8(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_DisableEditOnInstance)
-	unsigned char                                      bShouldPauseMovement : 1;                                 // 0x00B8(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_DisableEditOnInstance)
-	unsigned char                                      bAlwaysNotifyOnFinished : 1;                              // 0x00B8(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_DisableEditOnInstance)
-	unsigned char                                      UnknownData01[0x17];                                      // 0x00B9(0x0017) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x30];                                      // 0x0050(0x0030) MISSED OFFSET
+	unsigned char                                      bAllowNewSameClassInstance : 1;                           // 0x0080(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_DisableEditOnInstance)
+	unsigned char                                      bReplaceActiveSameClassInstance : 1;                      // 0x0080(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_DisableEditOnInstance)
+	unsigned char                                      bShouldPauseMovement : 1;                                 // 0x0080(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_DisableEditOnInstance)
+	unsigned char                                      bAlwaysNotifyOnFinished : 1;                              // 0x0080(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_DisableEditOnInstance)
+	unsigned char                                      UnknownData01[0x17];                                      // 0x0081(0x0017) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -3147,7 +3195,7 @@ public:
 
 
 // Class AIModule.PawnAction_BlueprintBase
-// 0x0000 (0x00D0 - 0x00D0)
+// 0x0000 (0x0098 - 0x0098)
 class UPawnAction_BlueprintBase : public UPawnAction
 {
 public:
@@ -3168,22 +3216,22 @@ public:
 
 
 // Class AIModule.PawnAction_Move
-// 0x0050 (0x0120 - 0x00D0)
+// 0x0050 (0x00E8 - 0x0098)
 class UPawnAction_Move : public UPawnAction
 {
 public:
-	class AActor*                                      GoalActor;                                                // 0x00D0(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	struct FVector                                     GoalLocation;                                             // 0x00D8(0x000C) (CPF_Edit, CPF_BlueprintVisible, CPF_IsPlainOldData)
-	float                                              AcceptableRadius;                                         // 0x00E4(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UClass*                                      FilterClass;                                              // 0x00E8(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      bAllowStrafe : 1;                                         // 0x00F0(0x0001) (CPF_Edit, CPF_BlueprintVisible)
-	unsigned char                                      bFinishOnOverlap : 1;                                     // 0x00F0(0x0001)
-	unsigned char                                      bUsePathfinding : 1;                                      // 0x00F0(0x0001)
-	unsigned char                                      bAllowPartialPath : 1;                                    // 0x00F0(0x0001)
-	unsigned char                                      bProjectGoalToNavigation : 1;                             // 0x00F0(0x0001)
-	unsigned char                                      bUpdatePathToGoal : 1;                                    // 0x00F0(0x0001)
-	unsigned char                                      bAbortChildActionOnPathChange : 1;                        // 0x00F0(0x0001)
-	unsigned char                                      UnknownData00[0x2F];                                      // 0x00F1(0x002F) MISSED OFFSET
+	class AActor*                                      GoalActor;                                                // 0x0098(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FVector                                     GoalLocation;                                             // 0x00A0(0x000C) (CPF_Edit, CPF_BlueprintVisible, CPF_IsPlainOldData)
+	float                                              AcceptableRadius;                                         // 0x00AC(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UClass*                                      FilterClass;                                              // 0x00B0(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      bAllowStrafe : 1;                                         // 0x00B8(0x0001) (CPF_Edit, CPF_BlueprintVisible)
+	unsigned char                                      bFinishOnOverlap : 1;                                     // 0x00B8(0x0001)
+	unsigned char                                      bUsePathfinding : 1;                                      // 0x00B8(0x0001)
+	unsigned char                                      bAllowPartialPath : 1;                                    // 0x00B8(0x0001)
+	unsigned char                                      bProjectGoalToNavigation : 1;                             // 0x00B8(0x0001)
+	unsigned char                                      bUpdatePathToGoal : 1;                                    // 0x00B8(0x0001)
+	unsigned char                                      bAbortChildActionOnPathChange : 1;                        // 0x00B8(0x0001)
+	unsigned char                                      UnknownData00[0x2F];                                      // 0x00B9(0x002F) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -3195,14 +3243,14 @@ public:
 
 
 // Class AIModule.PawnAction_Repeat
-// 0x0020 (0x00F0 - 0x00D0)
+// 0x0020 (0x00B8 - 0x0098)
 class UPawnAction_Repeat : public UPawnAction
 {
 public:
-	class UPawnAction*                                 ActionToRepeat;                                           // 0x00D0(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UPawnAction*                                 RecentActionCopy;                                         // 0x00D8(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
-	TEnumAsByte<EPawnActionFailHandling>               ChildFailureHandlingMode;                                 // 0x00E0(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData00[0xF];                                       // 0x00E1(0x000F) MISSED OFFSET
+	class UPawnAction*                                 ActionToRepeat;                                           // 0x0098(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UPawnAction*                                 RecentActionCopy;                                         // 0x00A0(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
+	TEnumAsByte<EPawnActionFailHandling>               ChildFailureHandlingMode;                                 // 0x00A8(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0xF];                                       // 0x00A9(0x000F) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -3214,15 +3262,15 @@ public:
 
 
 // Class AIModule.PawnAction_Sequence
-// 0x0030 (0x0100 - 0x00D0)
+// 0x0028 (0x00C0 - 0x0098)
 class UPawnAction_Sequence : public UPawnAction
 {
 public:
-	TArray<class UPawnAction*>                         ActionSequence;                                           // 0x00D0(0x0010) (CPF_ZeroConstructor)
-	TEnumAsByte<EPawnActionFailHandling>               ChildFailureHandlingMode;                                 // 0x00E0(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x00E1(0x0007) MISSED OFFSET
-	class UPawnAction*                                 RecentActionCopy;                                         // 0x00E8(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData01[0x10];                                      // 0x00F0(0x0010) MISSED OFFSET
+	TArray<class UPawnAction*>                         ActionSequence;                                           // 0x0098(0x0010) (CPF_ZeroConstructor)
+	TEnumAsByte<EPawnActionFailHandling>               ChildFailureHandlingMode;                                 // 0x00A8(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x00A9(0x0007) MISSED OFFSET
+	class UPawnAction*                                 RecentActionCopy;                                         // 0x00B0(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData01[0x8];                                       // 0x00B8(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -3234,12 +3282,12 @@ public:
 
 
 // Class AIModule.PawnAction_Wait
-// 0x0010 (0x00E0 - 0x00D0)
+// 0x0010 (0x00A8 - 0x0098)
 class UPawnAction_Wait : public UPawnAction
 {
 public:
-	float                                              TimeToWait;                                               // 0x00D0(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData00[0xC];                                       // 0x00D4(0x000C) MISSED OFFSET
+	float                                              TimeToWait;                                               // 0x0098(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0xC];                                       // 0x009C(0x000C) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

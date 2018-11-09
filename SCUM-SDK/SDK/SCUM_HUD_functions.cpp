@@ -1,4 +1,4 @@
-// SCUM (0.1.17) SDK
+// SCUM (0.1.20) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -885,22 +885,6 @@ void UHUD_C::GetPrisonerLifeComponent(class UPrisonerLifeComponent** LifeCompone
 }
 
 
-// Function HUD.HUD_C.ToggleMonitorsVisibility
-// (FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
-
-void UHUD_C::ToggleMonitorsVisibility()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function HUD.HUD_C.ToggleMonitorsVisibility");
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
 // Function HUD.HUD_C.OnPerformanceMonitorMaximized
 // (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 
@@ -1087,6 +1071,22 @@ void UHUD_C::AddMessageWithColor(TEnumAsByte<EMessageType> Type, const struct FT
 }
 
 
+// Function HUD.HUD_C.ToggleMonitorsVisibility
+// (FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
+
+void UHUD_C::ToggleMonitorsVisibility()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function HUD.HUD_C.ToggleMonitorsVisibility");
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function HUD.HUD_C.ClearTeammateNames
 // (FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
 
@@ -1225,32 +1225,6 @@ void UHUD_C::Shake()
 	{
 	} params;
 
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function HUD.HUD_C.AddMessage
-// (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
-// Parameters:
-// TEnumAsByte<EMessageType>      Type                           (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// struct FText                   Text                           (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm)
-// float                          Duration                       (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-
-void UHUD_C::AddMessage(TEnumAsByte<EMessageType> Type, const struct FText& Text, float Duration)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function HUD.HUD_C.AddMessage");
-
-	struct
-	{
-		TEnumAsByte<EMessageType>      Type;
-		struct FText                   Text;
-		float                          Duration;
-	} params;
-
-	params.Type = Type;
-	params.Text = Text;
-	params.Duration = Duration;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -1437,6 +1411,32 @@ void UHUD_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 
 	params.MyGeometry = MyGeometry;
 	params.InDeltaTime = InDeltaTime;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function HUD.HUD_C.AddMessage
+// (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+// Parameters:
+// TEnumAsByte<EMessageType>      Type                           (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FText                   Text                           (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm)
+// float                          Duration                       (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UHUD_C::AddMessage(TEnumAsByte<EMessageType> Type, const struct FText& Text, float Duration)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function HUD.HUD_C.AddMessage");
+
+	struct
+	{
+		TEnumAsByte<EMessageType>      Type;
+		struct FText                   Text;
+		float                          Duration;
+	} params;
+
+	params.Type = Type;
+	params.Text = Text;
+	params.Duration = Duration;
 
 	UObject::ProcessEvent(fn, &params);
 }

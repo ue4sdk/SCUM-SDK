@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.17) SDK
+// SCUM (0.1.20) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -156,7 +156,7 @@ public:
 	bool                                               bUseBorderlessWindow;                                     // 0x0109(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
 	bool                                               bStartInVR;                                               // 0x010A(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
 	bool                                               bStartInAR;                                               // 0x010B(0x0001) (CPF_ZeroConstructor, CPF_Deprecated, CPF_IsPlainOldData)
-	bool                                               bSupportAR;                                               // 0x010C(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	bool                                               bSupportAR;                                               // 0x010C(0x0001) (CPF_ZeroConstructor, CPF_Deprecated, CPF_IsPlainOldData)
 	bool                                               bAllowWindowResize;                                       // 0x010D(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
 	bool                                               bAllowClose;                                              // 0x010E(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
 	bool                                               bAllowMaximize;                                           // 0x010F(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)

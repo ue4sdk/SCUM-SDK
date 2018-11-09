@@ -1,4 +1,4 @@
-// SCUM (0.1.17) SDK
+// SCUM (0.1.20) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -122,38 +122,34 @@ void UMeshReconstructorBase::DisconnectMRMesh()
 // (FUNC_Native, FUNC_Public)
 // Parameters:
 // class UMRMeshComponent*        Mesh                           (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
-// struct FMRMeshConfiguration    ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
 
-struct FMRMeshConfiguration UMeshReconstructorBase::ConnectMRMesh(class UMRMeshComponent* Mesh)
+void UMeshReconstructorBase::ConnectMRMesh(class UMRMeshComponent* Mesh)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MRMesh.MeshReconstructorBase.ConnectMRMesh");
 
 	struct
 	{
 		class UMRMeshComponent*        Mesh;
-		struct FMRMeshConfiguration    ReturnValue;
 	} params;
 
 	params.Mesh = Mesh;
 
 	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
 }
 
 
-// Function MRMesh.MRMeshComponent.GetReconstructor
+// Function MRMesh.MRMeshComponent.IsConnected
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class UMeshReconstructorBase*  ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class UMeshReconstructorBase* UMRMeshComponent::GetReconstructor()
+bool UMRMeshComponent::IsConnected()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MRMesh.MRMeshComponent.GetReconstructor");
+	static auto fn = UObject::FindObject<UFunction>("Function MRMesh.MRMeshComponent.IsConnected");
 
 	struct
 	{
-		class UMeshReconstructorBase*  ReturnValue;
+		bool                           ReturnValue;
 	} params;
 
 
@@ -163,21 +159,33 @@ class UMeshReconstructorBase* UMRMeshComponent::GetReconstructor()
 }
 
 
-// Function MRMesh.MRMeshComponent.ConnectReconstructor
+// Function MRMesh.MRMeshComponent.ForceNavMeshUpdate
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
-// Parameters:
-// class UMeshReconstructorBase*  Reconstructor                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UMRMeshComponent::ConnectReconstructor(class UMeshReconstructorBase* Reconstructor)
+void UMRMeshComponent::ForceNavMeshUpdate()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MRMesh.MRMeshComponent.ConnectReconstructor");
+	static auto fn = UObject::FindObject<UFunction>("Function MRMesh.MRMeshComponent.ForceNavMeshUpdate");
 
 	struct
 	{
-		class UMeshReconstructorBase*  Reconstructor;
 	} params;
 
-	params.Reconstructor = Reconstructor;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function MRMesh.MRMeshComponent.Clear
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+
+void UMRMeshComponent::Clear()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function MRMesh.MRMeshComponent.Clear");
+
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }

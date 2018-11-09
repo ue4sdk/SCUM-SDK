@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.17) SDK
+// SCUM (0.1.20) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_SentryAIController.BP_SentryAIController_C
-// 0x0000 (0x0518 - 0x0518)
+// 0x0000 (0x0540 - 0x0540)
 class ABP_SentryAIController_C : public ASentryAIController
 {
 public:

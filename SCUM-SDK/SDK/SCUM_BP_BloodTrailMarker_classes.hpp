@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.17) SDK
+// SCUM (0.1.20) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,12 +15,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_BloodTrailMarker.BP_BloodTrailMarker_C
-// 0x0010 (0x0378 - 0x0368)
+// 0x0010 (0x0388 - 0x0378)
 class ABP_BloodTrailMarker_C : public ATrackingMarker
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0368(0x0008) (CPF_Transient, CPF_DuplicateTransient)
-	class UDecalComponent*                             TrailDecal;                                               // 0x0370(0x0008) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0378(0x0008) (CPF_Transient, CPF_DuplicateTransient)
+	class UDecalComponent*                             TrailDecal;                                               // 0x0380(0x0008) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

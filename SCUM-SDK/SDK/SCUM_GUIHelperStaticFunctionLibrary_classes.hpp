@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.17) SDK
+// SCUM (0.1.20) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -27,8 +27,8 @@ public:
 	}
 
 
-	static void ShowErrorDialog(const struct FText& Message, class UCanvasPanel* Canvas, class UWidget* widgetToDisable, class UObject* __WorldContext);
-	static void LinearCoordinatesToString(const struct FVector& coordinates, class UObject* __WorldContext, struct FString* coordinatesString);
+	static void ShowErrorDialog(const struct FText& Message, class UCanvasPanel* Canvas, class UWidget* widgetToDisable, class UObject* __WorldContext, class UUI_ErrorMessage_C** messageWidget);
+	static void LinearCoordinatesToString(const struct FVector& Coordinates, class UObject* __WorldContext, struct FString* coordinatesString);
 	static void HealthToString(float Health, class UObject* __WorldContext, struct FString* healthString);
 	static void ValueToDescriptionString(const struct FString& preLabel, float Value, const struct FString& postLabel, class UObject* __WorldContext, struct FString* descriptionString);
 	static void ValueToString(float Value, class UObject* __WorldContext, struct FString* ValueString);
@@ -37,7 +37,7 @@ public:
 	static void AccelerationToString(float Acceleration, class UObject* __WorldContext, struct FString* accelerationString);
 	static void StringToDescriptionString(const struct FString& preLabel, const struct FString& ValueString, const struct FString& postLabel, class UObject* __WorldContext, struct FString* descriptionString);
 	static void LinearValueToString(float Value, class UObject* __WorldContext, struct FString* ValueString);
-	static void CoordinatesToString(const struct FVector& coordinates, class UObject* __WorldContext, struct FString* coordinatesString);
+	static void CoordinatesToString(const struct FVector& Coordinates, class UObject* __WorldContext, struct FString* coordinatesString);
 	static void VectorToString(const struct FVector& Vector, class UObject* __WorldContext, struct FString* vectorString);
 	static void RotationToString(const struct FRotator& Rotation, class UObject* __WorldContext, struct FString* rotationString);
 	static void LinearValueToDescriptionString(const struct FString& preLabel, float Value, const struct FString& postLabel, class UObject* __WorldContext, struct FString* descriptionString);

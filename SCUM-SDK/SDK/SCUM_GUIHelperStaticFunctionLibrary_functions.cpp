@@ -1,4 +1,4 @@
-// SCUM (0.1.17) SDK
+// SCUM (0.1.20) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,14 +13,15 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function GUIHelperStaticFunctionLibrary.GUIHelperStaticFunctionLibrary_C.ShowErrorDialog
-// (FUNC_Static, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+// (FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 // Parameters:
 // struct FText                   Message                        (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm)
 // class UCanvasPanel*            Canvas                         (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 // class UWidget*                 widgetToDisable                (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 // class UObject*                 __WorldContext                 (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// class UUI_ErrorMessage_C*      messageWidget                  (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 
-void UGUIHelperStaticFunctionLibrary_C::ShowErrorDialog(const struct FText& Message, class UCanvasPanel* Canvas, class UWidget* widgetToDisable, class UObject* __WorldContext)
+void UGUIHelperStaticFunctionLibrary_C::ShowErrorDialog(const struct FText& Message, class UCanvasPanel* Canvas, class UWidget* widgetToDisable, class UObject* __WorldContext, class UUI_ErrorMessage_C** messageWidget)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function GUIHelperStaticFunctionLibrary.GUIHelperStaticFunctionLibrary_C.ShowErrorDialog");
 
@@ -30,6 +31,7 @@ void UGUIHelperStaticFunctionLibrary_C::ShowErrorDialog(const struct FText& Mess
 		class UCanvasPanel*            Canvas;
 		class UWidget*                 widgetToDisable;
 		class UObject*                 __WorldContext;
+		class UUI_ErrorMessage_C*      messageWidget;
 	} params;
 
 	params.Message = Message;
@@ -39,28 +41,31 @@ void UGUIHelperStaticFunctionLibrary_C::ShowErrorDialog(const struct FText& Mess
 
 	static auto defaultObj = StaticClass()->CreateDefaultObject();
 	defaultObj->ProcessEvent(fn, &params);
+
+	if (messageWidget != nullptr)
+		*messageWidget = params.messageWidget;
 }
 
 
 // Function GUIHelperStaticFunctionLibrary.GUIHelperStaticFunctionLibrary_C.LinearCoordinatesToString
 // (FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintEvent, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// struct FVector                 coordinates                    (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_IsPlainOldData)
+// struct FVector                 Coordinates                    (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_IsPlainOldData)
 // class UObject*                 __WorldContext                 (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FString                 coordinatesString              (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor)
 
-void UGUIHelperStaticFunctionLibrary_C::LinearCoordinatesToString(const struct FVector& coordinates, class UObject* __WorldContext, struct FString* coordinatesString)
+void UGUIHelperStaticFunctionLibrary_C::LinearCoordinatesToString(const struct FVector& Coordinates, class UObject* __WorldContext, struct FString* coordinatesString)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function GUIHelperStaticFunctionLibrary.GUIHelperStaticFunctionLibrary_C.LinearCoordinatesToString");
 
 	struct
 	{
-		struct FVector                 coordinates;
+		struct FVector                 Coordinates;
 		class UObject*                 __WorldContext;
 		struct FString                 coordinatesString;
 	} params;
 
-	params.coordinates = coordinates;
+	params.Coordinates = Coordinates;
 	params.__WorldContext = __WorldContext;
 
 	static auto defaultObj = StaticClass()->CreateDefaultObject();
@@ -318,22 +323,22 @@ void UGUIHelperStaticFunctionLibrary_C::LinearValueToString(float Value, class U
 // Function GUIHelperStaticFunctionLibrary.GUIHelperStaticFunctionLibrary_C.CoordinatesToString
 // (FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintEvent, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// struct FVector                 coordinates                    (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_IsPlainOldData)
+// struct FVector                 Coordinates                    (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_IsPlainOldData)
 // class UObject*                 __WorldContext                 (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FString                 coordinatesString              (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor)
 
-void UGUIHelperStaticFunctionLibrary_C::CoordinatesToString(const struct FVector& coordinates, class UObject* __WorldContext, struct FString* coordinatesString)
+void UGUIHelperStaticFunctionLibrary_C::CoordinatesToString(const struct FVector& Coordinates, class UObject* __WorldContext, struct FString* coordinatesString)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function GUIHelperStaticFunctionLibrary.GUIHelperStaticFunctionLibrary_C.CoordinatesToString");
 
 	struct
 	{
-		struct FVector                 coordinates;
+		struct FVector                 Coordinates;
 		class UObject*                 __WorldContext;
 		struct FString                 coordinatesString;
 	} params;
 
-	params.coordinates = coordinates;
+	params.Coordinates = Coordinates;
 	params.__WorldContext = __WorldContext;
 
 	static auto defaultObj = StaticClass()->CreateDefaultObject();

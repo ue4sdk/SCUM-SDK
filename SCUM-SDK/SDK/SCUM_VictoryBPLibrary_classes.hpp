@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.17) SDK
+// SCUM (0.1.20) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -141,7 +141,7 @@ public:
 	static void VictoryAppendInline(const struct FString& ToAppend, bool AppendNewline, struct FString* string, struct FString* Result);
 	static struct FString Victory_SecondsToHoursMinutesSeconds(float Seconds, bool TrimZeroes);
 	static void Victory_SaveStringToOSClipboard(const struct FString& ToClipboard);
-	static bool Victory_SavePixels(const struct FString& FullFilePath, int Width, int Height, TArray<struct FLinearColor> ImagePixels, bool SaveAsBMP, bool SRGB, struct FString* errorString);
+	static bool Victory_SavePixels(const struct FString& FullFilePath, int Width, int Height, TArray<struct FLinearColor> ImagePixels, bool SaveAsBMP, bool SRGB, struct FString* ErrorString);
 	static class UTexture2D* Victory_LoadTexture2D_FromFile_Pixels(const struct FString& FullFilePath, EJoyImageFormats ImageFormat, bool* IsValid, int* Width, int* Height, TArray<struct FLinearColor>* OutPixels);
 	static class UTexture2D* Victory_LoadTexture2D_FromFile(const struct FString& FullFilePath, EJoyImageFormats ImageFormat, bool* IsValid, int* Width, int* Height);
 	static void Victory_GetStringFromOSClipboard(struct FString* FromClipboard);
@@ -175,7 +175,7 @@ public:
 	static void SetGenericTeamId(class AActor* Target, unsigned char NewTeamId);
 	static void SetComponentTickRate(class UActorComponent* Component, float Seconds);
 	static void SetBloomIntensity(class APostProcessVolume* PostProcessVolume, float Intensity);
-	static void ServerTravel(class UObject* WorldContextObject, const struct FString& mapName, bool bNotifyPlayers);
+	static void ServerTravel(class UObject* WorldContextObject, const struct FString& MapName, bool bNotifyPlayers);
 	static void Selection_SelectionBox(class UObject* WorldContextObject, const struct FVector2D& AnchorPoint, const struct FVector2D& DraggedPoint, class UClass* ClassFilter, TArray<class AActor*>* SelectedActors);
 	static void seedRandWithTime();
 	static void seedRandWithEntropy();
@@ -186,9 +186,9 @@ public:
 	static void Rendering__FreezeGameRendering();
 	static void RemoveFromStreamingLevels(class UObject* WorldContextObject, const struct FLevelStreamInstanceInfo& LevelInstanceInfo);
 	static void RemoveAllWidgetsOfClass(class UObject* WorldContextObject, class UClass* WidgetClass);
-	static void RealWorldTime__GetTimePassedSincePreviousTime(const struct FString& PreviousTime, float* Milliseconds, float* Seconds, float* Minutes, float* Hours);
-	static void RealWorldTime__GetDifferenceBetweenTimes(const struct FString& PreviousTime1, const struct FString& PreviousTime2, float* Milliseconds, float* Seconds, float* Minutes, float* Hours);
-	static struct FString RealWorldTime__GetCurrentOSTime(int* Milliseconds, int* Seconds, int* Minutes, int* Hours12, int* Hours24, int* Day, int* Month, int* Year);
+	static void RealWorldTime__GetTimePassedSincePreviousTime(const struct FString& PreviousTime, float* MilliSeconds, float* Seconds, float* Minutes, float* Hours);
+	static void RealWorldTime__GetDifferenceBetweenTimes(const struct FString& PreviousTime1, const struct FString& PreviousTime2, float* MilliSeconds, float* Seconds, float* Minutes, float* Hours);
+	static struct FString RealWorldTime__GetCurrentOSTime(int* MilliSeconds, int* Seconds, int* Minutes, int* Hours12, int* Hours24, int* Day, int* Month, int* Year);
 	static int RandInt_uniDis_MT();
 	static int RandInt_uniDis();
 	static int RandInt_MINMAX_uniDis_MT(int iMin, int iMax);
@@ -212,7 +212,7 @@ public:
 	static bool Physics__GetLocationofRagDoll(class AActor* TheCharacter, struct FVector* RagdollLocation);
 	static bool Physics__EnterRagDoll(class AActor* TheCharacter);
 	static bool OptionsMenu__GetDisplayAdapterScreenResolutions(bool IncludeRefreshRates, TArray<int>* Widths, TArray<int>* Heights, TArray<int>* RefreshRates);
-	static void OperatingSystem__GetCurrentPlatform(bool* Windows_, bool* Mac, bool* Linux, bool* iOS, bool* Android, bool* Android_ARM, bool* Android_Vulkan, bool* PS4, bool* XBoxOne, bool* HTML5, bool* Apple);
+	static void OperatingSystem__GetCurrentPlatform(bool* Windows_, bool* Mac, bool* Linux, bool* IOS, bool* Android, bool* Android_ARM, bool* Android_Vulkan, bool* PS4, bool* XBoxOne, bool* HTML5, bool* Apple);
 	static void Open_URL_In_Web_Browser(const struct FString& TheURL);
 	static bool NotEqual_Vector2DVector2D(const struct FVector2D& A, const struct FVector2D& B, float ErrorTolerance);
 	static bool Mobility__SetSceneCompMobility(class USceneComponent* SceneComp, TEnumAsByte<EComponentMobility> NewMobility);
@@ -234,13 +234,13 @@ public:
 	static bool JoyFileIO_GetFilesInRootAndAllSubFolders(const struct FString& RootFolderFullPath, const struct FString& Ext, TArray<struct FString>* Files);
 	static bool JoyFileIO_GetFiles(const struct FString& RootFolderFullPath, const struct FString& Ext, TArray<struct FString>* Files);
 	static bool IsWidgetOfClassInViewport(class UObject* WorldContextObject, class UClass* WidgetClass);
-	static bool IsStandalone(class UObject* WorldContextObject);
+	static bool IsStandAlone(class UObject* WorldContextObject);
 	static bool IsPointOnPlane(const struct FPlane& Plane, const struct FVector& Point, float Tolerance);
 	static bool IsAlphaNumeric(const struct FString& string);
 	static class UPanelSlot* InsertChildAt(class UWidget* Parent, int Index, class UWidget* Content);
 	static float HorizontalFOV(float VerticalFOV, float AspectRatio);
 	static void HideStreamingLevel(class ULevelStreamingKismet* LevelInstance);
-	static bool HasSubstring(const struct FString& SearchIn, const struct FString& Substring, TEnumAsByte<ESearchCase> SearchCase, TEnumAsByte<ESearchDir> SearchDir);
+	static bool HasSubstring(const struct FString& SearchIn, const struct FString& SubString, TEnumAsByte<ESearchCase> SearchCase, TEnumAsByte<ESearchDir> SearchDir);
 	static void GraphicsSettings__SetFrameRateToBeUnbound();
 	static void GraphicsSettings__SetFrameRateCap(float NewValue);
 	static class UWidget* GetWidgetFromName(class UUserWidget* ParentUserWidget, const struct FName& Name);
@@ -293,7 +293,7 @@ public:
 	static struct FPlane CreatePlane(const struct FVector& Center, const struct FVector& Normal);
 	static class UObject* CreateObject(class UObject* WorldContextObject, class UClass* TheObjectClass);
 	static bool CreateMD5Hash(const struct FString& FileToHash, const struct FString& FileToStoreHashTo);
-	static int CountOccurrancesOfSubString(const struct FString& Source, const struct FString& Substring, TEnumAsByte<ESearchCase> SearchCase);
+	static int CountOccurrancesOfSubString(const struct FString& Source, const struct FString& SubString, TEnumAsByte<ESearchCase> SearchCase);
 	static struct FRotator Conversions__VectorToRotator(const struct FVector& TheVector);
 	static void Conversions__StringToVector(const struct FString& string, struct FVector* ConvertedVector, bool* IsValid);
 	static void Conversions__StringToRotator(const struct FString& string, struct FRotator* ConvertedRotator, bool* IsValid);
@@ -348,11 +348,11 @@ public:
 
 
 // Class VictoryBPLibrary.VictoryISM
-// 0x0008 (0x0320 - 0x0318)
+// 0x0008 (0x0330 - 0x0328)
 class AVictoryISM : public AActor
 {
 public:
-	class UInstancedStaticMeshComponent*               Mesh;                                                     // 0x0318(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ExportObject, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst, CPF_InstancedReference, CPF_IsPlainOldData)
+	class UInstancedStaticMeshComponent*               Mesh;                                                     // 0x0328(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ExportObject, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst, CPF_InstancedReference, CPF_IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -364,7 +364,7 @@ public:
 
 
 // Class VictoryBPLibrary.VictoryPC
-// 0x0000 (0x0670 - 0x0670)
+// 0x0000 (0x0678 - 0x0678)
 class AVictoryPC : public APlayerController
 {
 public:

@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.17) SDK
+// SCUM (0.1.20) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // WidgetBlueprintGeneratedClass UI_ParameterLine.UI_ParameterLine_C
-// 0x0078 (0x0298 - 0x0220)
+// 0x0098 (0x02B8 - 0x0220)
 class UUI_ParameterLine_C : public UDesignableUserWidget
 {
 public:
@@ -38,6 +38,9 @@ public:
 	bool                                               _isUnderAlarm;                                            // 0x028D(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	unsigned char                                      UnknownData02[0x2];                                       // 0x028E(0x0002) MISSED OFFSET
 	class UUI_ExpandableContainer_C*                   ExpandableContainer;                                      // 0x0290(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
+	bool                                               HasToolTip;                                               // 0x0298(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData03[0x7];                                       // 0x0299(0x0007) MISSED OFFSET
+	struct FText                                       ToolTip;                                                  // 0x02A0(0x0018) (CPF_Edit, CPF_BlueprintVisible)
 
 	static UClass* StaticClass()
 	{

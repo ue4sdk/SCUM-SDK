@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.17) SDK
+// SCUM (0.1.20) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -63,8 +63,8 @@ public:
 	void RefreshSize();
 	void SetGridVisibility(ESlateVisibility gridVisibility);
 	void UpdateWithItem(class AItem* Item);
-	void SaveLayout(const TScriptInterface<class UAttributeMapInterface>& attributes);
-	void LoadLayout(const TScriptInterface<class UAttributeMapInterface>& attributes);
+	void SaveLayout(const TScriptInterface<class UAttributeMapInterface>& Attributes);
+	void LoadLayout(const TScriptInterface<class UAttributeMapInterface>& Attributes);
 	void ResetLayout();
 	void Construct();
 	void ExecuteUbergraph_UI_HandInventory(int EntryPoint);

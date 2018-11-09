@@ -1,4 +1,4 @@
-// SCUM (0.1.17) SDK
+// SCUM (0.1.20) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -194,6 +194,42 @@ void UUI_CraftingPanel_C::Tick(const struct FGeometry& MyGeometry, float InDelta
 
 	params.MyGeometry = MyGeometry;
 	params.InDeltaTime = InDeltaTime;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function UI_CraftingPanel.UI_CraftingPanel_C.ShowPlaceableCraftingConfirmationForCraftingIndex
+// (FUNC_Event, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+// Parameters:
+// int                            Index                          (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UUI_CraftingPanel_C::ShowPlaceableCraftingConfirmationForCraftingIndex(int Index)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UI_CraftingPanel.UI_CraftingPanel_C.ShowPlaceableCraftingConfirmationForCraftingIndex");
+
+	struct
+	{
+		int                            Index;
+	} params;
+
+	params.Index = Index;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function UI_CraftingPanel.UI_CraftingPanel_C.OnCraftingConfirmationDismissed
+// (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UUI_CraftingPanel_C::OnCraftingConfirmationDismissed()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UI_CraftingPanel.UI_CraftingPanel_C.OnCraftingConfirmationDismissed");
+
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }

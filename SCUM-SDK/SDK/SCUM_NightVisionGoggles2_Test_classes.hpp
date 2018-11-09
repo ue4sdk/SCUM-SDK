@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.17) SDK
+// SCUM (0.1.20) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass NightVisionGoggles2_Test.NightVisionGoggles2_Test_C
-// 0x0000 (0x0820 - 0x0820)
+// 0x0000 (0x0790 - 0x0790)
 class ANightVisionGoggles2_Test_C : public ANightVisionGogglesItem
 {
 public:

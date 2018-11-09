@@ -1,4 +1,4 @@
-// SCUM (0.1.17) SDK
+// SCUM (0.1.20) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -192,24 +192,24 @@ void UBaseProgressBar_C::SetClamping(bool shouldEnableClamping)
 // (FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintEvent, FUNC_BlueprintPure)
 // Parameters:
 // float                          Value                          (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// struct FText                   percentageText                 (CPF_Parm, CPF_OutParm)
+// struct FText                   PercentageText                 (CPF_Parm, CPF_OutParm)
 
-void UBaseProgressBar_C::PercentageToText(float Value, struct FText* percentageText)
+void UBaseProgressBar_C::PercentageToText(float Value, struct FText* PercentageText)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BaseProgressBar.BaseProgressBar_C.PercentageToText");
 
 	struct
 	{
 		float                          Value;
-		struct FText                   percentageText;
+		struct FText                   PercentageText;
 	} params;
 
 	params.Value = Value;
 
 	UObject::ProcessEvent(fn, &params);
 
-	if (percentageText != nullptr)
-		*percentageText = params.percentageText;
+	if (PercentageText != nullptr)
+		*PercentageText = params.PercentageText;
 }
 
 

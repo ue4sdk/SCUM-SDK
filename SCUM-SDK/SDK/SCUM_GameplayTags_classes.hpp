@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.17) SDK
+// SCUM (0.1.20) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -210,15 +210,16 @@ public:
 
 
 // Class GameplayTags.GameplayTagsManager
-// 0x0158 (0x0180 - 0x0028)
+// 0x0168 (0x0190 - 0x0028)
 class UGameplayTagsManager : public UObject
 {
 public:
 	unsigned char                                      UnknownData00[0x80];                                      // 0x0028(0x0080) MISSED OFFSET
 	TArray<struct FGameplayTagSource>                  TagSources;                                               // 0x00A8(0x0010) (CPF_ZeroConstructor)
 	unsigned char                                      UnknownData01[0x68];                                      // 0x00B8(0x0068) MISSED OFFSET
-	TArray<class UDataTable*>                          GameplayTagTables;                                        // 0x0120(0x0010) (CPF_ZeroConstructor)
-	unsigned char                                      UnknownData02[0x50];                                      // 0x0130(0x0050) MISSED OFFSET
+	TArray<class UDataTable*>                          RestrictedGameplayTagTables;                              // 0x0120(0x0010) (CPF_ZeroConstructor)
+	TArray<class UDataTable*>                          GameplayTagTables;                                        // 0x0130(0x0010) (CPF_ZeroConstructor)
+	unsigned char                                      UnknownData02[0x50];                                      // 0x0140(0x0050) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -246,8 +247,25 @@ public:
 };
 
 
+// Class GameplayTags.RestrictedGameplayTagsList
+// 0x0020 (0x0048 - 0x0028)
+class URestrictedGameplayTagsList : public UObject
+{
+public:
+	struct FString                                     ConfigFileName;                                           // 0x0028(0x0010) (CPF_ZeroConstructor)
+	TArray<struct FRestrictedGameplayTagTableRow>      RestrictedGameplayTagList;                                // 0x0038(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>("Class GameplayTags.RestrictedGameplayTagsList");
+		return ptr;
+	}
+
+};
+
+
 // Class GameplayTags.GameplayTagsSettings
-// 0x0058 (0x00A0 - 0x0048)
+// 0x0068 (0x00B0 - 0x0048)
 class UGameplayTagsSettings : public UGameplayTagsList
 {
 public:
@@ -262,6 +280,7 @@ public:
 	TArray<struct FName>                               CommonlyReplicatedTags;                                   // 0x0088(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
 	int                                                NumBitsForContainerSize;                                  // 0x0098(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
 	int                                                NetIndexFirstBitSegment;                                  // 0x009C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	TArray<struct FRestrictedConfigInfo>               RestrictedConfigFiles;                                    // 0x00A0(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
 
 	static UClass* StaticClass()
 	{

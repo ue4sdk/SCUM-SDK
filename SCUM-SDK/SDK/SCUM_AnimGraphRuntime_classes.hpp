@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.17) SDK
+// SCUM (0.1.20) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Class AnimGraphRuntime.AnimCustomInstance
-// 0x0000 (0x03C0 - 0x03C0)
+// 0x0000 (0x0360 - 0x0360)
 class UAnimCustomInstance : public UAnimInstance
 {
 public:
@@ -62,7 +62,7 @@ public:
 
 
 // Class AnimGraphRuntime.AnimSequencerInstance
-// 0x0000 (0x03C0 - 0x03C0)
+// 0x0000 (0x0360 - 0x0360)
 class UAnimSequencerInstance : public UAnimCustomInstance
 {
 public:
@@ -95,7 +95,7 @@ public:
 
 
 // Class AnimGraphRuntime.PlayMontageCallbackProxy
-// 0x00E8 (0x0110 - 0x0028)
+// 0x0080 (0x00A8 - 0x0028)
 class UPlayMontageCallbackProxy : public UObject
 {
 public:
@@ -104,7 +104,7 @@ public:
 	struct FScriptMulticastDelegate                    OnInterrupted;                                            // 0x0048(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
 	struct FScriptMulticastDelegate                    OnNotifyBegin;                                            // 0x0058(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
 	struct FScriptMulticastDelegate                    OnNotifyEnd;                                              // 0x0068(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
-	unsigned char                                      UnknownData00[0x98];                                      // 0x0078(0x0098) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x30];                                      // 0x0078(0x0030) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

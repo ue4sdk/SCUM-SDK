@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.17) SDK
+// SCUM (0.1.20) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -77,7 +77,7 @@ public:
 
 	inline void ProcessEvent(class UFunction* function, void* parms)
 	{
-		return GetVFunction<void(*)(UObject*, class UFunction*, void*)>(this, 63)(this, function, parms);
+		return GetVFunction<void(*)(UObject*, class UFunction*, void*)>(this, 65)(this, function, parms);
 	}
 
 
@@ -185,11 +185,11 @@ public:
 
 
 // Class CoreUObject.Package
-// 0x0070 (0x0098 - 0x0028)
+// 0x0068 (0x0090 - 0x0028)
 class UPackage : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x70];                                      // 0x0028(0x0070) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x68];                                      // 0x0028(0x0068) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -221,7 +221,7 @@ public:
 
 	inline UObject* CreateDefaultObject()
 	{
-		return GetVFunction<UObject*(*)(UClass*)>(this, 100)(this);
+		return GetVFunction<UObject*(*)(UClass*)>(this, 102)(this);
 	}
 
 };

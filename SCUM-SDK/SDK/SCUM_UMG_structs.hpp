@@ -1,16 +1,17 @@
 #pragma once
 
-// SCUM (0.1.17) SDK
+// SCUM (0.1.20) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
 #endif
 
 #include "SCUM_Basic.hpp"
-#include "SCUM_MovieScene_classes.hpp"
-#include "SCUM_CoreUObject_classes.hpp"
-#include "SCUM_SlateCore_classes.hpp"
 #include "SCUM_Engine_classes.hpp"
+#include "SCUM_CoreUObject_classes.hpp"
+#include "SCUM_PropertyPath_classes.hpp"
+#include "SCUM_SlateCore_classes.hpp"
+#include "SCUM_MovieScene_classes.hpp"
 #include "SCUM_Slate_classes.hpp"
 #include "SCUM_InputCore_classes.hpp"
 #include "SCUM_MovieSceneTracks_classes.hpp"
@@ -56,6 +57,15 @@ enum class EUMGSequencePlayMode : uint8_t
 };
 
 
+// Enum UMG.EWidgetTickFrequency
+enum class EWidgetTickFrequency : uint8_t
+{
+	EWidgetTickFrequency__Never    = 0,
+	EWidgetTickFrequency__Auto     = 1,
+	EWidgetTickFrequency__EWidgetTickFrequency_MAX = 2
+};
+
+
 // Enum UMG.EDragPivot
 enum class EDragPivot : uint8_t
 {
@@ -70,6 +80,17 @@ enum class EDragPivot : uint8_t
 	EDragPivot__BottomCenter       = 8,
 	EDragPivot__BottomRight        = 9,
 	EDragPivot__EDragPivot_MAX     = 10
+};
+
+
+// Enum UMG.EDynamicBoxType
+enum class EDynamicBoxType : uint8_t
+{
+	EDynamicBoxType__Horizontal    = 0,
+	EDynamicBoxType__Vertical      = 1,
+	EDynamicBoxType__Wrap          = 2,
+	EDynamicBoxType__Overlay       = 3,
+	EDynamicBoxType__EDynamicBoxType_MAX = 4
 };
 
 
@@ -188,40 +209,27 @@ struct FPaintContext
 };
 
 // ScriptStruct UMG.ShapedTextOptions
-// 0x0008
+// 0x0003
 struct FShapedTextOptions
 {
 	unsigned char                                      bOverride_TextShapingMethod : 1;                          // 0x0000(0x0001) (CPF_Edit)
 	unsigned char                                      bOverride_TextFlowDirection : 1;                          // 0x0000(0x0001) (CPF_Edit)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0001(0x0003) MISSED OFFSET
-	ETextShapingMethod                                 TextShapingMethod;                                        // 0x0004(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	ETextFlowDirection                                 TextFlowDirection;                                        // 0x0005(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData01[0x2];                                       // 0x0006(0x0002) MISSED OFFSET
-};
-
-// ScriptStruct UMG.PropertyPathSegment
-// 0x0020
-struct FPropertyPathSegment
-{
-	struct FName                                       Name;                                                     // 0x0000(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	int                                                ArrayIndex;                                               // 0x0008(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
-	class UStruct*                                     Struct;                                                   // 0x0010(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
-	class UField*                                      Field;                                                    // 0x0018(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
+	ETextShapingMethod                                 TextShapingMethod;                                        // 0x0001(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	ETextFlowDirection                                 TextFlowDirection;                                        // 0x0002(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
 // ScriptStruct UMG.DynamicPropertyPath
-// 0x0010
-struct FDynamicPropertyPath
+// 0x0000 (0x0028 - 0x0028)
+struct FDynamicPropertyPath : public FCachedPropertyPath
 {
-	TArray<struct FPropertyPathSegment>                Segments;                                                 // 0x0000(0x0010) (CPF_ZeroConstructor)
+
 };
 
 // ScriptStruct UMG.AnchorData
 // 0x0028
 struct FAnchorData
 {
-	struct FMargin                                     Offsets;                                                  // 0x0000(0x0010) (CPF_Edit, CPF_BlueprintVisible)
+	struct FMargin                                     Offsets;                                                  // 0x0000(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_IsPlainOldData)
 	struct FAnchors                                    Anchors;                                                  // 0x0010(0x0010) (CPF_Edit, CPF_BlueprintVisible)
 	struct FVector2D                                   Alignment;                                                // 0x0020(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_IsPlainOldData)
 };
@@ -233,6 +241,13 @@ struct FSlateChildSize
 	float                                              Value;                                                    // 0x0000(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	TEnumAsByte<ESlateSizeRule>                        SizeRule;                                                 // 0x0004(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	unsigned char                                      UnknownData00[0x3];                                       // 0x0005(0x0003) MISSED OFFSET
+};
+
+// ScriptStruct UMG.MovieScene2DTransformMask
+// 0x0004
+struct FMovieScene2DTransformMask
+{
+	uint32_t                                           Mask;                                                     // 0x0000(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
 // ScriptStruct UMG.SlateMeshVertex
@@ -261,15 +276,15 @@ struct FWidgetAnimationBinding
 };
 
 // ScriptStruct UMG.DelegateRuntimeBinding
-// 0x0038
+// 0x0050
 struct FDelegateRuntimeBinding
 {
 	struct FString                                     ObjectName;                                               // 0x0000(0x0010) (CPF_ZeroConstructor)
 	struct FName                                       PropertyName;                                             // 0x0010(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	struct FName                                       FunctionName;                                             // 0x0018(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	struct FDynamicPropertyPath                        SourcePath;                                               // 0x0020(0x0010)
-	EBindingKind                                       Kind;                                                     // 0x0030(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0031(0x0007) MISSED OFFSET
+	struct FDynamicPropertyPath                        SourcePath;                                               // 0x0020(0x0028)
+	EBindingKind                                       Kind;                                                     // 0x0048(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0049(0x0007) MISSED OFFSET
 };
 
 // ScriptStruct UMG.WidgetNavigationData
@@ -284,27 +299,28 @@ struct FWidgetNavigationData
 };
 
 // ScriptStruct UMG.MovieScene2DTransformSectionTemplate
-// 0x0318 (0x0360 - 0x0048)
+// 0x0468 (0x04B0 - 0x0048)
 struct FMovieScene2DTransformSectionTemplate : public FMovieScenePropertySectionTemplate
 {
-	struct FRichCurve                                  Translation[0x2];                                         // 0x0048(0x0070)
-	struct FRichCurve                                  Rotation;                                                 // 0x0128(0x0070)
-	struct FRichCurve                                  Scale[0x2];                                               // 0x0198(0x0070)
-	struct FRichCurve                                  Shear[0x2];                                               // 0x0278(0x0070)
-	EMovieSceneBlendType                               BlendType;                                                // 0x0358(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0359(0x0007) MISSED OFFSET
+	struct FMovieSceneFloatChannel                     Translation[0x2];                                         // 0x0048(0x00A0)
+	struct FMovieSceneFloatChannel                     Rotation;                                                 // 0x0188(0x00A0)
+	struct FMovieSceneFloatChannel                     Scale[0x2];                                               // 0x0228(0x00A0)
+	struct FMovieSceneFloatChannel                     Shear[0x2];                                               // 0x0368(0x00A0)
+	EMovieSceneBlendType                               BlendType;                                                // 0x04A8(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x04A9(0x0003) MISSED OFFSET
+	struct FMovieScene2DTransformMask                  Mask;                                                     // 0x04AC(0x0004)
 };
 
 // ScriptStruct UMG.MovieSceneMarginSectionTemplate
-// 0x01C8 (0x0210 - 0x0048)
+// 0x0288 (0x02D0 - 0x0048)
 struct FMovieSceneMarginSectionTemplate : public FMovieScenePropertySectionTemplate
 {
-	struct FRichCurve                                  TopCurve;                                                 // 0x0048(0x0070)
-	struct FRichCurve                                  LeftCurve;                                                // 0x00B8(0x0070)
-	struct FRichCurve                                  RightCurve;                                               // 0x0128(0x0070)
-	struct FRichCurve                                  BottomCurve;                                              // 0x0198(0x0070)
-	EMovieSceneBlendType                               BlendType;                                                // 0x0208(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0209(0x0007) MISSED OFFSET
+	struct FMovieSceneFloatChannel                     TopCurve;                                                 // 0x0048(0x00A0)
+	struct FMovieSceneFloatChannel                     LeftCurve;                                                // 0x00E8(0x00A0)
+	struct FMovieSceneFloatChannel                     RightCurve;                                               // 0x0188(0x00A0)
+	struct FMovieSceneFloatChannel                     BottomCurve;                                              // 0x0228(0x00A0)
+	EMovieSceneBlendType                               BlendType;                                                // 0x02C8(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x02C9(0x0007) MISSED OFFSET
 };
 
 // ScriptStruct UMG.MovieSceneWidgetMaterialSectionTemplate
@@ -312,6 +328,20 @@ struct FMovieSceneMarginSectionTemplate : public FMovieScenePropertySectionTempl
 struct FMovieSceneWidgetMaterialSectionTemplate : public FMovieSceneParameterSectionTemplate
 {
 	TArray<struct FName>                               BrushPropertyNamePath;                                    // 0x0050(0x0010) (CPF_ZeroConstructor)
+};
+
+// ScriptStruct UMG.RichTextStyleRow
+// 0x01E0 (0x01E8 - 0x0008)
+struct FRichTextStyleRow : public FTableRowBase
+{
+	struct FTextBlockStyle                             TextStyle;                                                // 0x0008(0x01E0) (CPF_Edit)
+};
+
+// ScriptStruct UMG.RichImageRow
+// 0x0088 (0x0090 - 0x0008)
+struct FRichImageRow : public FTableRowBase
+{
+	struct FSlateBrush                                 Brush;                                                    // 0x0008(0x0088) (CPF_Edit)
 };
 
 }

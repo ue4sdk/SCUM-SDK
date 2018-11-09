@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.17) SDK
+// SCUM (0.1.20) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -44,7 +44,7 @@ public:
 	void GetIsAlarmOn(bool* isAlarmOn);
 	void PercentageToUIText(float Value, struct FText* percentageString);
 	void SetClamping(bool shouldEnableClamping);
-	void PercentageToText(float Value, struct FText* percentageText);
+	void PercentageToText(float Value, struct FText* PercentageText);
 	void GetPreviousPercentage(float* prevPercentage);
 	void CheckAlarmThreshold(bool* shouldAlarmBeOn);
 	void AlarmSwitchOn();

@@ -1,14 +1,14 @@
 #pragma once
 
-// SCUM (0.1.17) SDK
+// SCUM (0.1.20) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
 #endif
 
 #include "SCUM_Basic.hpp"
-#include "SCUM_Engine_classes.hpp"
 #include "SCUM_CoreUObject_classes.hpp"
+#include "SCUM_Engine_classes.hpp"
 
 namespace SDK
 {
@@ -41,7 +41,7 @@ struct FProcMeshTangent
 };
 
 // ScriptStruct ProceduralMeshComponent.ProcMeshVertex
-// 0x0034
+// 0x004C
 struct FProcMeshVertex
 {
 	struct FVector                                     Position;                                                 // 0x0000(0x000C) (CPF_Edit, CPF_BlueprintVisible, CPF_IsPlainOldData)
@@ -49,6 +49,9 @@ struct FProcMeshVertex
 	struct FProcMeshTangent                            Tangent;                                                  // 0x0018(0x0010) (CPF_Edit, CPF_BlueprintVisible)
 	struct FColor                                      Color;                                                    // 0x0028(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_IsPlainOldData)
 	struct FVector2D                                   UV0;                                                      // 0x002C(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_IsPlainOldData)
+	struct FVector2D                                   UV1;                                                      // 0x0034(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_IsPlainOldData)
+	struct FVector2D                                   UV2;                                                      // 0x003C(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_IsPlainOldData)
+	struct FVector2D                                   UV3;                                                      // 0x0044(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_IsPlainOldData)
 };
 
 // ScriptStruct ProceduralMeshComponent.ProcMeshSection

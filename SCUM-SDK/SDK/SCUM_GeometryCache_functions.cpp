@@ -1,4 +1,4 @@
-// SCUM (0.1.17) SDK
+// SCUM (0.1.20) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,6 +30,35 @@ class UGeometryCacheComponent* AGeometryCacheActor::GetGeometryCacheComponent()
 	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
+}
+
+
+// Function GeometryCache.GeometryCacheComponent.TickAtThisTime
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+// Parameters:
+// float                          Time                           (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// bool                           bInIsRunning                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// bool                           bInBackwards                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// bool                           bInIsLooping                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UGeometryCacheComponent::TickAtThisTime(float Time, bool bInIsRunning, bool bInBackwards, bool bInIsLooping)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function GeometryCache.GeometryCacheComponent.TickAtThisTime");
+
+	struct
+	{
+		float                          Time;
+		bool                           bInIsRunning;
+		bool                           bInBackwards;
+		bool                           bInIsLooping;
+	} params;
+
+	params.Time = Time;
+	params.bInIsRunning = bInIsRunning;
+	params.bInBackwards = bInBackwards;
+	params.bInIsLooping = bInIsLooping;
+
+	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -110,7 +139,7 @@ void UGeometryCacheComponent::SetLooping(bool bNewLooping)
 
 
 // Function GeometryCache.GeometryCacheComponent.SetGeometryCache
-// (FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 // Parameters:
 // class UGeometryCache*          NewGeomCache                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
@@ -305,6 +334,90 @@ float UGeometryCacheComponent::GetStartTimeOffset()
 float UGeometryCacheComponent::GetPlaybackSpeed()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function GeometryCache.GeometryCacheComponent.GetPlaybackSpeed");
+
+	struct
+	{
+		float                          ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function GeometryCache.GeometryCacheComponent.GetPlaybackDirection
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+float UGeometryCacheComponent::GetPlaybackDirection()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function GeometryCache.GeometryCacheComponent.GetPlaybackDirection");
+
+	struct
+	{
+		float                          ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function GeometryCache.GeometryCacheComponent.GetNumberOfFrames
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// int                            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+int UGeometryCacheComponent::GetNumberOfFrames()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function GeometryCache.GeometryCacheComponent.GetNumberOfFrames");
+
+	struct
+	{
+		int                            ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function GeometryCache.GeometryCacheComponent.GetDuration
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+float UGeometryCacheComponent::GetDuration()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function GeometryCache.GeometryCacheComponent.GetDuration");
+
+	struct
+	{
+		float                          ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function GeometryCache.GeometryCacheComponent.GetAnimationTime
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+float UGeometryCacheComponent::GetAnimationTime()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function GeometryCache.GeometryCacheComponent.GetAnimationTime");
 
 	struct
 	{

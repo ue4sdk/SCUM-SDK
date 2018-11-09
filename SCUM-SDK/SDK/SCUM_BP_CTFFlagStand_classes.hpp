@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.17) SDK
+// SCUM (0.1.20) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_CTFFlagStand.BP_CTFFlagStand_C
-// 0x0000 (0x0338 - 0x0338)
+// 0x0000 (0x0348 - 0x0348)
 class ABP_CTFFlagStand_C : public ACTFFlagStand
 {
 public:

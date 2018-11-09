@@ -1,4 +1,4 @@
-// SCUM (0.1.17) SDK
+// SCUM (0.1.20) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -141,20 +141,20 @@ void ADonNavigationManager::VisualizeNAVResult(TArray<struct FVector> PathSoluti
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable)
 // Parameters:
 // struct FScriptDelegate         Listener                       (CPF_Parm, CPF_ZeroConstructor)
-// struct FDoNNavigationQueryData queryData                      (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
+// struct FDoNNavigationQueryData QueryData                      (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
 
-void ADonNavigationManager::VisualizeDynamicCollisionListeners(const struct FScriptDelegate& Listener, const struct FDoNNavigationQueryData& queryData)
+void ADonNavigationManager::VisualizeDynamicCollisionListeners(const struct FScriptDelegate& Listener, const struct FDoNNavigationQueryData& QueryData)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DonAINavigation.DonNavigationManager.VisualizeDynamicCollisionListeners");
 
 	struct
 	{
 		struct FScriptDelegate         Listener;
-		struct FDoNNavigationQueryData queryData;
+		struct FDoNNavigationQueryData QueryData;
 	} params;
 
 	params.Listener = Listener;
-	params.queryData = queryData;
+	params.QueryData = QueryData;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -164,22 +164,22 @@ void ADonNavigationManager::VisualizeDynamicCollisionListeners(const struct FScr
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable)
 // Parameters:
 // struct FScriptDelegate         ListenerToClear                (CPF_Parm, CPF_ZeroConstructor)
-// struct FDoNNavigationQueryData queryData                      (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
+// struct FDoNNavigationQueryData QueryData                      (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
 // int                            VolumeIndex                    (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void ADonNavigationManager::StopListeningToDynamicCollisionsForPathIndex(const struct FScriptDelegate& ListenerToClear, const struct FDoNNavigationQueryData& queryData, int VolumeIndex)
+void ADonNavigationManager::StopListeningToDynamicCollisionsForPathIndex(const struct FScriptDelegate& ListenerToClear, const struct FDoNNavigationQueryData& QueryData, int VolumeIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DonAINavigation.DonNavigationManager.StopListeningToDynamicCollisionsForPathIndex");
 
 	struct
 	{
 		struct FScriptDelegate         ListenerToClear;
-		struct FDoNNavigationQueryData queryData;
+		struct FDoNNavigationQueryData QueryData;
 		int                            VolumeIndex;
 	} params;
 
 	params.ListenerToClear = ListenerToClear;
-	params.queryData = queryData;
+	params.QueryData = QueryData;
 	params.VolumeIndex = VolumeIndex;
 
 	UObject::ProcessEvent(fn, &params);
@@ -190,20 +190,20 @@ void ADonNavigationManager::StopListeningToDynamicCollisionsForPathIndex(const s
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable)
 // Parameters:
 // struct FScriptDelegate         ListenerToClear                (CPF_Parm, CPF_ZeroConstructor)
-// struct FDoNNavigationQueryData queryData                      (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
+// struct FDoNNavigationQueryData QueryData                      (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
 
-void ADonNavigationManager::StopListeningToDynamicCollisionsForPath(const struct FScriptDelegate& ListenerToClear, const struct FDoNNavigationQueryData& queryData)
+void ADonNavigationManager::StopListeningToDynamicCollisionsForPath(const struct FScriptDelegate& ListenerToClear, const struct FDoNNavigationQueryData& QueryData)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DonAINavigation.DonNavigationManager.StopListeningToDynamicCollisionsForPath");
 
 	struct
 	{
 		struct FScriptDelegate         ListenerToClear;
-		struct FDoNNavigationQueryData queryData;
+		struct FDoNNavigationQueryData QueryData;
 	} params;
 
 	params.ListenerToClear = ListenerToClear;
-	params.queryData = queryData;
+	params.QueryData = QueryData;
 
 	UObject::ProcessEvent(fn, &params);
 }

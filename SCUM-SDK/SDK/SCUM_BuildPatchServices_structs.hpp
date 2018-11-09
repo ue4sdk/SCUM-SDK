@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.17) SDK
+// SCUM (0.1.20) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,20 +11,6 @@
 
 namespace SDK
 {
-//---------------------------------------------------------------------------
-//Enums
-//---------------------------------------------------------------------------
-
-// Enum BuildPatchServices.EManifestFileHeader
-enum class EManifestFileHeader : uint8_t
-{
-	EManifestFileHeader__STORED_RAW = 0,
-	EManifestFileHeader__STORED_COMPRESSED = 1,
-	EManifestFileHeader__STORED_MAX = 2
-};
-
-
-
 //---------------------------------------------------------------------------
 //Script Structs
 //---------------------------------------------------------------------------
@@ -46,7 +32,7 @@ struct FChunkPartData
 };
 
 // ScriptStruct BuildPatchServices.FileManifestData
-// 0x0070
+// 0x0068
 struct FFileManifestData
 {
 	struct FString                                     Filename;                                                 // 0x0000(0x0010) (CPF_ZeroConstructor)
@@ -59,7 +45,7 @@ struct FFileManifestData
 	struct FString                                     SymlinkTarget;                                            // 0x0050(0x0010) (CPF_ZeroConstructor)
 	bool                                               bIsReadOnly;                                              // 0x0060(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	bool                                               bIsCompressed;                                            // 0x0061(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData02[0xE];                                       // 0x0062(0x000E) MISSED OFFSET
+	unsigned char                                      UnknownData02[0x6];                                       // 0x0062(0x0006) MISSED OFFSET
 };
 
 // ScriptStruct BuildPatchServices.ChunkInfoData

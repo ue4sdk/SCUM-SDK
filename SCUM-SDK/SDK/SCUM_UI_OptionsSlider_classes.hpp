@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.17) SDK
+// SCUM (0.1.20) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -51,7 +51,7 @@ public:
 	unsigned char                                      UnknownData03[0x3];                                       // 0x02F5(0x0003) MISSED OFFSET
 	int                                                ValueFontSize;                                            // 0x02F8(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	float                                              ValuePadding;                                             // 0x02FC(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	struct FMargin                                     ValueTextPadding;                                         // 0x0300(0x0010) (CPF_Edit, CPF_BlueprintVisible)
+	struct FMargin                                     ValueTextPadding;                                         // 0x0300(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_IsPlainOldData)
 	TEnumAsByte<EHorizontalAlignment>                  ValueAlignment;                                           // 0x0310(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	bool                                               HasValueBackground;                                       // 0x0311(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.17) SDK
+// SCUM (0.1.20) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Abundant_02.Abundant_02_C
-// 0x0000 (0x0780 - 0x0780)
+// 0x0000 (0x06E0 - 0x06E0)
 class AAbundant_02_C : public AItem
 {
 public:

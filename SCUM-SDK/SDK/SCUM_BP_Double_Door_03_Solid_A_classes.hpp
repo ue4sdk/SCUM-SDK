@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.17) SDK
+// SCUM (0.1.20) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Double_Door_03_Solid_A.BP_Double_Door_03_Solid_A_C
-// 0x0008 (0x0408 - 0x0400)
+// 0x0008 (0x0428 - 0x0420)
 class ABP_Double_Door_03_Solid_A_C : public ADoubleRegularDoorStatic
 {
 public:
-	class UStaticMeshComponent*                        SM_Door_03_Frame;                                         // 0x0400(0x0008) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
+	class UStaticMeshComponent*                        SM_Door_03_Frame;                                         // 0x0420(0x0008) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

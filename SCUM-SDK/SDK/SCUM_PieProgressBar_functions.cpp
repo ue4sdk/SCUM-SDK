@@ -1,4 +1,4 @@
-// SCUM (0.1.17) SDK
+// SCUM (0.1.20) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -98,18 +98,18 @@ void UPieProgressBar_C::SetTextColor(class UTextBlock* textWidget, const struct 
 // Function PieProgressBar.PieProgressBar_C.SetCircularBarColor
 // (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 // Parameters:
-// struct FLinearColor            CircularBarColor               (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_IsPlainOldData)
+// struct FLinearColor            circularBarColor               (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_IsPlainOldData)
 
-void UPieProgressBar_C::SetCircularBarColor(const struct FLinearColor& CircularBarColor)
+void UPieProgressBar_C::SetCircularBarColor(const struct FLinearColor& circularBarColor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PieProgressBar.PieProgressBar_C.SetCircularBarColor");
 
 	struct
 	{
-		struct FLinearColor            CircularBarColor;
+		struct FLinearColor            circularBarColor;
 	} params;
 
-	params.CircularBarColor = CircularBarColor;
+	params.circularBarColor = circularBarColor;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -118,22 +118,22 @@ void UPieProgressBar_C::SetCircularBarColor(const struct FLinearColor& CircularB
 // Function PieProgressBar.PieProgressBar_C.GetCircularBarColor
 // (FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 // Parameters:
-// struct FLinearColor            CircularBarColor               (CPF_Parm, CPF_OutParm, CPF_IsPlainOldData)
+// struct FLinearColor            circularBarColor               (CPF_Parm, CPF_OutParm, CPF_IsPlainOldData)
 
-void UPieProgressBar_C::GetCircularBarColor(struct FLinearColor* CircularBarColor)
+void UPieProgressBar_C::GetCircularBarColor(struct FLinearColor* circularBarColor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PieProgressBar.PieProgressBar_C.GetCircularBarColor");
 
 	struct
 	{
-		struct FLinearColor            CircularBarColor;
+		struct FLinearColor            circularBarColor;
 	} params;
 
 
 	UObject::ProcessEvent(fn, &params);
 
-	if (CircularBarColor != nullptr)
-		*CircularBarColor = params.CircularBarColor;
+	if (circularBarColor != nullptr)
+		*circularBarColor = params.circularBarColor;
 }
 
 
@@ -182,40 +182,40 @@ void UPieProgressBar_C::GetOuterCircleColor(struct FLinearColor* OuterCircleColo
 // Function PieProgressBar.PieProgressBar_C.GetNormalColor
 // (FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 // Parameters:
-// struct FLinearColor            normalColor                    (CPF_Parm, CPF_OutParm, CPF_IsPlainOldData)
+// struct FLinearColor            NormalColor                    (CPF_Parm, CPF_OutParm, CPF_IsPlainOldData)
 
-void UPieProgressBar_C::GetNormalColor(struct FLinearColor* normalColor)
+void UPieProgressBar_C::GetNormalColor(struct FLinearColor* NormalColor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PieProgressBar.PieProgressBar_C.GetNormalColor");
 
 	struct
 	{
-		struct FLinearColor            normalColor;
+		struct FLinearColor            NormalColor;
 	} params;
 
 
 	UObject::ProcessEvent(fn, &params);
 
-	if (normalColor != nullptr)
-		*normalColor = params.normalColor;
+	if (NormalColor != nullptr)
+		*NormalColor = params.NormalColor;
 }
 
 
 // Function PieProgressBar.PieProgressBar_C.SetNormalColor
 // (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 // Parameters:
-// struct FLinearColor            normalColor                    (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_IsPlainOldData)
+// struct FLinearColor            NormalColor                    (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_IsPlainOldData)
 
-void UPieProgressBar_C::SetNormalColor(const struct FLinearColor& normalColor)
+void UPieProgressBar_C::SetNormalColor(const struct FLinearColor& NormalColor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PieProgressBar.PieProgressBar_C.SetNormalColor");
 
 	struct
 	{
-		struct FLinearColor            normalColor;
+		struct FLinearColor            NormalColor;
 	} params;
 
-	params.normalColor = normalColor;
+	params.NormalColor = NormalColor;
 
 	UObject::ProcessEvent(fn, &params);
 }

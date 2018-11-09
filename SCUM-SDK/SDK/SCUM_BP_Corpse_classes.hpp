@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.17) SDK
+// SCUM (0.1.20) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Corpse.BP_Corpse_C
-// 0x0008 (0x04E8 - 0x04E0)
+// 0x0008 (0x04F8 - 0x04F0)
 class ABP_Corpse_C : public ACorpse
 {
 public:
-	class AActor*                                      CloneSource;                                              // 0x04E0(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnTemplate, CPF_IsPlainOldData)
+	class AActor*                                      CloneSource;                                              // 0x04F0(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnTemplate, CPF_IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

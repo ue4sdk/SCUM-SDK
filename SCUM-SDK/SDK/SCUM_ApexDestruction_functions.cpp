@@ -1,4 +1,4 @@
-// SCUM (0.1.17) SDK
+// SCUM (0.1.20) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -90,10 +90,10 @@ void UDestructibleComponent::ApplyRadiusDamage(float BaseDamage, const struct FV
 // Parameters:
 // float                          DamageAmount                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FVector                 HitLocation                    (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm, CPF_IsPlainOldData)
-// struct FVector                 impulseDir                     (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector                 ImpulseDir                     (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm, CPF_IsPlainOldData)
 // float                          ImpulseStrength                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UDestructibleComponent::ApplyDamage(float DamageAmount, const struct FVector& HitLocation, const struct FVector& impulseDir, float ImpulseStrength)
+void UDestructibleComponent::ApplyDamage(float DamageAmount, const struct FVector& HitLocation, const struct FVector& ImpulseDir, float ImpulseStrength)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ApexDestruction.DestructibleComponent.ApplyDamage");
 
@@ -101,13 +101,13 @@ void UDestructibleComponent::ApplyDamage(float DamageAmount, const struct FVecto
 	{
 		float                          DamageAmount;
 		struct FVector                 HitLocation;
-		struct FVector                 impulseDir;
+		struct FVector                 ImpulseDir;
 		float                          ImpulseStrength;
 	} params;
 
 	params.DamageAmount = DamageAmount;
 	params.HitLocation = HitLocation;
-	params.impulseDir = impulseDir;
+	params.ImpulseDir = ImpulseDir;
 	params.ImpulseStrength = ImpulseStrength;
 
 	UObject::ProcessEvent(fn, &params);
