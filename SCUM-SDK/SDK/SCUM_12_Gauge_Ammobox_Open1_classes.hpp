@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass 12_Gauge_Ammobox_Open1.12_Gauge_Ammobox_Open1_C
-// 0x0000 (0x06F0 - 0x06F0)
+// 0x0000 (0x0718 - 0x0718)
 class A12_Gauge_Ammobox_Open1_C : public AAmmunitionItem
 {
 public:

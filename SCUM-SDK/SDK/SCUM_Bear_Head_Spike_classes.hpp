@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Bear_Head_Spike.Bear_Head_Spike_C
-// 0x0000 (0x06E0 - 0x06E0)
+// 0x0000 (0x0708 - 0x0708)
 class ABear_Head_Spike_C : public AItem
 {
 public:

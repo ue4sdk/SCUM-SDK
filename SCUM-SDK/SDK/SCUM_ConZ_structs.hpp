@@ -7,17 +7,19 @@
 #endif
 
 #include "SCUM_Basic.hpp"
+#include "SCUM_SlateCore_classes.hpp"
 #include "SCUM_UMG_classes.hpp"
 #include "SCUM_Engine_classes.hpp"
 #include "SCUM_CoreUObject_classes.hpp"
 #include "SCUM_GameplayTags_classes.hpp"
-#include "SCUM_DonAINavigation_classes.hpp"
 #include "SCUM_AIModule_classes.hpp"
+#include "SCUM_ReplicationGraph_classes.hpp"
 #include "SCUM_AkAudio_classes.hpp"
-#include "SCUM_SlateCore_classes.hpp"
 #include "SCUM_DcxVehicle_classes.hpp"
+#include "SCUM_DonAINavigation_classes.hpp"
 #include "SCUM_Foliage_classes.hpp"
 #include "SCUM_InputCore_classes.hpp"
+#include "SCUM_MIDIDevice_classes.hpp"
 #include "SCUM_NavigationSystem_classes.hpp"
 
 namespace SDK
@@ -111,7 +113,9 @@ enum class EInteractionType : uint8_t
 	EInteractionType__LearnAnimal  = 79,
 	EInteractionType__CommandAnimal = 80,
 	EInteractionType__FeedAnimal   = 81,
-	EInteractionType__EInteractionType_MAX = 82
+	EInteractionType__Buy          = 82,
+	EInteractionType__Maintain     = 83,
+	EInteractionType__EInteractionType_MAX = 84
 };
 
 
@@ -279,6 +283,16 @@ enum class ECharacterImpactSourceSoundCategory : uint8_t
 	ECharacterImpactSourceSoundCategory__Blunt_Metal = 8,
 	ECharacterImpactSourceSoundCategory__Sharp_Metal = 9,
 	ECharacterImpactSourceSoundCategory__ECharacterImpactSourceSoundCategory_MAX = 10
+};
+
+
+// Enum ConZ.EConZPxDominanceGroup
+enum class EConZPxDominanceGroup : uint8_t
+{
+	EConZPxDominanceGroup__Default = 0,
+	EConZPxDominanceGroup__MediumPawns = 1,
+	EConZPxDominanceGroup__LargePawns = 2,
+	EConZPxDominanceGroup__EConZPxDominanceGroup_MAX = 3
 };
 
 
@@ -531,8 +545,8 @@ enum class EPlayableInstrumentTone : uint8_t
 	EPlayableInstrumentTone__G     = 7,
 	EPlayableInstrumentTone__Ab    = 8,
 	EPlayableInstrumentTone__A     = 9,
-	EPlayableInstrumentTone__B     = 10,
-	EPlayableInstrumentTone__Bb    = 11,
+	EPlayableInstrumentTone__Bb    = 10,
+	EPlayableInstrumentTone__B     = 11,
 	EPlayableInstrumentTone__C2    = 12,
 	EPlayableInstrumentTone__Count = 13,
 	EPlayableInstrumentTone__EPlayableInstrumentTone_MAX = 14
@@ -550,8 +564,9 @@ enum class EWeaponCategory : uint8_t
 	EWeaponCategory__Shotguns      = 5,
 	EWeaponCategory__AutomaticRifles = 6,
 	EWeaponCategory__SniperRifles  = 7,
-	EWeaponCategory__Count         = 8,
-	EWeaponCategory__EWeaponCategory_MAX = 9
+	EWeaponCategory__Bow           = 8,
+	EWeaponCategory__Count         = 9,
+	EWeaponCategory__EWeaponCategory_MAX = 10
 };
 
 
@@ -631,6 +646,16 @@ enum class EDodgeDirectionType : uint8_t
 	EDodgeDirectionType__Left      = 2,
 	EDodgeDirectionType__Right     = 3,
 	EDodgeDirectionType__EDodgeDirectionType_MAX = 4
+};
+
+
+// Enum ConZ.EHumanRace
+enum class EHumanRace : uint8_t
+{
+	EHumanRace__Caucasian          = 0,
+	EHumanRace__Mongoloid          = 1,
+	EHumanRace__Negroid            = 2,
+	EHumanRace__EHumanRace_MAX     = 3
 };
 
 
@@ -1248,6 +1273,18 @@ enum class EAnimalMode : uint8_t
 };
 
 
+// Enum ConZ.EClassRepNodeMapping
+enum class EClassRepNodeMapping : uint8_t
+{
+	EClassRepNodeMapping__NotRouted = 0,
+	EClassRepNodeMapping__RelevantAllConnections = 1,
+	EClassRepNodeMapping__Spatialize_Static = 2,
+	EClassRepNodeMapping__Spatialize_Dynamic = 3,
+	EClassRepNodeMapping__Spatialize_Dormancy = 4,
+	EClassRepNodeMapping__EClassRepNodeMapping_MAX = 5
+};
+
+
 // Enum ConZ.ECraftingItemCategory
 enum class ECraftingItemCategory : uint8_t
 {
@@ -1469,7 +1506,8 @@ enum class EImpactSeverity : uint8_t
 	EImpactSeverity__Light         = 0,
 	EImpactSeverity__Medium        = 1,
 	EImpactSeverity__Heavy         = 2,
-	EImpactSeverity__EImpactSeverity_MAX = 3
+	EImpactSeverity__Count         = 3,
+	EImpactSeverity__EImpactSeverity_MAX = 4
 };
 
 
@@ -2090,7 +2128,8 @@ enum class ESkillReplicationID : uint8_t
 	ESkillReplicationID__CamouflageSkill = 17,
 	ESkillReplicationID__TacticsSkill = 18,
 	ESkillReplicationID__ThrowingSkill = 19,
-	ESkillReplicationID__ESkillReplicationID_MAX = 20
+	ESkillReplicationID__ArcherySkill = 20,
+	ESkillReplicationID__ESkillReplicationID_MAX = 21
 };
 
 
@@ -2449,6 +2488,21 @@ struct FInteractionStruct
 {
 	EInteractionType                                   InteractionType;                                          // 0x0000(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	unsigned char                                      UnknownData00[0x2F];                                      // 0x0001(0x002F) MISSED OFFSET
+};
+
+// ScriptStruct ConZ.HitEffects
+// 0x0038
+struct FHitEffects
+{
+	float                                              SpeedThreshold;                                           // 0x0000(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0004(0x0004) MISSED OFFSET
+	class UParticleSystem*                             ParticleSystem;                                           // 0x0008(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FVector                                     ParticlesScale;                                           // 0x0010(0x000C) (CPF_Edit, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x001C(0x0004) MISSED OFFSET
+	class UAkAudioEvent*                               AudioEvent;                                               // 0x0020(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UClass*                                      CameraShake;                                              // 0x0028(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              CameraShakeScale;                                         // 0x0030(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData02[0x4];                                       // 0x0034(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct ConZ.MeleeWeaponDesc
@@ -2964,6 +3018,42 @@ struct FCharacterCreationMenuContext
 	struct FString                                     ServerAuthToken;                                          // 0x0020(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor)
 };
 
+// ScriptStruct ConZ.VehicleSpawnParameters
+// 0x0018
+struct FVehicleSpawnParameters
+{
+	struct FVector                                     MinSpawnLocationOffset;                                   // 0x0000(0x000C) (CPF_Edit, CPF_IsPlainOldData)
+	struct FVector                                     MaxSpawnLocationOffset;                                   // 0x000C(0x000C) (CPF_Edit, CPF_IsPlainOldData)
+};
+
+// ScriptStruct ConZ.VehicleDamagedEffectsParameters
+// 0x0060
+struct FVehicleDamagedEffectsParameters
+{
+	struct FFloatRange                                 HealthRatioRange;                                         // 0x0000(0x0010) (CPF_Edit)
+	struct FTransform                                  Transform;                                                // 0x0010(0x0030) (CPF_Edit, CPF_IsPlainOldData)
+	class UParticleSystem*                             ParticleSystem;                                           // 0x0040(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UAkAudioEvent*                               StartAudioEvent;                                          // 0x0048(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UAkAudioEvent*                               StopAudioEvent;                                           // 0x0050(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              DeactivationDelay;                                        // 0x0058(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x005C(0x0004) MISSED OFFSET
+};
+
+// ScriptStruct ConZ.VehicleImpactEffects
+// 0x0038
+struct FVehicleImpactEffects
+{
+	float                                              HitImpulseThreshold;                                      // 0x0000(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0004(0x0004) MISSED OFFSET
+	class UParticleSystem*                             ParticleSystem;                                           // 0x0008(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FVector                                     ParticlesScale;                                           // 0x0010(0x000C) (CPF_Edit, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x001C(0x0004) MISSED OFFSET
+	class UAkAudioEvent*                               AudioEvent;                                               // 0x0020(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UClass*                                      CameraShake;                                              // 0x0028(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              CameraShakeScale;                                         // 0x0030(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData02[0x4];                                       // 0x0034(0x0004) MISSED OFFSET
+};
+
 // ScriptStruct ConZ.ItemSpawningSettings
 // 0x0078
 struct FItemSpawningSettings
@@ -3218,13 +3308,6 @@ struct FProjectileImpulseMultiplier
 	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
 };
 
-// ScriptStruct ConZ.DbIntegerId
-// 0x0008
-struct FDbIntegerId
-{
-	int64_t                                            Value;                                                    // 0x0000(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-};
-
 // ScriptStruct ConZ.DbUserServerHistoryItem
 // 0x0028
 struct FDbUserServerHistoryItem
@@ -3233,6 +3316,13 @@ struct FDbUserServerHistoryItem
 	struct FString                                     Host;                                                     // 0x0010(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor)
 	int                                                Port;                                                     // 0x0020(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x0024(0x0004) MISSED OFFSET
+};
+
+// ScriptStruct ConZ.DbIntegerId
+// 0x0008
+struct FDbIntegerId
+{
+	int64_t                                            Value;                                                    // 0x0000(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
 // ScriptStruct ConZ.DbUserProfileAuthorityInfo
@@ -3341,13 +3431,15 @@ struct FExamineItemSpawnerConstraint_MaxOccurrencesPerSpawnTypes
 };
 
 // ScriptStruct ConZ.ExamineItemSpawnerData
-// 0x00A0
+// 0x00A8
 struct FExamineItemSpawnerData
 {
 	int                                                MinQuantity;                                              // 0x0000(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	int                                                MaxQuantity;                                              // 0x0004(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	struct FItemSpawnerDataBasedOnPreset               Spawner;                                                  // 0x0008(0x0088) (CPF_Edit)
-	TArray<struct FExamineItemSpawnerConstraint_MaxOccurrencesPerSpawnTypes> MaxOccurrencesPerSpawnTypes;                              // 0x0090(0x0010) (CPF_Edit, CPF_ZeroConstructor)
+	bool                                               AllowDuplicates;                                          // 0x0008(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0009(0x0007) MISSED OFFSET
+	struct FItemSpawnerDataBasedOnPreset               Spawner;                                                  // 0x0010(0x0088) (CPF_Edit)
+	TArray<struct FExamineItemSpawnerConstraint_MaxOccurrencesPerSpawnTypes> MaxOccurrencesPerSpawnTypes;                              // 0x0098(0x0010) (CPF_Edit, CPF_ZeroConstructor)
 };
 
 // ScriptStruct ConZ.ExamineDataPerItemGroup
@@ -3429,7 +3521,9 @@ struct FLadderMarker
 	bool                                               HasEdge;                                                  // 0x0090(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	bool                                               IsNarrow;                                                 // 0x0091(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	TEnumAsByte<EPhysicalSurface>                      PhysicalSurfaceForSounds;                                 // 0x0092(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData01[0xD];                                       // 0x0093(0x000D) MISSED OFFSET
+	unsigned char                                      UnknownData01[0x1];                                       // 0x0093(0x0001) MISSED OFFSET
+	float                                              Thickness;                                                // 0x0094(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData02[0x8];                                       // 0x0098(0x0008) MISSED OFFSET
 };
 
 // ScriptStruct ConZ.WindowMarker
@@ -3756,14 +3850,16 @@ struct FPrisonerMeleeAttackTypes
 };
 
 // ScriptStruct ConZ.PrisonerAppearanceData
-// 0x0028
+// 0x0030
 struct FPrisonerAppearanceData
 {
-	class USkeletalMesh*                               HeadMesh;                                                 // 0x0000(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UMaterialInstance*                           SkinMaterial;                                             // 0x0008(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UMaterialInstance*                           TorsoMaterial;                                            // 0x0010(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UMaterialInstance*                           HeadMaterial;                                             // 0x0018(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UMaterialInstance*                           PenisMaterial;                                            // 0x0020(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	EHumanRace                                         Race;                                                     // 0x0000(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0001(0x0007) MISSED OFFSET
+	class USkeletalMesh*                               HeadMesh;                                                 // 0x0008(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UMaterialInstance*                           SkinMaterial;                                             // 0x0010(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UMaterialInstance*                           TorsoMaterial;                                            // 0x0018(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UMaterialInstance*                           HeadMaterial;                                             // 0x0020(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UMaterialInstance*                           PenisMaterial;                                            // 0x0028(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
 // ScriptStruct ConZ.PrisonerNearbyFoliageInstanceInfo
@@ -3783,6 +3879,15 @@ struct FPrisonerNearbyFoliageInstanceInfo
 struct FPrisonerNearbyFoliageInfo
 {
 	TArray<struct FPrisonerNearbyFoliageInstanceInfo>  InstancesInfo;                                            // 0x0000(0x0010) (CPF_BlueprintVisible, CPF_ZeroConstructor)
+};
+
+// ScriptStruct ConZ.PrisonerMountReplication
+// 0x0010
+struct FPrisonerMountReplication
+{
+	bool                                               HasMountedSlot;                                           // 0x0000(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0001(0x0007) MISSED OFFSET
+	class UObject*                                     MountedSlot;                                              // 0x0008(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
 // ScriptStruct ConZ.PrisonerTeleportRequest
@@ -4484,6 +4589,49 @@ struct FTeamDeathmatchParameters
 	float                                              BarrierHeatUpDuration;                                    // 0x0010(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
+// ScriptStruct ConZ.VehicleCorpseBurningParticles
+// 0x0060
+struct FVehicleCorpseBurningParticles
+{
+	class UParticleSystem*                             Particles;                                                // 0x0000(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0008(0x0008) MISSED OFFSET
+	struct FTransform                                  ParticlesTransform;                                       // 0x0010(0x0030) (CPF_Edit, CPF_IsPlainOldData)
+	bool                                               HasHeatEmitter;                                           // 0x0040(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x0041(0x0003) MISSED OFFSET
+	struct FHeatEmitter                                HeatEmitter;                                              // 0x0044(0x001C) (CPF_Edit)
+};
+
+// ScriptStruct ConZ.VehicleSpawnerDataBasedOnPreset
+// 0x0028
+struct FVehicleSpawnerDataBasedOnPreset
+{
+	class UClass*                                      preset;                                                   // 0x0000(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               OverrideVehicleClasses;                                   // 0x0008(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               OverrideProbability;                                      // 0x0009(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x6];                                       // 0x000A(0x0006) MISSED OFFSET
+	TArray<class UClass*>                              VehicleClasses;                                           // 0x0010(0x0010) (CPF_Edit, CPF_ZeroConstructor)
+	float                                              Probability;                                              // 0x0020(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x0024(0x0004) MISSED OFFSET
+};
+
+// ScriptStruct ConZ.VehicleSpawnerMarker
+// 0x0060
+struct FVehicleSpawnerMarker
+{
+	struct FTransform                                  Transform;                                                // 0x0000(0x0030) (CPF_Edit, CPF_IsPlainOldData)
+	struct FVehicleSpawnerDataBasedOnPreset            Spawner;                                                  // 0x0030(0x0028) (CPF_Edit)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0058(0x0008) MISSED OFFSET
+};
+
+// ScriptStruct ConZ.VehicleSpawnerData
+// 0x0018
+struct FVehicleSpawnerData
+{
+	TArray<class UClass*>                              VehicleClasses;                                           // 0x0000(0x0010) (CPF_Edit, CPF_ZeroConstructor)
+	float                                              Probability;                                              // 0x0010(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0014(0x0004) MISSED OFFSET
+};
+
 // ScriptStruct ConZ.Waypoint
 // 0x0030
 struct FWaypoint
@@ -4684,6 +4832,14 @@ struct FInstanceManager
 	unsigned char                                      UnknownData00[0x58];                                      // 0x0000(0x0058) MISSED OFFSET
 };
 
+// ScriptStruct ConZ.VirtualizedItemDescription
+// 0x0014
+struct FVirtualizedItemDescription
+{
+	TWeakObjectPtr<class AItem>                        Item;                                                     // 0x0000(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FVector                                     PreviousLocation;                                         // 0x0008(0x000C) (CPF_Edit, CPF_BlueprintVisible, CPF_IsPlainOldData)
+};
+
 // ScriptStruct ConZ.LandingDamageEvent
 // 0x0010 (0x00B8 - 0x00A8)
 struct FLandingDamageEvent : public FPointDamageEvent
@@ -4759,10 +4915,10 @@ struct FBodyPartInjury
 };
 
 // ScriptStruct ConZ.InstrumentEvent
-// 0x000C
+// 0x0010
 struct FInstrumentEvent
 {
-	unsigned char                                      UnknownData00[0xC];                                       // 0x0000(0x000C) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0000(0x0010) MISSED OFFSET
 };
 
 // ScriptStruct ConZ.WindowDetectionParams

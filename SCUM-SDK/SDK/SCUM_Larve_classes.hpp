@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Larve.Larve_C
-// 0x0000 (0x07C0 - 0x07C0)
+// 0x0000 (0x07E8 - 0x07E8)
 class ALarve_C : public AFoodItem
 {
 public:

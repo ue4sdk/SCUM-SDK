@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Advanced_Standing_Torch_01.BP_Advanced_Standing_Torch_01_C
-// 0x0008 (0x0750 - 0x0748)
+// 0x0008 (0x0778 - 0x0770)
 class ABP_Advanced_Standing_Torch_01_C : public AFireItem
 {
 public:
-	class UPointLightComponent*                        PointLight;                                               // 0x0748(0x0008) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
+	class UPointLightComponent*                        PointLight;                                               // 0x0770(0x0008) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

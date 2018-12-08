@@ -12,6 +12,60 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function UI_Chat.UI_Chat_C.OnPreviewKeyDown
+// (FUNC_Event, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+// Parameters:
+// struct FGeometry               MyGeometry                     (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_IsPlainOldData)
+// struct FKeyEvent               InKeyEvent                     (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm)
+// struct FEventReply             ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
+
+struct FEventReply UUI_Chat_C::OnPreviewKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UI_Chat.UI_Chat_C.OnPreviewKeyDown");
+
+	struct
+	{
+		struct FGeometry               MyGeometry;
+		struct FKeyEvent               InKeyEvent;
+		struct FEventReply             ReturnValue;
+	} params;
+
+	params.MyGeometry = MyGeometry;
+	params.InKeyEvent = InKeyEvent;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function UI_Chat.UI_Chat_C.OnKeyDown
+// (FUNC_BlueprintCosmetic, FUNC_Event, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+// Parameters:
+// struct FGeometry               MyGeometry                     (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_IsPlainOldData)
+// struct FKeyEvent               InKeyEvent                     (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm)
+// struct FEventReply             ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
+
+struct FEventReply UUI_Chat_C::OnKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UI_Chat.UI_Chat_C.OnKeyDown");
+
+	struct
+	{
+		struct FGeometry               MyGeometry;
+		struct FKeyEvent               InKeyEvent;
+		struct FEventReply             ReturnValue;
+	} params;
+
+	params.MyGeometry = MyGeometry;
+	params.InKeyEvent = InKeyEvent;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
 // Function UI_Chat.UI_Chat_C.SetInputFocusIfNeeded
 // (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 

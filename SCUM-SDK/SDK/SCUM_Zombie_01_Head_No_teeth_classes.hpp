@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Zombie_01_Head_No_teeth.Zombie_01_Head_No_teeth_C
-// 0x0000 (0x06F8 - 0x06F8)
+// 0x0000 (0x0720 - 0x0720)
 class AZombie_01_Head_No_teeth_C : public AEquipmentItem
 {
 public:

@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Bracken.Bracken_C
-// 0x0000 (0x07C0 - 0x07C0)
+// 0x0000 (0x07E8 - 0x07E8)
 class ABracken_C : public AFoodItem
 {
 public:

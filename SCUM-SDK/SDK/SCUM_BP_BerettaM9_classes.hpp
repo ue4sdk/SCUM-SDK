@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_BerettaM9.BP_BerettaM9_C
-// 0x0000 (0x1030 - 0x1030)
+// 0x0000 (0x1060 - 0x1060)
 class ABP_BerettaM9_C : public AWeapon
 {
 public:

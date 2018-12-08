@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass AntiMalariaPils_03.AntiMalariaPils_03_C
-// 0x0000 (0x06E8 - 0x06E8)
+// 0x0000 (0x0710 - 0x0710)
 class AAntiMalariaPils_03_C : public AMedicationItem
 {
 public:

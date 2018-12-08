@@ -15,12 +15,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Cow2.BP_Cow2_C
-// 0x000F (0x0C48 - 0x0C39)
+// 0x000F (0x0D18 - 0x0D09)
 class ABP_Cow2_C : public ABP_Bear2_C
 {
 public:
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0C39(0x0007) MISSED OFFSET
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0C40(0x0008) (CPF_Transient, CPF_DuplicateTransient)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0D09(0x0007) MISSED OFFSET
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0D10(0x0008) (CPF_Transient, CPF_DuplicateTransient)
 
 	static UClass* StaticClass()
 	{

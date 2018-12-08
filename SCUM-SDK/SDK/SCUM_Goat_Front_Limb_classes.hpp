@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Goat_Front_Limb.Goat_Front_Limb_C
-// 0x0000 (0x06F8 - 0x06F8)
+// 0x0000 (0x0720 - 0x0720)
 class AGoat_Front_Limb_C : public AEquipmentItem
 {
 public:

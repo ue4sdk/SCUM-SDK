@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Cheese.Cheese_C
-// 0x0000 (0x07C0 - 0x07C0)
+// 0x0000 (0x07E8 - 0x07E8)
 class ACheese_C : public AFoodItem
 {
 public:

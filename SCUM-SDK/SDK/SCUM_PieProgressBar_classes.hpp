@@ -28,8 +28,8 @@ public:
 	class UImage*                                      ImageAttribute_4Full;                                     // 0x02B8(0x0008) (CPF_BlueprintVisible, CPF_ExportObject, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData, CPF_RepSkip, CPF_RepNotify, CPF_Interp, CPF_NonTransactional, CPF_EditorOnly, CPF_NoDestructor, CPF_AutoWeak, CPF_ContainsInstancedReference, CPF_AssetRegistrySearchable, CPF_SimpleDisplay, CPF_AdvancedDisplay, CPF_Protected, CPF_BlueprintCallable, CPF_BlueprintAuthorityOnly, CPF_TextExportTransient, CPF_NonPIEDuplicateTransient, CPF_ExposeOnSpawn, CPF_PersistentInstance, CPF_UObjectWrapper, CPF_HasGetValueTypeHash, CPF_NativeAccessSpecifierPublic, CPF_NativeAccessSpecifierProtected, CPF_NativeAccessSpecifierPrivate)
 	struct FLinearColor                                AlarmColor;                                               // 0x02C0(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	struct FLinearColor                                NormalColor;                                              // 0x02D0(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	struct FLinearColor                                OuterCircleColor;                                         // 0x02E0(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	struct FLinearColor                                circularBarColor;                                         // 0x02F0(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	struct FLinearColor                                outerCircleColor;                                         // 0x02E0(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	struct FLinearColor                                CircularBarColor;                                         // 0x02F0(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -42,10 +42,10 @@ public:
 	struct FText GetPercentageText();
 	void SetImageColor(class UImage* Image, const struct FLinearColor& Color);
 	void SetTextColor(class UTextBlock* textWidget, const struct FLinearColor& Color);
-	void SetCircularBarColor(const struct FLinearColor& circularBarColor);
-	void GetCircularBarColor(struct FLinearColor* circularBarColor);
-	void SetOuterCircleColor(const struct FLinearColor& OuterCircleColor);
-	void GetOuterCircleColor(struct FLinearColor* OuterCircleColor);
+	void SetCircularBarColor(const struct FLinearColor& CircularBarColor);
+	void GetCircularBarColor(struct FLinearColor* CircularBarColor);
+	void SetOuterCircleColor(const struct FLinearColor& outerCircleColor);
+	void GetOuterCircleColor(struct FLinearColor* outerCircleColor);
 	void GetNormalColor(struct FLinearColor* NormalColor);
 	void SetNormalColor(const struct FLinearColor& NormalColor);
 	void UpdatePercentageArc();

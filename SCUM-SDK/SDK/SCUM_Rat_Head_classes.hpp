@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Rat_Head.Rat_Head_C
-// 0x0000 (0x06F8 - 0x06F8)
+// 0x0000 (0x0720 - 0x0720)
 class ARat_Head_C : public AEquipmentItem
 {
 public:

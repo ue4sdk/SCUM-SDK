@@ -117,22 +117,22 @@ void UOxygenSaturationMonitor_C::SetPrisonerAndLifeComponentToMonitor(class APri
 // Function OxygenSaturationMonitor.OxygenSaturationMonitor_C.ProvideOxygenSaturationExtremes
 // (FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 // Parameters:
-// struct FText                   oxygenSaturationExtremes       (CPF_Parm, CPF_OutParm)
+// struct FText                   OxygenSaturationExtremes       (CPF_Parm, CPF_OutParm)
 
-void UOxygenSaturationMonitor_C::ProvideOxygenSaturationExtremes(struct FText* oxygenSaturationExtremes)
+void UOxygenSaturationMonitor_C::ProvideOxygenSaturationExtremes(struct FText* OxygenSaturationExtremes)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OxygenSaturationMonitor.OxygenSaturationMonitor_C.ProvideOxygenSaturationExtremes");
 
 	struct
 	{
-		struct FText                   oxygenSaturationExtremes;
+		struct FText                   OxygenSaturationExtremes;
 	} params;
 
 
 	UObject::ProcessEvent(fn, &params);
 
-	if (oxygenSaturationExtremes != nullptr)
-		*oxygenSaturationExtremes = params.oxygenSaturationExtremes;
+	if (OxygenSaturationExtremes != nullptr)
+		*OxygenSaturationExtremes = params.OxygenSaturationExtremes;
 }
 
 

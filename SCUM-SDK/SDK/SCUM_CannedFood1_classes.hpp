@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass CannedFood1.CannedFood1_C
-// 0x0000 (0x07D0 - 0x07D0)
+// 0x0000 (0x07F8 - 0x07F8)
 class ACannedFood1_C : public ACannedFoodItem
 {
 public:

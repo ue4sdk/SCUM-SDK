@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Stabproof_Vest_04.Stabproof_Vest_04_C
-// 0x0000 (0x0760 - 0x0760)
+// 0x0000 (0x0788 - 0x0788)
 class AStabproof_Vest_04_C : public AClothesItem
 {
 public:

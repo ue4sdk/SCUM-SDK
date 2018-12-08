@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Neoprene_Face_Mask.Neoprene_Face_Mask_C
-// 0x0000 (0x0760 - 0x0760)
+// 0x0000 (0x0788 - 0x0788)
 class ANeoprene_Face_Mask_C : public AClothesItem
 {
 public:

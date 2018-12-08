@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Rabbit_Right_Back.Rabbit_Right_Back_C
-// 0x0000 (0x06F8 - 0x06F8)
+// 0x0000 (0x0720 - 0x0720)
 class ARabbit_Right_Back_C : public AEquipmentItem
 {
 public:

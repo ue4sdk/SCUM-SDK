@@ -33,7 +33,7 @@ public:
 
 
 	void StartFade();
-	void Init(const struct FText& Text, TEnumAsByte<EMessageType> Type, float Duration);
+	void Init(const struct FText& Text, TEnumAsByte<EMessageType> Type, float Duration, const struct FLinearColor& Color);
 	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
 	void ExecuteUbergraph_Message(int EntryPoint);
 };

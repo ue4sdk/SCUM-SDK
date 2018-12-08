@@ -158,18 +158,18 @@ void UCircularProgressBarSprites_C::ActivateNormalColor()
 // Function CircularProgressBarSprites.CircularProgressBarSprites_C.SetCircularBarColor
 // (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 // Parameters:
-// struct FLinearColor            circularBarColor               (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_IsPlainOldData)
+// struct FLinearColor            CircularBarColor               (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_IsPlainOldData)
 
-void UCircularProgressBarSprites_C::SetCircularBarColor(const struct FLinearColor& circularBarColor)
+void UCircularProgressBarSprites_C::SetCircularBarColor(const struct FLinearColor& CircularBarColor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CircularProgressBarSprites.CircularProgressBarSprites_C.SetCircularBarColor");
 
 	struct
 	{
-		struct FLinearColor            circularBarColor;
+		struct FLinearColor            CircularBarColor;
 	} params;
 
-	params.circularBarColor = circularBarColor;
+	params.CircularBarColor = CircularBarColor;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -178,40 +178,40 @@ void UCircularProgressBarSprites_C::SetCircularBarColor(const struct FLinearColo
 // Function CircularProgressBarSprites.CircularProgressBarSprites_C.GetCircularBarColor
 // (FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 // Parameters:
-// struct FLinearColor            circularBarColor               (CPF_Parm, CPF_OutParm, CPF_IsPlainOldData)
+// struct FLinearColor            CircularBarColor               (CPF_Parm, CPF_OutParm, CPF_IsPlainOldData)
 
-void UCircularProgressBarSprites_C::GetCircularBarColor(struct FLinearColor* circularBarColor)
+void UCircularProgressBarSprites_C::GetCircularBarColor(struct FLinearColor* CircularBarColor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CircularProgressBarSprites.CircularProgressBarSprites_C.GetCircularBarColor");
 
 	struct
 	{
-		struct FLinearColor            circularBarColor;
+		struct FLinearColor            CircularBarColor;
 	} params;
 
 
 	UObject::ProcessEvent(fn, &params);
 
-	if (circularBarColor != nullptr)
-		*circularBarColor = params.circularBarColor;
+	if (CircularBarColor != nullptr)
+		*CircularBarColor = params.CircularBarColor;
 }
 
 
 // Function CircularProgressBarSprites.CircularProgressBarSprites_C.SetOuterCircleColor
 // (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 // Parameters:
-// struct FLinearColor            OuterCircleColor               (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_IsPlainOldData)
+// struct FLinearColor            outerCircleColor               (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_IsPlainOldData)
 
-void UCircularProgressBarSprites_C::SetOuterCircleColor(const struct FLinearColor& OuterCircleColor)
+void UCircularProgressBarSprites_C::SetOuterCircleColor(const struct FLinearColor& outerCircleColor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CircularProgressBarSprites.CircularProgressBarSprites_C.SetOuterCircleColor");
 
 	struct
 	{
-		struct FLinearColor            OuterCircleColor;
+		struct FLinearColor            outerCircleColor;
 	} params;
 
-	params.OuterCircleColor = OuterCircleColor;
+	params.outerCircleColor = outerCircleColor;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -220,22 +220,22 @@ void UCircularProgressBarSprites_C::SetOuterCircleColor(const struct FLinearColo
 // Function CircularProgressBarSprites.CircularProgressBarSprites_C.GetOuterCircleColor
 // (FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintEvent, FUNC_BlueprintPure)
 // Parameters:
-// struct FLinearColor            OuterCircleColor               (CPF_Parm, CPF_OutParm, CPF_IsPlainOldData)
+// struct FLinearColor            outerCircleColor               (CPF_Parm, CPF_OutParm, CPF_IsPlainOldData)
 
-void UCircularProgressBarSprites_C::GetOuterCircleColor(struct FLinearColor* OuterCircleColor)
+void UCircularProgressBarSprites_C::GetOuterCircleColor(struct FLinearColor* outerCircleColor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CircularProgressBarSprites.CircularProgressBarSprites_C.GetOuterCircleColor");
 
 	struct
 	{
-		struct FLinearColor            OuterCircleColor;
+		struct FLinearColor            outerCircleColor;
 	} params;
 
 
 	UObject::ProcessEvent(fn, &params);
 
-	if (OuterCircleColor != nullptr)
-		*OuterCircleColor = params.OuterCircleColor;
+	if (outerCircleColor != nullptr)
+		*outerCircleColor = params.outerCircleColor;
 }
 
 

@@ -8,8 +8,8 @@
 
 #include "SCUM_Basic.hpp"
 #include "SCUM_ConZ_classes.hpp"
-#include "SCUM_CoreUObject_classes.hpp"
 #include "SCUM_MessageType_classes.hpp"
+#include "SCUM_CoreUObject_classes.hpp"
 
 namespace SDK
 {

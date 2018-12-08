@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Crow.BP_Crow_C
-// 0x0008 (0x0A38 - 0x0A30)
+// 0x0008 (0x0B08 - 0x0B00)
 class ABP_Crow_C : public ABP_Bird2_C
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0A30(0x0008) (CPF_Transient, CPF_DuplicateTransient)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0B00(0x0008) (CPF_Transient, CPF_DuplicateTransient)
 
 	static UClass* StaticClass()
 	{

@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Antibiotics_03.Antibiotics_03_C
-// 0x0000 (0x06E8 - 0x06E8)
+// 0x0000 (0x0710 - 0x0710)
 class AAntibiotics_03_C : public AMedicationItem
 {
 public:

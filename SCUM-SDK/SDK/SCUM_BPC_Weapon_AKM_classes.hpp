@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BPC_Weapon_AKM.BPC_Weapon_AKM_C
-// 0x0000 (0x1038 - 0x1038)
+// 0x0000 (0x1068 - 0x1068)
 class ABPC_Weapon_AKM_C : public ABP_Weapon_AK47_C
 {
 public:

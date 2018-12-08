@@ -15,12 +15,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Horse2.BP_Horse2_C
-// 0x0010 (0x0C30 - 0x0C20)
+// 0x0010 (0x0D00 - 0x0CF0)
 class ABP_Horse2_C : public ABP_BaseComplexAnimal2_C
 {
 public:
-	class UMeleeAttackCollisionCapsule*                MeleeAttackCapsuleHoofBL;                                 // 0x0C20(0x0008) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
-	class UMeleeAttackCollisionCapsule*                MeleeAttackCapsuleHoofBR;                                 // 0x0C28(0x0008) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
+	class UMeleeAttackCollisionCapsule*                MeleeAttackCapsuleHoofBL;                                 // 0x0CF0(0x0008) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
+	class UMeleeAttackCollisionCapsule*                MeleeAttackCapsuleHoofBR;                                 // 0x0CF8(0x0008) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Spaghetti_Bolognese.Spaghetti_Bolognese_C
-// 0x0000 (0x07C0 - 0x07C0)
+// 0x0000 (0x07E8 - 0x07E8)
 class ASpaghetti_Bolognese_C : public AFoodItem
 {
 public:

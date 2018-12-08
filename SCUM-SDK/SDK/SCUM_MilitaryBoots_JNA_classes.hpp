@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass MilitaryBoots_JNA.MilitaryBoots_JNA_C
-// 0x0000 (0x0760 - 0x0760)
+// 0x0000 (0x0788 - 0x0788)
 class AMilitaryBoots_JNA_C : public AClothesItem
 {
 public:

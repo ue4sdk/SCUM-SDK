@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Magazine_MP5.BP_Magazine_MP5_C
-// 0x0000 (0x0700 - 0x0700)
+// 0x0000 (0x0728 - 0x0728)
 class ABP_Magazine_MP5_C : public AWeaponAttachmentMagazine
 {
 public:

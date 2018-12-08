@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Wolf3.BP_Wolf3_C
-// 0x0008 (0x0C48 - 0x0C40)
+// 0x0008 (0x0D18 - 0x0D10)
 class ABP_Wolf3_C : public ABP_Donkey2_C
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0C40(0x0008) (CPF_Transient, CPF_DuplicateTransient)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0D10(0x0008) (CPF_Transient, CPF_DuplicateTransient)
 
 	static UClass* StaticClass()
 	{

@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Raincoat_Down_01.Raincoat_Down_01_C
-// 0x0000 (0x0760 - 0x0760)
+// 0x0000 (0x0788 - 0x0788)
 class ARaincoat_Down_01_C : public AClothesItem
 {
 public:

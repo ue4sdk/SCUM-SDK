@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass SPAS-12.SPAS-12_C
-// 0x0000 (0x0728 - 0x0728)
+// 0x0000 (0x0750 - 0x0750)
 class ASPAS_12_C : public AWeaponItem
 {
 public:

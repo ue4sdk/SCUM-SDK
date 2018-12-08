@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass White_Duck_Skinned.White_Duck_Skinned_C
-// 0x0000 (0x06F8 - 0x06F8)
+// 0x0000 (0x0720 - 0x0720)
 class AWhite_Duck_Skinned_C : public AEquipmentItem
 {
 public:

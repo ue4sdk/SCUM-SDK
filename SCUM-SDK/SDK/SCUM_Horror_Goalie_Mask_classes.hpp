@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Horror_Goalie_Mask.Horror_Goalie_Mask_C
-// 0x0000 (0x0760 - 0x0760)
+// 0x0000 (0x0788 - 0x0788)
 class AHorror_Goalie_Mask_C : public AClothesItem
 {
 public:

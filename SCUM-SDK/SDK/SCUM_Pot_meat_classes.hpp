@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Pot_meat.Pot_meat_C
-// 0x0000 (0x07D0 - 0x07D0)
+// 0x0000 (0x07F8 - 0x07F8)
 class APot_meat_C : public ACookedFoodItem
 {
 public:

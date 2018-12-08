@@ -34,8 +34,8 @@ public:
 	class UMaterialInstanceDynamic*                    CircularMaterial;                                         // 0x02E8(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	struct FLinearColor                                AlarmColor;                                               // 0x02F0(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	struct FLinearColor                                NormalColor;                                              // 0x0300(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	struct FLinearColor                                OuterCircleColor;                                         // 0x0310(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	struct FLinearColor                                circularBarColor;                                         // 0x0320(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	struct FLinearColor                                outerCircleColor;                                         // 0x0310(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	struct FLinearColor                                CircularBarColor;                                         // 0x0320(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	float                                              _currentPercentageToShow;                                 // 0x0330(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 	static UClass* StaticClass()
@@ -52,10 +52,10 @@ public:
 	void SetTextalarmColorC(class UTextBlock* textWidget);
 	void SetTextColor(class UTextBlock* textWidget, const struct FLinearColor& Color);
 	void ActivateNormalColor();
-	void SetCircularBarColor(const struct FLinearColor& circularBarColor);
-	void GetCircularBarColor(struct FLinearColor* circularBarColor);
-	void SetOuterCircleColor(const struct FLinearColor& OuterCircleColor);
-	void GetOuterCircleColor(struct FLinearColor* OuterCircleColor);
+	void SetCircularBarColor(const struct FLinearColor& CircularBarColor);
+	void GetCircularBarColor(struct FLinearColor* CircularBarColor);
+	void SetOuterCircleColor(const struct FLinearColor& outerCircleColor);
+	void GetOuterCircleColor(struct FLinearColor* outerCircleColor);
 	void GetNormalColor(struct FLinearColor* NormalColor);
 	void SetNormalColor(const struct FLinearColor& NormalColor);
 	void GetAlarmColor(struct FLinearColor* AlarmColor);

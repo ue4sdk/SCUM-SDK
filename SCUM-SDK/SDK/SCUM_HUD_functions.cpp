@@ -12,6 +12,27 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function HUD.HUD_C.GetChatWidget
+// (FUNC_Event, FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintEvent, FUNC_Const)
+// Parameters:
+// class UChatWidget*             ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_InstancedReference, CPF_IsPlainOldData)
+
+class UChatWidget* UHUD_C::GetChatWidget()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function HUD.HUD_C.GetChatWidget");
+
+	struct
+	{
+		class UChatWidget*             ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
 // Function HUD.HUD_C.GetVisibility_1
 // (FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintEvent, FUNC_BlueprintPure)
 // Parameters:
@@ -938,8 +959,9 @@ void UHUD_C::OnBCUBodyMonitorMaximized()
 // Parameters:
 // struct FText                   Text                           (CPF_ConstParm, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
 // bool                           beep                           (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FLinearColor            Color                          (CPF_ConstParm, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_OutParm, CPF_ReferenceParm, CPF_IsPlainOldData)
 
-void UHUD_C::AddMessageToScreen(const struct FText& Text, bool beep)
+void UHUD_C::AddMessageToScreen(const struct FText& Text, bool beep, const struct FLinearColor& Color)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HUD.HUD_C.AddMessageToScreen");
 
@@ -947,10 +969,12 @@ void UHUD_C::AddMessageToScreen(const struct FText& Text, bool beep)
 	{
 		struct FText                   Text;
 		bool                           beep;
+		struct FLinearColor            Color;
 	} params;
 
 	params.Text = Text;
 	params.beep = beep;
+	params.Color = Color;
 
 	UObject::ProcessEvent(fn, &params);
 }

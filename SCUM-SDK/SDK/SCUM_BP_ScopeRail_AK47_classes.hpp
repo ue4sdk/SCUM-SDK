@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_ScopeRail_AK47.BP_ScopeRail_AK47_C
-// 0x0000 (0x06F0 - 0x06F0)
+// 0x0000 (0x0718 - 0x0718)
 class ABP_ScopeRail_AK47_C : public AWeaponAttachmentScopeRail
 {
 public:

@@ -147,29 +147,18 @@ ESlateVisibility UUI_SpawnScreenWidget_C::GetButtonVisibility()
 
 
 // Function UI_SpawnScreenWidget.UI_SpawnScreenWidget_C.OnSpawnAccept
-// (FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
-// Parameters:
-// struct FGeometry               MyGeometry                     (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_IsPlainOldData)
-// struct FPointerEvent           MouseEvent                     (CPF_ConstParm, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
-// struct FEventReply             ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
+// (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 
-struct FEventReply UUI_SpawnScreenWidget_C::OnSpawnAccept(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
+void UUI_SpawnScreenWidget_C::OnSpawnAccept()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_SpawnScreenWidget.UI_SpawnScreenWidget_C.OnSpawnAccept");
 
 	struct
 	{
-		struct FGeometry               MyGeometry;
-		struct FPointerEvent           MouseEvent;
-		struct FEventReply             ReturnValue;
 	} params;
 
-	params.MyGeometry = MyGeometry;
-	params.MouseEvent = MouseEvent;
 
 	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
 }
 
 

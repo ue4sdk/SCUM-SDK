@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Improvised_Wooden_Arrow.Improvised_Wooden_Arrow_C
-// 0x0000 (0x06E0 - 0x06E0)
+// 0x0000 (0x0708 - 0x0708)
 class AImprovised_Wooden_Arrow_C : public AItem
 {
 public:

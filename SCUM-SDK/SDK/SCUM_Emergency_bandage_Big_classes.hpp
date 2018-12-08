@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Emergency_bandage_Big.Emergency_bandage_Big_C
-// 0x0000 (0x06F8 - 0x06F8)
+// 0x0000 (0x0720 - 0x0720)
 class AEmergency_bandage_Big_C : public AEquipmentItem
 {
 public:

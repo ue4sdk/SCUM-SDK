@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Improvised_Bow2.Improvised_Bow2_C
-// 0x0000 (0x06E0 - 0x06E0)
+// 0x0000 (0x0708 - 0x0708)
 class AImprovised_Bow2_C : public AItem
 {
 public:

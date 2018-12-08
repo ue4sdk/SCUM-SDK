@@ -39,7 +39,7 @@ public:
 	void ActivateAlarm();
 	void CheckBloodOxygenationAlarm(float oxygenationLevel, int* alarmCode);
 	void SetPrisonerAndLifeComponentToMonitor(class APrisoner* prisonerToSet, bool* Success);
-	void ProvideOxygenSaturationExtremes(struct FText* oxygenSaturationExtremes);
+	void ProvideOxygenSaturationExtremes(struct FText* OxygenSaturationExtremes);
 	struct FText GetHeartRateBPM();
 	void Construct();
 	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);

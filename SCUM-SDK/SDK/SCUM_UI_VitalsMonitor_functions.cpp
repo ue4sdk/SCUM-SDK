@@ -15,22 +15,22 @@ namespace SDK
 // Function UI_VitalsMonitor.UI_VitalsMonitor_C.GetOxygenSaturationExtremesText
 // (FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 // Parameters:
-// struct FText                   oxygenSaturationExtremes       (CPF_Parm, CPF_OutParm)
+// struct FText                   OxygenSaturationExtremes       (CPF_Parm, CPF_OutParm)
 
-void UUI_VitalsMonitor_C::GetOxygenSaturationExtremesText(struct FText* oxygenSaturationExtremes)
+void UUI_VitalsMonitor_C::GetOxygenSaturationExtremesText(struct FText* OxygenSaturationExtremes)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_VitalsMonitor.UI_VitalsMonitor_C.GetOxygenSaturationExtremesText");
 
 	struct
 	{
-		struct FText                   oxygenSaturationExtremes;
+		struct FText                   OxygenSaturationExtremes;
 	} params;
 
 
 	UObject::ProcessEvent(fn, &params);
 
-	if (oxygenSaturationExtremes != nullptr)
-		*oxygenSaturationExtremes = params.oxygenSaturationExtremes;
+	if (OxygenSaturationExtremes != nullptr)
+		*OxygenSaturationExtremes = params.OxygenSaturationExtremes;
 }
 
 

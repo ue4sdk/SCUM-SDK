@@ -7,9 +7,9 @@
 #endif
 
 #include "SCUM_Basic.hpp"
+#include "SCUM_MediaAssets_classes.hpp"
 #include "SCUM_Engine_classes.hpp"
 #include "SCUM_CoreUObject_classes.hpp"
-#include "SCUM_MediaAssets_classes.hpp"
 
 namespace SDK
 {

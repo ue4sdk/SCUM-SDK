@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BeePollen_Pils_03.BeePollen_Pils_03_C
-// 0x0000 (0x06E8 - 0x06E8)
+// 0x0000 (0x0710 - 0x0710)
 class ABeePollen_Pils_03_C : public AMedicationItem
 {
 public:

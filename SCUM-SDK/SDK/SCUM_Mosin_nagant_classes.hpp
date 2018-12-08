@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Mosin_nagant.Mosin_nagant_C
-// 0x0000 (0x0728 - 0x0728)
+// 0x0000 (0x0750 - 0x0750)
 class AMosin_nagant_C : public AWeaponItem
 {
 public:

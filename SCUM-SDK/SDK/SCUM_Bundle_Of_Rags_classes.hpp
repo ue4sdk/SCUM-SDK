@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Bundle_Of_Rags.Bundle_Of_Rags_C
-// 0x0000 (0x06F8 - 0x06F8)
+// 0x0000 (0x0720 - 0x0720)
 class ABundle_Of_Rags_C : public AEquipmentItem
 {
 public:

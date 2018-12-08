@@ -9,10 +9,10 @@
 #include "SCUM_Basic.hpp"
 #include "SCUM_CoreUObject_classes.hpp"
 #include "SCUM_Engine_classes.hpp"
+#include "SCUM_AIModule_classes.hpp"
 #include "SCUM_Slate_classes.hpp"
 #include "SCUM_SlateCore_classes.hpp"
 #include "SCUM_InputCore_classes.hpp"
-#include "SCUM_AIModule_classes.hpp"
 
 namespace SDK
 {

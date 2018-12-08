@@ -49,7 +49,7 @@ public:
 	}
 
 
-	void GetOxygenSaturationExtremesText(struct FText* oxygenSaturationExtremes);
+	void GetOxygenSaturationExtremesText(struct FText* OxygenSaturationExtremes);
 	void GetTemperatureExtremesText(struct FText* temperatureExtremes);
 	void GetRespiratoryRateExtremesText(struct FText* respiratoryRateExtremes);
 	void SetPrisoner(class APrisoner* Prisoner);

@@ -1682,6 +1682,32 @@ void UOptionsWidget_C::BndEvt__ConcealedMode_K2Node_ComponentBoundEvent_2_OnValu
 }
 
 
+// Function OptionsWidget.OptionsWidget_C.BndEvt__RealTimeRadiosity_K2Node_ComponentBoundEvent_3_OnValueChanged__DelegateSignature
+// (FUNC_BlueprintEvent)
+// Parameters:
+// int                            Index                          (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// int                            OldIndex                       (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FText                   Value                          (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm)
+
+void UOptionsWidget_C::BndEvt__RealTimeRadiosity_K2Node_ComponentBoundEvent_3_OnValueChanged__DelegateSignature(int Index, int OldIndex, const struct FText& Value)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function OptionsWidget.OptionsWidget_C.BndEvt__RealTimeRadiosity_K2Node_ComponentBoundEvent_3_OnValueChanged__DelegateSignature");
+
+	struct
+	{
+		int                            Index;
+		int                            OldIndex;
+		struct FText                   Value;
+	} params;
+
+	params.Index = Index;
+	params.OldIndex = OldIndex;
+	params.Value = Value;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function OptionsWidget.OptionsWidget_C.ExecuteUbergraph_OptionsWidget
 // (FUNC_HasDefaults)
 // Parameters:

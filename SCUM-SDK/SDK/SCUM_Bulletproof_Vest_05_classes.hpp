@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Bulletproof_Vest_05.Bulletproof_Vest_05_C
-// 0x0000 (0x0760 - 0x0760)
+// 0x0000 (0x0788 - 0x0788)
 class ABulletproof_Vest_05_C : public AClothesItem
 {
 public:

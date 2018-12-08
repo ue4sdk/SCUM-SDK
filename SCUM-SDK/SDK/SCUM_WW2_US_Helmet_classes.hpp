@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass WW2_US_Helmet.WW2_US_Helmet_C
-// 0x0000 (0x0760 - 0x0760)
+// 0x0000 (0x0788 - 0x0788)
 class AWW2_US_Helmet_C : public AClothesItem
 {
 public:

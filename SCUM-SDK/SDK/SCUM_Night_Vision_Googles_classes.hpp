@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Night_Vision_Googles.Night_Vision_Googles_C
-// 0x0000 (0x0790 - 0x0790)
+// 0x0000 (0x07B8 - 0x07B8)
 class ANight_Vision_Googles_C : public ANightVisionGogglesItem
 {
 public:

@@ -43,7 +43,7 @@ public:
 	void CanSpawn(bool* CanSpawn);
 	struct FEventReply OnKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent);
 	ESlateVisibility GetButtonVisibility();
-	struct FEventReply OnSpawnAccept(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
+	void OnSpawnAccept();
 	void UpdateInfo();
 	void BndEvt__Button_0_K2Node_ComponentBoundEvent_7_OnButtonClickedEvent__DelegateSignature();
 	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);

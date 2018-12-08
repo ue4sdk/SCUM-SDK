@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Sights_M16A4_FoldingSights.Sights_M16A4_FoldingSights_C
-// 0x0000 (0x07F0 - 0x07F0)
+// 0x0000 (0x0818 - 0x0818)
 class ASights_M16A4_FoldingSights_C : public AWeaponAttachmentScope
 {
 public:

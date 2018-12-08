@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Shorts_Pants_11.Shorts_Pants_10_C
-// 0x0000 (0x0760 - 0x0760)
+// 0x0000 (0x0788 - 0x0788)
 class AShorts_Pants_10_C : public AClothesItem
 {
 public:

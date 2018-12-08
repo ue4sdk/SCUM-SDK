@@ -273,6 +273,9 @@
     <ClCompile Include="SCUM-SDK\SDK\SCUM_ABP_Sentry_functions.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_ABP_SUV_01_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
     <ClCompile Include="SCUM-SDK\SDK\SCUM_ABP_Zombie_Corpse_functions.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
@@ -367,6 +370,9 @@
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="SCUM-SDK\SDK\SCUM_AnimBP_AKS_74U_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_AnimBP_AS_Val_functions.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="SCUM-SDK\SDK\SCUM_AnimBP_Desert_Eagle_functions.cpp">
@@ -1053,6 +1059,27 @@
     <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Armory_Room_functions.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_AS_Val_InsertBulletChamber_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_AS_Val_InsertMag_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_AS_Val_InsertMagChamber_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_AS_Val_Reload_Event_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_AS_Val_RemoveMagInsertBulletChamber_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_AS_Val_RemoveMagInsertMag_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_AS_Val_RemoveMagInsertMagChamber_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
     <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Banjo_functions.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
@@ -1143,22 +1170,7 @@
     <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_CargoDrop_01_Door_functions.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_CargoDropContainer_AmmoGranadesFoodDrink_functions.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_CargoDropContainer_Clothes_functions.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_CargoDropContainer_CraftMix_functions.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
     <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_CargoDropContainer_Empty_functions.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_CargoDropContainer_Weapons_functions.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_CargoDropContainer_Zombies_functions.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_CargoDropEvent_functions.cpp">
@@ -1602,6 +1614,9 @@
     <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Magazine_AKS_74U_functions.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Magazine_AS_Val_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
     <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Magazine_DEagle_51_functions.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
@@ -1687,6 +1702,9 @@
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_MountTypeWeaponMagazine76254_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_MountTypeWeaponMagazineASVal_functions.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_MountTypeWeaponMagazineDEagle_51_functions.cpp">
@@ -1917,6 +1935,30 @@
     <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Supermarket_02_functions.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_SUV_01_A_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_SUV_01_A_Item_Container_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_SUV_01_B_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_SUV_01_C_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_SUV_01_Corpse_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_SUV_01_D_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_SUV_01_E_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_SUV_01_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
     <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_SVD_InsertBulletChamber_functions.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
@@ -2076,6 +2118,24 @@
     <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Tunnel_Small_L_functions.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Vehicle_Item_Container_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Vehicle_Large_Impact_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Vehicle_Light_Impact_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Vehicle_Medium_Impact_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Vehicle4W_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_VehicleCorpse_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
     <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Warning_Cargo_Light_functions.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
@@ -2095,6 +2155,9 @@
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Weapon_AKS_74U_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Weapon_AS_Val_functions.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_Weapon_Hunter85_functions.cpp">
@@ -2119,6 +2182,9 @@
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_WeaponBullet_9mmParabellumFMJ_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_WeaponBullet_9x39mm_functions.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="SCUM-SDK\SDK\SCUM_BP_WeaponBullet_31_functions.cpp">
@@ -2212,6 +2278,21 @@
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="SCUM-SDK\SDK\SCUM_BPC_BerettaM9_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BPC_CargoDropContainer_AmmoGranadesFoodDrink_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BPC_CargoDropContainer_Clothes_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BPC_CargoDropContainer_CraftMix_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BPC_CargoDropContainer_Weapons_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_BPC_CargoDropContainer_Zombies_functions.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="SCUM-SDK\SDK\SCUM_BPC_Deagle_358_functions.cpp">
@@ -2395,6 +2476,18 @@
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="SCUM-SDK\SDK\SCUM_Cal_9mm_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_Cal_9x39mm_5_Bullets_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_Cal_9x39mm_AmmoboxClosed_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_Cal_9x39mm_AmmoboxOpen_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_Cal_9x39mm_functions.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="SCUM-SDK\SDK\SCUM_Cal_50_AE_1pcs_functions.cpp">
@@ -2947,6 +3040,9 @@
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="SCUM-SDK\SDK\SCUM_Deer_Steak_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_Default_functions.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="SCUM-SDK\SDK\SCUM_Diary_functions.cpp">
@@ -3987,6 +4083,9 @@
     <ClCompile Include="SCUM-SDK\SDK\SCUM_Metal_Scrap_05_functions.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_MIDIDevice_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
     <ClCompile Include="SCUM-SDK\SDK\SCUM_Military_Ammo_Clips_functions.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
@@ -4020,7 +4119,7 @@
     <ClCompile Include="SCUM-SDK\SDK\SCUM_Military_Footwear_functions.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="SCUM-SDK\SDK\SCUM_Military_Goggles_functions.cpp">
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_Military_Goggles_01_functions.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="SCUM-SDK\SDK\SCUM_Military_Helmet_01_functions.cpp">
@@ -4704,6 +4803,9 @@
     <ClCompile Include="SCUM-SDK\SDK\SCUM_Renderer_functions.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_ReplicationGraph_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
     <ClCompile Include="SCUM-SDK\SDK\SCUM_ResizableWindow_functions.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
@@ -4729,9 +4831,6 @@
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="SCUM-SDK\SDK\SCUM_Rope1_functions.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="SCUM-SDK\SDK\SCUM_Round_Sunglasses_functions.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="SCUM-SDK\SDK\SCUM_Rubber_band_functions.cpp">
@@ -5976,6 +6075,9 @@
     <ClCompile Include="SCUM-SDK\SDK\SCUM_UI_UserImage_functions.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="SCUM-SDK\SDK\SCUM_UI_VehicleHUD_functions.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
     <ClCompile Include="SCUM-SDK\SDK\SCUM_UI_VicinityItem_functions.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
@@ -7166,6 +7268,12 @@
     <ClInclude Include="SCUM-SDK\SDK\SCUM_ABP_Sentry_structs.hpp">
       <Filter>Headerdateien</Filter>
     </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_ABP_SUV_01_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_ABP_SUV_01_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
     <ClInclude Include="SCUM-SDK\SDK\SCUM_ABP_Zombie_classes.hpp">
       <Filter>Headerdateien</Filter>
     </ClInclude>
@@ -7356,6 +7464,12 @@
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="SCUM-SDK\SDK\SCUM_AnimBP_AKS_74U_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_AnimBP_AS_Val_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_AnimBP_AS_Val_structs.hpp">
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="SCUM-SDK\SDK\SCUM_AnimBP_Desert_Eagle_classes.hpp">
@@ -8723,6 +8837,48 @@
     <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Armory_Room_structs.hpp">
       <Filter>Headerdateien</Filter>
     </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_AS_Val_InsertBulletChamber_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_AS_Val_InsertBulletChamber_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_AS_Val_InsertMag_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_AS_Val_InsertMag_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_AS_Val_InsertMagChamber_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_AS_Val_InsertMagChamber_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_AS_Val_Reload_Event_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_AS_Val_Reload_Event_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_AS_Val_RemoveMagInsertBulletChamber_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_AS_Val_RemoveMagInsertBulletChamber_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_AS_Val_RemoveMagInsertMag_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_AS_Val_RemoveMagInsertMag_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_AS_Val_RemoveMagInsertMagChamber_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_AS_Val_RemoveMagInsertMagChamber_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
     <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Banjo_classes.hpp">
       <Filter>Headerdateien</Filter>
     </ClInclude>
@@ -8903,40 +9059,10 @@
     <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_CargoDrop_01_Door_structs.hpp">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_CargoDropContainer_AmmoGranadesFoodDrink_classes.hpp">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_CargoDropContainer_AmmoGranadesFoodDrink_structs.hpp">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_CargoDropContainer_Clothes_classes.hpp">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_CargoDropContainer_Clothes_structs.hpp">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_CargoDropContainer_CraftMix_classes.hpp">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_CargoDropContainer_CraftMix_structs.hpp">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
     <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_CargoDropContainer_Empty_classes.hpp">
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_CargoDropContainer_Empty_structs.hpp">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_CargoDropContainer_Weapons_classes.hpp">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_CargoDropContainer_Weapons_structs.hpp">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_CargoDropContainer_Zombies_classes.hpp">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_CargoDropContainer_Zombies_structs.hpp">
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_CargoDropEvent_classes.hpp">
@@ -9821,6 +9947,12 @@
     <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Magazine_AKS_74U_structs.hpp">
       <Filter>Headerdateien</Filter>
     </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Magazine_AS_Val_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Magazine_AS_Val_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
     <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Magazine_DEagle_51_classes.hpp">
       <Filter>Headerdateien</Filter>
     </ClInclude>
@@ -9993,6 +10125,12 @@
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_MountTypeWeaponMagazine76254_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_MountTypeWeaponMagazineASVal_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_MountTypeWeaponMagazineASVal_structs.hpp">
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_MountTypeWeaponMagazineDEagle_51_classes.hpp">
@@ -10451,6 +10589,54 @@
     <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Supermarket_02_structs.hpp">
       <Filter>Headerdateien</Filter>
     </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_SUV_01_A_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_SUV_01_A_Item_Container_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_SUV_01_A_Item_Container_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_SUV_01_A_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_SUV_01_B_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_SUV_01_B_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_SUV_01_C_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_SUV_01_C_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_SUV_01_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_SUV_01_Corpse_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_SUV_01_Corpse_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_SUV_01_D_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_SUV_01_D_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_SUV_01_E_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_SUV_01_E_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_SUV_01_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
     <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_SVD_InsertBulletChamber_classes.hpp">
       <Filter>Headerdateien</Filter>
     </ClInclude>
@@ -10769,6 +10955,42 @@
     <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Tunnel_Small_L_structs.hpp">
       <Filter>Headerdateien</Filter>
     </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Vehicle_Item_Container_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Vehicle_Item_Container_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Vehicle_Large_Impact_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Vehicle_Large_Impact_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Vehicle_Light_Impact_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Vehicle_Light_Impact_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Vehicle_Medium_Impact_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Vehicle_Medium_Impact_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Vehicle4W_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Vehicle4W_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_VehicleCorpse_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_VehicleCorpse_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
     <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Warning_Cargo_Light_classes.hpp">
       <Filter>Headerdateien</Filter>
     </ClInclude>
@@ -10809,6 +11031,12 @@
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Weapon_AKS_74U_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Weapon_AS_Val_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Weapon_AS_Val_structs.hpp">
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_Weapon_Hunter85_classes.hpp">
@@ -10857,6 +11085,12 @@
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_WeaponBullet_9mmParabellumFMJ_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_WeaponBullet_9x39mm_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_WeaponBullet_9x39mm_structs.hpp">
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="SCUM-SDK\SDK\SCUM_BP_WeaponBullet_31_classes.hpp">
@@ -11043,6 +11277,36 @@
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="SCUM-SDK\SDK\SCUM_BPC_BerettaM9_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BPC_CargoDropContainer_AmmoGranadesFoodDrink_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BPC_CargoDropContainer_AmmoGranadesFoodDrink_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BPC_CargoDropContainer_Clothes_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BPC_CargoDropContainer_Clothes_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BPC_CargoDropContainer_CraftMix_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BPC_CargoDropContainer_CraftMix_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BPC_CargoDropContainer_Weapons_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BPC_CargoDropContainer_Weapons_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BPC_CargoDropContainer_Zombies_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_BPC_CargoDropContainer_Zombies_structs.hpp">
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="SCUM-SDK\SDK\SCUM_BPC_Deagle_358_classes.hpp">
@@ -11409,6 +11673,30 @@
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="SCUM-SDK\SDK\SCUM_Cal_9mm_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_Cal_9x39mm_5_Bullets_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_Cal_9x39mm_5_Bullets_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_Cal_9x39mm_AmmoboxClosed_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_Cal_9x39mm_AmmoboxClosed_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_Cal_9x39mm_AmmoboxOpen_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_Cal_9x39mm_AmmoboxOpen_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_Cal_9x39mm_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_Cal_9x39mm_structs.hpp">
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="SCUM-SDK\SDK\SCUM_Cal_50_AE_1pcs_classes.hpp">
@@ -12513,6 +12801,12 @@
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="SCUM-SDK\SDK\SCUM_Deer_Steak_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_Default_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_Default_structs.hpp">
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="SCUM-SDK\SDK\SCUM_Diary_classes.hpp">
@@ -14591,6 +14885,12 @@
     <ClInclude Include="SCUM-SDK\SDK\SCUM_Metal_Scrap_05_structs.hpp">
       <Filter>Headerdateien</Filter>
     </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_MIDIDevice_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_MIDIDevice_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
     <ClInclude Include="SCUM-SDK\SDK\SCUM_Military_Ammo_Clips_classes.hpp">
       <Filter>Headerdateien</Filter>
     </ClInclude>
@@ -14657,10 +14957,10 @@
     <ClInclude Include="SCUM-SDK\SDK\SCUM_Military_Footwear_structs.hpp">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="SCUM-SDK\SDK\SCUM_Military_Goggles_classes.hpp">
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_Military_Goggles_01_classes.hpp">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="SCUM-SDK\SDK\SCUM_Military_Goggles_structs.hpp">
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_Military_Goggles_01_structs.hpp">
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="SCUM-SDK\SDK\SCUM_Military_Helmet_01_classes.hpp">
@@ -16025,6 +16325,12 @@
     <ClInclude Include="SCUM-SDK\SDK\SCUM_Renderer_structs.hpp">
       <Filter>Headerdateien</Filter>
     </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_ReplicationGraph_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_ReplicationGraph_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
     <ClInclude Include="SCUM-SDK\SDK\SCUM_ResizableWindow_classes.hpp">
       <Filter>Headerdateien</Filter>
     </ClInclude>
@@ -16077,12 +16383,6 @@
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="SCUM-SDK\SDK\SCUM_Rope1_structs.hpp">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="SCUM-SDK\SDK\SCUM_Round_Sunglasses_classes.hpp">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="SCUM-SDK\SDK\SCUM_Round_Sunglasses_structs.hpp">
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="SCUM-SDK\SDK\SCUM_Rubber_band_classes.hpp">
@@ -18567,6 +18867,12 @@
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="SCUM-SDK\SDK\SCUM_UI_UserImage_structs.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_UI_VehicleHUD_classes.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SCUM-SDK\SDK\SCUM_UI_VehicleHUD_structs.hpp">
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="SCUM-SDK\SDK\SCUM_UI_VicinityItem_classes.hpp">

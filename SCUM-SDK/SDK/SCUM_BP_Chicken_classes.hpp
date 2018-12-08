@@ -15,12 +15,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Chicken.BP_Chicken_C
-// 0x0010 (0x0A00 - 0x09F0)
+// 0x0010 (0x0AD0 - 0x0AC0)
 class ABP_Chicken_C : public AAnimal2
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x09F0(0x0008) (CPF_Transient, CPF_DuplicateTransient)
-	class UNavigationInvokerComponent*                 NavigationInvoker;                                        // 0x09F8(0x0008) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0AC0(0x0008) (CPF_Transient, CPF_DuplicateTransient)
+	class UNavigationInvokerComponent*                 NavigationInvoker;                                        // 0x0AC8(0x0008) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

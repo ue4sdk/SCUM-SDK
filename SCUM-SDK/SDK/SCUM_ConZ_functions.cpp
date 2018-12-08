@@ -708,6 +708,26 @@ bool AItem::NeedServerDataUpdate()
 }
 
 
+// Function ConZ.Item.Multicast_UpdateExpirationTime
+// (FUNC_Net, FUNC_NetReliable, FUNC_Native, FUNC_Event, FUNC_NetMulticast, FUNC_Public)
+// Parameters:
+// int64_t                        Time                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void AItem::Multicast_UpdateExpirationTime(int64_t Time)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Item.Multicast_UpdateExpirationTime");
+
+	struct
+	{
+		int64_t                        Time;
+	} params;
+
+	params.Time = Time;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function ConZ.Item.Multicast_Throw
 // (FUNC_Net, FUNC_NetReliable, FUNC_Native, FUNC_Event, FUNC_NetMulticast, FUNC_Public, FUNC_HasDefaults)
 // Parameters:
@@ -1373,6 +1393,27 @@ bool AItem::CanBeDroppedBy(class AConZCharacter* Character)
 }
 
 
+// Function ConZ.Item.CanBeDropped
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+bool AItem::CanBeDropped()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Item.CanBeDropped");
+
+	struct
+	{
+		bool                           ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
 // Function ConZ.Item.CanAutoAddItem
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable)
 // Parameters:
@@ -1587,6 +1628,47 @@ void AConZCharacter::Server_HandleMeleeAttackCapsuleHit(class AConZCharacter* at
 
 	params.attacker = attacker;
 	params.HitInfo = HitInfo;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function ConZ.ConZCharacter.ReceiveBeginHit
+// (FUNC_Native, FUNC_Event, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintEvent)
+// Parameters:
+// class UPrimitiveComponent*     MyComp                         (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
+// class AActor*                  Other                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// class UPrimitiveComponent*     OtherComp                      (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
+// bool                           selfMoved                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 HitLocation                    (CPF_Parm, CPF_IsPlainOldData)
+// struct FVector                 HitNormal                      (CPF_Parm, CPF_IsPlainOldData)
+// struct FVector                 NormalImpulse                  (CPF_Parm, CPF_IsPlainOldData)
+// struct FHitResult              Hit                            (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm, CPF_IsPlainOldData)
+
+void AConZCharacter::ReceiveBeginHit(class UPrimitiveComponent* MyComp, class AActor* Other, class UPrimitiveComponent* OtherComp, bool selfMoved, const struct FVector& HitLocation, const struct FVector& HitNormal, const struct FVector& NormalImpulse, const struct FHitResult& Hit)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.ConZCharacter.ReceiveBeginHit");
+
+	struct
+	{
+		class UPrimitiveComponent*     MyComp;
+		class AActor*                  Other;
+		class UPrimitiveComponent*     OtherComp;
+		bool                           selfMoved;
+		struct FVector                 HitLocation;
+		struct FVector                 HitNormal;
+		struct FVector                 NormalImpulse;
+		struct FHitResult              Hit;
+	} params;
+
+	params.MyComp = MyComp;
+	params.Other = Other;
+	params.OtherComp = OtherComp;
+	params.selfMoved = selfMoved;
+	params.HitLocation = HitLocation;
+	params.HitNormal = HitNormal;
+	params.NormalImpulse = NormalImpulse;
+	params.Hit = Hit;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -5289,6 +5371,26 @@ void AWeapon::SetShouldPlayChamberOpenedIdle(bool Value)
 }
 
 
+// Function ConZ.Weapon.SetMakeNoiseLoudness
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+// Parameters:
+// bool                           Value                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void AWeapon::SetMakeNoiseLoudness(bool Value)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Weapon.SetMakeNoiseLoudness");
+
+	struct
+	{
+		bool                           Value;
+	} params;
+
+	params.Value = Value;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function ConZ.Weapon.SetIsChambering
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 // Parameters:
@@ -5908,6 +6010,27 @@ struct FVector AWeapon::GetMuzzleDirection()
 	struct
 	{
 		struct FVector                 ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function ConZ.Weapon.GetMakeNoiseLoudness
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+bool AWeapon::GetMakeNoiseLoudness()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Weapon.GetMakeNoiseLoudness");
+
+	struct
+	{
+		bool                           ReturnValue;
 	} params;
 
 
@@ -9629,6 +9752,48 @@ bool AConZGameMode::KickPlayer(class APrisonerPlayerController* Player, const st
 }
 
 
+// Function ConZ.ConZGameMode.GetVehicleSpawner
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// class AVehicleSpawningManager* ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+class AVehicleSpawningManager* AConZGameMode::GetVehicleSpawner()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.ConZGameMode.GetVehicleSpawner");
+
+	struct
+	{
+		class AVehicleSpawningManager* ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function ConZ.ConZGameMode.GetItemVirtualizationManager
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// class AItemVirtualizationManager* ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+class AItemVirtualizationManager* AConZGameMode::GetItemVirtualizationManager()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.ConZGameMode.GetItemVirtualizationManager");
+
+	struct
+	{
+		class AItemVirtualizationManager* ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
 // Function ConZ.ConZGameMode.GetItemSpawningManager
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
@@ -10057,6 +10222,42 @@ void AConZTeam::AddMember(class APrisoner* Prisoner)
 }
 
 
+// Function ConZ.ConZVehicle4W.WarnAboutMounteeEvictionIfInWater
+// (FUNC_Final, FUNC_Net, FUNC_NetReliable, FUNC_Native, FUNC_Event, FUNC_NetMulticast, FUNC_Private)
+
+void AConZVehicle4W::WarnAboutMounteeEvictionIfInWater()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.ConZVehicle4W.WarnAboutMounteeEvictionIfInWater");
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function ConZ.ConZVehicle4W.SetHealth
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+// Parameters:
+// float                          Value                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void AConZVehicle4W::SetHealth(float Value)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.ConZVehicle4W.SetHealth");
+
+	struct
+	{
+		float                          Value;
+	} params;
+
+	params.Value = Value;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function ConZ.ConZVehicle4W.Server_SetVehicleHornActive
 // (FUNC_Final, FUNC_Net, FUNC_NetReliable, FUNC_Native, FUNC_Event, FUNC_Private, FUNC_NetServer, FUNC_NetValidate)
 // Parameters:
@@ -10097,21 +10298,88 @@ void AConZVehicle4W::Server_SetVehicleEngineTurnedOn(bool Value)
 }
 
 
-// Function ConZ.ConZVehicle4W.Server_ReportRigidBodyState
-// (FUNC_Final, FUNC_Net, FUNC_NetReliable, FUNC_Native, FUNC_Event, FUNC_Private, FUNC_NetServer, FUNC_NetValidate)
+// Function ConZ.ConZVehicle4W.Server_SendState
+// (FUNC_Final, FUNC_Net, FUNC_Native, FUNC_Event, FUNC_Private, FUNC_NetServer, FUNC_NetValidate)
 // Parameters:
 // struct FRigidBodyState         State                          (CPF_ConstParm, CPF_Parm, CPF_ReferenceParm)
+// uint32_t                       packedGearLoadAndRpm           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void AConZVehicle4W::Server_ReportRigidBodyState(const struct FRigidBodyState& State)
+void AConZVehicle4W::Server_SendState(const struct FRigidBodyState& State, uint32_t packedGearLoadAndRpm)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ConZ.ConZVehicle4W.Server_ReportRigidBodyState");
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.ConZVehicle4W.Server_SendState");
 
 	struct
 	{
 		struct FRigidBodyState         State;
+		uint32_t                       packedGearLoadAndRpm;
 	} params;
 
 	params.State = State;
+	params.packedGearLoadAndRpm = packedGearLoadAndRpm;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function ConZ.ConZVehicle4W.Server_ApplyImpactDamage
+// (FUNC_Final, FUNC_Net, FUNC_NetReliable, FUNC_Native, FUNC_Event, FUNC_Private, FUNC_NetServer, FUNC_NetValidate)
+// Parameters:
+// float                          Damage                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FHitResult              HitResult                      (CPF_ConstParm, CPF_Parm, CPF_ReferenceParm, CPF_IsPlainOldData)
+
+void AConZVehicle4W::Server_ApplyImpactDamage(float Damage, const struct FHitResult& HitResult)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.ConZVehicle4W.Server_ApplyImpactDamage");
+
+	struct
+	{
+		float                          Damage;
+		struct FHitResult              HitResult;
+	} params;
+
+	params.Damage = Damage;
+	params.HitResult = HitResult;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function ConZ.ConZVehicle4W.ReceiveBeginHit
+// (FUNC_Native, FUNC_Event, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintEvent)
+// Parameters:
+// class UPrimitiveComponent*     MyComp                         (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
+// class AActor*                  Other                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// class UPrimitiveComponent*     OtherComp                      (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
+// bool                           selfMoved                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 HitLocation                    (CPF_Parm, CPF_IsPlainOldData)
+// struct FVector                 HitNormal                      (CPF_Parm, CPF_IsPlainOldData)
+// struct FVector                 NormalImpulse                  (CPF_Parm, CPF_IsPlainOldData)
+// struct FHitResult              Hit                            (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm, CPF_IsPlainOldData)
+
+void AConZVehicle4W::ReceiveBeginHit(class UPrimitiveComponent* MyComp, class AActor* Other, class UPrimitiveComponent* OtherComp, bool selfMoved, const struct FVector& HitLocation, const struct FVector& HitNormal, const struct FVector& NormalImpulse, const struct FHitResult& Hit)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.ConZVehicle4W.ReceiveBeginHit");
+
+	struct
+	{
+		class UPrimitiveComponent*     MyComp;
+		class AActor*                  Other;
+		class UPrimitiveComponent*     OtherComp;
+		bool                           selfMoved;
+		struct FVector                 HitLocation;
+		struct FVector                 HitNormal;
+		struct FVector                 NormalImpulse;
+		struct FHitResult              Hit;
+	} params;
+
+	params.MyComp = MyComp;
+	params.Other = Other;
+	params.OtherComp = OtherComp;
+	params.selfMoved = selfMoved;
+	params.HitLocation = HitLocation;
+	params.HitNormal = HitNormal;
+	params.NormalImpulse = NormalImpulse;
+	params.Hit = Hit;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -10157,12 +10425,211 @@ void AConZVehicle4W::OnRep_VehicleEngineTurnedOn(bool OldValue)
 }
 
 
+// Function ConZ.ConZVehicle4W.OnRep_Health
+// (FUNC_Native, FUNC_Protected)
+// Parameters:
+// float                          OldValue                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void AConZVehicle4W::OnRep_Health(float OldValue)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.ConZVehicle4W.OnRep_Health");
+
+	struct
+	{
+		float                          OldValue;
+	} params;
+
+	params.OldValue = OldValue;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function ConZ.ConZVehicle4W.OnRep_GearLoadAndRpm
+// (FUNC_Final, FUNC_Native, FUNC_Private)
+
+void AConZVehicle4W::OnRep_GearLoadAndRpm()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.ConZVehicle4W.OnRep_GearLoadAndRpm");
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function ConZ.ConZVehicle4W.GetWaterImmersionDepthSlow
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+float AConZVehicle4W::GetWaterImmersionDepthSlow()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.ConZVehicle4W.GetWaterImmersionDepthSlow");
+
+	struct
+	{
+		float                          ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function ConZ.ConZVehicle4W.GetWaterImmersionDepth
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+float AConZVehicle4W::GetWaterImmersionDepth()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.ConZVehicle4W.GetWaterImmersionDepth");
+
+	struct
+	{
+		float                          ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function ConZ.ConZVehicle4W.GetMaxHealth
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+float AConZVehicle4W::GetMaxHealth()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.ConZVehicle4W.GetMaxHealth");
+
+	struct
+	{
+		float                          ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function ConZ.ConZVehicle4W.GetHealthRatio
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+float AConZVehicle4W::GetHealthRatio()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.ConZVehicle4W.GetHealthRatio");
+
+	struct
+	{
+		float                          ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function ConZ.ConZVehicle4W.GetHealth
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+float AConZVehicle4W::GetHealth()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.ConZVehicle4W.GetHealth");
+
+	struct
+	{
+		float                          ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function ConZ.ConZVehicle4W.CanBeInteractedWith
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+bool AConZVehicle4W::CanBeInteractedWith()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.ConZVehicle4W.CanBeInteractedWith");
+
+	struct
+	{
+		bool                           ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function ConZ.ConZVehicleDriveComponent4W.GetEngineLoad
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+float UConZVehicleDriveComponent4W::GetEngineLoad()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.ConZVehicleDriveComponent4W.GetEngineLoad");
+
+	struct
+	{
+		float                          ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
 // Function ConZ.Corpse.OnRep_PoseData
 // (FUNC_Final, FUNC_Native, FUNC_Private)
 
 void ACorpse::OnRep_PoseData()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Corpse.OnRep_PoseData");
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function ConZ.Corpse.OnRep_Inventory
+// (FUNC_Final, FUNC_Native, FUNC_Private)
+
+void ACorpse::OnRep_Inventory()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Corpse.OnRep_Inventory");
 
 	struct
 	{
@@ -12757,51 +13224,6 @@ EDbConnectionOpenMode UDbConnection::GetOpenMode()
 	struct
 	{
 		EDbConnectionOpenMode          ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function ConZ.DbConnection.FindOrInsertMap
-// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
-// Parameters:
-// struct FString                 Name                           (CPF_Parm, CPF_ZeroConstructor)
-// struct FDbIntegerId            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
-
-struct FDbIntegerId UDbConnection::FindOrInsertMap(const struct FString& Name)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function ConZ.DbConnection.FindOrInsertMap");
-
-	struct
-	{
-		struct FString                 Name;
-		struct FDbIntegerId            ReturnValue;
-	} params;
-
-	params.Name = Name;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function ConZ.DbConnection.DeleteUsersHavingNullOrEmptyProvider
-// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
-// Parameters:
-// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-
-bool UDbConnection::DeleteUsersHavingNullOrEmptyProvider()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function ConZ.DbConnection.DeleteUsersHavingNullOrEmptyProvider");
-
-	struct
-	{
-		bool                           ReturnValue;
 	} params;
 
 
@@ -20125,6 +20547,27 @@ class UCraftingPanelWidget* UHudWidget::GetCraftingPanel()
 }
 
 
+// Function ConZ.HudWidget.GetChatWidget
+// (FUNC_Event, FUNC_Public, FUNC_BlueprintEvent, FUNC_Const)
+// Parameters:
+// class UChatWidget*             ReturnValue                    (CPF_ExportObject, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_InstancedReference, CPF_IsPlainOldData)
+
+class UChatWidget* UHudWidget::GetChatWidget()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.HudWidget.GetChatWidget");
+
+	struct
+	{
+		class UChatWidget*             ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
 // Function ConZ.HudWidget.GetBCURightPanel
 // (FUNC_Event, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
@@ -20301,12 +20744,13 @@ void UHudWidget::AddTeammateName(const struct FString& Name)
 
 
 // Function ConZ.HudWidget.AddMessageToScreen
-// (FUNC_Event, FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintEvent)
+// (FUNC_Event, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintEvent)
 // Parameters:
 // struct FText                   Text                           (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
 // bool                           beep                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FLinearColor            Color                          (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm, CPF_IsPlainOldData)
 
-void UHudWidget::AddMessageToScreen(const struct FText& Text, bool beep)
+void UHudWidget::AddMessageToScreen(const struct FText& Text, bool beep, const struct FLinearColor& Color)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ConZ.HudWidget.AddMessageToScreen");
 
@@ -20314,10 +20758,12 @@ void UHudWidget::AddMessageToScreen(const struct FText& Text, bool beep)
 	{
 		struct FText                   Text;
 		bool                           beep;
+		struct FLinearColor            Color;
 	} params;
 
 	params.Text = Text;
 	params.beep = beep;
+	params.Color = Color;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -22066,6 +22512,457 @@ void AMenuPlayerController::InputComponent_MousePressed()
 }
 
 
+// Function ConZ.Mountable.GetMountSlots
+// (FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// TArray<TScriptInterface<class UMountSlot>> Result                         (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor)
+
+void UMountable::GetMountSlots(TArray<TScriptInterface<class UMountSlot>>* Result)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Mountable.GetMountSlots");
+
+	struct
+	{
+		TArray<TScriptInterface<class UMountSlot>> Result;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	if (Result != nullptr)
+		*Result = params.Result;
+}
+
+
+// Function ConZ.Mountable.GetClosestMountSlot
+// (FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// TScriptInterface<class UMountee> Mountee                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// bool                           considerOnlyMountableSlots     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// TScriptInterface<class UMountSlot> ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+TScriptInterface<class UMountSlot> UMountable::GetClosestMountSlot(const TScriptInterface<class UMountee>& Mountee, bool considerOnlyMountableSlots)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Mountable.GetClosestMountSlot");
+
+	struct
+	{
+		TScriptInterface<class UMountee> Mountee;
+		bool                           considerOnlyMountableSlots;
+		TScriptInterface<class UMountSlot> ReturnValue;
+	} params;
+
+	params.Mountee = Mountee;
+	params.considerOnlyMountableSlots = considerOnlyMountableSlots;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function ConZ.Mountee.Unmount
+// (FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+// Parameters:
+// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+bool UMountee::Unmount()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Mountee.Unmount");
+
+	struct
+	{
+		bool                           ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function ConZ.Mountee.Mount
+// (FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+// Parameters:
+// TScriptInterface<class UMountSlot> Value                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+bool UMountee::Mount(const TScriptInterface<class UMountSlot>& Value)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Mountee.Mount");
+
+	struct
+	{
+		TScriptInterface<class UMountSlot> Value;
+		bool                           ReturnValue;
+	} params;
+
+	params.Value = Value;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function ConZ.Mountee.GetMounteeTransform
+// (FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// struct FTransform              ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm, CPF_IsPlainOldData)
+
+struct FTransform UMountee::GetMounteeTransform()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Mountee.GetMounteeTransform");
+
+	struct
+	{
+		struct FTransform              ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function ConZ.Mountee.GetMountedSlot
+// (FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// TScriptInterface<class UMountSlot> ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+TScriptInterface<class UMountSlot> UMountee::GetMountedSlot()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Mountee.GetMountedSlot");
+
+	struct
+	{
+		TScriptInterface<class UMountSlot> ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function ConZ.Mountee.CanUnmount
+// (FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+bool UMountee::CanUnmount()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Mountee.CanUnmount");
+
+	struct
+	{
+		bool                           ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function ConZ.Mountee.CanMount
+// (FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// TScriptInterface<class UMountSlot> Slot                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+bool UMountee::CanMount(const TScriptInterface<class UMountSlot>& Slot)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Mountee.CanMount");
+
+	struct
+	{
+		TScriptInterface<class UMountSlot> Slot;
+		bool                           ReturnValue;
+	} params;
+
+	params.Slot = Slot;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function ConZ.MountSlot.HandleUnmounted
+// (FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+
+void UMountSlot::HandleUnmounted()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.MountSlot.HandleUnmounted");
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function ConZ.MountSlot.HandleMounted
+// (FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+// Parameters:
+// TScriptInterface<class UMountee> Mountee                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UMountSlot::HandleMounted(const TScriptInterface<class UMountee>& Mountee)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.MountSlot.HandleMounted");
+
+	struct
+	{
+		TScriptInterface<class UMountee> Mountee;
+	} params;
+
+	params.Mountee = Mountee;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function ConZ.MountSlot.GetUnmountTransform
+// (FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// struct FTransform              ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm, CPF_IsPlainOldData)
+
+struct FTransform UMountSlot::GetUnmountTransform()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.MountSlot.GetUnmountTransform");
+
+	struct
+	{
+		struct FTransform              ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function ConZ.MountSlot.GetUnmountAudioEvent
+// (FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// class UAkAudioEvent*           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+class UAkAudioEvent* UMountSlot::GetUnmountAudioEvent()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.MountSlot.GetUnmountAudioEvent");
+
+	struct
+	{
+		class UAkAudioEvent*           ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function ConZ.MountSlot.GetSocketToMount
+// (FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// struct FName                   ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+struct FName UMountSlot::GetSocketToMount()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.MountSlot.GetSocketToMount");
+
+	struct
+	{
+		struct FName                   ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function ConZ.MountSlot.GetOwningMountable
+// (FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// TScriptInterface<class UMountable> ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+TScriptInterface<class UMountable> UMountSlot::GetOwningMountable()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.MountSlot.GetOwningMountable");
+
+	struct
+	{
+		TScriptInterface<class UMountable> ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function ConZ.MountSlot.GetMountPriority
+// (FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// int                            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+int UMountSlot::GetMountPriority()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.MountSlot.GetMountPriority");
+
+	struct
+	{
+		int                            ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function ConZ.MountSlot.GetMountee
+// (FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// TScriptInterface<class UMountee> ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+TScriptInterface<class UMountee> UMountSlot::GetMountee()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.MountSlot.GetMountee");
+
+	struct
+	{
+		TScriptInterface<class UMountee> ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function ConZ.MountSlot.GetMountedAnimation
+// (FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// class UAnimSequenceBase*       ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+class UAnimSequenceBase* UMountSlot::GetMountedAnimation()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.MountSlot.GetMountedAnimation");
+
+	struct
+	{
+		class UAnimSequenceBase*       ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function ConZ.MountSlot.GetMountAudioEvent
+// (FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// class UAkAudioEvent*           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+class UAkAudioEvent* UMountSlot::GetMountAudioEvent()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.MountSlot.GetMountAudioEvent");
+
+	struct
+	{
+		class UAkAudioEvent*           ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function ConZ.MountSlot.GetComponentToMount
+// (FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// class USceneComponent*         ReturnValue                    (CPF_ExportObject, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_InstancedReference, CPF_IsPlainOldData)
+
+class USceneComponent* UMountSlot::GetComponentToMount()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.MountSlot.GetComponentToMount");
+
+	struct
+	{
+		class USceneComponent*         ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function ConZ.MountSlot.CanUnmount
+// (FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+bool UMountSlot::CanUnmount()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.MountSlot.CanUnmount");
+
+	struct
+	{
+		bool                           ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function ConZ.MountSlot.CanMount
+// (FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// TScriptInterface<class UMountee> Mountee                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+bool UMountSlot::CanMount(const TScriptInterface<class UMountee>& Mountee)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.MountSlot.CanMount");
+
+	struct
+	{
+		TScriptInterface<class UMountee> Mountee;
+		bool                           ReturnValue;
+	} params;
+
+	params.Mountee = Mountee;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
 // Function ConZ.NativeWindowsContent.TestText
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
@@ -22834,6 +23731,22 @@ void APrisoner::UpdateDeluxePlayerStatus()
 void APrisoner::UpdateChipLightColorIndex()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Prisoner.UpdateChipLightColorIndex");
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function ConZ.Prisoner.UpdateCensoring
+// (FUNC_Final, FUNC_Native, FUNC_Public)
+
+void APrisoner::UpdateCensoring()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Prisoner.UpdateCensoring");
 
 	struct
 	{
@@ -24470,8 +25383,9 @@ void APrisoner::Server_InteractWithLadder(const struct FVector& traceOrigin, con
 // Parameters:
 // EPlayableInstrumentTone        tone                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          timeOffset                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// int                            octave                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void APrisoner::Server_InstrumentStopTone(EPlayableInstrumentTone tone, float timeOffset)
+void APrisoner::Server_InstrumentStopTone(EPlayableInstrumentTone tone, float timeOffset, int octave)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Prisoner.Server_InstrumentStopTone");
 
@@ -24479,10 +25393,12 @@ void APrisoner::Server_InstrumentStopTone(EPlayableInstrumentTone tone, float ti
 	{
 		EPlayableInstrumentTone        tone;
 		float                          timeOffset;
+		int                            octave;
 	} params;
 
 	params.tone = tone;
 	params.timeOffset = timeOffset;
+	params.octave = octave;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -24493,8 +25409,9 @@ void APrisoner::Server_InstrumentStopTone(EPlayableInstrumentTone tone, float ti
 // Parameters:
 // EPlayableInstrumentTone        tone                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          timeOffset                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// int                            octave                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void APrisoner::Server_InstrumentPlayTone(EPlayableInstrumentTone tone, float timeOffset)
+void APrisoner::Server_InstrumentPlayTone(EPlayableInstrumentTone tone, float timeOffset, int octave)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Prisoner.Server_InstrumentPlayTone");
 
@@ -24502,10 +25419,12 @@ void APrisoner::Server_InstrumentPlayTone(EPlayableInstrumentTone tone, float ti
 	{
 		EPlayableInstrumentTone        tone;
 		float                          timeOffset;
+		int                            octave;
 	} params;
 
 	params.tone = tone;
 	params.timeOffset = timeOffset;
+	params.octave = octave;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -25220,12 +26139,12 @@ void APrisoner::OnRep_PackedWetness(uint32_t oldWetness)
 }
 
 
-// Function ConZ.Prisoner.OnRep_MountedSlot
+// Function ConZ.Prisoner.OnRep_Mount
 // (FUNC_Native, FUNC_Protected)
 
-void APrisoner::OnRep_MountedSlot()
+void APrisoner::OnRep_Mount()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Prisoner.OnRep_MountedSlot");
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Prisoner.OnRep_Mount");
 
 	struct
 	{
@@ -25503,6 +26422,70 @@ void APrisoner::OnMovingThroughNearbyFoliageInstance(const struct FPrisonerNearb
 }
 
 
+// Function ConZ.Prisoner.OnMovementUpdated
+// (FUNC_Native, FUNC_Public, FUNC_HasDefaults)
+// Parameters:
+// float                          DeltaSeconds                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 OldLocation                    (CPF_Parm, CPF_IsPlainOldData)
+// struct FVector                 OldVelocity                    (CPF_Parm, CPF_IsPlainOldData)
+
+void APrisoner::OnMovementUpdated(float DeltaSeconds, const struct FVector& OldLocation, const struct FVector& OldVelocity)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Prisoner.OnMovementUpdated");
+
+	struct
+	{
+		float                          DeltaSeconds;
+		struct FVector                 OldLocation;
+		struct FVector                 OldVelocity;
+	} params;
+
+	params.DeltaSeconds = DeltaSeconds;
+	params.OldLocation = OldLocation;
+	params.OldVelocity = OldVelocity;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function ConZ.Prisoner.OnMidiEvent
+// (FUNC_Final, FUNC_Native, FUNC_Private)
+// Parameters:
+// class UMIDIDeviceController*   MIDIDeviceController           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// int                            Timestamp                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// EMIDIEventType                 EventType                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// int                            Channel                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// int                            ControlID                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// int                            Velocity                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// int                            RawEventType                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void APrisoner::OnMidiEvent(class UMIDIDeviceController* MIDIDeviceController, int Timestamp, EMIDIEventType EventType, int Channel, int ControlID, int Velocity, int RawEventType)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Prisoner.OnMidiEvent");
+
+	struct
+	{
+		class UMIDIDeviceController*   MIDIDeviceController;
+		int                            Timestamp;
+		EMIDIEventType                 EventType;
+		int                            Channel;
+		int                            ControlID;
+		int                            Velocity;
+		int                            RawEventType;
+	} params;
+
+	params.MIDIDeviceController = MIDIDeviceController;
+	params.Timestamp = Timestamp;
+	params.EventType = EventType;
+	params.Channel = Channel;
+	params.ControlID = ControlID;
+	params.Velocity = Velocity;
+	params.RawEventType = RawEventType;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function ConZ.Prisoner.OnInteractDefaultContextMenuClosed
 // (FUNC_Final, FUNC_Native, FUNC_Public)
 
@@ -25740,8 +26723,9 @@ void APrisoner::NetMulticast_RequestCharacterAction(const struct FCharacterActio
 // Parameters:
 // EPlayableInstrumentTone        tone                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          timeOffset                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// int                            octave                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void APrisoner::NetMulticast_InstrumentStopTone(EPlayableInstrumentTone tone, float timeOffset)
+void APrisoner::NetMulticast_InstrumentStopTone(EPlayableInstrumentTone tone, float timeOffset, int octave)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Prisoner.NetMulticast_InstrumentStopTone");
 
@@ -25749,10 +26733,12 @@ void APrisoner::NetMulticast_InstrumentStopTone(EPlayableInstrumentTone tone, fl
 	{
 		EPlayableInstrumentTone        tone;
 		float                          timeOffset;
+		int                            octave;
 	} params;
 
 	params.tone = tone;
 	params.timeOffset = timeOffset;
+	params.octave = octave;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -25763,8 +26749,9 @@ void APrisoner::NetMulticast_InstrumentStopTone(EPlayableInstrumentTone tone, fl
 // Parameters:
 // EPlayableInstrumentTone        tone                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          timeOffset                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// int                            octave                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void APrisoner::NetMulticast_InstrumentPlayTone(EPlayableInstrumentTone tone, float timeOffset)
+void APrisoner::NetMulticast_InstrumentPlayTone(EPlayableInstrumentTone tone, float timeOffset, int octave)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Prisoner.NetMulticast_InstrumentPlayTone");
 
@@ -25772,10 +26759,12 @@ void APrisoner::NetMulticast_InstrumentPlayTone(EPlayableInstrumentTone tone, fl
 	{
 		EPlayableInstrumentTone        tone;
 		float                          timeOffset;
+		int                            octave;
 	} params;
 
 	params.tone = tone;
 	params.timeOffset = timeOffset;
+	params.octave = octave;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -26886,6 +27875,27 @@ struct FVector2D APrisoner::GetTabMouseMovement()
 	struct
 	{
 		struct FVector2D               ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function ConZ.Prisoner.GetTabMode
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// ETabMode                       ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+ETabMode APrisoner::GetTabMode()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Prisoner.GetTabMode");
+
+	struct
+	{
+		ETabMode                       ReturnValue;
 	} params;
 
 
@@ -28536,22 +29546,6 @@ class AActor* APrisoner::ChooseFirstMeleeTarget()
 	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
-}
-
-
-// Function ConZ.Prisoner.CheckForCensoring
-// (FUNC_Final, FUNC_Native, FUNC_Public)
-
-void APrisoner::CheckForCensoring()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Prisoner.CheckForCensoring");
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -37284,14 +38278,14 @@ void APrisonerPlayerController::Client_ProcessAdminCommand_VisualizeBulletTrajec
 }
 
 
-// Function ConZ.PrisonerPlayerController.Client_ProcessAdminCommand_ListTransports
+// Function ConZ.PrisonerPlayerController.Client_ProcessAdminCommand_ListVehicles
 // (FUNC_Net, FUNC_NetReliable, FUNC_Native, FUNC_Event, FUNC_Public, FUNC_NetClient)
 // Parameters:
 // struct FString                 Filter                         (CPF_Parm, CPF_ZeroConstructor)
 
-void APrisonerPlayerController::Client_ProcessAdminCommand_ListTransports(const struct FString& Filter)
+void APrisonerPlayerController::Client_ProcessAdminCommand_ListVehicles(const struct FString& Filter)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ConZ.PrisonerPlayerController.Client_ProcessAdminCommand_ListTransports");
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.PrisonerPlayerController.Client_ProcessAdminCommand_ListVehicles");
 
 	struct
 	{
@@ -37359,6 +38353,38 @@ void APrisonerPlayerController::Client_Login(const struct FPlayerLoginInfo& serv
 	} params;
 
 	params.serverLoginInfo = serverLoginInfo;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function ConZ.PrisonerPlayerController.ChatHistoryForward
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+
+void APrisonerPlayerController::ChatHistoryForward()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.PrisonerPlayerController.ChatHistoryForward");
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function ConZ.PrisonerPlayerController.ChatHistoryBack
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+
+void APrisonerPlayerController::ChatHistoryBack()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.PrisonerPlayerController.ChatHistoryBack");
+
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -40167,6 +41193,521 @@ void UThrowingComponent::Multicast_PierceHitObject(const struct FVector& ImpactV
 	params.ZeroBasedImpactResult = ZeroBasedImpactResult;
 
 	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function ConZ.Vehicle.SetVehicleThrottleAmount
+// (FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+// Parameters:
+// float                          Value                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UVehicle::SetVehicleThrottleAmount(float Value)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Vehicle.SetVehicleThrottleAmount");
+
+	struct
+	{
+		float                          Value;
+	} params;
+
+	params.Value = Value;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function ConZ.Vehicle.SetVehicleSteerAmount
+// (FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+// Parameters:
+// float                          Value                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UVehicle::SetVehicleSteerAmount(float Value)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Vehicle.SetVehicleSteerAmount");
+
+	struct
+	{
+		float                          Value;
+	} params;
+
+	params.Value = Value;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function ConZ.Vehicle.SetVehicleHornActive
+// (FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+// Parameters:
+// bool                           Value                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UVehicle::SetVehicleHornActive(bool Value)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Vehicle.SetVehicleHornActive");
+
+	struct
+	{
+		bool                           Value;
+	} params;
+
+	params.Value = Value;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function ConZ.Vehicle.SetVehicleHandbrakeAmount
+// (FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+// Parameters:
+// float                          Value                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UVehicle::SetVehicleHandbrakeAmount(float Value)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Vehicle.SetVehicleHandbrakeAmount");
+
+	struct
+	{
+		float                          Value;
+	} params;
+
+	params.Value = Value;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function ConZ.Vehicle.SetVehicleFreeLookEnabled
+// (FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+// Parameters:
+// bool                           Value                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UVehicle::SetVehicleFreeLookEnabled(bool Value)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Vehicle.SetVehicleFreeLookEnabled");
+
+	struct
+	{
+		bool                           Value;
+	} params;
+
+	params.Value = Value;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function ConZ.Vehicle.SetVehicleEngineTurnedOn
+// (FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+// Parameters:
+// bool                           Value                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UVehicle::SetVehicleEngineTurnedOn(bool Value)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Vehicle.SetVehicleEngineTurnedOn");
+
+	struct
+	{
+		bool                           Value;
+	} params;
+
+	params.Value = Value;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function ConZ.Vehicle.SetVehicleBrakeAmount
+// (FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+// Parameters:
+// float                          Value                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UVehicle::SetVehicleBrakeAmount(float Value)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Vehicle.SetVehicleBrakeAmount");
+
+	struct
+	{
+		float                          Value;
+	} params;
+
+	params.Value = Value;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function ConZ.Vehicle.SaveState
+// (FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// struct FDbIntegerId            ID                             (CPF_Parm)
+// struct FDbIntegerId            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
+
+struct FDbIntegerId UVehicle::SaveState(const struct FDbIntegerId& ID)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Vehicle.SaveState");
+
+	struct
+	{
+		struct FDbIntegerId            ID;
+		struct FDbIntegerId            ReturnValue;
+	} params;
+
+	params.ID = ID;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function ConZ.Vehicle.ResetVehicle
+// (FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+
+void UVehicle::ResetVehicle()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Vehicle.ResetVehicle");
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function ConZ.Vehicle.LoadState
+// (FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+// Parameters:
+// struct FDbIntegerId            ID                             (CPF_Parm)
+
+void UVehicle::LoadState(const struct FDbIntegerId& ID)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Vehicle.LoadState");
+
+	struct
+	{
+		struct FDbIntegerId            ID;
+	} params;
+
+	params.ID = ID;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function ConZ.Vehicle.IsVehicleHornActive
+// (FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+bool UVehicle::IsVehicleHornActive()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Vehicle.IsVehicleHornActive");
+
+	struct
+	{
+		bool                           ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function ConZ.Vehicle.IsVehicleFreeLookEnabled
+// (FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+bool UVehicle::IsVehicleFreeLookEnabled()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Vehicle.IsVehicleFreeLookEnabled");
+
+	struct
+	{
+		bool                           ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function ConZ.Vehicle.IsVehicleEngineTurnedOn
+// (FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+bool UVehicle::IsVehicleEngineTurnedOn()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Vehicle.IsVehicleEngineTurnedOn");
+
+	struct
+	{
+		bool                           ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function ConZ.Vehicle.GetVehicleWheelsSteerAmount
+// (FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+float UVehicle::GetVehicleWheelsSteerAmount()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Vehicle.GetVehicleWheelsSteerAmount");
+
+	struct
+	{
+		float                          ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function ConZ.Vehicle.GetVehicleThrottleAmount
+// (FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+float UVehicle::GetVehicleThrottleAmount()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Vehicle.GetVehicleThrottleAmount");
+
+	struct
+	{
+		float                          ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function ConZ.Vehicle.GetVehicleSteerAmount
+// (FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+float UVehicle::GetVehicleSteerAmount()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Vehicle.GetVehicleSteerAmount");
+
+	struct
+	{
+		float                          ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function ConZ.Vehicle.GetVehicleSpeed
+// (FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+float UVehicle::GetVehicleSpeed()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Vehicle.GetVehicleSpeed");
+
+	struct
+	{
+		float                          ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function ConZ.Vehicle.GetVehicleSpawnParameters
+// (FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// struct FVehicleSpawnParameters ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
+
+struct FVehicleSpawnParameters UVehicle::GetVehicleSpawnParameters()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Vehicle.GetVehicleSpawnParameters");
+
+	struct
+	{
+		struct FVehicleSpawnParameters ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function ConZ.Vehicle.GetVehicleHealthRatio
+// (FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+float UVehicle::GetVehicleHealthRatio()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Vehicle.GetVehicleHealthRatio");
+
+	struct
+	{
+		float                          ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function ConZ.Vehicle.GetVehicleHandbrakeAmount
+// (FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+float UVehicle::GetVehicleHandbrakeAmount()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Vehicle.GetVehicleHandbrakeAmount");
+
+	struct
+	{
+		float                          ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function ConZ.Vehicle.GetVehicleBrakeAmount
+// (FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+float UVehicle::GetVehicleBrakeAmount()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.Vehicle.GetVehicleBrakeAmount");
+
+	struct
+	{
+		float                          ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function ConZ.VehicleCorpse.GetMesh
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// class UStaticMeshComponent*    ReturnValue                    (CPF_ExportObject, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_InstancedReference, CPF_IsPlainOldData)
+
+class UStaticMeshComponent* AVehicleCorpse::GetMesh()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.VehicleCorpse.GetMesh");
+
+	struct
+	{
+		class UStaticMeshComponent*    ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function ConZ.VehicleHudWidget.HasVehicle
+// (FUNC_Final, FUNC_Native, FUNC_Private, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+bool UVehicleHudWidget::HasVehicle()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.VehicleHudWidget.HasVehicle");
+
+	struct
+	{
+		bool                           ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function ConZ.VehicleHudWidget.GetVehicleSpeed
+// (FUNC_Final, FUNC_Native, FUNC_Private, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+float UVehicleHudWidget::GetVehicleSpeed()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.VehicleHudWidget.GetVehicleSpeed");
+
+	struct
+	{
+		float                          ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function ConZ.VehicleHudWidget.GetVehicleHealthRatio
+// (FUNC_Final, FUNC_Native, FUNC_Private, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+float UVehicleHudWidget::GetVehicleHealthRatio()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ConZ.VehicleHudWidget.GetVehicleHealthRatio");
+
+	struct
+	{
+		float                          ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
 }
 
 

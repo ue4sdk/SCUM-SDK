@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Pigeon_Skinned.Pigeon_Skinned_C
-// 0x0000 (0x06F8 - 0x06F8)
+// 0x0000 (0x0720 - 0x0720)
 class APigeon_Skinned_C : public AEquipmentItem
 {
 public:

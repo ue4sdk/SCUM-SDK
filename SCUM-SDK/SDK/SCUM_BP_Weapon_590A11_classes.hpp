@@ -15,12 +15,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Weapon_590A11.BP_Weapon_590A11_C
-// 0x0010 (0x1040 - 0x1030)
+// 0x0010 (0x1070 - 0x1060)
 class ABP_Weapon_590A11_C : public AWeapon
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x1030(0x0008) (CPF_Transient, CPF_DuplicateTransient)
-	class UMeleeAttackCollisionCapsule*                MeleeAttackCollisionCapsule;                              // 0x1038(0x0008) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x1060(0x0008) (CPF_Transient, CPF_DuplicateTransient)
+	class UMeleeAttackCollisionCapsule*                MeleeAttackCollisionCapsule;                              // 0x1068(0x0008) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
