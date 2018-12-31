@@ -1,4 +1,4 @@
-// SCUM (0.1.20) SDK
+// SCUM (0.1.22) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -101,29 +101,29 @@ struct FEventReply UUI_MultipleProgressBar_C::OnMouseMove(const struct FGeometry
 // (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 // Parameters:
 // float                          Percentage1                    (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// float                          percentage2                    (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// float                          percentage3                    (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// float                          Percentage2                    (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// float                          Percentage3                    (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Percentage4                    (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// float                          percentage5                    (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// float                          Percentage5                    (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UUI_MultipleProgressBar_C::SetPercentages(float Percentage1, float percentage2, float percentage3, float Percentage4, float percentage5)
+void UUI_MultipleProgressBar_C::SetPercentages(float Percentage1, float Percentage2, float Percentage3, float Percentage4, float Percentage5)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_MultipleProgressBar.UI_MultipleProgressBar_C.SetPercentages");
 
 	struct
 	{
 		float                          Percentage1;
-		float                          percentage2;
-		float                          percentage3;
+		float                          Percentage2;
+		float                          Percentage3;
 		float                          Percentage4;
-		float                          percentage5;
+		float                          Percentage5;
 	} params;
 
 	params.Percentage1 = Percentage1;
-	params.percentage2 = percentage2;
-	params.percentage3 = percentage3;
+	params.Percentage2 = Percentage2;
+	params.Percentage3 = Percentage3;
 	params.Percentage4 = Percentage4;
-	params.percentage5 = percentage5;
+	params.Percentage5 = Percentage5;
 
 	UObject::ProcessEvent(fn, &params);
 }

@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.20) SDK
+// SCUM (0.1.22) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Mosin_nagant.Mosin_nagant_C
-// 0x0000 (0x0750 - 0x0750)
+// 0x0000 (0x0748 - 0x0748)
 class AMosin_nagant_C : public AWeaponItem
 {
 public:

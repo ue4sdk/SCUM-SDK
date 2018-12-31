@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.20) SDK
+// SCUM (0.1.22) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Vitamins_03.Vitamins_03_C
-// 0x0000 (0x07E8 - 0x07E8)
+// 0x0000 (0x07E0 - 0x07E0)
 class AVitamins_03_C : public AFoodItem
 {
 public:

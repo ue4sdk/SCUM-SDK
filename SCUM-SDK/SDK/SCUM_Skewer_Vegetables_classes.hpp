@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.20) SDK
+// SCUM (0.1.22) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Skewer_Vegetables.Skewer_Vegetables_C
-// 0x0000 (0x07F8 - 0x07F8)
+// 0x0000 (0x07F0 - 0x07F0)
 class ASkewer_Vegetables_C : public ACookedFoodItem
 {
 public:

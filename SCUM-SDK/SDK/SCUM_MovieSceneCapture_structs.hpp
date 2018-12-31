@@ -1,35 +1,18 @@
 #pragma once
 
-// SCUM (0.1.20) SDK
+// SCUM (0.1.22) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
 #endif
 
 #include "SCUM_Basic.hpp"
+#include "SCUM_MovieSceneCapture_enums.hpp"
 #include "SCUM_Engine_classes.hpp"
 #include "SCUM_CoreUObject_classes.hpp"
 
 namespace SDK
 {
-//---------------------------------------------------------------------------
-//Enums
-//---------------------------------------------------------------------------
-
-// Enum MovieSceneCapture.EHDRCaptureGamut
-enum class EHDRCaptureGamut : uint8_t
-{
-	HCGM_Rec709                    = 0,
-	HCGM_P3DCI                     = 1,
-	HCGM_Rec2020                   = 2,
-	HCGM_ACES                      = 3,
-	HCGM_ACEScg                    = 4,
-	HCGM_Linear                    = 5,
-	HCGM_MAX                       = 6
-};
-
-
-
 //---------------------------------------------------------------------------
 //Script Structs
 //---------------------------------------------------------------------------

@@ -1,32 +1,18 @@
 #pragma once
 
-// SCUM (0.1.20) SDK
+// SCUM (0.1.22) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
 #endif
 
 #include "SCUM_Basic.hpp"
+#include "SCUM_ApexDestruction_enums.hpp"
 #include "SCUM_CoreUObject_classes.hpp"
 #include "SCUM_Engine_classes.hpp"
 
 namespace SDK
 {
-//---------------------------------------------------------------------------
-//Enums
-//---------------------------------------------------------------------------
-
-// Enum ApexDestruction.EImpactDamageOverride
-enum class EImpactDamageOverride : uint8_t
-{
-	IDO_None                       = 0,
-	IDO_On                         = 1,
-	IDO_Off                        = 2,
-	IDO_MAX                        = 3
-};
-
-
-
 //---------------------------------------------------------------------------
 //Script Structs
 //---------------------------------------------------------------------------

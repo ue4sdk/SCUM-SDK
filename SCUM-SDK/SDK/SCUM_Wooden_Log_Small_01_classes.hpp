@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.20) SDK
+// SCUM (0.1.22) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Wooden_Log_Small_01.Wooden_Log_Small_01_C
-// 0x0000 (0x0720 - 0x0720)
+// 0x0000 (0x0718 - 0x0718)
 class AWooden_Log_Small_01_C : public AEquipmentItem
 {
 public:

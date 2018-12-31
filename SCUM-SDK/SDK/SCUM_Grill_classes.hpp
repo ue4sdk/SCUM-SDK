@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.20) SDK
+// SCUM (0.1.22) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Grill.Grill_C
-// 0x0000 (0x0778 - 0x0778)
+// 0x0000 (0x0770 - 0x0770)
 class AGrill_C : public AFireplaceItem
 {
 public:

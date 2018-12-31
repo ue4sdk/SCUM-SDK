@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.20) SDK
+// SCUM (0.1.22) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -1947,36 +1947,6 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>("Class Engine.DataAsset");
-		return ptr;
-	}
-
-};
-
-
-// Class Engine.ReplicationDriver
-// 0x0000 (0x0028 - 0x0028)
-class UReplicationDriver : public UObject
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>("Class Engine.ReplicationDriver");
-		return ptr;
-	}
-
-};
-
-
-// Class Engine.ReplicationConnectionDriver
-// 0x0000 (0x0028 - 0x0028)
-class UReplicationConnectionDriver : public UObject
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>("Class Engine.ReplicationConnectionDriver");
 		return ptr;
 	}
 
@@ -19227,6 +19197,36 @@ public:
 };
 
 
+// Class Engine.ReplicationDriver
+// 0x0000 (0x0028 - 0x0028)
+class UReplicationDriver : public UObject
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>("Class Engine.ReplicationDriver");
+		return ptr;
+	}
+
+};
+
+
+// Class Engine.ReplicationConnectionDriver
+// 0x0000 (0x0028 - 0x0028)
+class UReplicationConnectionDriver : public UObject
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>("Class Engine.ReplicationConnectionDriver");
+		return ptr;
+	}
+
+};
+
+
 // Class Engine.ReporterBase
 // 0x0008 (0x0030 - 0x0028)
 class UReporterBase : public UObject
@@ -21150,7 +21150,7 @@ public:
 class UTouchInterface : public UObject
 {
 public:
-	TArray<struct FTouchInputControl>                  Controls;                                                 // 0x0028(0x0010) (CPF_Edit, CPF_ZeroConstructor)
+	TArray<struct FTouchInputControl>                  controls;                                                 // 0x0028(0x0010) (CPF_Edit, CPF_ZeroConstructor)
 	float                                              ActiveOpacity;                                            // 0x0038(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	float                                              InactiveOpacity;                                          // 0x003C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	float                                              TimeUntilDeactive;                                        // 0x0040(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)

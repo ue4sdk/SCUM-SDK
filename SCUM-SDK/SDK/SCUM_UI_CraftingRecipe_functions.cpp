@@ -1,4 +1,4 @@
-// SCUM (0.1.20) SDK
+// SCUM (0.1.22) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -135,8 +135,31 @@ void UUI_CraftingRecipe_C::SetIsSelected(bool isSelected)
 }
 
 
+// Function UI_CraftingRecipe.UI_CraftingRecipe_C.SetTooltipFromCaptionAndDescription
+// (FUNC_Event, FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintEvent)
+// Parameters:
+// struct FText                   Caption                        (CPF_ConstParm, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
+// struct FText                   Description                    (CPF_ConstParm, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
+
+void UUI_CraftingRecipe_C::SetTooltipFromCaptionAndDescription(const struct FText& Caption, const struct FText& Description)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UI_CraftingRecipe.UI_CraftingRecipe_C.SetTooltipFromCaptionAndDescription");
+
+	struct
+	{
+		struct FText                   Caption;
+		struct FText                   Description;
+	} params;
+
+	params.Caption = Caption;
+	params.Description = Description;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function UI_CraftingRecipe.UI_CraftingRecipe_C.ExecuteUbergraph_UI_CraftingRecipe
-// ()
+// (FUNC_HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 

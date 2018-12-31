@@ -1,4 +1,4 @@
-// SCUM (0.1.20) SDK
+// SCUM (0.1.22) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -211,18 +211,18 @@ void UOptionsWidget_C::SetDynamicShadowsQuality(int Value)
 // Function OptionsWidget.OptionsWidget_C.UpdateSupportedResolutions
 // (FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 // Parameters:
-// bool                           fullscreen                     (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// bool                           Fullscreen                     (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UOptionsWidget_C::UpdateSupportedResolutions(bool fullscreen)
+void UOptionsWidget_C::UpdateSupportedResolutions(bool Fullscreen)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OptionsWidget.OptionsWidget_C.UpdateSupportedResolutions");
 
 	struct
 	{
-		bool                           fullscreen;
+		bool                           Fullscreen;
 	} params;
 
-	params.fullscreen = fullscreen;
+	params.Fullscreen = Fullscreen;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -1703,6 +1703,22 @@ void UOptionsWidget_C::BndEvt__RealTimeRadiosity_K2Node_ComponentBoundEvent_3_On
 	params.Index = Index;
 	params.OldIndex = OldIndex;
 	params.Value = Value;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function OptionsWidget.OptionsWidget_C.BndEvt__FOVSlider_K2Node_ComponentBoundEvent_4_MouseUp__DelegateSignature
+// (FUNC_BlueprintEvent)
+
+void UOptionsWidget_C::BndEvt__FOVSlider_K2Node_ComponentBoundEvent_4_MouseUp__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function OptionsWidget.OptionsWidget_C.BndEvt__FOVSlider_K2Node_ComponentBoundEvent_4_MouseUp__DelegateSignature");
+
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }

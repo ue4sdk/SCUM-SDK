@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.20) SDK
+// SCUM (0.1.22) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -44,6 +44,7 @@ public:
 	void Construct();
 	void BndEvt__UI_InventoryItem_K2Node_ComponentBoundEvent_2_ExpandedStateChanged__DelegateSignature(class UUI_InventoryItem_C* inventoryItemWidget, bool IsExpanded);
 	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
+	void OnItemDestroyed(class AActor* Item);
 	void ExecuteUbergraph_UI_VicinityItem(int EntryPoint);
 };
 

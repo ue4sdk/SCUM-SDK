@@ -1,33 +1,19 @@
 #pragma once
 
-// SCUM (0.1.20) SDK
+// SCUM (0.1.22) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
 #endif
 
 #include "SCUM_Basic.hpp"
+#include "SCUM_ActorSequence_enums.hpp"
 #include "SCUM_MovieScene_classes.hpp"
 #include "SCUM_Engine_classes.hpp"
 #include "SCUM_CoreUObject_classes.hpp"
 
 namespace SDK
 {
-//---------------------------------------------------------------------------
-//Enums
-//---------------------------------------------------------------------------
-
-// Enum ActorSequence.EActorSequenceObjectReferenceType
-enum class EActorSequenceObjectReferenceType : uint8_t
-{
-	EActorSequenceObjectReferenceType__ContextActor = 0,
-	EActorSequenceObjectReferenceType__ExternalActor = 1,
-	EActorSequenceObjectReferenceType__Component = 2,
-	EActorSequenceObjectReferenceType__EActorSequenceObjectReferenceType_MAX = 3
-};
-
-
-
 //---------------------------------------------------------------------------
 //Script Structs
 //---------------------------------------------------------------------------

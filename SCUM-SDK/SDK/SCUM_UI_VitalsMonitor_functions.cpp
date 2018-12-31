@@ -1,4 +1,4 @@
-// SCUM (0.1.20) SDK
+// SCUM (0.1.22) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,22 +15,22 @@ namespace SDK
 // Function UI_VitalsMonitor.UI_VitalsMonitor_C.GetOxygenSaturationExtremesText
 // (FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 // Parameters:
-// struct FText                   OxygenSaturationExtremes       (CPF_Parm, CPF_OutParm)
+// struct FText                   oxygenSaturationExtremes       (CPF_Parm, CPF_OutParm)
 
-void UUI_VitalsMonitor_C::GetOxygenSaturationExtremesText(struct FText* OxygenSaturationExtremes)
+void UUI_VitalsMonitor_C::GetOxygenSaturationExtremesText(struct FText* oxygenSaturationExtremes)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_VitalsMonitor.UI_VitalsMonitor_C.GetOxygenSaturationExtremesText");
 
 	struct
 	{
-		struct FText                   OxygenSaturationExtremes;
+		struct FText                   oxygenSaturationExtremes;
 	} params;
 
 
 	UObject::ProcessEvent(fn, &params);
 
-	if (OxygenSaturationExtremes != nullptr)
-		*OxygenSaturationExtremes = params.OxygenSaturationExtremes;
+	if (oxygenSaturationExtremes != nullptr)
+		*oxygenSaturationExtremes = params.oxygenSaturationExtremes;
 }
 
 

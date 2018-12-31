@@ -1,0 +1,1 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/tbphw0r6g30ypjl9?svg=true)](https://ci.appveyor.com/project/pubgsdk/scum-sdk)

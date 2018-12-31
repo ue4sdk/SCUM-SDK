@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.20) SDK
+// SCUM (0.1.22) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Tracksuit_Top_02_02.Tracksuit_Top_02_02_C
-// 0x0000 (0x0788 - 0x0788)
+// 0x0000 (0x0780 - 0x0780)
 class ATracksuit_Top_02_02_C : public AClothesItem
 {
 public:

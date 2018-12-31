@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.20) SDK
+// SCUM (0.1.22) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,12 +15,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_PrisonerPlayerController.BP_PrisonerPlayerController_C
-// 0x0010 (0x07D0 - 0x07C0)
+// 0x0010 (0x07D8 - 0x07C8)
 class ABP_PrisonerPlayerController_C : public APrisonerPlayerController
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x07C0(0x0008) (CPF_Transient, CPF_DuplicateTransient)
-	class UUI_GameMenu_C*                              GameMenu;                                                 // 0x07C8(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_InstancedReference, CPF_IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x07C8(0x0008) (CPF_Transient, CPF_DuplicateTransient)
+	class UUI_GameMenu_C*                              GameMenu;                                                 // 0x07D0(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_InstancedReference, CPF_IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

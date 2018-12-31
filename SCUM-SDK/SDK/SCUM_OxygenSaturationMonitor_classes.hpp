@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.20) SDK
+// SCUM (0.1.22) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -39,7 +39,7 @@ public:
 	void ActivateAlarm();
 	void CheckBloodOxygenationAlarm(float oxygenationLevel, int* alarmCode);
 	void SetPrisonerAndLifeComponentToMonitor(class APrisoner* prisonerToSet, bool* Success);
-	void ProvideOxygenSaturationExtremes(struct FText* OxygenSaturationExtremes);
+	void ProvideOxygenSaturationExtremes(struct FText* oxygenSaturationExtremes);
 	struct FText GetHeartRateBPM();
 	void Construct();
 	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);

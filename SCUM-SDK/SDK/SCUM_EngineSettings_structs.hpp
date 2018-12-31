@@ -1,39 +1,17 @@
 #pragma once
 
-// SCUM (0.1.20) SDK
+// SCUM (0.1.22) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
 #endif
 
 #include "SCUM_Basic.hpp"
+#include "SCUM_EngineSettings_enums.hpp"
 #include "SCUM_CoreUObject_classes.hpp"
 
 namespace SDK
 {
-//---------------------------------------------------------------------------
-//Enums
-//---------------------------------------------------------------------------
-
-// Enum EngineSettings.EThreePlayerSplitScreenType
-enum class EThreePlayerSplitScreenType : uint8_t
-{
-	EThreePlayerSplitScreenType__FavorTop = 0,
-	EThreePlayerSplitScreenType__FavorBottom = 1,
-	EThreePlayerSplitScreenType__EThreePlayerSplitScreenType_MAX = 2
-};
-
-
-// Enum EngineSettings.ETwoPlayerSplitScreenType
-enum class ETwoPlayerSplitScreenType : uint8_t
-{
-	ETwoPlayerSplitScreenType__Horizontal = 0,
-	ETwoPlayerSplitScreenType__Vertical = 1,
-	ETwoPlayerSplitScreenType__ETwoPlayerSplitScreenType_MAX = 2
-};
-
-
-
 //---------------------------------------------------------------------------
 //Script Structs
 //---------------------------------------------------------------------------

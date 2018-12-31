@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.20) SDK
+// SCUM (0.1.22) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass VeryRare_01.VeryRare_01_C
-// 0x0000 (0x0708 - 0x0708)
+// 0x0000 (0x0700 - 0x0700)
 class AVeryRare_01_C : public AItem
 {
 public:

@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.20) SDK
+// SCUM (0.1.22) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Harmonica.BP_Harmonica_C
-// 0x0000 (0x0900 - 0x0900)
+// 0x0000 (0x08F8 - 0x08F8)
 class ABP_Harmonica_C : public AInstrumentItem
 {
 public:

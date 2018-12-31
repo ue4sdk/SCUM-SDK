@@ -1,4 +1,4 @@
-// SCUM (0.1.20) SDK
+// SCUM (0.1.22) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -117,22 +117,22 @@ void UOxygenSaturationMonitor_C::SetPrisonerAndLifeComponentToMonitor(class APri
 // Function OxygenSaturationMonitor.OxygenSaturationMonitor_C.ProvideOxygenSaturationExtremes
 // (FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 // Parameters:
-// struct FText                   OxygenSaturationExtremes       (CPF_Parm, CPF_OutParm)
+// struct FText                   oxygenSaturationExtremes       (CPF_Parm, CPF_OutParm)
 
-void UOxygenSaturationMonitor_C::ProvideOxygenSaturationExtremes(struct FText* OxygenSaturationExtremes)
+void UOxygenSaturationMonitor_C::ProvideOxygenSaturationExtremes(struct FText* oxygenSaturationExtremes)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OxygenSaturationMonitor.OxygenSaturationMonitor_C.ProvideOxygenSaturationExtremes");
 
 	struct
 	{
-		struct FText                   OxygenSaturationExtremes;
+		struct FText                   oxygenSaturationExtremes;
 	} params;
 
 
 	UObject::ProcessEvent(fn, &params);
 
-	if (OxygenSaturationExtremes != nullptr)
-		*OxygenSaturationExtremes = params.OxygenSaturationExtremes;
+	if (oxygenSaturationExtremes != nullptr)
+		*oxygenSaturationExtremes = params.oxygenSaturationExtremes;
 }
 
 

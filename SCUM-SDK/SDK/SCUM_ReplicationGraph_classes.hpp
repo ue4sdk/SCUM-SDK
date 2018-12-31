@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.20) SDK
+// SCUM (0.1.22) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -262,7 +262,7 @@ public:
 	void ServerStopDebugging();
 	void ServerStartDebugging();
 	void ServerSetCullDistanceForClass(class UClass* Class, float CullDistance);
-	void ServerPrintAllActorInfo(const struct FString& Str);
+	void ServerPrintAllActorInfo(const struct FString& str);
 	void ServerCellInfo();
 	void ClientCellInfo(const struct FVector& CellLocation, const struct FVector& CellExtent, TArray<class AActor*> Actors);
 };

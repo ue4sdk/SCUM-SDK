@@ -1,4 +1,4 @@
-// SCUM (0.1.20) SDK
+// SCUM (0.1.22) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -21,7 +21,7 @@ bool FWeakObjectPtr::IsValid() const
 	{
 		return false;
 	}
-	auto ObjectItem = UObject::GetGlobalObjects().GetItemByIndex(ObjectIndex);
+	auto ObjectItem = UObject::GetGlobalObjects().GetObjectPtr(ObjectIndex);
 	if (!ObjectItem)
 	{
 		return false;
@@ -37,7 +37,7 @@ UObject* FWeakObjectPtr::Get() const
 {
 	if (IsValid())
 	{
-		auto ObjectItem = UObject::GetGlobalObjects().GetItemByIndex(ObjectIndex);
+		auto ObjectItem = UObject::GetGlobalObjects().GetObjectPtr(ObjectIndex);
 		if (ObjectItem)
 		{
 			return ObjectItem->Object;

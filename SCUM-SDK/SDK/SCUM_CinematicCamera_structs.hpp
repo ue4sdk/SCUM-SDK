@@ -1,32 +1,18 @@
 #pragma once
 
-// SCUM (0.1.20) SDK
+// SCUM (0.1.22) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
 #endif
 
 #include "SCUM_Basic.hpp"
+#include "SCUM_CinematicCamera_enums.hpp"
 #include "SCUM_CoreUObject_classes.hpp"
 #include "SCUM_Engine_classes.hpp"
 
 namespace SDK
 {
-//---------------------------------------------------------------------------
-//Enums
-//---------------------------------------------------------------------------
-
-// Enum CinematicCamera.ECameraFocusMethod
-enum class ECameraFocusMethod : uint8_t
-{
-	ECameraFocusMethod__None       = 0,
-	ECameraFocusMethod__Manual     = 1,
-	ECameraFocusMethod__Tracking   = 2,
-	ECameraFocusMethod__ECameraFocusMethod_MAX = 3
-};
-
-
-
 //---------------------------------------------------------------------------
 //Script Structs
 //---------------------------------------------------------------------------

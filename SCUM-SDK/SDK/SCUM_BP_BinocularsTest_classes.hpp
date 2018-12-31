@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.20) SDK
+// SCUM (0.1.22) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_BinocularsTest.BP_BinocularsTest_C
-// 0x0000 (0x0768 - 0x0768)
+// 0x0000 (0x0760 - 0x0760)
 class ABP_BinocularsTest_C : public ABinocularsItem
 {
 public:

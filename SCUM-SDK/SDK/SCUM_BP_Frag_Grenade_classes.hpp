@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.20) SDK
+// SCUM (0.1.22) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Frag_Grenade.BP_Frag_Grenade_C
-// 0x0000 (0x0740 - 0x0740)
+// 0x0000 (0x0738 - 0x0738)
 class ABP_Frag_Grenade_C : public AFragGrenadeItem
 {
 public:

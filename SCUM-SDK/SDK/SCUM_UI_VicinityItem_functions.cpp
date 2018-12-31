@@ -1,4 +1,4 @@
-// SCUM (0.1.20) SDK
+// SCUM (0.1.22) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -281,6 +281,26 @@ void UUI_VicinityItem_C::Tick(const struct FGeometry& MyGeometry, float InDeltaT
 
 	params.MyGeometry = MyGeometry;
 	params.InDeltaTime = InDeltaTime;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function UI_VicinityItem.UI_VicinityItem_C.OnItemDestroyed
+// (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+// Parameters:
+// class AActor*                  Item                           (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UUI_VicinityItem_C::OnItemDestroyed(class AActor* Item)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UI_VicinityItem.UI_VicinityItem_C.OnItemDestroyed");
+
+	struct
+	{
+		class AActor*                  Item;
+	} params;
+
+	params.Item = Item;
 
 	UObject::ProcessEvent(fn, &params);
 }

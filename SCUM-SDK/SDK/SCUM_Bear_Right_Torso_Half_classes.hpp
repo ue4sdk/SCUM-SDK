@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.20) SDK
+// SCUM (0.1.22) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Bear_Right_Torso_Half.Bear_Right_Torso_Half_C
-// 0x0000 (0x0720 - 0x0720)
+// 0x0000 (0x0718 - 0x0718)
 class ABear_Right_Torso_Half_C : public AEquipmentItem
 {
 public:

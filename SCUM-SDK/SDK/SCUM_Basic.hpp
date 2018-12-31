@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.20) SDK
+// SCUM (0.1.22) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -53,38 +53,65 @@ public:
 class TUObjectArray
 {
 public:
-	inline int32_t Num() const
+	enum
+	{
+		NumElementsPerChunk = 65 * 1024, //66560 = 0x10400
+	};
+
+	int32_t Num() const
 	{
 		return NumElements;
 	}
-
-	inline UObject* GetByIndex(int32_t index) const
+	
+	bool IsValidIndex(int32_t Index) const
 	{
-		return Objects[index].Object;
+		return Index < Num() && Index >= 0;
 	}
 
-	inline FUObjectItem* GetItemByIndex(int32_t index) const
+	FUObjectItem* GetObjectPtr(int32_t Index) const
 	{
-		if (index < NumElements)
+		const int32_t ChunkIndex = Index / NumElementsPerChunk;
+		const int32_t WithinChunkIndex = Index % NumElementsPerChunk;
+		FUObjectItem* Chunk = Objects[ChunkIndex];
+		return Chunk + WithinChunkIndex;
+	}
+
+	UObject* GetUObject(int32_t Index) const
+	{
+		UObject* result = nullptr;
+		if(IsValidIndex(Index))
 		{
-			return &Objects[index];
-		}
-		return nullptr;
+			const int32_t ChunkIndex = Index / NumElementsPerChunk;
+			const int32_t WithinChunkIndex = Index % NumElementsPerChunk;
+			FUObjectItem* Chunk = Objects[ChunkIndex];
+			if(Chunk != nullptr)
+			{
+				FUObjectItem* object = Chunk + WithinChunkIndex;
+				if(object != nullptr)
+				{
+					result = object->Object;
+				}					
+			}			
+		}		
+		return result;
 	}
 
 private:
-	FUObjectItem* Objects;
+	FUObjectItem** Objects;
+	FUObjectItem* PreAllocatedObjects;
 	int32_t MaxElements;
 	int32_t NumElements;
+	int32_t MaxChunks;
+	int32_t NumChunks;
 };
 
 class FUObjectArray
 {
 public:
-	int32_t ObjFirstGCIndex;
+	/*int32_t ObjFirstGCIndex;
 	int32_t ObjLastNonGCIndex;
 	int32_t MaxObjectsNotConsideredByGC;
-	int32_t OpenForDisregardForGC;
+	int32_t OpenForDisregardForGC;*/
 	TUObjectArray ObjObjects;
 };
 

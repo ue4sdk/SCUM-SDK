@@ -1,6 +1,6 @@
 #pragma once
 
-// SCUM (0.1.20) SDK
+// SCUM (0.1.22) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass QuinineSulphate_Pils_03.QuinineSulphate_Pils_03_C
-// 0x0000 (0x0710 - 0x0710)
+// 0x0000 (0x0708 - 0x0708)
 class AQuinineSulphate_Pils_03_C : public AMedicationItem
 {
 public:
